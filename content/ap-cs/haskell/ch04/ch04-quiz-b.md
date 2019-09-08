@@ -2,7 +2,7 @@
 title: "Chapter 4 Quiz B"
 date: 2018-10-04T23:05:31-05:00
 weight: 50
-draft: false
+draft: true
 #type: slide
 #theme: white
 description: "Another quiz on Haskell and problem-solving."

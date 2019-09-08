@@ -2,7 +2,7 @@
 title: "Chapter 4 Quiz A"
 date: 2018-09-27T22:50:46-05:00
 weight: 45
-draft: false
+draft: true
 #type: slide
 #theme: white
 description: "The first quiz on Chapter 4, based on Chapter 4 Discussion III and similar CodingBat problems."

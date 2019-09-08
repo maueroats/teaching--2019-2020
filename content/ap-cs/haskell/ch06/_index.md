@@ -5,7 +5,7 @@ weight: 60
 draft: false
 ---
 
-This is a fun chapter to read, but as a class we are done after Chapter 5 (for now).
+This is a fun chapter to read.
 
 {{% children %}}
 

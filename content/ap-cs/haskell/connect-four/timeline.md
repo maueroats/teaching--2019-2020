@@ -7,11 +7,11 @@ draft: false
 
 | Day | Date(s) | Project Assignment  |
 |:---:|---------|---------------------|
-| 1   | Oct 9   | Project assigned. Write `draw_board`. |
-| 2-3 | Oct 11  | Plan, write, and test: `is_legal_move`. |
-| 5   | Oct 12  | Plan `is_won` in class. Write and test at home. |
-| 6   | Oct 15  | Project due. |
-| -   | Oct 19   | Last day to turn in project. |
+| 1   | TBA 9   | Project assigned. Write `draw_board`. |
+| 2-3 | TBA 11  | Plan, write, and test: `is_legal_move`. |
+| 5   | TBA 12  | Plan `is_won` in class. Write and test at home. |
+| 6   | TBA 15  | Project due. |
+| -   | TBA 19   | Last day to turn in project. |
 
 I expect this project to take 4-6 hours to complete over the course of
 a week. If you spend less than 3 hours on the project you should read
