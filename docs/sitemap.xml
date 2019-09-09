@@ -43,6 +43,16 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ai/ch01/ch1-notes/</loc>
+    <lastmod>2019-09-08T17:57:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ai/ch01/</loc>
+    <lastmod>2019-09-08T17:57:26-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/</loc>
     <lastmod>2019-09-06T21:32:40-05:00</lastmod>
   </url>
@@ -188,16 +198,6 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-quiz-a/</loc>
-    <lastmod>2018-09-27T22:50:46-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-quiz-b/</loc>
-    <lastmod>2018-10-04T23:05:31-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch06/</loc>
     <lastmod>2017-10-03T20:50:00-05:00</lastmod>
   </url>
@@ -270,6 +270,11 @@
   <url>
     <loc>https://wy-cs.website/ai/resources/</loc>
     <lastmod>2019-09-06T16:46:47-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/resources/</loc>
+    <lastmod>2019-09-08T19:12:36-05:00</lastmod>
   </url>
   
   <url>
@@ -348,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.website/resources/why-racket/</loc>
+    <loc>https://wy-cs.website/intermediate-cs/resources/why-racket/</loc>
     <lastmod>2018-09-05T20:12:44-05:00</lastmod>
   </url>
   
@@ -463,8 +468,13 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.website/resources/ics-wescheme-note/</loc>
+    <loc>https://wy-cs.website/intermediate-cs/resources/ics-wescheme-note/</loc>
     <lastmod>2017-09-09T07:00:30-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/_footer/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

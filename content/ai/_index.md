@@ -10,3 +10,6 @@ description: "Common Lisp and Artificial Intelligence through Peter Norvig's Par
 
 {{% children description = "true" %}}
 
+## Recent Changes
+
+{{% recent-changes "ai" %}}

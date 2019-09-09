@@ -8,9 +8,13 @@ draft: false
 description: "Robotics class including CAD and Lego engineering."
 ---
 
-{{< std-resources >}}
+## Recent Changes
+
+{{% recent-changes "robotics" %}}
 
 ## Topics
 
 {{% children description = "true" %}}
+
+{{< std-resources >}}
 

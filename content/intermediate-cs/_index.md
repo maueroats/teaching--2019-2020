@@ -12,7 +12,7 @@ Intermediate Computer Science uses the
 Programs](http://PicturingPrograms.com) textbook. Use
 [WeScheme](https://www.wescheme.org) if you cannot install programs, but
 read the [notes on WeScheme]({{< ref
-"/resources/ICS-WeScheme-Note.md">}}) because it is different in some
+"resources/ICS-WeScheme-Note.md">}}) because it is different in some
 ways.
 
 Eventually you will want to understand [why we learn
