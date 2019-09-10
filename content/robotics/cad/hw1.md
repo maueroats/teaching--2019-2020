@@ -5,6 +5,7 @@ date: 2019-09-09T17:35:02-05:00
 draft: false
 #type: slide
 #theme: white
+description: "Exercises in 2D CAD drawings."
 ---
 
 ## 1a
@@ -26,8 +27,8 @@ Start with the figure below. Put the circle of radius 1.5 and the
 circle of radius 2.5 with the same center. 
 
 * Circle of radius 1 centered at the origin. 
-* Circle of radius 2.5 tangent to the circle of radius 1.5 at a point
-on the x-axis
+* Circle of radius 2.5 tangent to the circle of radius 2.0 at a point
+on the x-axis.
 
 {{% figlink src="2019-09-10-ex4-ccircle+dist.png" %}}
 
@@ -44,10 +45,9 @@ Make the two diagonal lines parallel to each
 Start with four connected line segments and a circle centered at
   the origin. Put a point on one of the line segments.
   
-      * Line segments meet at right angles. 
-      * The point is coincident with the circle. 
-      * One line segment is tangent to the circle (and touching it).
-      * Opposite sides of the quadrilateral are parallel.
+   * Line segments meet at right angles. 
+   * The point is coincident with the circle. 
+   * One line segment is tangent to the circle (and touching it).
 
   {{% figlink src="2019-09-10-ex2.png" %}}
 
