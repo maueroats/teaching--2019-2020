@@ -63,7 +63,7 @@ The sum of the squares of the first ten natural numbers is,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;1^2 + 2^2 + ... + 10^2 = 385&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The square of the sum of the first ten natural numbers is,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;(1 + 2 + ... + 10)^2 = 55^2 = 3025&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.&lt;/p&gt;
+&lt;p&gt;Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.&lt;/p&gt;
 
 &lt;p&gt;Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
