@@ -2,7 +2,7 @@
 title: "Chapter 2 Test"
 date: 2018-09-22T16:17:17-05:00
 weight: 200
-draft: true
+draft: false
 #type: slide
 #theme: white
 ---
