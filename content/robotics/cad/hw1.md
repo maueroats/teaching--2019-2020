@@ -1,7 +1,7 @@
 ---
 title: "CAD: HW 1"
 date: 2019-09-09T17:35:02-05:00
-#weight: 
+weight: 321
 draft: false
 #type: slide
 #theme: white
