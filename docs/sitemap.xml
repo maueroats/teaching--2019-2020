@@ -103,6 +103,16 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ai/ch02/2-programming/</loc>
+    <lastmod>2019-09-13T09:20:44-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ai/ch02/</loc>
+    <lastmod>2019-09-13T09:18:50-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/ch01/ch1-quiz1/</loc>
     <lastmod>2019-09-11T10:00:53-05:00</lastmod>
   </url>
@@ -170,16 +180,6 @@
   <url>
     <loc>https://wy-cs.website/resources/apcs-syllabus-2017-2018/</loc>
     <lastmod>2017-09-09T15:49:20-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/robotics/cad/hw2/</loc>
-    <lastmod>2019-09-12T07:58:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/robotics/cad/hw3/</loc>
-    <lastmod>2019-09-12T07:58:57-05:00</lastmod>
   </url>
   
   <url>
@@ -305,6 +305,16 @@
   <url>
     <loc>https://wy-cs.website/robotics/cad/hw1/</loc>
     <lastmod>2019-09-09T17:35:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/cad/hw2/</loc>
+    <lastmod>2019-09-12T07:58:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/cad/hw3/</loc>
+    <lastmod>2019-09-12T07:58:57-05:00</lastmod>
   </url>
   
   <url>

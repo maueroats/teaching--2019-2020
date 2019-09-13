@@ -1,7 +1,7 @@
 ---
-title: "CAD HW 3"
+title: "CAD: HW 3"
 date: 2019-09-12T07:58:57-05:00
-weight: 33
+weight: 303
 draft: false
 #type: slide
 #theme: white
