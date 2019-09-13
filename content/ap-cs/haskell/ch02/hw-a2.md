@@ -1,19 +1,14 @@
 ---
 title: "Haskell HW 2"
-date: 2018-09-12T15:57:47-05:00
+date: 2019-09-13T15:59:25-05:00
 weight: 20
 tags: 
   - homework
   - hw
   - haskell
   - ap-cs
+description: "Graph a function, is a point on a line, get the numbers more than 100, break up a list, find the nearest point."
 ---
-
-Graph a function, is a point on a line, get the numbers more than 100, break up a list, 
-find the nearest point.
-<!--more-->
-
-## Homework
 
 All of the points you should work with have `Int` coordinates. So far
 you only know `Int`, `String`, and lists of each of those.
