@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Cow Graze :: WY Computer Science</title>
+<title>Ch1 HW3: Cow Graze :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -450,13 +450,6 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ai/ch01/cow-graze/" class="dd-item active">
-        <div>
-          <a href="/ai/ch01/cow-graze/">
-            Cow Graze
-          </a>
-        </div>
-    </li>
       <li data-nav-id="/ai/ch01/ch1-quiz1/" class="dd-item">
         <div>
           <a href="/ai/ch01/ch1-quiz1/">
@@ -468,6 +461,13 @@
         <div>
           <a href="/ai/ch01/ch1-hw2/">
             Ch1 HW2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ai/ch01/cow-graze/" class="dd-item active">
+        <div>
+          <a href="/ai/ch01/cow-graze/">
+            Ch1 HW3: Cow Graze
           </a>
         </div>
     </li>
@@ -494,6 +494,20 @@
       <a href="/intermediate-cs/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/why-racket/">
+            Why Racket?
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/ics-wescheme-note/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/ics-wescheme-note/">
+            WeScheme
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/intermediate-cs/ch03/" class="dd-item haschildren
@@ -626,6 +640,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/resources/interview/" class="dd-item">
+        <div>
+          <a href="/resources/interview/">
+            Interviews
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/resources/senioritis/" class="dd-item">
         <div>
           <a href="/resources/senioritis/">
@@ -664,9 +685,9 @@
   - 
    Ch 01</option> 
       <option value="/ai/ch01/ch1-notes/" >-- Ch1 Notes</option>
-      <option value="/ai/ch01/cow-graze/"  selected>-- Cow Graze</option>
       <option value="/ai/ch01/ch1-quiz1/" >-- Ch1 Quiz 1</option>
       <option value="/ai/ch01/ch1-hw2/" >-- Ch1 HW2</option>
+      <option value="/ai/ch01/cow-graze/"  selected>-- Ch1 HW3: Cow Graze</option>
   
       <option value="/ai/resources/" >- AI Resources</option>
   
@@ -688,20 +709,31 @@
     </div>
     
 
-    <h1>Cow Graze</h1>
+    <h1>Ch1 HW3: Cow Graze</h1>
 
     
     
     
-    <ul>
+    
+
+<ul>
 <li>A pasture looks like <code>(....)</code></li>
-<li>Pastures either have grass (<code>'G</code>) and cows (<code>'COW</code>) or other
+<li>Pastures either have grass (written <code>'G</code>) and/or cows (written <code>'COW</code>), or other
 sub-pastures inside them.</li>
 <li>The <code>GRAZE</code> function takes pastures with at least one cow and
 removes all of their grass. It leaves pastures without cows unchanged.</li>
 </ul>
 
-<p>Example: There are three pastures with grass in this example, two
+<h2 id="assignment">Assignment</h2>
+
+<p>Write the <code>GRAZE</code> function.</p>
+
+<p>Extra credit: cows in a pasture without at least one grass die (are
+removed), leaving only the empty pasture.</p>
+
+<h2 id="example">Example</h2>
+
+<p>There are three pastures with grass in this example, two
   inside a pasture that only has sub-pastures.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">|-------------|
 |  (1)        |
@@ -721,13 +753,27 @@ removes all of their grass. It leaves pastures without cows unchanged.</li>
     &#39;((G COW COW G G G)
       ((G G G G G)
        (G G G COW))))</pre></div>
+<h2 id="tests">Tests</h2>
+
+<p>Cow is C, grass is G.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define-test test-graze
+  &#34;Make sure the grazing works.&#34;
+  (assert-equal &#39;(C C) (graze &#39;(G C C G G)))
+  (assert-equal &#39;((G G G G) (C C))
+                (graze &#39;((G G G G) (G C G G C))))
+  (assert-equal &#39;((C C)
+                  ((G G G G)
+                   (C C)))
+                (graze &#39;((G C C G G)
+                        ((G G G G)
+                         (G C C G G))))))</pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ai/ch01/ch1-notes/" title="Ch1 Notes"> <i class="fa fa-chevron-left"></i><label>Ch1 Notes</label></a>
-    <a class="nav nav-next" href="/ai/ch01/ch1-quiz1/" title="Ch1 Quiz 1" style="margin-right: 0px;"><label>Ch1 Quiz 1</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ai/ch01/ch1-hw2/" title="Ch1 HW2"> <i class="fa fa-chevron-left"></i><label>Ch1 HW2</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/" title="Intermediate CS" style="margin-right: 0px;"><label>Intermediate CS</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 

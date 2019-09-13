@@ -1,7 +1,7 @@
 ---
 title: "Ch1 Quiz 1"
 date: 2019-09-11T10:00:53-05:00
-#weight: 
+weight: 20
 draft: false
 #type: slide
 #theme: white

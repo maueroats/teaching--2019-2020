@@ -103,6 +103,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ai/ch01/ch1-quiz1/</loc>
+    <lastmod>2019-09-11T10:00:53-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/</loc>
     <lastmod>2019-09-06T09:47:14-05:00</lastmod>
   </url>
@@ -138,6 +143,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ai/ch01/ch1-hw2/</loc>
+    <lastmod>2019-09-10T09:21:07-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/resources/apcs-syllabus-2019-2020/</loc>
     <lastmod>2019-09-07T09:08:30-05:00</lastmod>
   </url>
@@ -163,6 +173,16 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/cad/hw2/</loc>
+    <lastmod>2019-09-12T07:58:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/cad/hw3/</loc>
+    <lastmod>2019-09-12T07:58:57-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-discussion-03/</loc>
     <lastmod>2018-09-23T11:47:31-05:00</lastmod>
   </url>
@@ -170,6 +190,11 @@
   <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-discussion-04/</loc>
     <lastmod>2018-09-28T11:18:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ai/ch01/cow-graze/</loc>
+    <lastmod>2019-09-12T12:18:00-05:00</lastmod>
   </url>
   
   <url>
@@ -268,8 +293,18 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/haskell/ch02/ch02-test/</loc>
+    <lastmod>2019-09-12T13:34:57-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/resources/</loc>
     <lastmod>2019-09-06T16:46:47-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/cad/hw1/</loc>
+    <lastmod>2019-09-09T17:35:02-05:00</lastmod>
   </url>
   
   <url>
@@ -288,13 +323,13 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.website/ai/ch01/ch1-hw2/</loc>
-    <lastmod>2019-09-10T09:21:07-05:00</lastmod>
+    <loc>https://wy-cs.website/intermediate-cs/ch03/</loc>
+    <lastmod>2019-09-12T10:57:37-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wy-cs.website/robotics/cad/hw1/</loc>
-    <lastmod>2019-09-09T17:35:02-05:00</lastmod>
+    <loc>https://wy-cs.website/intermediate-cs/ch03/additional-exercises/</loc>
+    <lastmod>2019-09-12T10:57:27-05:00</lastmod>
   </url>
   
   <url>

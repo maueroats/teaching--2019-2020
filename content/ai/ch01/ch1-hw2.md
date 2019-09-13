@@ -1,7 +1,7 @@
 ---
 title: "Ch1 HW2"
 date: 2019-09-10T09:21:07-05:00
-#weight: 
+weight: 30
 draft: false
 #type: slide
 #theme: white

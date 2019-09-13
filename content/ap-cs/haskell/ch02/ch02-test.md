@@ -1,6 +1,6 @@
 ---
 title: "Chapter 2 Test"
-date: 2018-09-22T16:17:17-05:00
+date: 2019-09-12T13:34:57-05:00
 weight: 200
 draft: false
 #type: slide
