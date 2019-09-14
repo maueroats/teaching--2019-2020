@@ -1,5 +1,5 @@
 ---
-title: "Ch02.Programming"
+title: "Ch2 Programming"
 date: 2019-09-13T09:20:44-05:00
 weight: 20
 draft: false
@@ -37,5 +37,7 @@ value2))`. The `assoc` function takes in a key and returns the
 
 ## Utility
 
-See the [base-code](base-code.lisp).
+Download the [base-code](base-code.lisp).
+
+{{< gist maueroats 81107dd8d89108e970b4af3c61891f4b >}}
 

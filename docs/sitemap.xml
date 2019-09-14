@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ai/ch03/ch03-reading/</loc>
+    <lastmod>2019-09-13T21:00:44-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/ch01/ch1-notes/</loc>
     <lastmod>2019-09-08T17:57:32-05:00</lastmod>
   </url>
@@ -103,6 +108,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/haskell/ch02/hw-a2/</loc>
+    <lastmod>2019-09-13T15:59:25-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/ch02/2-programming/</loc>
     <lastmod>2019-09-13T09:20:44-05:00</lastmod>
   </url>
@@ -120,11 +130,6 @@
   <url>
     <loc>https://wy-cs.website/ai/</loc>
     <lastmod>2019-09-06T09:47:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/ap-cs/haskell/ch02/hw-a2/</loc>
-    <lastmod>2018-09-12T15:57:47-05:00</lastmod>
   </url>
   
   <url>
@@ -150,6 +155,11 @@
   <url>
     <loc>https://wy-cs.website/resources/generic-cs-syllabus/</loc>
     <lastmod>2017-09-09T15:50:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ai/ch03/</loc>
+    <lastmod>2019-09-13T20:59:45-05:00</lastmod>
   </url>
   
   <url>
@@ -328,6 +338,31 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/tags/ap-cs/</loc>
+    <lastmod>2019-09-13T15:59:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/tags/haskell/</loc>
+    <lastmod>2019-09-13T15:59:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/tags/homework/</loc>
+    <lastmod>2019-09-13T15:59:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/tags/hw/</loc>
+    <lastmod>2019-09-13T15:59:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/tags/</loc>
+    <lastmod>2019-09-13T15:59:25-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/resources/interview/</loc>
     <lastmod>2019-09-12T22:11:32-05:00</lastmod>
   </url>
@@ -385,31 +420,6 @@
   <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-check-expect/</loc>
     <lastmod>2018-09-23T12:36:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/tags/ap-cs/</loc>
-    <lastmod>2018-09-12T15:57:47-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/tags/haskell/</loc>
-    <lastmod>2018-09-12T15:57:47-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/tags/homework/</loc>
-    <lastmod>2018-09-12T15:57:47-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/tags/hw/</loc>
-    <lastmod>2018-09-12T15:57:47-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/tags/</loc>
-    <lastmod>2018-09-12T15:57:47-05:00</lastmod>
   </url>
   
   <url>

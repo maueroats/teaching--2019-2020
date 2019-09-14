@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Why Racket? :: WY Computer Science</title>
+<title>Ch03. Reading Guide :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/intermediate-cs/resources/why-racket/">
+  <body data-url="/ai/ch03/ch03-reading/">
     
       <header>
   <div class="logo">
@@ -429,10 +429,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/" class="dd-item haschildren
+    <li data-nav-id="/ai/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ai/">Artificial Intelligence</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ai/">Artificial Intelligence</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ai/ch01/" class="dd-item haschildren
@@ -486,13 +487,14 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/ch03/" class="dd-item haschildren
+    <li data-nav-id="/ai/ch03/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ai/ch03/">Ch 03 Lisp</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ai/ch03/">Ch 03 Lisp</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ai/ch03/ch03-reading/" class="dd-item">
+      <li data-nav-id="/ai/ch03/ch03-reading/" class="dd-item active">
         <div>
           <a href="/ai/ch03/ch03-reading/">
             Ch03. Reading Guide
@@ -510,21 +512,19 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/intermediate-cs/resources/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/resources/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/resources/">Resources</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item active">
+      <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
         <div>
           <a href="/intermediate-cs/resources/why-racket/">
             Why Racket?
@@ -709,20 +709,22 @@
     <option value="/ap-cs/" >
    AP CS</option>
     <option value="/ai/" >
-   Artificial Intelligence</option>
+   Artificial Intelligence</option> 
+    <option value="/ai/ch01/" >
+  - 
+   Ch 01</option>
+    <option value="/ai/ch02/" >
+  - 
+   Ch 02</option>
+    <option value="/ai/ch03/" >
+  - 
+   Ch 03 Lisp</option> 
+      <option value="/ai/ch03/ch03-reading/"  selected>-- Ch03. Reading Guide</option>
+  
+      <option value="/ai/resources/" >- AI Resources</option>
+  
     <option value="/intermediate-cs/" >
-   Intermediate CS</option> 
-    <option value="/intermediate-cs/resources/" >
-  - 
-   Resources</option> 
-      <option value="/intermediate-cs/resources/why-racket/"  selected>-- Why Racket?</option>
-      <option value="/intermediate-cs/resources/ics-wescheme-note/" >-- WeScheme</option>
-  
-    <option value="/intermediate-cs/ch03/" >
-  - 
-   Chapter 3</option>
-      <option value="/intermediate-cs/e-courses/" >- Online Help</option>
-  
+   Intermediate CS</option>
     <option value="/robotics/" >
    Robotics</option>
     <option value="/ftc/" >
@@ -739,57 +741,121 @@
     </div>
     
 
-    <h1>Why Racket?</h1>
+    <h1>Ch03. Reading Guide</h1>
     
     
     
-    <blockquote>
-<p>Many people we encounter tell us they wish they knew how to code and then ask which programming language they should learn. Given the press that some programming languages get, this question is not surprising. But it is also wholly inappropriate. Learning to program in a currently fashionable programming language often sets up students for eventual failure. Fashion in this world is extremely short lived. A typical “quick programming in X” book or course fails to teach principles that transfer to the next fashion language. Worse, the language itself often distracts from the acquisition of transferable skills, at the level of both expressing solutions and dealing with programming mistakes.</p>
+    
 
-<p>&ndash; <a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/part_preface.html">Felleison et al, <em>How to Design Programs</em>, Second Edition</a>.</p>
-</blockquote>
+<ol>
+<li><p>What are the six &ldquo;maxims&rdquo;? List each and give a one sentence example.</p></li>
 
-<p>To understand why Racket is a good language to learn, one need read no further than <a href="http://www.picturingprograms.com/download/chap00.pdf">Section 0.1</a> of Stephen Bloch&rsquo;s <em>Picturing Programs</em>. Please read it now if you have not.</p>
+<li><p>What does the function <code>caddar</code> do, anyway?</p></li>
 
-<p>To summarize, here are major arguments for choosing Racket over a more
-&ldquo;popular&rdquo; programming language:</p>
+<li><p>Why is <code>find</code> preferred over a <code>loop</code>? Give two reasons.</p></li>
 
-<ul>
-<li><p>Racket&rsquo;s uniform syntax (everything is in parentheses, no order of
-operations, means that everything you do learn is a real
-intellectual concept.</p></li>
+<li><p>Which two ways are offered for setting variable to a value? Is
+there a maxim that would apply to help you make the choice? How
+about overall guidance about using these ways in your program?</p></li>
+</ol>
 
-<li><p>Racket works without any incantations that cannot be understood by a
-beginner. Example: Java&rsquo;s <code>public static void main (String[] args)</code>
-incantation.</p></li>
+<h2 id="special-forms">Special Forms</h2>
 
-<li><p>Racket&rsquo;s language levels protects you from advanced features that
-could be misunderstood at the start, but lets you continue to
-program in the same familiar language with more advanced features
-when you are ready.</p></li>
+<ol>
+<li><p>List two definitions special forms that you do not know how to use
+right now.</p></li>
 
-<li><p>Any language you choose will be obsolete by the time you enter the
-workforce in 4-8 years, so effort spent learning language-specific
-syntax is not productive. Instead, you need to learn how to learn a
-new language. Most programmers find themselves working in a variety
-of languages depending on the requirements of their current task.</p></li>
+<li><p>What do you think the <code>incf</code> and <code>decf</code> special forms do?</p></li>
 
-<li><p><a href="https://en.wikipedia.org/wiki/Paul_Graham_(computer_programmer)">Paul Graham&rsquo;s</a> article <a href="http://www.paulgraham.com/avg.html"><em>Beating the Averages</em></a> explains how they used Lisp to make a very successful business (it was worth almost $50 million when it was purchased by Yahoo!). Lisp is a language very similar to Racket.</p></li>
+<li><p>Under what circumstances does <code>(defvar x 5)</code> set the variable <code>x</code>
+to the value 5?</p></li>
+</ol>
 
-<li><p>Racket includes a way to build <a href="https://docs.racket-lang.org/continue/index.html?q=web%20applications">web applications</a> as well as a
-<a href="https://docs.racket-lang.org/gui/windowing-overview.html?q=gui">graphical user interface builder</a> that works on any kind of computer.</p></li>
+<h3 id="student">Student</h3>
 
-<li><p>Nobody should pass judgement on Racket until they understand the
-<a href="http://www.greghendershott.com/fear-of-macros/Preface.html">macro system</a> that it has! Consider that a challenge if you are an advanced student.</p></li>
-</ul>
+<ol>
+<li><p>Write the form to define a <code>student</code> structure that contains name,
+division, id, and an optional <code>home-phone</code> which is set to <code>nil</code> if
+it is not available.</p></li>
+
+<li><p>Create a student with name DocMo, division A321, and id number 666321.</p></li>
+
+<li><p>Create a student with your name, division, id number, and a home
+phone of 773-534-7500.</p></li>
+
+<li><p>How can you test to see if a variable <code>v</code> holds a <code>student</code>?</p></li>
+
+<li><p>Given the student from two exercises ago, how do you make a list
+containing just the name and division number.</p></li>
+
+<li><p>Set the division of <code>DocMo</code> to 934.</p></li>
+
+<li><p>Which is more efficient, storing a list with (name, division, id,
+home phone) or using a structure? Explain.</p></li>
+</ol>
+
+<h2 id="conditionals">Conditionals</h2>
+
+<ol>
+<li><p>What is the most basic special form?</p></li>
+
+<li><p>What form should you use to replace <code>(if good-friend nil
+(run-fast))</code>?</p></li>
+
+<li><p>Given an example when the table on page 53 (pdf page 62) does not
+contain a perfectly accurate translation of the conditional
+form. Be specific.</p></li>
+
+<li><p>Give one way to print a string.</p></li>
+
+<li><p>Read the examples using <code>and</code> or <code>or</code> to run conditionals and then
+write an example that prints out &ldquo;Go Fish&rdquo; if the function <code>q19</code>
+is called with neither the color <code>'red</code> nor the suit <code>'clubs</code>.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">q19</span> <span style="color:#111">(</span><span style="color:#111">color</span> <span style="color:#111">suit</span><span style="color:#111">)</span>
+  <span style="color:#f92672">...</span><span style="color:#111">)</span></code></pre></div></li>
+
+<li><p>Which special forms are preferred when the main purpose is to take
+an action? How about returning a value?</p></li>
+
+<li><p>Given a bunch of tests in a <code>cond</code> that all evaluate to
+true, which value should be returned?</p></li>
+
+<li><p>Suppose you want to perform different actions depending on
+whether an input <code>dk</code> is a number or a list. What special form do
+you use?</p></li>
+
+<li><p>Write a function that doubles any number it is given and returns
+only the first element if given a list.</p></li>
+</ol>
+
+<h2 id="repetition">Repetition</h2>
+
+<ol>
+<li>What is <code>mapc</code>? <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">Look it
+up</a>
+and summarize.
+<br /></li>
+</ol>
+
+<h2 id="exercises">Exercises</h2>
+
+<ol>
+<li><p>Do something different depending on the type of an input. Error if
+not one of the choices.</p></li>
+
+<li><p>Truncate a list after the third element. (Note that this is a
+horrible idea.)</p></li>
+
+<li><p>Exercise 3.1, page 56 (PDF page 67).</p></li>
+</ol>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/intermediate-cs/resources/" title="Resources"> <i class="fa fa-chevron-left"></i><label>Resources</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/resources/ics-wescheme-note/" title="WeScheme" style="margin-right: 0px;"><label>WeScheme</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ai/ch03/" title="Ch 03 Lisp"> <i class="fa fa-chevron-left"></i><label>Ch 03 Lisp</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/" title="Intermediate CS" style="margin-right: 0px;"><label>Intermediate CS</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -804,7 +870,7 @@ of languages depending on the requirements of their current task.</p></li>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 05/09/2018
+        <i class='fa fa-calendar'></i> Last update on 13/09/2019
     </div>
     
 
