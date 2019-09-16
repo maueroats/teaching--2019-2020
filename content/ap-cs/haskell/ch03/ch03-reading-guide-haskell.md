@@ -33,7 +33,7 @@ You should use valid Haskell types in all of your answers. Unless needed, I stic
     
 ## Class Constraints
 13. Where can you find a class constraint?
-14. What special symbol separate a class constraint from a function's type?
+14. What special symbol separates a class constraint from a function's type?
 15. What is the best type to give the function:
     ```
      mystery a b = if ( a < b ) then "A small" else "A large"
