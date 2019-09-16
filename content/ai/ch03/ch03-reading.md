@@ -1,5 +1,5 @@
 ---
-title: "Ch03. Reading Guide"
+title: "Ch3 Reading Guide 3.1-3.6"
 date: 2019-09-13T21:00:44-05:00
 weight: 10
 draft: false
@@ -7,7 +7,19 @@ draft: false
 #theme: white
 ---
 
-1. What are the six "maxims"? List each and give a one sentence example.
+## Learning Guide
+
+Of course you should read this chapter carefully. It is a quick
+introduction to the major features of Common Lisp. There are
+additional sources to read about lightly covered topics:
+
+* [Sequences](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node141.html).
+
+
+## Questions
+
+1. Pick what you believe are the three most important of the six
+   "maxims"? List each and give a one sentence example.
 
 2. What does the function `caddar` do, anyway?
 
@@ -88,6 +100,59 @@ containing just the name and division number.
 24. What is `mapc`? [Look it
     up](http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm)
     and summarize.
+
+25. What is the difference between `remove` and `delete`? List a few
+    useful variants of `remove`.
+
+26. How do you find the index of an element in a list? Why are there
+    two possibilities? 
+
+27. There is an important difference between the `length9` (page 62 /
+    PDF 73) and `length10` (page 63 / PDF 74) functions. Carefully
+    explain the difference and the implications this difference has
+    for the memory usage of the two functions. (**Discuss.**)
+
+## Other
+
+28. What is the value of `(progn 1 2 3)`? 
+
+29. Give an example of a situation where using `progn` is helpful.
+
+30. What is the result of using the `magic` function below in `(magic
+    (list 5 10 40 8))`? Explain carefully.
+
+	```lisp
+	(defun magic (numbers)
+	  (* 3 
+		 (let ((ans 5))
+		   (dolist (x numbers ans)
+			 (if (= x 1)
+				 (return 42)
+				 (setf ans (* ans x)))))))
+	```
+
+## Macros
+
+31. Write what you understand a macro to be, in your own words. If you
+    are not sure, write a question or two that you have about macros.
+	
+32. How do you get one step of expansion of a macro?
+
+## Equality and Sequences (3.4-3.5)
+
+33. There are five main ways to compare items for equality: `=`, `eq`,
+    `eql`, `equal`, `equalp`. Briefly explain what each one does and
+    how they differ.
+
+34. How is `nth` different from all of the other "getter" functions in
+    Section 3.5?
+	
+35. What is the difference between `assoc` and `rassoc`? 
+
+36. What is a disadvantage of an association list?
+
+37. What more complex data structure can perform the same basic
+    function as an association list, but more quickly?
 	
 ## Exercises
 
@@ -99,6 +164,13 @@ containing just the name and division number.
    
 3. Exercise 3.1, page 56 (PDF page 67).
 
+4. Exercises 3.3 and 3.4, page 70 (PDF page 81): printing an
+   expression using dotted pair notation.
+
+5. Write a function that takes in a hash table an a symbol, and
+   returns the value from the hash table. Unless the symbol is
+   `'DANGER`, in which case it removes the associations for `'MAD` and
+   `'ROBOT` from the hash table.
 
 
 

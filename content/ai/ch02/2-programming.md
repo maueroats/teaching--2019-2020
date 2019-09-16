@@ -21,6 +21,9 @@ value2))`. The `assoc` function takes in a key and returns the
 ; (get-good) => '(good 50)
 ```
 
+For completeness, a "property list" has the form `(:key1 value1 :key2 value2)`. 
+You could [read more about property lists](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node108.html) or just [see a few examples](https://riptutorial.com/common-lisp/example/12948/property-lists).
+
 ## Debugging
 
 * `(trace cow-graze)`: Show the inputs and outputs of every call to `cow-graze`.
