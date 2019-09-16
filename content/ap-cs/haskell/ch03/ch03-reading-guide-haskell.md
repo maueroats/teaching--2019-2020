@@ -6,10 +6,8 @@ tags:
  - reading-guide
 draft: false
 weight: 20
+description: "We learn about types and typeclasses. Types are familiar. Typeclasses are more abstract - roughly, they specify abilities."
 ---
-
-We learn about types and typeclasses. 
-<!--more-->
 
 You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.
 
@@ -20,8 +18,11 @@ You should use valid Haskell types in all of your answers. Unless needed, I stic
 7. What is the type signature for a function that takes in an integer and puts out a string?
 8. What is the type signature for a function that takes in two integers and multiplies them?
 9. What is the type of (factorial 50) from the book? How is that different from an Int?
-3. Write the signature of a function `prob3` that takes in a number and puts out a string.
-4. What is the correct way to write the type signature of a function `prob4` that take single number and a list of numbers and puts out a list of numbers?
+7. Write the signature of a function `prob7` that takes in a number
+   (an integer) and puts out a string.
+8. What is the correct way to write the type signature of a function
+   `prob8` that take single number (integer) and a list of numbers
+   (integers) and puts out a list of numbers (integers)?
 
 10. Find out the difference between Float and Double. Summarize it here.
 11. How can you tell whether the text "string" in a program refers to a variable or a type?

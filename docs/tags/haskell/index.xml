@@ -86,7 +86,8 @@ The sum of the squares of the first ten natural numbers is,&lt;/p&gt;
       <pubDate>Wed, 13 Sep 2017 13:18:35 -0500</pubDate>
       
       <guid>https://wy-cs.website/ap-cs/haskell/ch03/ch03-reading-guide-haskell/</guid>
-      <description>&lt;p&gt;We learn about types and typeclasses.&lt;/p&gt;</description>
+      <description>You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.
+Basics  How do you find the type of an expression (when using the interpreter)? What is the type of a string, written in correct Haskell type syntax? What is the type of the expression (5 == 5)? What is the type signature for a function that takes in an integer and puts out a string?</description>
     </item>
     
     <item>

@@ -1,5 +1,5 @@
 ---
-title: "Additional Exercises"
+title: "Exercises"
 date: 2019-09-12T10:57:27-05:00
 #weight: 
 draft: false
