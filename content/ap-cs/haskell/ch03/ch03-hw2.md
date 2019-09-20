@@ -18,16 +18,9 @@ and tails as 0. The numbers are written in rows of 10.
    They still break the data every line. Translate the data into
    numbers.
    
-     That is, change input data like this:
-
-        ["xcxcxcxxxc",
-         "xcxxcxxxcc"]
-
-      into data like this:
-
-        [[1,0,1,0,1,0,1,1,1,0],
-         [1,0,1,1,0,1,1,1,0,0]]
-
+        ["xcxcxcxxxc", "xcxxcxxxcc"] ==
+          q1 [[1,0,1,0,1,0,1,1,1,0],
+              [1,0,1,1,0,1,1,1,0,0]]
 
 2. (`q2`) The nested list format is good for writing, but not necessarily the
    best for analyzing. Write a program to "flatten" the nested input
