@@ -37,7 +37,7 @@ and tails as 0. The numbers are written in rows of 10.
    `q2` outputs) and output a tuple containing the number of 0s and
    number of 1s in the data.
    
-        (4, 6) ==  q3 [1,0,1,0,1,0,1,1,1]
+        (3, 6) ==  q3 [1,0,1,0,1,0,1,1,1]
    
 4. (`q4`) One way in which random data and human-faked data are
    different is that humans tend to make shorter runs of the same
@@ -49,10 +49,10 @@ and tails as 0. The numbers are written in rows of 10.
 
 5. (`q5`) Now write a function that outputs a list of all of the run-lengths.
 
-        [5,1,1,6] == q5 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]
+        [5,1,1,7] == q5 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]
 
 6. (`q6`) *Bonus* Given the output from `q5`, produce a list of tuples
    (run length, number of runs of that length). Order does not matter.
    
-         [(1,2),(5,1),(6,1)] == q6 $ q5 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]
+         [(1,2),(5,1),(7,1)] == q6 $ q5 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]
 
