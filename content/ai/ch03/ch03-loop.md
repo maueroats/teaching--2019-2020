@@ -226,7 +226,9 @@ terminate.  Note that WHILE occurs after the WHEN.
 
 ## always, never, thereis
 
-These are used to get answers, not do work.
+These are used to get answers: is the condition _always_, sometimes,
+or _never_ satisfied? For sometimes, the keyword is _thereis_. The
+loop construct gives an answer of `T` or `NIL`.
 
 Make sure I is always less than 11 (two ways).
 The FOR construct terminates these loops.
@@ -378,7 +380,13 @@ Sum a function of elements of a list.
 
 ### with
 
-Defines variables. All at once using "with...and...".
+Defines variables, like `let` or `let*`. **DANGER** not very
+useful. Only runs once at the start of the loop.
+
+* (sequential assignment, `let*`) second definition can depend on
+  the first: a bunch of `with` statements 
+* (parallel assignment, `let`) all assignments happen at the same
+  time: `with` then lots of `and` sub-clauses.
 
 A bunch of `with` clauses in a row cause the definitions ("bindings")
 to occur in sequence. 
