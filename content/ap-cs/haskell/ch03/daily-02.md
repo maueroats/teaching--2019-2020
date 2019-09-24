@@ -1,5 +1,5 @@
 ---
-title: "Ch3 Daily 02"
+title: "Chapter 3 Daily 02"
 date: 2019-09-24T15:16:52-05:00
 #weight: 
 draft: false
