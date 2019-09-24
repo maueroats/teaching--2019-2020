@@ -39,9 +39,9 @@ draft: false
 
 6.  A palindrome is a sequence that reads the same forwards
     and backwards.  The list `(A B C D C B A)` is a palindrome; 
-	`(A B C A B C)` is not.  Write a function `palindromep` that
+    `(A B C A B C)` is not.  Write a function `palindromep` that
     returns T if its input is a palindrome.
-	
+    
 7. Write `make-palindrome` that takes in a list and makes a palindrome
    out of it in a simple way. Given `(YOU AND ME)` as input it should
    return `(YOU AND ME ME AND YOU)`.
@@ -49,7 +49,7 @@ draft: false
 8. Write a crude program to compute the probability that an integer
    picked from M to N is a perfect square.
 
-	{{% figure src="ps1-n89.png" %}}
+    {{% figure src="ps1-n89.png" %}}
 
 
 9. Earlier, we started a simulation of a dice rolling game. Finish
@@ -72,7 +72,7 @@ draft: false
    features,  with  the  symbol -VS-  separating  the  first  object
    from  the  second.    Thus,  when  given  a list:
    
-		(large red shiny cube -vs- small shiny red four-sided pyramid)
+        (large red shiny cube -vs- small shiny red four-sided pyramid)
 
        the  program will  respond  with:
 
@@ -85,4 +85,9 @@ draft: false
    * `count-common`
    * `compare`
    
-	
+    
+## Pro Tips
+
+* You can never go wrong with using `equal` for comparison. The function `=` compares
+  numbers, `eql` compares symbols, so it is good enough for rock-paper-scissors.
+
