@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Haybales :: WY Computer Science</title>
+<title>Chapter 3 Daily 03 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ap-cs/haskell/usaco/haybales/">
+  <body data-url="/ap-cs/haskell/ch03/daily-03/">
     
       <header>
   <div class="logo">
@@ -147,10 +147,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/ch03/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/haskell/ch03/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/ch03/">3. Types and Typeclasses</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/ch03/">3. Types and Typeclasses</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/" class="dd-item">
@@ -174,7 +175,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/ch03/daily-03/" class="dd-item">
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-03/" class="dd-item active">
         <div>
           <a href="/ap-cs/haskell/ch03/daily-03/">
             Chapter 3 Daily 03
@@ -298,14 +299,13 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/usaco/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/usaco/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/usaco/">USACO Practice</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/usaco/">USACO Practice</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ap-cs/haskell/usaco/haybales/" class="dd-item active">
+      <li data-nav-id="/ap-cs/haskell/usaco/haybales/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/usaco/haybales/">
             Haybales
@@ -770,7 +770,15 @@
    2. Starting Out</option>
     <option value="/ap-cs/haskell/ch03/" >
   -- 
-   3. Types and Typeclasses</option>
+   3. Types and Typeclasses</option> 
+      <option value="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/" >--- Chapter 3 Reading Guide</option>
+      <option value="/ap-cs/haskell/ch03/ch03-hw1/" >--- Chapter 3 Problem Set</option>
+      <option value="/ap-cs/haskell/ch03/ch03-walkthrough/" >--- Chapter 3 Walkthrough</option>
+      <option value="/ap-cs/haskell/ch03/daily-03/"  selected>--- Chapter 3 Daily 03</option>
+      <option value="/ap-cs/haskell/ch03/daily-02/" >--- Chapter 3 Daily 02</option>
+      <option value="/ap-cs/haskell/ch03/daily-01/" >--- Chapter 3 Daily 01</option>
+      <option value="/ap-cs/haskell/ch03/ch03-hw2/" >--- Chapter 3 Test</option>
+  
     <option value="/ap-cs/haskell/ch04/" >
   -- 
    4. Syntax in Functions</option>
@@ -782,9 +790,7 @@
    6. Higher Order Functions</option>
     <option value="/ap-cs/haskell/usaco/" >
   -- 
-   USACO Practice</option> 
-      <option value="/ap-cs/haskell/usaco/haybales/"  selected>--- Haybales</option>
-  
+   USACO Practice</option>
     <option value="/ap-cs/haskell/daily/" >
   -- 
    Haskell Daily Notes</option>
@@ -816,24 +822,37 @@
     </div>
     
 
-    <h1>Haybales</h1>
+    <h1>Chapter 3 Daily 03</h1>
 
     
     
     
-    <p>The <a href="http://usaco.org/index.php?page=viewproblem2&amp;cpid=666">haybales</a> problem
-is from Bronze 1, December 2016. In this directory you can download
-the <a href="usaco-y2016-m12.tar.bz2">starter code</a>. If you are
-new to Unix, you unpack it with the command <code>tar zvxf usaco-y2016-m12.tar.bz2</code>.
-Inside there is a <code>README.md</code> file that has a few more instructions.</p>
+    <p>Old school multiplication problems have work that looks like this:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  123
+ x 45
+ ----
+  615
+ 4920
+ ----
+ 5535</pre></div>
+<p>The top two numbers are the inputs, and the bottom number is the
+output, which is easy to get the computer to find. In between are the
+partial products.</p>
+
+<p>You are writing a <code>partialProducts</code> function that produces a list of
+partial products.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">partialProducts 123 45 == [615, 4920]</pre></div>
+<p>If you get this function to work, then consider how to make a partial
+products function that works in different bases (showing everything in
+the base you are working on).</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/usaco/" title="USACO Practice"> <i class="fa fa-chevron-left"></i><label>USACO Practice</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/daily/" title="Haskell Daily Notes" style="margin-right: 0px;"><label>Haskell Daily Notes</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/haskell/ch03/ch03-walkthrough/" title="Chapter 3 Walkthrough"> <i class="fa fa-chevron-left"></i><label>Chapter 3 Walkthrough</label></a>
+    <a class="nav nav-next" href="/ap-cs/haskell/ch03/daily-02/" title="Chapter 3 Daily 02" style="margin-right: 0px;"><label>Chapter 3 Daily 02</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -849,7 +868,7 @@ Inside there is a <code>README.md</code> file that has a few more instructions.<
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 03/10/2017
+        <i class='fa fa-calendar'></i> Last update on 25/09/2019
     </div>
     
 
