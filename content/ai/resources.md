@@ -25,6 +25,12 @@ Many people have had various complaints about Portacle. You could try
 Edition](https://franz.com/downloads/clp/survey) or
 [Lispworks](http://www.lispworks.com/downloads/). 
 
+## Articles
+
+* [How lisp became God's own programming
+language](https://twobithistory.org/2018/10/14/lisp.html). 
+* [The Roots of Lisp](http://languagelog.ldc.upenn.edu/myl/llog/jmc.pdf)
+
 ## Additional Reading
 
 Northwestern University's [EECS
