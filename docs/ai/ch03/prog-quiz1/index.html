@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Chapter 3 Quiz 1 :: WY Computer Science</title>
+<title>Ch3 Quiz 1 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -539,7 +539,7 @@
       <li data-nav-id="/ai/ch03/prog-quiz1/" class="dd-item active">
         <div>
           <a href="/ai/ch03/prog-quiz1/">
-            Chapter 3 Quiz 1
+            Ch3 Quiz 1
           </a>
         </div>
     </li>
@@ -778,7 +778,7 @@
    Ch 03 Lisp</option> 
       <option value="/ai/ch03/ch03-reading/" >-- Ch3 Reading Guide 3.1-3.6</option>
       <option value="/ai/ch03/ch03-loop/" >-- Ch3 Loop by Example</option>
-      <option value="/ai/ch03/prog-quiz1/"  selected>-- Chapter 3 Quiz 1</option>
+      <option value="/ai/ch03/prog-quiz1/"  selected>-- Ch3 Quiz 1</option>
       <option value="/ai/ch03/prog-hw1/" >-- Ch3 Programming HW1</option>
   
       <option value="/ai/resources/" >- AI Resources</option>
@@ -801,7 +801,7 @@
     </div>
     
 
-    <h1>Chapter 3 Quiz 1</h1>
+    <h1>Ch3 Quiz 1</h1>
 
     
     
@@ -818,12 +818,12 @@ problem set from Chapter 3.</p>
 
 <li><p>The cities in states are stored in a list <code>*ATLAS*</code>, like this:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">((pennsylvania pittsburg)
- (pennsylvania harrisburg)      
+ (pennsylvania harrisburg)
  (new-jersey newark)
  (ohio columbus))</pre></div>
 <p>Write a function that returns all of the cities in a given state.</p></li>
 
-<li><p>In playing craps, the first throw of the dice is crucial A throw of
+<li><p>In playing craps, the first throw of the dice is crucial. A throw of
 7 or 11 is an instant win. A throw of 2, 3, or 12 is an instant
 loss.</p></li>
 </ol>
@@ -831,17 +831,19 @@ loss.</p></li>
 <p>a. The function <code>throw-dice</code> returns  alist of two random numbers,
    each from 1 to 6.</p>
 
-<p>b. Two ones is &ldquo;snake eyes&rdquo; and two sixes is &ldquo;boxcars&rdquo;.</p>
+<p>b. Two ones is &ldquo;snake eyes&rdquo; and two sixes is &ldquo;boxcars&rdquo;. Write two
+   predicates <code>snake-eyes-p</code> and <code>boxcars-p</code> that take in a throw and
+   return T in the appropriate situation.</p>
 
 <p>c. Write predicates <code>instant-win-p</code> and <code>instant-loss-p</code> to detect
-   these conditions. Each hould take a throw as input.</p>
+   the instant win/loss conditions for the first roll. Each hould take a throw as input.</p>
 
 <p>d. Write a function <code>say-throw</code> that takes a throw as input asd
    returns either the sum of the two dice or the symbol SNAKE-EYES or
    BOXCARS if the sum is 2 or 12.</p>
 
 <p>e. If you don&rsquo;t win or lose, the value that you get becomes your
-   &ldquo;point&rdquo;. Once the point is established, you continue throwingg the
+   &ldquo;point&rdquo;. Once the point is established, you continue throwing the
    dice until you either win by making the point again, or lose by
    throwing a 7. Write a simulation of the craps game that produce a
    list of values that ends when you win or lose the game.</p>
@@ -851,7 +853,7 @@ loss.</p></li>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">   * `(SNAKE-EYES YOU-LOSE)`
    * `(7 YOU-WIN)`
    * `(11 YOU-WIN)`
-   * `(YOUR POINT IS 5 2 3 7 5 YOU-WIN)` 
+   * `(YOUR POINT IS 5 10 3 11 5 YOU-WIN)` 
    * `(BOXCARS YOU-LOSE)` 
    * `(YOUR POINT IS 4 8 7 YOU-LOSE)`</pre></div>
 <h2 id="ignore-this-part">Ignore this part</h2>
