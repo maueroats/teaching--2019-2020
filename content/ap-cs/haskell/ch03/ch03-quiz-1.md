@@ -1,7 +1,7 @@
 ---
-title: "Chapter 3 Quiz"
+title: "Chapter 3 Quiz 1"
 date: 2017-09-19T08:59:37-05:00
-weight: 45
+weight: 201
 tags: 
  - haskell
  - quiz

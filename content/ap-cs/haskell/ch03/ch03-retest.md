@@ -1,7 +1,7 @@
 ---
 title: "Chapter 3 Test Retake"
 date: 2018-09-23T17:18:23-05:00
-weight: 60
+weight: 360
 draft: true
 #type: slide
 #theme: white

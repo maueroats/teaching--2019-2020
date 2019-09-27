@@ -1,7 +1,7 @@
 ---
 title: "Chapter 3 Haskell Test"
 date: 2018-09-21T07:28:38-05:00
-weight: 50
+weight: 350
 draft: true
 #type: slide
 #theme: white

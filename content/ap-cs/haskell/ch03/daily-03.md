@@ -1,7 +1,7 @@
 ---
 title: "Chapter 3 Daily 03"
 date: 2019-09-25T15:27:40-05:00
-#weight: 
+weight: 103
 draft: false
 #type: slide
 #theme: white
