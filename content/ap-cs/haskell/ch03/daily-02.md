@@ -23,6 +23,11 @@ draft: false
    `[15,0,0,13]` and output the value of the actual number. 
    
         61453 == hexDec [15,0,0,13]
+
+    Each number represents the decimal value of a base 16
+    digit:
+
+        15*16^3 + 0*16^2 + 0*16^1 + 13*16^0
         
 
 4. Later we will write `hexParse :: String -> [Int]` to produce a the
