@@ -24,9 +24,24 @@ For example: `(3 7 -1)` indicates that the rule applies when trying to
 get a point of 3, if the current roll is a 7, then the game is lost.
 
 The rules will include a symbol `POINT` which is replaced by the
-current value of the point wherever it occurs.
+current value of the point wherever it occurs, so you can say "getting
+the same value as the point" by using the rule:
 
     (POINT POINT 1)
 
+Think: How would you use `POINT` to indicate that rolling a 7 when you are
+trying for any other number results in a loss?
 
+## Technical Orientation
 
+You will define a list of rules:
+
+	(defparameter *CRAPS-RULES* '((0 7 1) (POINT POINT 1) ...))
+	
+1. Write a function `simulate-1` that takes in the current point
+value as well as the current roll total, and puts out an outcome
+(0,+1,-1) using the `*CRAPS-RULES*`.
+
+2. Write a function `simulate` that uses `simulate-1` repeatedly to
+   generate a list of all of the dice roll totals in one play of the game.
+   
