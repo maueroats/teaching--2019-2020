@@ -1,7 +1,7 @@
 ---
-title: "Ch3 Programming HW1"
+title: "Ch3 HW1"
 date: 2019-09-22T19:56:27-05:00
-#weight: 
+weight: 110
 draft: false
 #type: slide
 #theme: white

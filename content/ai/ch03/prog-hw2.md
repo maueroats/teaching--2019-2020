@@ -1,47 +1,56 @@
 ---
-title: "Ch3 A Rule-Based Game"
-date: 2019-09-27T17:58:43-05:00
-#weight: 
+title: "Ch3 HW2"
+date: 2019-09-29T07:32:55-05:00
+weight: 120
 draft: false
 #type: slide
 #theme: white
 ---
 
-The game of Craps is played with two dice. Read about [street
-craps](https://ourpastimes.com/play-street-craps-4505587.html) but
-ignore the betting.
+{{% use-mathjax %}}
+$\newcommand{\abs}[1]{\lvert{#1}\rvert}$
 
-You are going to create a rule-based craps simulator.
+The purpose of this homework is to practice working with loop. There is [starter code](hw2.lisp) to download, also available at the end of this document.
 
-You begin with a set of rules. Our rules will be a list of 3-tuples
-`(point roll outcome)`:
+* (`one-more-mult`) Make sure you know how to use (mod x n) to figure out if x is
+divisible by n. Write a function that takes in an integer and returns
+true when the integer is one more than a multiple of 8.
 
-* `point` is the current point value (0 at the start), 
-* `roll` is the current roll, and 
-* `outcome` is +1 for a win, -1 for a loss and 0 if the game continues.
+* (`all-6-by-17`) Given a list of integers, return all of the elements that are
+either greater than 100 or leave a remainder of 6 when divided by 17.
 
-For example: `(3 7 -1)` indicates that the rule applies when trying to
-get a point of 3, if the current roll is a 7, then the game is lost.
+* (`long-words`) Given a list of words, return the number of words in the list that
+  are longer than 6 letters.
 
-The rules will include a symbol `POINT` which is replaced by the
-current value of the point wherever it occurs, so you can say "getting
-the same value as the point" by using the rule:
+* (`good-lists`) Given a list of lists `ys`, if a sublist y of ys begins with the
+symbol `GOOD`, then put every element from the list y in the answer.
 
-    (POINT POINT 1)
+## Working with pairs
 
-Think: How would you use `POINT` to indicate that rolling a 7 when you are
-trying for any other number results in a loss?
+In all of the following problems, you are given a list of ordered
+pairs of numbers, like `(list 5 12)`.
 
-## Technical Orientation
+* (`x010`) Return a list of all of the x values that are in the interval [0,10].
 
-You will define a list of rules:
+* (`y200`) Return a list of all of the points whose y values are 
+  either greater than 200 or less than -200.
 
-	(defparameter *CRAPS-RULES* '((0 7 1) (POINT POINT 1) ...))
-	
-1. Write a function `simulate-1` that takes in the current point
-value as well as the current roll total, and puts out an outcome
-(0,+1,-1) using the `*CRAPS-RULES*`.
+* (`ptf`) Find the greatest value of $f(x,y) = x^2 + 3 y^2 - 2 x y$ using the
+  points in the list.
 
-2. Write a function `simulate` that uses `simulate-1` repeatedly to
-   generate a list of all of the dice roll totals in one play of the game.
-   
+* (`smd`) Find the smallest difference $\abs{x-y}$ in the list.
+
+* (`aop`) If every point is on the parabola $y=x^2$ then return true (otherwise false).
+
+* (`isfar`) If any point has $\abs{y - x^2} > 10$, then return true.
+
+* (`not10x`) If no point in the list has $y = 10^x$, return true. 
+
+## More
+
+* (`xyzTrip`) Given a list of triples $(x,y,z)$, which we write `(list x y z)`, 
+  return a list containing `(list x y)` for every point where $z=x^2+y^2$.
+
+## Starter Code
+
+{{< gist maueroats e4873a51813a3a5e6fb0d3c8a1b6b246 >}}
