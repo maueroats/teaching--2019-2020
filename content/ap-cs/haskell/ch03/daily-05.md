@@ -35,6 +35,14 @@ draft: false
    as in the previous exercise. The shorter number should be padded
    with zeros to be the same length as the long number.
    
+    The type signature for `op` in the big `bitwise` signature is
+    `(Int->Int->Int)`.  Example:
+   
+        xor' :: Int -> Int -> Int
+        xor' a b = if a == b then 0 else 1
+
+        bitwise xor' [1,0,1,0] [0,1,1,0] = [1,1,0,0]
+
 5. `txtToBin :: String -> [[Int]]`. Translate a string into a list of
    binary numbers using the location each character is found in the
    (abbreviated) list below. If a character is not found, produce the
