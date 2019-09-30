@@ -70,7 +70,7 @@ either greater than 100 or leave a remainder of 6 when divided by 17."
 (define-test test-all-6-by-17
     "Test all-6-by-17"
   (assert-equal `(103 105 23 40 -28)
-		(all-6-by-17 `(50 60 70 -30 103 80 105 22 23 24 34 40 51 -28))))
+                (all-6-by-17 `(50 60 70 -30 103 80 105 22 23 24 34 40 51 -28))))
 
 
 (defun long-words (wordlist)
@@ -81,8 +81,8 @@ either greater than 100 or leave a remainder of 6 when divided by 17."
 (define-test test-longwords
   "Vocab check"
   (assert-equal 3
-		(long-words (list "short" "transcendental" "transmogrify"
-				  "longer" "stuff" "cuddles" "finish"))))
+                (long-words (list "short" "transcendental" "transmogrify"
+                                  "longer" "stuff" "cuddles" "finish"))))
 
 (defun good-lists (ys)
   "Given a list of lists `ys`, if a sublist y of ys begins with the
@@ -92,8 +92,8 @@ symbol `GOOD`, then put every element from the list y in the answer."
 (define-test test-good-lists
     "Example to help you decode the question."
   (assert-equal `(GOOD LUCK GOOD RIDDANCE)
-		(good-lists `((BAD START) (GOOD LUCK) (EVIL EMPIRE)
-			      (GOOD RIDDANCE) (YEET)))))
+                (good-lists `((BAD START) (GOOD LUCK) (EVIL EMPIRE)
+                              (GOOD RIDDANCE) (YEET)))))
 
 (defun x010 (pts)
   "* (`x010`) Return a list of all of the x values that are in the interval [0,10]."
@@ -101,17 +101,17 @@ symbol `GOOD`, then put every element from the list y in the answer."
 
 (define-test test-x010
     (assert-equal '(0 3 1 9)
-		  (x010 `((0 5) (3 8) (-7 4) (1 13) (15 3) (9 20)))))
+                  (x010 `((0 5) (3 8) (-7 4) (1 13) (15 3) (9 20)))))
 
 (defun y200 (pts)
   "* (`y200`) Return a list of all of the points whose y values are 
   either greater than 200 or less than -200."
-  (list (list 0 1))
+  (list (list 0 1)))
 
 (define-test test-y200
     (assert-equal '((40 -300) (50 201) (5 -200) (50 500))
-		  (y200 '((40 -300) (50 201) (-205 90)
-			  (5 -200) (50 500) (400 95)))))
+                  (y200 '((40 -300) (50 201) (-205 90)
+                          (5 -200) (50 500) (400 95)))))
 
 (defun ptf (pts)
   "* (`ptf`) Find the greatest value of $f(x,y) = x^2 + 3 y^2 - 2 x y$ using the
@@ -167,7 +167,7 @@ symbol `GOOD`, then put every element from the list y in the answer."
 (define-test test-xyzTrip
     "Triples?!"
   (assert-equal '((5 12) (20 21))
-		(xyzTrip '((5 12 169) (8 15 17) (20 21 841)))))
+                (xyzTrip '((5 12 169) (8 15 17) (20 21 841)))))
   
 (run-tests)
 

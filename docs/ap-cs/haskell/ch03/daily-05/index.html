@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Chapter 3 Daily 05 :: WY Computer Science</title>
+<title>Chapter 3 Daily 05 HW :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -220,7 +220,7 @@
       <li data-nav-id="/ap-cs/haskell/ch03/daily-05/" class="dd-item active">
         <div>
           <a href="/ap-cs/haskell/ch03/daily-05/">
-            Chapter 3 Daily 05
+            Chapter 3 Daily 05 HW
           </a>
         </div>
     </li>
@@ -789,6 +789,7 @@
 
 
     </ul>
+
     <section>
     </section>
   </aside>
@@ -821,7 +822,7 @@
       <option value="/ap-cs/haskell/ch03/daily-04/" >--- Chapter 3 Daily 04</option>
       <option value="/ap-cs/haskell/ch03/ch03-quiz-2/" >--- Chapter 3 Quiz 2</option>
       <option value="/ap-cs/haskell/ch03/ch03-test-2019/" >--- Chapter 3 Test 2019</option>
-      <option value="/ap-cs/haskell/ch03/daily-05/"  selected>--- Chapter 3 Daily 05</option>
+      <option value="/ap-cs/haskell/ch03/daily-05/"  selected>--- Chapter 3 Daily 05 HW</option>
   
     <option value="/ap-cs/haskell/ch04/" >
   -- 
@@ -866,7 +867,8 @@
     </div>
     
 
-    <h1>Chapter 3 Daily 05</h1>
+    <h1>Chapter 3 Daily 05 HW</h1>
+
     
     
     
@@ -876,12 +878,49 @@ the start and end number?</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">bcount :: [Int] -&gt; [Int] -&gt; Int
 bcount [1,0,0,1,1] [1,1,0,1,0] == 8</pre></div></li>
 
-<li><p>Binary decimals: the binary number 110.101 means</p>
+<li><p>(SKIP, NO QUESTION) Binary decimals: the binary number 110.101 means</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">2**2 + 2**1 + 2**(-1) + 2**(-3) == 6.625</pre></div>
 <p>Haskell does not believe in negative exponents for integers (using
 <code>^</code>), but will happily do them for decimals (<code>**</code>). Check the type
 signatures&hellip; when the inputs to a function are integers, expect
 the output to be an integer as well.</p></li>
+
+<li><p>(<code>and' :: Int -&gt; Int -&gt; Int</code>). Helper function. Give 1 if both
+inputs are 1, otherwise 0.</p></li>
+
+<li><p>(<code>bitwiseAnd</code>) Given two binary integers <code>a</code> and <code>b</code> (represented
+as lists of 0 and 1), produce the
+binary number given by lining up the ones places and the then
+&ldquo;and&rdquo;-ing the digits of <code>a</code> and <code>b</code> together.</p></li>
+
+<li><p>(<code>bitwise</code>) Given a binary operation (<code>op :: Int -&gt; Int</code>) and two
+binary integers, create a number by performing the operation bitwise
+as in the previous exercise. The shorter number should be padded
+with zeros to be the same length as the long number.</p></li>
+
+<li><p><code>txtToBin :: String -&gt; [[Int]]</code>. Translate a string into a list of
+binary numbers using the location each character is found in the
+(abbreviated) list below. If a character is not found, produce the
+empty list to represent it.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">A-Za-z0-9[space].?</pre></div></li>
+
+<li><p><code>binToMessage :: [[Int]] -&gt; [Int]</code>. Concatenate all of the binary
+numbers into one long string, but make sure each binary number is 6
+digits.</p></li>
+
+<li><p><code>msgDecode :: [Int] -&gt; String</code>. Now decode the big binary number,
+changing it back into text.</p></li>
+
+<li><p><code>encrypt :: String -&gt; String -&gt; String</code>. The encrypt function takes
+in a message string and a key string. The encryption lines up the
+letters in the message and the string, changes the characters into
+binary numbers, joins the binary numbers with <code>xor</code>, and then
+changes the resulting number back into a string. The string will be
+nonsense.</p></li>
+
+<li><p><code>decrypt :: String -&gt; String -&gt; String</code>. Given an encrypted
+message and a key, reverse the encryption process. This is kind of
+tricky; try just re-encrypting the message.</p></li>
 </ol>
 
 
@@ -891,6 +930,7 @@ the output to be an integer as well.</p></li>
     <div id="navigation">
 <a class="nav nav-prev" href="/ap-cs/haskell/ch03/ch03-test-2019/" title="Chapter 3 Test 2019"> <i class="fa fa-chevron-left"></i><label>Chapter 3 Test 2019</label></a>
     <a class="nav nav-next" href="/ap-cs/haskell/ch04/" title="4. Syntax in Functions" style="margin-right: 0px;"><label>4. Syntax in Functions</label><i class="fa fa-chevron-right"></i></a></div>
+
   </div>
 
   </section>
