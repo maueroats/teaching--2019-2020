@@ -30,7 +30,7 @@ draft: false
    binary number given by lining up the ones places and the then
    "and"-ing the digits of `a` and `b` together. 
    
-4. (`bitwise`) Given a binary operation (`op :: Int -> Int`) and two
+4. (`bitwise`) Given a binary operation (`op :: Int -> Int -> Int`) and two
    binary integers, create a number by performing the operation bitwise
    as in the previous exercise. The shorter number should be padded
    with zeros to be the same length as the long number.
