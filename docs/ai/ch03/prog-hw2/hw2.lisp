@@ -120,7 +120,7 @@ symbol `GOOD`, then put every element from the list y in the answer."
 
 (define-test test-ptf
     "What is the greatest value of ptf?"
-  (assert-equal 225000 (ptf '((40 20) (50 200) (-90 40)))))
+  (assert-equal 102500 (ptf '((40 20) (50 200) (-90 40)))))
 
 (defun smd (pts)
   "* (`smd`) Find the smallest difference $\abs{x-y}$ in the list."

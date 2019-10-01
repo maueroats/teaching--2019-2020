@@ -29,6 +29,8 @@ draft: false
    as lists of 0 and 1), produce the
    binary number given by lining up the ones places and the then
    "and"-ing the digits of `a` and `b` together. 
+   The shorter number should be padded
+   with zeros to be the same length as the long number.
    
 4. (`bitwise`) Given a binary operation (`op :: Int -> Int -> Int`) and two
    binary integers, create a number by performing the operation bitwise

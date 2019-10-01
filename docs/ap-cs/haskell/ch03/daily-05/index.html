@@ -891,7 +891,9 @@ inputs are 1, otherwise 0.</p></li>
 <li><p>(<code>bitwiseAnd</code>) Given two binary integers <code>a</code> and <code>b</code> (represented
 as lists of 0 and 1), produce the
 binary number given by lining up the ones places and the then
-&ldquo;and&rdquo;-ing the digits of <code>a</code> and <code>b</code> together.</p></li>
+&ldquo;and&rdquo;-ing the digits of <code>a</code> and <code>b</code> together.
+The shorter number should be padded
+with zeros to be the same length as the long number.</p></li>
 
 <li><p>(<code>bitwise</code>) Given a binary operation (<code>op :: Int -&gt; Int -&gt; Int</code>) and two
 binary integers, create a number by performing the operation bitwise
