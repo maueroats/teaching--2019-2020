@@ -18,11 +18,13 @@ draft: false
     the output to be an integer as well.
 -->
 
-	{{% note alert %}}
-	Updates for txtToBin: put the space first and remove the question mark.
-	{{% /note %}}
+    {{% note alert %}}
+    Updates for txtToBin: put the space first and remove the question mark.
+    {{% /note %}}
 
-Some [longer example tests](examples.hs) are available.
+Some [longer example tests](examples.hs) are available. [Additional
+example](read-lyrics.hs) showing how to read a bunch of lyrics from a file (for
+a cool thing to encrypt in problem 8). 
 
 1. How many numbers are between two given binary numbers, including
    the start and end number?
@@ -33,8 +35,8 @@ Some [longer example tests](examples.hs) are available.
 2. (`ensureLen :: Int -> [Int] -> [Int]`). The call `ensureLen 6 xs`
    add leading zeros to `xs` if necessary to ensure it has a length of at least 6. 
    
-		ensureLen 4 [1] == [0,0,0,1]
-		ensureLen 3 [1,0,1,0,1] == [1,0,1,0,1]
+        ensureLen 4 [1] == [0,0,0,1]
+        ensureLen 3 [1,0,1,0,1] == [1,0,1,0,1]
 
 3. (`and' :: Int -> Int -> Int`). Helper function. Give 1 if both
     inputs are 1, otherwise 0. 
@@ -80,17 +82,17 @@ Some [longer example tests](examples.hs) are available.
    changes the resulting number back into a string. The string will be
    nonsense.
    
-	    encrypt "Key" "Secret"
-		
-	The key is repeated and lined up with the secret message, then
+        encrypt "Key" "Secret"
+        
+    The key is repeated and lined up with the secret message, then
     the values of the binary numbers are combined with `xor`.
-	
-		"KeyKeyK"
-		"Secrets"
-		"X tm cl"
+    
+        "KeyKeyK"
+        "Secrets"
+        "X tm cl"
    
     Note: this function is likely to require helper functions!
-	
+    
 9. `decrypt :: String -> String -> String`. Given an encrypted
    message and a key, reverse the encryption process. This is kind of
    tricky without experimentation; try just re-encrypting the message and see if you can figure out a pattern.
