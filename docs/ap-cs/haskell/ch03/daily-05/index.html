@@ -789,7 +789,6 @@
 
 
     </ul>
-
     <section>
     </section>
   </aside>
@@ -868,22 +867,36 @@
     
 
     <h1>Chapter 3 Daily 05 HW</h1>
+    
+    
+    
+    <!--
+2. (SKIP, NO QUESTION) Binary decimals: the binary number 110.101 means 
 
-    
-    
-    
-    <ol>
+        2**2 + 2**1 + 2**(-1) + 2**(-3) == 6.625
+
+    Haskell does not believe in negative exponents for integers (using
+    `^`), but will happily do them for decimals (`**`). Check the type
+    signatures... when the inputs to a function are integers, expect
+    the output to be an integer as well.
+-->
+
+<div class="alert alert-warning" role="alert">
+    Updates for txtToBin: put the space first and remove the question mark.
+    </div>
+
+<p>Some <a href="examples.hs">longer example tests</a> are available.</p>
+
+<ol>
 <li><p>How many numbers are between two given binary numbers, including
 the start and end number?</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">bcount :: [Int] -&gt; [Int] -&gt; Int
 bcount [1,0,0,1,1] [1,1,0,1,0] == 8</pre></div></li>
 
-<li><p>(SKIP, NO QUESTION) Binary decimals: the binary number 110.101 means</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">2**2 + 2**1 + 2**(-1) + 2**(-3) == 6.625</pre></div>
-<p>Haskell does not believe in negative exponents for integers (using
-<code>^</code>), but will happily do them for decimals (<code>**</code>). Check the type
-signatures&hellip; when the inputs to a function are integers, expect
-the output to be an integer as well.</p></li>
+<li><p>(<code>ensureLen :: Int -&gt; [Int] -&gt; [Int]</code>). The call <code>ensureLen 6 xs</code>
+add leading zeros to <code>xs</code> if necessary to ensure it has a length of at least 6.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ensureLen 4 [1] == [0,0,0,1]
+ensureLen 3 [1,0,1,0,1] == [1,0,1,0,1]</pre></div></li>
 
 <li><p>(<code>and' :: Int -&gt; Int -&gt; Int</code>). Helper function. Give 1 if both
 inputs are 1, otherwise 0.</p></li>
@@ -911,9 +924,9 @@ bitwise xor&#39; [1,0,1,0] [0,1,1,0] = [1,1,0,0]</pre></div></li>
 binary numbers using the location each character is found in the
 (abbreviated) list below. If a character is not found, produce the
 empty list to represent it.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">A-Za-z0-9[space].?</pre></div></li>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[space]A-Za-z0-9.</pre></div></li>
 
-<li><p><code>binToMessage :: [[Int]] -&gt; [Int]</code>. Concatenate all of the binary
+<li><p><code>binToMsg :: [[Int]] -&gt; [Int]</code>. Concatenate all of the binary
 numbers into one long string, but make sure each binary number is 6
 digits.</p></li>
 
@@ -925,11 +938,18 @@ in a message string and a key string. The encryption lines up the
 letters in the message and the string, changes the characters into
 binary numbers, joins the binary numbers with <code>xor</code>, and then
 changes the resulting number back into a string. The string will be
-nonsense.</p></li>
+nonsense.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">encrypt &#34;Key&#34; &#34;Secret&#34;</pre></div>
+<p>The key is repeated and lined up with the secret message, then
+the values of the binary numbers are combined with <code>xor</code>.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;KeyKeyK&#34;
+&#34;Secrets&#34;
+&#34;X tm cl&#34;</pre></div>
+<p>Note: this function is likely to require helper functions!</p></li>
 
 <li><p><code>decrypt :: String -&gt; String -&gt; String</code>. Given an encrypted
 message and a key, reverse the encryption process. This is kind of
-tricky; try just re-encrypting the message.</p></li>
+tricky without experimentation; try just re-encrypting the message and see if you can figure out a pattern.</p></li>
 </ol>
 
 
@@ -939,7 +959,6 @@ tricky; try just re-encrypting the message.</p></li>
     <div id="navigation">
 <a class="nav nav-prev" href="/ap-cs/haskell/ch03/ch03-test-2019/" title="Chapter 3 Test 2019"> <i class="fa fa-chevron-left"></i><label>Chapter 3 Test 2019</label></a>
     <a class="nav nav-next" href="/ap-cs/haskell/ch04/" title="4. Syntax in Functions" style="margin-right: 0px;"><label>4. Syntax in Functions</label><i class="fa fa-chevron-right"></i></a></div>
-
   </div>
 
   </section>

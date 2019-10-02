@@ -7,12 +7,7 @@ draft: false
 #theme: white
 ---
 
-1. How many numbers are between two given binary numbers, including
-   the start and end number?
-
-        bcount :: [Int] -> [Int] -> Int
-        bcount [1,0,0,1,1] [1,1,0,1,0] == 8
-        
+<!--
 2. (SKIP, NO QUESTION) Binary decimals: the binary number 110.101 means 
 
         2**2 + 2**1 + 2**(-1) + 2**(-3) == 6.625
@@ -21,6 +16,25 @@ draft: false
     `^`), but will happily do them for decimals (`**`). Check the type
     signatures... when the inputs to a function are integers, expect
     the output to be an integer as well.
+-->
+
+	{{% note alert %}}
+	Updates for txtToBin: put the space first and remove the question mark.
+	{{% /note %}}
+
+Some [longer example tests](examples.hs) are available.
+
+1. How many numbers are between two given binary numbers, including
+   the start and end number?
+
+        bcount :: [Int] -> [Int] -> Int
+        bcount [1,0,0,1,1] [1,1,0,1,0] == 8
+        
+2. (`ensureLen :: Int -> [Int] -> [Int]`). The call `ensureLen 6 xs`
+   add leading zeros to `xs` if necessary to ensure it has a length of at least 6. 
+   
+		ensureLen 4 [1] == [0,0,0,1]
+		ensureLen 3 [1,0,1,0,1] == [1,0,1,0,1]
 
 3. (`and' :: Int -> Int -> Int`). Helper function. Give 1 if both
     inputs are 1, otherwise 0. 
@@ -50,9 +64,9 @@ draft: false
    (abbreviated) list below. If a character is not found, produce the
    empty list to represent it. 
 
-        A-Za-z0-9[space].?
+        [space]A-Za-z0-9.
 
-6. `binToMessage :: [[Int]] -> [Int]`. Concatenate all of the binary
+6. `binToMsg :: [[Int]] -> [Int]`. Concatenate all of the binary
    numbers into one long string, but make sure each binary number is 6
    digits. 
 
@@ -66,6 +80,17 @@ draft: false
    changes the resulting number back into a string. The string will be
    nonsense.
    
+	    encrypt "Key" "Secret"
+		
+	The key is repeated and lined up with the secret message, then
+    the values of the binary numbers are combined with `xor`.
+	
+		"KeyKeyK"
+		"Secrets"
+		"X tm cl"
+   
+    Note: this function is likely to require helper functions!
+	
 9. `decrypt :: String -> String -> String`. Given an encrypted
    message and a key, reverse the encryption process. This is kind of
-   tricky; try just re-encrypting the message.
+   tricky without experimentation; try just re-encrypting the message and see if you can figure out a pattern.
