@@ -68,9 +68,9 @@ a cool thing to encrypt in problem 8).
 
         [space]A-Za-z0-9.
 
-6. `binToMsg :: [[Int]] -> [Int]`. Concatenate all of the binary
-   numbers into one long string, but make sure each binary number is 6
-   digits. 
+6. `binToMsg :: [[Int]] -> [Int]`. Make sure each binary number is 6
+   digits, and then concatenate all of the binary
+   numbers into one long list of integers.
 
 7. `msgDecode :: [Int] -> String`. Now decode the big binary number,
    changing it back into text.

@@ -20,9 +20,9 @@ description: Questions to help you understand Chapter 4.
 
 4. What pattern do you use to recursively process the first item in a list and the rest of the list?
 
-5. What Haskell function is used to indicate that the user is asking the program to do something impossible?
-
 6. Are parentheses necessary when writing a function using the pattern from the previous question? Explain why or why not.
+
+5. What Haskell function is used to indicate that the user is asking the program to do something impossible?
 
 7. A function `two_of` takes in a list of showable numbers and puts out a String that says "__ is item 2 of __". For example `two_of [10,25,50] == "25 is item 2 of [10,25,50]". Write the signature and function definition for `two_of`.
 
