@@ -926,20 +926,24 @@ cipher table</a>.</p></li>
 representing the number in base 3.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">base3 (81+9+3+1) == [1,0,1,1,1]</pre></div></li>
 
-<li><p>(<code>inCirc</code>) Given an integer r,  create a list of all integers <code>x</code>
-that have <code>(x,-x)</code>  inside the circle of radius <code>2*r</code> centered at
-<code>(r,r)</code>. You can use  your own distance function or this one:</p>
+<li><p>(<code>inCirc</code>) Given an integer <code>w</code>,  create a list of all integers <code>x</code>
+that have the point <code>(x,-x)</code> inside the circle of radius <code>2*w</code> centered at
+<code>(w,w)</code>. You can use  your own distance function or this one:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">dist :: (Int,Int) -&gt; (Int,Int) -&gt; Double
 dist (x0,y0) (x,y) = sqrt $ fromIntegral $ (x-x0)^2 + (y-y0)^2</pre></div></li>
 
-<li><p>You can encode messages using the table from question 2. Write a
+<li><p>(<code>vin</code>) You can encode messages using the table from question 2. Write a
 single letter encoder by using the letter from the message to
 choose the row and the letter from the key to choose the column:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vin :: Char -&gt; Char -&gt; Char
 vin msg key = undefined
 checkit = (vin &#39;C&#39; &#39;X&#39; == &#39;Z&#39;) -- should be True</pre></div></li>
 
-<li><p>Make an encoder that work for string messages and keys.</p></li>
+<li><p>(<code>ving</code>) Enhance your single letter encoder from the previous question to
+encode messages. Example from Wikipedia using the message
+&ldquo;ATTACKATDAWN&rdquo; and the secret key &ldquo;LEMON&rdquo;.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ving :: String -&gt; String -&gt; String
+ving &#34;ATTACKATDAWN&#34; &#34;LEMON&#34; == &#34;LXFOPVEFRNHR&#34;</pre></div></li>
 </ol>
 
 
