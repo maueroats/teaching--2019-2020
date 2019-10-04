@@ -938,7 +938,14 @@ distance <code>2*w</code> of the point <code>(w,w)</code>.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">inCirc :: Double -&gt; [Double]</pre></div>
 <p>You can use your own distance function or this one:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">dist :: (Double,Double) -&gt; (Double,Double) -&gt; Double
-dist (x0,y0) (x,y) = sqrt $ (x-x0)^2 + (y-y0)^2</pre></div></li>
+dist (x0,y0) (x,y) = sqrt $ (x-x0)^2 + (y-y0)^2</pre></div>
+<p>Here is an image showing the situation where <code>w=4</code> and there are 9
+integer coordinate points that are distance &lt;= 8 from (4,4) and on
+the line y=-x.</p>
+
+<figure>
+<img src="CircleLinePic2.png" width="200"/> 
+</figure></li>
 
 <li><p>(<code>vig</code>) You can encode messages using the table from question 2. Write a
 single letter encoder by using the letter from the message to
