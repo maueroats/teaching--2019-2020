@@ -910,14 +910,14 @@
     
     
     
-    <p>You may not use reference materials, the book, especially not Stack
+    <p>You may use the book, but not other reference materials, especially not Stack
 Overflow or any of your old homework.</p>
 
 <ol>
-<li><p>Find the product of all odd negative integers greater than -2015.
+<li><p>Find the product of all odd negative integers greater than -2017.
 Create a tuple called <code>answer1</code> containing the sign (+1
 or -1) and the last two digits (the tens and units digit). Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">answer1 = (-1, 17)</pre></div></li>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">answer1 = (-1, 23)</pre></div></li>
 
 <li><p>Create a list of lists to represent the inside of <a href="https://en.wikipedia.org/wiki/File:Vigen%C3%A8re_square_shading.svg">this Vigènere
 cipher table</a>.</p></li>
@@ -927,23 +927,28 @@ representing the number in base 3.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">base3 (81+9+2*3+1) == [1,0,1,2,1]</pre></div></li>
 
 <li><p>(<code>inCirc</code>) Given an integer <code>w</code>,  create a list of all integers <code>x</code>
-that have the point <code>(x,-x)</code> inside the circle of radius <code>2*w</code> centered at
-<code>(w,w)</code>. You can use  your own distance function or this one:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">dist :: (Int,Int) -&gt; (Int,Int) -&gt; Double
-dist (x0,y0) (x,y) = sqrt $ fromIntegral $ (x-x0)^2 + (y-y0)^2</pre></div></li>
+that have the property that the point <code>(x,-x)</code> inside the circle of
+radius <code>2*w</code> centered at <code>(w,w)</code>. This means you are looking for
+integer coordinate points on the line <code>y=-x</code> that are within
+distance <code>2*w</code> of the point <code>(w,w)</code>.</p></li>
+</ol>
 
-<li><p>(<code>vin</code>) You can encode messages using the table from question 2. Write a
+<p>You can use  your own distance function or this one:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    dist :: (Int,Int) -&gt; (Int,Int) -&gt; Double
+    dist (x0,y0) (x,y) = sqrt $ fromIntegral $ (x-x0)^2 + (y-y0)^2</pre></div>
+<ol>
+<li><p>(<code>vig</code>) You can encode messages using the table from question 2. Write a
 single letter encoder by using the letter from the message to
 choose the row and the letter from the key to choose the column:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vin :: Char -&gt; Char -&gt; Char
-vin msg key = undefined
-checkit = (vin &#39;C&#39; &#39;X&#39; == &#39;Z&#39;) -- should be True</pre></div></li>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vig :: Char -&gt; Char -&gt; Char
+vig msg key = undefined
+checkit = (vig &#39;C&#39; &#39;X&#39; == &#39;Z&#39;) -- should be True</pre></div></li>
 
-<li><p>(<code>ving</code>) Enhance your single letter encoder from the previous question to
+<li><p>(<code>vigen</code>) Enhance your single letter encoder from the previous question to
 encode messages. Example from Wikipedia using the message
 &ldquo;ATTACKATDAWN&rdquo; and the secret key &ldquo;LEMON&rdquo;.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ving :: String -&gt; String -&gt; String
-ving &#34;ATTACKATDAWN&#34; &#34;LEMON&#34; == &#34;LXFOPVEFRNHR&#34;</pre></div></li>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vigen :: String -&gt; String -&gt; String
+vigen &#34;ATTACKATDAWN&#34; &#34;LEMON&#34; == &#34;LXFOPVEFRNHR&#34;</pre></div></li>
 </ol>
 
 
