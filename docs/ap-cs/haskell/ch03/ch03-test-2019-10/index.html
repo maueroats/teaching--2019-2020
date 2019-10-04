@@ -930,13 +930,16 @@ representing the number in base 3.</p>
 that have the property that the point <code>(x,-x)</code> inside the circle of
 radius <code>2*w</code> centered at <code>(w,w)</code>. This means you are looking for
 integer coordinate points on the line <code>y=-x</code> that are within
-distance <code>2*w</code> of the point <code>(w,w)</code>.</p></li>
-</ol>
+distance <code>2*w</code> of the point <code>(w,w)</code>.</p>
 
-<p>You can use  your own distance function or this one:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    dist :: (Int,Int) -&gt; (Int,Int) -&gt; Double
-    dist (x0,y0) (x,y) = sqrt $ fromIntegral $ (x-x0)^2 + (y-y0)^2</pre></div>
-<ol>
+<p>Haskell will prefer that you call all of the points involved
+ <code>Double</code>. The other choice is to write your own distance function
+ and use <code>fromIntegral</code>.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">inCirc :: Double -&gt; [Double]</pre></div>
+<p>You can use your own distance function or this one:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">dist :: (Double,Double) -&gt; (Double,Double) -&gt; Double
+dist (x0,y0) (x,y) = sqrt $ (x-x0)^2 + (y-y0)^2</pre></div></li>
+
 <li><p>(<code>vig</code>) You can encode messages using the table from question 2. Write a
 single letter encoder by using the letter from the message to
 choose the row and the letter from the key to choose the column:</p>
@@ -945,8 +948,11 @@ vig msg key = undefined
 checkit = (vig &#39;C&#39; &#39;X&#39; == &#39;Z&#39;) -- should be True</pre></div></li>
 
 <li><p>(<code>vigen</code>) Enhance your single letter encoder from the previous question to
-encode messages. Example from Wikipedia using the message
-&ldquo;ATTACKATDAWN&rdquo; and the secret key &ldquo;LEMON&rdquo;.</p>
+encode messages. Take in two strings: the message and a key, and
+match up corresponding letters. (Repeat the key as necessary.)</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher#Description">An example from Wikipedia</a>
+using the secret key &ldquo;LEMON&rdquo;.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vigen :: String -&gt; String -&gt; String
 vigen &#34;ATTACKATDAWN&#34; &#34;LEMON&#34; == &#34;LXFOPVEFRNHR&#34;</pre></div></li>
 </ol>
