@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>daily-notes on WY Computer Science</title>
+    <link>https://wy-cs.website/tags/daily-notes/</link>
+    <description>Recent content in daily-notes on WY Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Sep 2017 10:47:02 -0500</lastBuildDate>
+    
+	<atom:link href="https://wy-cs.website/tags/daily-notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2017-09-11</title>
+      <link>https://wy-cs.website/ap-cs/haskell/daily/2017-09-11/</link>
+      <pubDate>Mon, 11 Sep 2017 10:47:02 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ap-cs/haskell/daily/2017-09-11/</guid>
+      <description>removeVowels word = [ letter | letter &amp;lt;- word, not (letter elem &amp;ldquo;aeiouAEIOU&amp;rdquo; )]
+wordLenPairs wordlist = [ (word, length word) | word &amp;lt;- wordlist ]</description>
+    </item>
+    
+  </channel>
+</rss>

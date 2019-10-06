@@ -27,3 +27,4 @@ Write type signatures for all functions.
 8. (`vDub`) Double all of the vowels in a word.
 
 		vDub "Alligator" == "AAlliigaatoor"
+
