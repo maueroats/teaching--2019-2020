@@ -47,8 +47,8 @@ Write a function creating this pattern.
 
 # What?
 
-`whaaa (a,b,c) [x:y:z:ws]@wow = `
+`whaa (a,b,c) [x:y:z:ws]@wow = `
 
-`    a : z : wow`
+	a : z : wow
 
 `whaa (5,2,1) [2,4..10] == ?`

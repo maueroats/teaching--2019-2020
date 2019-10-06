@@ -1,7 +1,7 @@
 ---
 title: "Chapter 3 Daily 05 HW"
 date: 2019-09-26T21:49:56-05:00
-#weight: 
+weight: 105
 draft: false
 #type: slide
 #theme: white

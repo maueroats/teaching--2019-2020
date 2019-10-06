@@ -203,6 +203,20 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-05/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-05/">
+            Chapter 3 Daily 05 HW
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-06/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-06/">
+            Chapter 3 Daily 06
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/ap-cs/haskell/ch03/ch03-quiz-2/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/ch03/ch03-quiz-2/">
@@ -221,13 +235,6 @@
         <div>
           <a href="/ap-cs/haskell/ch03/ch03-test-2019-10/">
             Chapter 3 Test 2019-10
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ap-cs/haskell/ch03/daily-05/" class="dd-item">
-        <div>
-          <a href="/ap-cs/haskell/ch03/daily-05/">
-            Chapter 3 Daily 05 HW
           </a>
         </div>
     </li>
@@ -348,17 +355,17 @@
       <a href="/ap-cs/haskell/daily/">Haskell Daily Notes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ap-cs/haskell/daily/2018-10-09/" class="dd-item">
-        <div>
-          <a href="/ap-cs/haskell/daily/2018-10-09/">
-            2018.10.09 Project
-          </a>
-        </div>
-    </li>
       <li data-nav-id="/ap-cs/haskell/daily/2018-10-16/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/daily/2018-10-16/">
             2018-10-16
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-09/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-09/">
+            2018-10-09 Project
           </a>
         </div>
     </li>
@@ -857,10 +864,11 @@
       <option value="/ap-cs/haskell/ch03/daily-02/" >--- Chapter 3 Daily 02</option>
       <option value="/ap-cs/haskell/ch03/daily-03/" >--- Chapter 3 Daily 03</option>
       <option value="/ap-cs/haskell/ch03/daily-04/" >--- Chapter 3 Daily 04</option>
+      <option value="/ap-cs/haskell/ch03/daily-05/" >--- Chapter 3 Daily 05 HW</option>
+      <option value="/ap-cs/haskell/ch03/daily-06/" >--- Chapter 3 Daily 06</option>
       <option value="/ap-cs/haskell/ch03/ch03-quiz-2/" >--- Chapter 3 Quiz 2</option>
       <option value="/ap-cs/haskell/ch03/ch03-test-2019/" >--- Chapter 3 Test 2019</option>
       <option value="/ap-cs/haskell/ch03/ch03-test-2019-10/"  selected>--- Chapter 3 Test 2019-10</option>
-      <option value="/ap-cs/haskell/ch03/daily-05/" >--- Chapter 3 Daily 05 HW</option>
   
     <option value="/ap-cs/haskell/ch04/" >
   -- 
@@ -910,7 +918,18 @@
     
     
     
-    <p>You may use the book, but not other reference materials, especially not Stack
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$'], ['\\[','\\]']]
+  }});
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<p>You may use the book, but not other reference materials, especially not Stack
 Overflow or any of your old homework.</p>
 
 <ol>
@@ -927,10 +946,10 @@ representing the number in base 3.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">base3 (81+9+2*3+1) == [1,0,1,2,1]</pre></div></li>
 
 <li><p>(<code>inCirc</code>) Given an integer <code>w</code>,  create a list of all integers <code>x</code>
-that have the property that the point <code>(x,-x)</code> inside the circle of
+that have the property that the point <code>(x,-x)</code> (meaning $y$ is the opposite of $x$) inside the circle of
 radius <code>2*w</code> centered at <code>(w,w)</code>. This means you are looking for
-integer coordinate points on the line <code>y=-x</code> that are within
-distance <code>2*w</code> of the point <code>(w,w)</code>.</p>
+integer coordinate points on the line $y=-x$ that are within
+distance $2*w$ of the point $(w,w)$.</p>
 
 <p>Haskell will prefer that you call all of the points involved
  <code>Double</code>. The other choice is to write your own distance function
@@ -939,9 +958,9 @@ distance <code>2*w</code> of the point <code>(w,w)</code>.</p>
 <p>You can use your own distance function or this one:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">dist :: (Double,Double) -&gt; (Double,Double) -&gt; Double
 dist (x0,y0) (x,y) = sqrt $ (x-x0)^2 + (y-y0)^2</pre></div>
-<p>Here is an image showing the situation where <code>w=4</code> and there are 9
-integer coordinate points that are distance &lt;= 8 from (4,4) and on
-the line y=-x.</p>
+<p>Here is an image showing the situation where $w=4$ and there are 9
+integer coordinate points that are distance $d \le 8$ from $(4,4)$ and on
+the line $y=-x$.</p>
 
 <figure>
 <img src="CircleLinePic2.png" width="200"/> 
@@ -970,7 +989,7 @@ vigen &#34;ATTACKATDAWN&#34; &#34;LEMON&#34; == &#34;LXFOPVEFRNHR&#34;</pre></di
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/ap-cs/haskell/ch03/ch03-test-2019/" title="Chapter 3 Test 2019"> <i class="fa fa-chevron-left"></i><label>Chapter 3 Test 2019</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/ch03/daily-05/" title="Chapter 3 Daily 05 HW" style="margin-right: 0px;"><label>Chapter 3 Daily 05 HW</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/ap-cs/haskell/ch04/" title="4. Syntax in Functions" style="margin-right: 0px;"><label>4. Syntax in Functions</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
