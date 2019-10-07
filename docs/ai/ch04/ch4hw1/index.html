@@ -894,7 +894,9 @@
     
     
     
-    <p>Read pages 99-101 in the book and write <code>complement</code> and <code>find-all</code>,
+    
+
+<p>Read pages 99-101 in the book and write <code>complement</code> and <code>find-all</code>,
 possibly copying them from the book.</p>
 
 <ol>
@@ -905,8 +907,44 @@ possibly copying them from the book.</p>
 and the <code>circ</code>-umference of the ball (in inches, a number).</li>
 <li>Create a softball with a circumference of 12.</li>
 <li>Modify the circumference to be 13.</li>
+<li>Write a function that takes in anything (even lists and numbers)
+and returns true if the item is a ball of circumference greater
+than 10.</li>
 </ul></li>
+
+<li><p>The function <code>pos+</code> takes in a list and returns a list of each
+element plus its position.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(pos+ &#39;(7 5 1 4))
+=&gt; (7 6 3 7)</pre></div>
+<p>Write the <code>pos+</code> function using (i) recursion; (ii) iteration; and
+ (iii) <code>mapcar</code>.</p></li>
+
+<li><p>Write a function <code>rle</code> that takes in a list and outputs a list of
+pairs <code>(item repeats)</code>, where <code>repeats</code> tells how many times in a
+row the item is repeated.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(rle &#39;(7 7 7 7 7 4 1 4 4 4))
+=&gt; ((7 5) (4 1) (1 1) (4 3))</pre></div></li>
 </ol>
+
+<h2 id="fixit">Fixit</h2>
+
+<p>A classmate is trying to write a function that reteurns the sum of all
+of the non-nil elements in a list. Neither version below
+works. Explain why and fix each (in the style it is written):</p>
+
+<p>A.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#111">lst</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#75af00">remove</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">lst</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#75af00">apply</span> <span style="color:#75af00">#&#39;+</span> <span style="color:#111">lst</span><span style="color:#111">))</span></code></pre></div>
+<p>B.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#111">lst</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#00a8c8">let</span> <span style="color:#111">((</span><span style="color:#111">x</span> <span style="color:#111">(</span><span style="color:#75af00">car</span> <span style="color:#111">lst</span><span style="color:#111">)))</span>
+    <span style="color:#111">(</span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">null</span> <span style="color:#111">x</span><span style="color:#111">)</span>
+      <span style="color:#111">(</span><span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">lst</span><span style="color:#111">))</span>
+      <span style="color:#111">(</span><span style="color:#75af00">+</span> <span style="color:#111">x</span> <span style="color:#111">(</span><span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">lst</span><span style="color:#111">))))))</span></code></pre></div>
+<h2 id="utility-functions">Utility Functions</h2>
+
+<p>Make a file called &ldquo;utility.lisp&rdquo; and write these functions:</p>
 
 
     
