@@ -924,6 +924,14 @@ pairs <code>(item repeats)</code>, where <code>repeats</code> tells how many tim
 row the item is repeated.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(rle &#39;(7 7 7 7 7 4 1 4 4 4))
 =&gt; ((7 5) (4 1) (1 1) (4 3))</pre></div></li>
+
+<li><p>(<code>div2</code>) You will write the function <code>div2</code>, divides a number by
+two. It has a keyword argument <code>:skip-odd</code> which defaults to false
+(<code>nil</code>).</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(div2 5) =&gt; 2.5
+(div2 8) =&gt; 4
+(div2 5 :skip-odd T) =&gt; 5
+(div2 8 :skip-odd T) =&gt; 4</pre></div></li>
 </ol>
 
 <h2 id="fixit">Fixit</h2>

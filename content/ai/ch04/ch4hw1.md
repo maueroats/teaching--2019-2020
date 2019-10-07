@@ -36,6 +36,17 @@ possibly copying them from the book.
         (rle '(7 7 7 7 7 4 1 4 4 4))
         => ((7 5) (4 1) (1 1) (4 3))
 
+4. (`div2`) You will write the function `div2`, divides a number by
+   two. It has a keyword argument `:skip-odd` which defaults to false
+   (`nil`). 
+   
+        (div2 5) => 2.5
+        (div2 8) => 4
+        (div2 5 :skip-odd T) => 5
+        (div2 8 :skip-odd T) => 4
+
+        
+
 ## Fixit
 
 A classmate is trying to write a function that reteurns the sum of all
