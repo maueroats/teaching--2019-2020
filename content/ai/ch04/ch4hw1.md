@@ -74,5 +74,11 @@ B.
 
 ## Utility Functions
 
-Make a file called "utility.lisp" and write these functions:
+Make a file called "utility.lisp" and write the functions below, all
+recommended by Paul Graham. Make sure to test them! We will keep adding to our utility functions file every week. 
 
+* `(last1 lst)`: The last item in a list.
+* `(single lst)`: True if the argument is a length 1 list. (Do not use `length` it is slow.)
+* `(append1 lst item)`: Append a single item to the end of a list.
+* `(mklist obj)`: If the object is not already a list, put it in one.
+* `(longer x y)`: Give true if the list x is longer than y, but do not traverse the whole list - once you know enough to deduce x is longer (or not), stop and give the answer.

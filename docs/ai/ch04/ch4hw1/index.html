@@ -952,7 +952,16 @@ works. Explain why and fix each (in the style it is written):</p>
       <span style="color:#111">(</span><span style="color:#75af00">+</span> <span style="color:#111">x</span> <span style="color:#111">(</span><span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">lst</span><span style="color:#111">))))))</span></code></pre></div>
 <h2 id="utility-functions">Utility Functions</h2>
 
-<p>Make a file called &ldquo;utility.lisp&rdquo; and write these functions:</p>
+<p>Make a file called &ldquo;utility.lisp&rdquo; and write the functions below, all
+recommended by Paul Graham. Make sure to test them! We will keep adding to our utility functions file every week.</p>
+
+<ul>
+<li><code>(last1 lst)</code>: The last item in a list.</li>
+<li><code>(single lst)</code>: True if the argument is a length 1 list. (Do not use <code>length</code> it is slow.)</li>
+<li><code>(append1 lst item)</code>: Append a single item to the end of a list.</li>
+<li><code>(mklist obj)</code>: If the object is not already a list, put it in one.</li>
+<li><code>(longer x y)</code>: Give true if the list x is longer than y, but do not traverse the whole list - once you know enough to deduce x is longer (or not), stop and give the answer.</li>
+</ul>
 
 
     
