@@ -15,7 +15,7 @@ Write type signatures for all functions.
    it, otherwise put the extra number after it. 
 4. Switch the front and back number in a list of numbers. Leave the
    others the same.
-5. Delete the middle number.
+5. Delete the middle number of a list of numbers. Assume the length is odd.
 6. `delRange start end numList`: Remove items from index `start`
    through index `end` from the numbers list.
 
