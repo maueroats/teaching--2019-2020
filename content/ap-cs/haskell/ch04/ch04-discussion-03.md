@@ -18,8 +18,8 @@ coding.
 
 1. ([`makeLast`](https://codingbat.com/prob/p137188)): Given a list of `Int`, return a new list twice the
    length of the original. The last element of the result is
-   the same as the last element of the original list, and every
-   other element is 0.
+   the same as the last element of the original list, and all
+   other elements are 0.
    
    
 2. (`swapEnds`) Given a list, return a new list with the first and last elements

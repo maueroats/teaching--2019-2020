@@ -18,13 +18,21 @@ Write type signatures for all functions.
 5. Delete the middle number.
 6. `delRange start end numList`: Remove items from index `start`
    through index `end` from the numbers list.
+
+        delRange 1 4 [10,11,12,13,14,15] == [10,15]
+        delRange 3 7 "Platypus" == "PlaFiesta"
+        
+        Work:
+        PlatypusFiesta
+        01234567Fiesta
+
 7. (`moveOdd`) Move any add numbers from the start of a list to the end. Stop
    moving when you find an even number. If there are no even numbers,
    the list does not change.
    
-		moveOdd [1,3,4,5,6] == [4,5,6,1,3]
-		moveOdd [2,3,5,7,9] == [2,3,5,7,9]
+        moveOdd [1,3,4,5,6] == [4,5,6,1,3]
+        moveOdd [2,3,5,7,9] == [2,3,5,7,9]
 8. (`vDub`) Double all of the vowels in a word.
 
-		vDub "Alligator" == "AAlliigaatoor"
+        vDub "Alligator" == "AAlliigaatoor"
 
