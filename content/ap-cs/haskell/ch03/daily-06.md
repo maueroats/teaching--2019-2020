@@ -20,7 +20,7 @@ Write type signatures for all functions.
    through index `end` from the numbers list.
 
         delRange 1 4 [10,11,12,13,14,15] == [10,15]
-        delRange 3 7 "Platypus" == "PlaFiesta"
+        delRange 3 7 "PlatypusFiesta" == "PlaFiesta"
         
         Work:
         PlatypusFiesta
