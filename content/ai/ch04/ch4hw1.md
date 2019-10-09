@@ -45,7 +45,10 @@ possibly copying them from the book.
         (div2 5 :skip-odd T) => 5
         (div2 8 :skip-odd T) => 4
 
-        
+5. (`add2len`) Use `&rest` to make a function that returns the first
+   number added to the number of arguments it receives.
+   
+        (add2len 5 10 20 30 40 50 60) => 5 + 7 = 12        
 
 ## Fixit
 
