@@ -949,7 +949,13 @@ represent rolls of six-sided dice ([1..6]). Return the sum of the
 inputs. If the boolean is true, if the dice show the same value,
 increment one die to the next value, wrapping around to a 1 if the
 value was a six.</p></li>
+</ol>
 
+<p>Examples:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    withoutDoubles 2 3 True == 5
+    withoutDoubles 3 3 True == 7
+    withoutDoubles 3 3 False == 6</pre></div>
+<ol>
 <li><p>(<code>teenSum</code>) Given 2 ints, return their sum. However, &ldquo;teen&rdquo; values
 in the range 13..19 inclusive, are extra lucky. So if either value
 is a teen, just return 19.</p></li>

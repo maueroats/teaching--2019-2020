@@ -34,6 +34,13 @@ coding.
    inputs. If the boolean is true, if the dice show the same value,
    increment one die to the next value, wrapping around to a 1 if the
    value was a six.
+   
+   Examples:
+
+        withoutDoubles 2 3 True == 5
+        withoutDoubles 3 3 True == 7
+        withoutDoubles 3 3 False == 6
+
 
 6. (`teenSum`) Given 2 ints, return their sum. However, "teen" values
    in the range 13..19 inclusive, are extra lucky. So if either value
