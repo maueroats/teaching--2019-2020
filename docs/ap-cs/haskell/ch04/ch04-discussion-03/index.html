@@ -948,14 +948,13 @@ unlucky 1 in the first 2 or last 2 positions in the list.</p></li>
 represent rolls of six-sided dice ([1..6]). Return the sum of the
 inputs. If the boolean is true, if the dice show the same value,
 increment one die to the next value, wrapping around to a 1 if the
-value was a six.</p></li>
-</ol>
+value was a six.</p>
 
 <p>Examples:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    withoutDoubles 2 3 True == 5
-    withoutDoubles 3 3 True == 7
-    withoutDoubles 3 3 False == 6</pre></div>
-<ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">withoutDoubles 2 3 True == 5
+withoutDoubles 3 3 True == 7
+withoutDoubles 3 3 False == 6</pre></div></li>
+
 <li><p>(<code>teenSum</code>) Given 2 ints, return their sum. However, &ldquo;teen&rdquo; values
 in the range 13..19 inclusive, are extra lucky. So if either value
 is a teen, just return 19.</p></li>

@@ -35,7 +35,7 @@ coding.
    increment one die to the next value, wrapping around to a 1 if the
    value was a six.
    
-   Examples:
+     Examples:
 
         withoutDoubles 2 3 True == 5
         withoutDoubles 3 3 True == 7
