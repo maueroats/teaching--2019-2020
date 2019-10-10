@@ -16,6 +16,8 @@ Make sure to write a list of test cases so you have thought through
 what every part of the problem description means before you start
 coding. 
 
+[Some test cases](ch03disc03tests.hs).
+
 1. ([`makeLast`](https://codingbat.com/prob/p137188)): Given a list of `Int`, return a new list twice the
    length of the original. The last element of the result is
    the same as the last element of the original list, and all
@@ -58,9 +60,8 @@ coding.
    'x' chars in the string, there exists a 'y' char somewhere later in
    the string. So "xxy" is balanced, but "xyx" is not. One 'y' can
    balance multiple 'x's. Return true if the given string is
-   xy-balanced.   
-   
-     Examples:
+   xy-balanced. 
+      Examples:
      
          xyBalance "pixxa" == False
          xyBalance "pixely art" == True
