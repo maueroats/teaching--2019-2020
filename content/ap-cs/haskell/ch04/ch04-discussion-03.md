@@ -16,7 +16,8 @@ Make sure to write a list of test cases so you have thought through
 what every part of the problem description means before you start
 coding. 
 
-[Some test cases](ch03disc03tests.hs).
+Some test cases [as a haskell file](ch04disc03tests.hs) or [as a web
+page]({{% relref "ch04disc03tests" %}})
 
 1. ([`makeLast`](https://codingbat.com/prob/p137188)): Given a list of `Int`, return a new list twice the
    length of the original. The last element of the result is
