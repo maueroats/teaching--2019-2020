@@ -26,7 +26,8 @@ possibly copying them from the book.
         (pos+ '(7 5 1 4))
         => (7 6 3 7)
 
-     Write the `pos+` function using (i) recursion; (ii) iteration; and
+     Write the `pos+` function using (i) recursion; (ii) iteration
+     (like loop); and
      (iii) `mapcar`.
 
 3. Write a function `rle` that takes in a list and outputs a list of
@@ -81,7 +82,13 @@ Make a file called "utility.lisp" and write the functions below, all
 recommended by Paul Graham. Make sure to test them! We will keep adding to our utility functions file every week. 
 
 * `(last1 lst)`: The last item in a list.
-* `(single lst)`: True if the argument is a length 1 list. (Do not use `length` it is slow.)
+* `(single lst)`: True if the argument is a length 1 list. (Do not use
+  `length` it is slow.) Test your function on: `'(a)` and `'(a
+  b)`. We will discuss the weird case of `'()` in class.
 * `(append1 lst item)`: Append a single item to the end of a list.
 * `(mklist obj)`: If the object is not already a list, put it in one.
 * `(longer x y)`: Give true if the list x is longer than y, but do not traverse the whole list - once you know enough to deduce x is longer (or not), stop and give the answer.
+
+The last function is a little more complex than the other
+ones, I am thinking of a recursive solution that goes through both
+lists at the same time.

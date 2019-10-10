@@ -924,7 +924,8 @@ than 10.</li>
 element plus its position.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(pos+ &#39;(7 5 1 4))
 =&gt; (7 6 3 7)</pre></div>
-<p>Write the <code>pos+</code> function using (i) recursion; (ii) iteration; and
+<p>Write the <code>pos+</code> function using (i) recursion; (ii) iteration
+ (like loop); and
  (iii) <code>mapcar</code>.</p></li>
 
 <li><p>Write a function <code>rle</code> that takes in a list and outputs a list of
@@ -969,11 +970,17 @@ recommended by Paul Graham. Make sure to test them! We will keep adding to our u
 
 <ul>
 <li><code>(last1 lst)</code>: The last item in a list.</li>
-<li><code>(single lst)</code>: True if the argument is a length 1 list. (Do not use <code>length</code> it is slow.)</li>
+<li><code>(single lst)</code>: True if the argument is a length 1 list. (Do not use
+<code>length</code> it is slow.) Test your function on: <code>'(a)</code> and <code>'(a
+b)</code>. We will discuss the weird case of <code>'()</code> in class.</li>
 <li><code>(append1 lst item)</code>: Append a single item to the end of a list.</li>
 <li><code>(mklist obj)</code>: If the object is not already a list, put it in one.</li>
 <li><code>(longer x y)</code>: Give true if the list x is longer than y, but do not traverse the whole list - once you know enough to deduce x is longer (or not), stop and give the answer.</li>
 </ul>
+
+<p>The last function is a little more complex than the other
+ones, I am thinking of a recursive solution that goes through both
+lists at the same time.</p>
 
 
     
