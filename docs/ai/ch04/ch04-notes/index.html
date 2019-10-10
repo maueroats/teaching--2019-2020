@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Chapter 3 :: WY Computer Science</title>
+<title>Ch4 Notes :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/intermediate-cs/ch03/">
+  <body data-url="/ai/ch04/ch04-notes/">
     
       <header>
   <div class="logo">
@@ -498,10 +498,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/" class="dd-item haschildren
+    <li data-nav-id="/ai/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ai/">Artificial Intelligence</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ai/">Artificial Intelligence</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ai/ch01/" class="dd-item haschildren
@@ -605,13 +606,14 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/ch04/" class="dd-item haschildren
+    <li data-nav-id="/ai/ch04/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ai/ch04/">Ch 04 GPS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ai/ch04/">Ch 04 GPS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ai/ch04/ch04-notes/" class="dd-item">
+      <li data-nav-id="/ai/ch04/ch04-notes/" class="dd-item active">
         <div>
           <a href="/ai/ch04/ch04-notes/">
             Ch4 Notes
@@ -651,11 +653,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/intermediate-cs/resources/" class="dd-item haschildren
@@ -680,11 +681,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/ch03/" class="dd-item parent active haschildren
+    <li data-nav-id="/intermediate-cs/ch03/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/ch03/">Chapter 3</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/ch03/">Chapter 3</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/ch03/ch03-art-project/" class="dd-item">
@@ -858,20 +858,29 @@
     <option value="/ap-cs/" >
    AP CS</option>
     <option value="/ai/" >
-   Artificial Intelligence</option>
+   Artificial Intelligence</option> 
+    <option value="/ai/ch01/" >
+  - 
+   Ch 01</option>
+    <option value="/ai/ch02/" >
+  - 
+   Ch 02</option>
+    <option value="/ai/ch03/" >
+  - 
+   Ch 03 Lisp</option>
+    <option value="/ai/ch04/" >
+  - 
+   Ch 04 GPS</option> 
+      <option value="/ai/ch04/ch04-notes/"  selected>-- Ch4 Notes</option>
+      <option value="/ai/ch04/ch4hw1/" >-- 4. Ch4 HW1</option>
+  
+    <option value="/ai/quiz/" >
+  - 
+   Quizzes</option>
+      <option value="/ai/resources/" >- AI Resources</option>
+  
     <option value="/intermediate-cs/" >
-   Intermediate CS</option> 
-    <option value="/intermediate-cs/resources/" >
-  - 
-   Resources</option>
-    <option value="/intermediate-cs/ch03/"  selected >
-  - 
-   Chapter 3</option> 
-      <option value="/intermediate-cs/ch03/ch03-art-project/" >-- Art Project</option>
-      <option value="/intermediate-cs/ch03/additional-exercises/" >-- Exercises</option>
-  
-      <option value="/intermediate-cs/e-courses/" >- Online Help</option>
-  
+   Intermediate CS</option>
     <option value="/robotics/" >
    Robotics</option>
     <option value="/ftc/" >
@@ -888,31 +897,33 @@
     </div>
     
 
-    <h1>Chapter 3</h1>
+    <h1>Ch4 Notes</h1>
 
     
     
     
+    <p>There are several problems with the &ldquo;base model&rdquo; General Problem
+Solver:</p>
 
-<ul class="children children-li">
-
-<span><li>
-                <a href="/intermediate-cs/ch03/ch03-art-project/" >Art Project</a></li>
-</span>
-
-<span><li>
-                <a href="/intermediate-cs/ch03/additional-exercises/" >Exercises</a></li>
-</span>
+<ul>
+<li>Clobbered goal: achieving one goal causes another goal to
+ be lost.</li>
+<li>Leaping before you look: committing to a &ldquo;strategy&rdquo; that is
+ impossible to finish (and missing another method).</li>
+<li>Infinite loop: trying to find a way to achieve a goal causes you
+ to need that same goal, again and again.</li>
 </ul>
 
+<p>You should be able to give examples of goals and operations that would
+give rise to each of these problems with a &ldquo;naive solver&rdquo;.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/intermediate-cs/resources/ics-wescheme-note/" title="WeScheme"> <i class="fa fa-chevron-left"></i><label>WeScheme</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/ch03/ch03-art-project/" title="Art Project" style="margin-right: 0px;"><label>Art Project</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ai/ch04/" title="Ch 04 GPS"> <i class="fa fa-chevron-left"></i><label>Ch 04 GPS</label></a>
+    <a class="nav nav-next" href="/ai/ch04/ch4hw1/" title="4. Ch4 HW1" style="margin-right: 0px;"><label>4. Ch4 HW1</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -928,7 +939,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 12/09/2019
+        <i class='fa fa-calendar'></i> Last update on 09/10/2019
     </div>
     
 
