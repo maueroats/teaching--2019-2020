@@ -54,7 +54,17 @@ coding.
    cases, if either tea or candy is less than 5, the party is always
    bad (0).
    
-8. (`xyBalance`) We'll say that a String is xy-balanced if for all the 'x' chars in the string, there exists a 'y' char somewhere later in the string. So "xxy" is balanced, but "xyx" is not. One 'y' can balance multiple 'x's. Return true if the given string is xy-balanced.   
+8. (`xyBalance`) We'll say that a String is xy-balanced if for all the
+   'x' chars in the string, there exists a 'y' char somewhere later in
+   the string. So "xxy" is balanced, but "xyx" is not. One 'y' can
+   balance multiple 'x's. Return true if the given string is
+   xy-balanced.   
+   
+     Examples:
+     
+         xyBalance "pixxa" == False
+         xyBalance "pixely art" == True
+         xyBalance "xay anythxng" == False
 
 4. (`unluckyOne2`) Continuing the `unluckyOne` problem, return true if a
    list contains an unlucky 1 in any position.
