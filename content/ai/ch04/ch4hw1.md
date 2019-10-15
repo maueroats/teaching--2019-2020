@@ -1,7 +1,7 @@
 ---
-title: "4. Ch4 HW1"
+title: "Ch4 HW1"
 date: 2019-10-03T09:26:58-05:00
-#weight: 
+weight: 110
 draft: false
 #type: slide
 #theme: white

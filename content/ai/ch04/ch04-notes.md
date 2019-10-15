@@ -1,7 +1,7 @@
 ---
 title: "Ch4 Notes"
 date: 2019-10-09T18:46:29-05:00
-weight: 100
+weight: 20
 draft: false
 #type: slide
 #theme: white
