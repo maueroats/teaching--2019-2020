@@ -41,10 +41,14 @@ sum67 [1, 1, 6, 7, 2] == 4
       newFibonacci 1 1 10 == 55
       newFibonacci 5 8 9 == 233
 ```
-Hint: Get the standard Fibonacci `fib` function working, then move it completely inside a `let` binding so you can alter the starting values.
-5. [Block Game](http://usaco.org/index.php?page=viewproblem2&cpid=664). Do this bronze level USA Computing Olympiad problem. (You should start with a list of pairs of words, that is `[(String,String)]`; you do not have to read them from a file.)
+Hint: Get the standard Fibonacci `fib` function working, then move it completely inside a `l
+et` binding so you can alter the starting values.
 
-## Games
+## Block Game
+
+[Block Game](http://usaco.org/index.php?page=viewproblem2&cpid=664). Do this bronze level USA Computing Olympiad problem. (You should start with a list of pairs of words, that is `[(String,String)]`; you do not have to read them from a file.)
+
+## Laser Tag
 
 We discussed these in class. You should be able to do them. If you missed class, talk to someone who was there.
 

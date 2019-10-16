@@ -27,7 +27,8 @@ taking any irrevocable steps.
 
 ## Utility Functions
 
-[Testing code for utilities](test-basic).
+[Testing code for utilities](test-basic). If you want to load a file
+you probably need to read how to [load a file in the same directory](https://stackoverflow.com/questions/25800283/load-file-with-a-relative-path#25801629). 
 
 * `(remove-* subtract all)`: Return items from the list ALL that are
   not in the list SUBTRACT.

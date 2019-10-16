@@ -4,7 +4,7 @@ date: 2017-09-26T08:08:42-05:00
 tags:
  - haskell
  - quiz
-weight: 50
+weight: 60
 draft: true
 ---
 
