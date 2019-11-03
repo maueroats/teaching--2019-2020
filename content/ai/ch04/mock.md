@@ -46,3 +46,80 @@ certain controlled circumstances. This lets us make sure the
 `achieve-one` function. Of course we perform similar testing with the
 `achieve-one` function in isolation as well.
 
+## Example of Mocking
+
+This example is courtesy of John Wu.
+
+Here's a simpler example of this that came up earlier for people who
+are still confused about what mocking is.
+
+There was a post about how we can
+check functions that have a `(random x)` in them because well it's
+random so there should be no feasible way to check it. The solution
+uses something very similar to mocking, and with a little adjustment,
+it can actually serve as a good example of mocking.
+
+<!--
+This is that post:
+
+```lisp
+(defun nonrandom-pick-word (n)
+  (elt '("go" "fish" "fry") 
+       n))
+(define-test test-word 
+  (assert-equal "fish" (nonrandom-pick-word 1)))
+(defun random-pick-word ()
+  (nonrandom-pick-word (random 3)))
+```
+-->
+
+Okay, so back from the beginning let use the example given there. So
+let's say that we want to recreate the `random-pick-word` function from
+the example earlier.
+
+```lisp
+(defun random-pick-word ()
+  "Picks a random word from 'go', 'fish', or 'fry'"
+  (elt '("go" "fish" "fry") 
+       (random 3)))
+```
+ 
+One way we can quickly rewrite this to replicate how `achieve-all` and
+`achieve-one` works on at least a surface level is to write it like
+this. In other words, we can pass a parameter to the element that
+allows us to mock the hard to test parts. In this case that would be
+the random part for reasons given earlier.
+
+ 
+
+```lisp
+(defun random-pick-word (&key (mocked-part (random 3)))
+   "random-pick-word but modified to take in which elem it picks, defaults to random" 
+   (elt '("go" "fish" "fry") mocked-part)) 
+```
+ 
+Now by passing the function simpler elements to test, we can actually
+test to see if the `random-pick-word` works as we intend it to for the
+possible values we can pass it. 
+
+```lisp
+(define-test test-random-pick-word 
+   (assert-equal "go"   (random-pick-word :mocked-part 0))
+   (assert-equal "fish" (random-pick-word :mocked-part 1)) 
+   (assert-equal "fry"  (random-pick-word :mocked-part 2))) 
+```
+
+Now assumedly when all of these tests pass, we know that our function
+will work with the random component because every possible thing that
+`(random x)` could pass it has been tested to work. We have successfully
+mock-tested our random function.
+
+## Advanced note
+
+Super-technical note: if you actually try this, you will see the
+random choice does not change with different calls to
+`(random-pick-word)` because the default value is chosen by evaluating
+`(random 3)` only once when the function is defined. That's too
+technical to worry about right now.
+
+

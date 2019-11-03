@@ -969,6 +969,68 @@ certain controlled circumstances. This lets us make sure the
 <code>achieve-one</code> function. Of course we perform similar testing with the
 <code>achieve-one</code> function in isolation as well.</p>
 
+<h2 id="example-of-mocking">Example of Mocking</h2>
+
+<p>This example is courtesy of John Wu.</p>
+
+<p>Here&rsquo;s a simpler example of this that came up earlier for people who
+are still confused about what mocking is.</p>
+
+<p>There was a post about how we can
+check functions that have a <code>(random x)</code> in them because well it&rsquo;s
+random so there should be no feasible way to check it. The solution
+uses something very similar to mocking, and with a little adjustment,
+it can actually serve as a good example of mocking.</p>
+
+<!--
+This is that post:
+
+```lisp
+(defun nonrandom-pick-word (n)
+  (elt '("go" "fish" "fry") 
+       n))
+(define-test test-word 
+  (assert-equal "fish" (nonrandom-pick-word 1)))
+(defun random-pick-word ()
+  (nonrandom-pick-word (random 3)))
+```
+-->
+
+<p>Okay, so back from the beginning let use the example given there. So
+let&rsquo;s say that we want to recreate the <code>random-pick-word</code> function from
+the example earlier.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">random-pick-word</span> <span style="color:#111">()</span>
+  <span style="color:#d88200">&#34;Picks a random word from &#39;go&#39;, &#39;fish&#39;, or &#39;fry&#39;&#34;</span>
+  <span style="color:#111">(</span><span style="color:#75af00">elt</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;go&#34;</span> <span style="color:#d88200">&#34;fish&#34;</span> <span style="color:#d88200">&#34;fry&#34;</span><span style="color:#111">)</span> 
+       <span style="color:#111">(</span><span style="color:#75af00">random</span> <span style="color:#ae81ff">3</span><span style="color:#111">)))</span></code></pre></div>
+<p>One way we can quickly rewrite this to replicate how <code>achieve-all</code> and
+<code>achieve-one</code> works on at least a surface level is to write it like
+this. In other words, we can pass a parameter to the element that
+allows us to mock the hard to test parts. In this case that would be
+the random part for reasons given earlier.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">random-pick-word</span> <span style="color:#111">(</span><span style="color:#00a8c8">&amp;key</span> <span style="color:#111">(</span><span style="color:#111">mocked-part</span> <span style="color:#111">(</span><span style="color:#75af00">random</span> <span style="color:#ae81ff">3</span><span style="color:#111">)))</span>
+   <span style="color:#d88200">&#34;random-pick-word but modified to take in which elem it picks, defaults to random&#34;</span> 
+   <span style="color:#111">(</span><span style="color:#75af00">elt</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;go&#34;</span> <span style="color:#d88200">&#34;fish&#34;</span> <span style="color:#d88200">&#34;fry&#34;</span><span style="color:#111">)</span> <span style="color:#111">mocked-part</span><span style="color:#111">))</span> </code></pre></div>
+<p>Now by passing the function simpler elements to test, we can actually
+test to see if the <code>random-pick-word</code> works as we intend it to for the
+possible values we can pass it.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">define-test</span> <span style="color:#111">test-random-pick-word</span> 
+   <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#d88200">&#34;go&#34;</span>   <span style="color:#111">(</span><span style="color:#111">random-pick-word</span> <span style="color:#d88200">:mocked-part</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span>
+   <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#d88200">&#34;fish&#34;</span> <span style="color:#111">(</span><span style="color:#111">random-pick-word</span> <span style="color:#d88200">:mocked-part</span> <span style="color:#ae81ff">1</span><span style="color:#111">))</span> 
+   <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#d88200">&#34;fry&#34;</span>  <span style="color:#111">(</span><span style="color:#111">random-pick-word</span> <span style="color:#d88200">:mocked-part</span> <span style="color:#ae81ff">2</span><span style="color:#111">)))</span> </code></pre></div>
+<p>Now assumedly when all of these tests pass, we know that our function
+will work with the random component because every possible thing that
+<code>(random x)</code> could pass it has been tested to work. We have successfully
+mock-tested our random function.</p>
+
+<h2 id="advanced-note">Advanced note</h2>
+
+<p>Super-technical note: if you actually try this, you will see the
+random choice does not change with different calls to
+<code>(random-pick-word)</code> because the default value is chosen by evaluating
+<code>(random 3)</code> only once when the function is defined. That&rsquo;s too
+technical to worry about right now.</p>
+
 
     
     
