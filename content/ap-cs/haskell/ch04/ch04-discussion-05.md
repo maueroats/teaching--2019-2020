@@ -1,5 +1,5 @@
 ---
-title: "Ch04 Discussion 05"
+title: "Chapter 4 Discussion V"
 date: 2019-11-01T14:16:44-05:00
 weight: 37
 draft: false
