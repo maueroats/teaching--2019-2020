@@ -1,6 +1,6 @@
 ---
 title: "AI Resources"
-date: 2019-09-06T16:46:47-05:00
+date: 2019-11-03T13:55:15-06:00
 weight: 300
 draft: false
 #type: slide
@@ -17,6 +17,11 @@ description: "References and downloads for AI."
   portable Common Lisp built on [SBCL](http://sbcl.org/) and
   [Emacs](https://www.gnu.org/software/emacs/) using
   [SLIME](https://github.com/slime/slime). 
+
+* USING SMARTPARENS with Portacle:
+
+    * [Disable paredit mode](disable-paredit.el)
+    * [Install and enable smartparens](smartparens-emacs.el)
   
 ## Alternatives
 
