@@ -35,3 +35,6 @@ The alternating series is
 
         goalt 0.21 == 0.5833...
         
+
+Remember: `fromIntegral` when you need to divide something by an
+Int.
