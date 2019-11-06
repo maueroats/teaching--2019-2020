@@ -12,17 +12,18 @@ This is the web page for the [First Tech
 Challenge](https://www.firstinspires.org/robotics/ftc) team 3216,
 Robophins, and team 15659, Young Droids, from [Whitney Young](http://wyoung.org/).
 
-[NEW 12-2018] [All registration info]({{% relref "registration" %}}):
-[National permission
-slips](https://www.firstinspires.org/sites/default/files/uploads/resource_library/first-youth-team-member-paperwork-2016-2017.pdf)
-and
-[Illinois permission slips](http://registration.firstillinoisrobotics.org/Consent.aspx?ConsentID=0&TeamID=0).
+[UPDATED 11-2019] [All registration info]({{% relref "registration" %}}).
 
 ## Club Meetings
 
 Monday and Thursday, 3:20-4:50pm. Room 109.
 
 ## Meet Schedule
+
+* November 9, 2019 at DePaul, 247 S State Street, 10am-4pm.
+* December 14, 2019 at U of C Lab School, 5840 S. Kenwood, 10am-4pm.
+* January 11, 2020 at Juarez, 1450-1510 W Cermak Road, 8am-1pm.
+* February 3, 2020 at Horizon Science Academy, 2245 W Pershing Ave, 8am-6pm.
 
 ## Game Resources
 
