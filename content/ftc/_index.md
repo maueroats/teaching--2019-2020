@@ -23,7 +23,7 @@ Monday and Thursday, 3:20-4:50pm. Room 109.
 * November 9, 2019 at DePaul, 247 S State Street, 10am-4pm.
 * December 14, 2019 at U of C Lab School, 5840 S. Kenwood, 10am-4pm.
 * January 11, 2020 at Juarez, 1450-1510 W Cermak Road, 8am-1pm.
-* February 3, 2020 at Horizon Science Academy, 2245 W Pershing Ave, 8am-6pm.
+* February 1, 2020 at Horizon Science Academy, 2245 W Pershing Ave, 8am-6pm.
 
 ## Game Resources
 
