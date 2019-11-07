@@ -992,15 +992,19 @@ everything greater than or equal to the first argument.</p>
 
 <ol>
 <li><p><code>boxMaker :: Int -&gt; String</code>. Make a function to create an square.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">putStrLn $ boxMaker 5 </pre></div>
-<p>prints out a square of side length 5. (Use <code>\n</code> to go to the next line.)</p>
+
+<p>Calling <code>boxMaker 5</code> gives the string</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;xxxxx\nx   x\nx   x\nx   x\nxxxxx&#34;</pre></div>
+<p>to see this more beautifully, print it with <code>putStrLn</code> in your
+main method.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">main = do putStrLn $ boxMaker 5 </pre></div>
+<p>(Use <code>\n</code> in a string to go to the next line.) The output looks
+like this:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">xxxxx
 x   x
 x   x
 x   x
-xxxxx</pre></div>
-<p>That means that the string is</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;xxxxx\nx   x\nx   x\nx   x\nxxxxx&#34;</pre></div></li>
+xxxxx</pre></div></li>
 
 <li><p><code>alphaBox :: String -&gt; String</code>. Make a square using the letters
 from the word provided. Add extra x&rsquo;s at the end if needed to make

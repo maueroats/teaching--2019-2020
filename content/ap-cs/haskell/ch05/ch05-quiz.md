@@ -33,18 +33,23 @@ Here you are allowed to use tools.
 
 1. `boxMaker :: Int -> String`. Make a function to create an square.
 
-        putStrLn $ boxMaker 5 
-    prints out a square of side length 5. (Use `\n` to go to the next line.)
+    Calling `boxMaker 5` gives the string
+    
+        "xxxxx\nx   x\nx   x\nx   x\nxxxxx"
+
+    to see this more beautifully, print it with `putStrLn` in your
+    main method.
+
+        main = do putStrLn $ boxMaker 5 
+
+    (Use `\n` in a string to go to the next line.) The output looks
+    like this:
    
         xxxxx
         x   x
         x   x
         x   x
         xxxxx
-
-    That means that the string is 
-    
-        "xxxxx\nx   x\nx   x\nx   x\nxxxxx"
 
 
 2. `alphaBox :: String -> String`. Make a square using the letters
