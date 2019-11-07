@@ -31,7 +31,7 @@ guards, patterns, `==` (etc), `:`, `++`. No length, head, tail, etc.
 
 Here you are allowed to use tools.
 
-1. `boxMaker :: Int -> String`. Make a function to create an ascii square.
+1. `boxMaker :: Int -> String`. Make a function to create an square.
 
         print $ boxMaker 5 
     prints out a square of side length 5. (Use `\n` to go to the next line.)
@@ -42,3 +42,5 @@ Here you are allowed to use tools.
         x   x
         xxxxx
 
+
+2. 
