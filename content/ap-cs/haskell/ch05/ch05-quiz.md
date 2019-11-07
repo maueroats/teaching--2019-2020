@@ -33,7 +33,7 @@ Here you are allowed to use tools.
 
 1. `boxMaker :: Int -> String`. Make a function to create an square.
 
-        print $ boxMaker 5 
+        putStrLn $ boxMaker 5 
     prints out a square of side length 5. (Use `\n` to go to the next line.)
    
         xxxxx
@@ -42,12 +42,20 @@ Here you are allowed to use tools.
         x   x
         xxxxx
 
-    That means that the string is `"xxxxx\nx   x\nx   x\nx   x\nxxxxx"`.
+    That means that the string is 
+    
+        "xxxxx\nx   x\nx   x\nx   x\nxxxxx"
 
 
 2. `alphaBox :: String -> String`. Make a square using the letters
    from the word provided. Add extra x's at the end if needed to make
-   a square.
+   a square. Omit spaces in the input from your box.
    
-        alphaBox "Fox in a Box" ==
-        
+        alphaBox "Fox in a Box Rox"
+    
+    prints out as
+    
+         Foxi
+         x  n
+         o  a
+         RxoB
