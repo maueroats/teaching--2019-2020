@@ -42,5 +42,8 @@ Here you are allowed to use tools.
         x   x
         xxxxx
 
+    That means that the string is "xxxxx\nx   x\nx   x\nx   x\nxxxxx".
 
-2. 
+
+2. `alphaBox :: String -> String`. Make a square using the letters
+   from the word provided.

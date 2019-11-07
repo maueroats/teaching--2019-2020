@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ap-cs on WY Computer Science</title>
+    <link>https://wy-cs.website/tags/ap-cs/</link>
+    <description>Recent content in ap-cs on WY Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Sep 2019 15:59:25 -0500</lastBuildDate>
+    
+	<atom:link href="https://wy-cs.website/tags/ap-cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Haskell CW II.2</title>
+      <link>https://wy-cs.website/ap-cs/haskell/ch02/cw-a2/</link>
+      <pubDate>Sat, 09 Sep 2017 15:57:47 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ap-cs/haskell/ch02/cw-a2/</guid>
+      <description>&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
+MathJax.Hub.Config({
+tex2jax: {
+  inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]],
+  displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\\[&#39;,&#39;\\]&#39;]]
+  }});
+&lt;/script&gt;
+
+&lt;script async type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML&#34;&gt;
+&lt;/script&gt;
+
+
+
+&lt;h2 id=&#34;warmup&#34;&gt;Warmup&lt;/h2&gt;
+
+&lt;p&gt;On the line $y = 3x-5$, find at least 20 ordered pairs $(x,y)$ with
+$0\le x \le 5$.&lt;/p&gt;
+
+&lt;h2 id=&#34;class-work-for-2-1-2-3&#34;&gt;Class work for 2.1&amp;ndash;2.3&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://projecteuler.net/problem=6&#34;&gt;Sum Square Difference&lt;/a&gt;
+The sum of the squares of the first ten natural numbers is,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;1^2 + 2^2 + ... + 10^2 = 385&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The square of the sum of the first ten natural numbers is,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;(1 + 2 + ... + 10)^2 = 55^2 = 3025&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.&lt;/p&gt;
+
+&lt;p&gt;Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Haskell HW 2</title>
+      <link>https://wy-cs.website/ap-cs/haskell/ch02/hw-a2/</link>
+      <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ap-cs/haskell/ch02/hw-a2/</guid>
+      <description>All of the points you should work with have Int coordinates. So far you only know Int, String, and lists of each of those.
+ Write a function onLine that takes in a slope m, a y-intercept b, and a point (x0,y0) and gives back True if the point is on the line y=m*x+b and false otherwise.
+ Write a function moreThan100 that takes in a list of numbers and puts out a list of numbers.</description>
+    </item>
+    
+  </channel>
+</rss>
