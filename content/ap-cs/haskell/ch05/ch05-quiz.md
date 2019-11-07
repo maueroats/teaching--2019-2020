@@ -7,8 +7,12 @@ draft: false
 #theme: white
 ---
 
+No notes, no book, do by yourself.
+
+## Stone Age
+
 Write each of the following, using nothing but "stone age" tools:
-guards, patterns, `:`, `++`. No length, head, tail, etc.
+guards, patterns, `==` (etc), `:`, `++`. No length, head, tail, etc.
 
 1. `myintercalate :: String -> [String] -> String`. Given a separator
    and a list of strings, create a string containing the separator in
@@ -22,4 +26,19 @@ guards, patterns, `:`, `++`. No length, head, tail, etc.
         myfindGE 5 [3,13,8,4,9] == [13,8,9]
 
 
+
+## Bronze Age
+
+Here you are allowed to use tools.
+
+1. `boxMaker :: Int -> String`. Make a function to create an ascii square.
+
+        print $ boxMaker 5 
+    prints out a square of side length 5. (Use `\n` to go to the next line.)
+   
+        xxxxx
+        x   x
+        x   x
+        x   x
+        xxxxx
 
