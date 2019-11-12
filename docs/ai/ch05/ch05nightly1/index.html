@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>OnShape 2: 2D Shapes :: WY Computer Science</title>
+<title>Ch5 Nightly 1 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.website";
 </script>
-<meta name="description" content="Rectangle, circle, and arc construction.">
+<meta name="description" content="">
 
 
 
     
   </head>
-  <body data-url="/robotics/cad/2019-09-05-class/">
+  <body data-url="/ai/ch05/ch05nightly1/">
     
       <header>
   <div class="logo">
@@ -526,10 +526,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/" class="dd-item haschildren
+    <li data-nav-id="/ai/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ai/">Artificial Intelligence</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ai/">Artificial Intelligence</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ai/ch01/" class="dd-item haschildren
@@ -669,13 +670,14 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/ch05/" class="dd-item haschildren
+    <li data-nav-id="/ai/ch05/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ai/ch05/">Ch 05 Eliza</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ai/ch05/">Ch 05 Eliza</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ai/ch05/ch05nightly1/" class="dd-item">
+      <li data-nav-id="/ai/ch05/ch05nightly1/" class="dd-item active">
         <div>
           <a href="/ai/ch05/ch05nightly1/">
             Ch5 Nightly 1
@@ -774,18 +776,16 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/robotics/" class="dd-item parent haschildren
+    <li data-nav-id="/robotics/" class="dd-item haschildren
         ">
       <div>
-      <a href="/robotics/">Robotics</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/robotics/">Robotics</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/robotics/cad/" class="dd-item parent haschildren
+    <li data-nav-id="/robotics/cad/" class="dd-item haschildren
         ">
       <div>
-      <a href="/robotics/cad/">CAD (Onshape)</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/robotics/cad/">CAD (Onshape)</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/robotics/cad/onshape/" class="dd-item">
@@ -795,7 +795,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/robotics/cad/2019-09-05-class/" class="dd-item active">
+      <li data-nav-id="/robotics/cad/2019-09-05-class/" class="dd-item">
         <div>
           <a href="/robotics/cad/2019-09-05-class/">
             OnShape 2: 2D Shapes
@@ -922,22 +922,34 @@
     <option value="/ap-cs/" >
    AP CS</option>
     <option value="/ai/" >
-   Artificial Intelligence</option>
+   Artificial Intelligence</option> 
+    <option value="/ai/ch01/" >
+  - 
+   Ch 01</option>
+    <option value="/ai/ch02/" >
+  - 
+   Ch 02</option>
+    <option value="/ai/ch03/" >
+  - 
+   Ch 03 Lisp</option>
+    <option value="/ai/ch04/" >
+  - 
+   Ch 04 GPS</option>
+    <option value="/ai/ch05/" >
+  - 
+   Ch 05 Eliza</option> 
+      <option value="/ai/ch05/ch05nightly1/"  selected>-- Ch5 Nightly 1</option>
+      <option value="/ai/ch05/ch5hw1/" >-- Ch5 HW1</option>
+  
+    <option value="/ai/quiz/" >
+  - 
+   Quizzes</option>
+      <option value="/ai/resources/" >- AI Resources</option>
+  
     <option value="/intermediate-cs/" >
    Intermediate CS</option>
     <option value="/robotics/" >
-   Robotics</option> 
-    <option value="/robotics/cad/" >
-  - 
-   CAD (Onshape)</option> 
-      <option value="/robotics/cad/onshape/" >-- Onshape 1: Info</option>
-      <option value="/robotics/cad/2019-09-05-class/"  selected>-- OnShape 2: 2D Shapes</option>
-      <option value="/robotics/cad/2019-09-06-class/" >-- OnShape 3: Dimensioning</option>
-      <option value="/robotics/cad/hw1/" >-- CAD: HW 1</option>
-      <option value="/robotics/cad/hw2/" >-- CAD: HW 2</option>
-      <option value="/robotics/cad/hw3/" >-- CAD: HW 3</option>
-  
-  
+   Robotics</option>
     <option value="/ftc/" >
    WY Robotics</option>
     <option value="/ecs-teach/" >
@@ -952,36 +964,36 @@
     </div>
     
 
-    <h1>OnShape 2: 2D Shapes</h1>
+    <h1>Ch5 Nightly 1</h1>
 
     
     
     
-    <p>Opener: List at least three household items that you can sketch on
-paper.</p>
+    <p>The purpose of this assignment is so you keep up with what we are
+doing in class.</p>
 
-<p>Learn: Watch OnShape videos introducing sketching, rectangles,
-circles, and arcs.</p>
+<p>Write the <code>pat-match</code> function that returns <code>T</code> when the pattern
+matches, and <code>NIL</code> otherwise.</p>
 
-<p>Create:</p>
-
-<p><a href="2019-09-05-construct-1.png"><figure>
-    <img src="2019-09-05-construct-1.png" width="200"/>
-</figure>
-</a></p>
-
-<p><a href="2019-09-05-construct-2.png"><figure>
-    <img src="2019-09-05-construct-2.png" width="200"/>
-</figure>
-</a></p>
-
+<p>It should pass the following checks:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"> (assert-true (pat-match &#39;?x &#39;a))
+ (assert-true (pat-match &#39;a  &#39;a))
+ (assert-false (pat-match &#39;b &#39;a))
+ (assert-true (pat-match &#39;(I like cream) &#39;(I like cream)))
+ (assert-false (pat-match &#39;(I like cream) &#39;(I like cookies)))
+ (assert-true (pat-match &#39;(I ?y cream) &#39;(I hate cream)))
+ (assert-false (pat-match &#39;(I ?z cream) &#39;(I hate cookies)))
+ (assert-true (pat-match &#39;(I am (?x) but ?y)
+                         &#39;(I am (complicated) but right)))
+ (assert-false (pat-match &#39;(I am (not ?x))
+                         &#39;(I am (simple))))</pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/robotics/cad/onshape/" title="Onshape 1: Info"> <i class="fa fa-chevron-left"></i><label>Onshape 1: Info</label></a>
-    <a class="nav nav-next" href="/robotics/cad/2019-09-06-class/" title="OnShape 3: Dimensioning" style="margin-right: 0px;"><label>OnShape 3: Dimensioning</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ai/ch05/" title="Ch 05 Eliza"> <i class="fa fa-chevron-left"></i><label>Ch 05 Eliza</label></a>
+    <a class="nav nav-next" href="/ai/ch05/ch5hw1/" title="Ch5 HW1" style="margin-right: 0px;"><label>Ch5 HW1</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -997,7 +1009,7 @@ circles, and arcs.</p>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 06/09/2019
+        <i class='fa fa-calendar'></i> Last update on 12/11/2019
     </div>
     
 
