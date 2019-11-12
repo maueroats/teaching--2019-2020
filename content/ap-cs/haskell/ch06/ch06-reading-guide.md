@@ -7,6 +7,8 @@ tags:
 draft: false
 ---
 
+**Don't do this while this note is here.**
+
 1. Take in a list of numbers and output a list containing all of the numbers greater than 8.
 
 2. Take in a list of numbers and output a list containing all of the numbers between 10 and 20 (inclusive).
