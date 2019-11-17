@@ -1001,6 +1001,38 @@
     
     
 
+<p>We are creating a way to match pattern segments &ndash; not just individual
+words &ndash; using <code>(?* ?x)</code>. Today you are writing <code>segment-match</code>, which
+takes in a pattern (assumed to begin with a <code>?*</code>-pattern) and an input
+to match.</p>
+
+<h2 id="tests">Tests</h2>
+
+<p>Your code should do at least this much.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-equal (list (&#39;?x . &#39;(the food was))) 
+              (segment-match &#39;((?* ?x) great)
+                             &#39;(the food was great)))
+(assert-equal NIL
+              (segment-match &#39;((?* ?x) terrible)
+                             &#39;(the food was great)))</pre></div>
+<h2 id="eventual-goals">Eventual Goals</h2>
+
+<p>If your code matches more than one pattern, that&rsquo;s great but it could
+be a little tricky without reading the book.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-equal (list (&#39;?x . &#39;(really fun)) (&#39;?y . (at the museum)))
+              (segment-match &#39;(I had a (?* ?x) time (?* ?y) thanks)
+                             &#39;(I had a really fun time at the museum thanks)))
+
+(assert-false (segment-match &#39;(I went (?* ?x) zoo)
+                             &#39;(I went golfing at the park)))</pre></div>
+<h2 id="tools">Tools</h2>
+
+<ul>
+<li><code>(position 'x '(a b x c) :start 1)</code></li>
+<li><code>(subseq '(a b x c) 1 3)</code></li>
+</ul>
+
+
     
     
         <div class="chevrons">
