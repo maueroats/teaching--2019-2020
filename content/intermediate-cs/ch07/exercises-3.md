@@ -12,9 +12,9 @@ description: "More exercises writing functions."
 
 3. Write a function `stuck-50-150` that takes in a number x and gives out x. Except if x is below 50, give an answer of 50. Also if x is more than 150, give an answer of 150.
 
-3. `random-3`: Write a function that gives a random number between -50 and 50.
+3. `random-a`: Write a function that gives a random number between -50 and 50.
 
-4. `random-4`: Write a function that gives a random even number 0-200.
+4. `random-b`: Write a function that gives a random even number 0-200.
 
 5. `dice`: Write a function that gives the total from randomly rolling two six sided dice.
 
@@ -22,7 +22,10 @@ description: "More exercises writing functions."
 Write a function that makes a star with a random side length.
 
 6. `dstar`:
-Write a function that makes two stars next to each other, one should have a random side length and the other should have sides that are twice as long.
+Write a function that makes two stars next to each other, one should
+have a random side length and the other should have sides that are
+twice as long. (Note: make sure to write and test your non-random
+function first!)
 
 7. Challenge: make a star with a random number of sides. For the third number, the "step", try `(remainder 31 sides)`. You will want a helper function that knows the number of sides.
 
