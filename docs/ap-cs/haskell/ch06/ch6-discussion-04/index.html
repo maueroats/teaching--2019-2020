@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>reading-guide :: WY Computer Science</title>
+<title>Ch6 Discussion 04 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/tags/reading-guide/">
+  <body data-url="/ap-cs/haskell/ch06/ch6-discussion-04/">
     
       <header>
   <div class="logo">
@@ -68,16 +68,18 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/ap-cs/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/">AP CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/haskell/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/">Haskell</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/">Haskell</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ap-cs/haskell/ch01/" class="dd-item haschildren
@@ -344,10 +346,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/ch06/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/haskell/ch06/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/ch06/">6. Higher Order Functions</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/ch06/">6. Higher Order Functions</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-01/" class="dd-item">
@@ -371,7 +374,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-04/" class="dd-item">
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-04/" class="dd-item active">
         <div>
           <a href="/ap-cs/haskell/ch06/ch6-discussion-04/">
             Ch6 Discussion 04
@@ -1038,7 +1041,51 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/ap-cs/" >
-   AP CS</option>
+   AP CS</option> 
+    <option value="/ap-cs/haskell/" >
+  - 
+   Haskell</option> 
+    <option value="/ap-cs/haskell/ch01/" >
+  -- 
+   1. Intro</option>
+    <option value="/ap-cs/haskell/ch02/" >
+  -- 
+   2. Starting Out</option>
+    <option value="/ap-cs/haskell/ch03/" >
+  -- 
+   3. Types and Typeclasses</option>
+    <option value="/ap-cs/haskell/ch04/" >
+  -- 
+   4. Syntax in Functions</option>
+    <option value="/ap-cs/haskell/ch05/" >
+  -- 
+   5. Recursion</option>
+    <option value="/ap-cs/haskell/ch06/" >
+  -- 
+   6. Higher Order Functions</option> 
+      <option value="/ap-cs/haskell/ch06/ch6-discussion-01/" >--- Ch6 Discussion 01</option>
+      <option value="/ap-cs/haskell/ch06/ch6-discussion-02/" >--- Ch6 Discussion 02</option>
+      <option value="/ap-cs/haskell/ch06/ch6-discussion-03/" >--- Ch6 Discussion 03</option>
+      <option value="/ap-cs/haskell/ch06/ch6-discussion-04/"  selected>--- Ch6 Discussion 04</option>
+      <option value="/ap-cs/haskell/ch06/ch06-reading-guide/" >--- Chapter 6 Reading Guide</option>
+  
+    <option value="/ap-cs/haskell/usaco/" >
+  -- 
+   USACO Practice</option>
+    <option value="/ap-cs/haskell/daily/" >
+  -- 
+   Haskell Daily Notes</option>
+    <option value="/ap-cs/haskell/scrabble/" >
+  -- 
+   Scrabble</option>
+    <option value="/ap-cs/haskell/connect-four/" >
+  -- 
+   Connect Four</option>
+      <option value="/ap-cs/haskell/typeclass-notes/" >-- Typeclass Notes</option>
+      <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
+      <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
+  
+  
     <option value="/ai/" >
    Artificial Intelligence</option>
     <option value="/intermediate-cs/" >
@@ -1059,187 +1106,48 @@
     </div>
     
 
-    <h1>reading-guide</h1>
+    <h1>Ch6 Discussion 04</h1>
 
     
     
     
+    
 
+<p>Learn: <code>scanl</code>.</p>
 
+<p>Find the first 40 partial sums of the sequence 1+<sup>1</sup>&frasl;<sub>2</sub>+<sup>1</sup>&frasl;<sub>3</sub>+<sup>1</sup>&frasl;<sub>4</sub>+&hellip; by
+using <code>scanl</code>.</p>
 
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-        
-        <span class="page-number">Page 1 of 1</span>
-        
-</nav>
+<h2 id="exercises">Exercises</h2>
 
-</div>
+<ol>
+<li><p>Take in a list <code>[(Float,Bool)]</code> of <code>(gpa, admitted)</code> student data, find all of the
+pairs where the student was admitted with a gpa of less than 3.0.</p></li>
 
+<li><p>Shopping. Given $200 and a list of <code>Float</code> prices of items, find</p></li>
+</ol>
 
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/ch04/ch04-reading-guide/">Chapter 4 Reading Guide</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Sections 4.1&ndash;4.3  A pattern starts out with &ldquo;dog&rdquo;,&ldquo;cat&rdquo;, &ldquo;cat dog&rdquo;, &ldquo;cat dog cat&rdquo;, &ldquo;cat dog cat cat dog&rdquo;, &ldquo;cat dog cat cat dog cat dog cat&rdquo; and so on - each new string is created by appending the previous two with a space in between them. Write a function that takes in the number of the word in the sequence and returns the word, starting with 1 is &ldquo;dog&rdquo;. <a class="read-more" href="/ap-cs/haskell/ch04/ch04-reading-guide/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
+<p>a. How much money remains after buying each item possible, in order
+   from left to right.</p>
 
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/reading-guide/">reading-guide</a>
-            
-        
+<p>b. A list of how much you have at the start, and then after each
+   item whether or not it was purchased.</p>
 
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/ch02/ch02-reading-guide/">Chapter 2 Reading Guide</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Haskell Starting Out Questions A. Sections 2.1&ndash;2.3  There is an annoyance with negative numbers that is mentioned.
- What is the correct way to write five times negative three in Haskell? What is a wrong way to do the same thing?  Logical operations are basic building blocks of programs. How do you write:
- and or not equals not equals  Haskell follows mostly the normal order of operations from mathematics. <a class="read-more" href="/ap-cs/haskell/ch02/ch02-reading-guide/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/reading-guide/">reading-guide</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/">Chapter 3 Reading Guide</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.
-Basics  How do you find the type of an expression (when using the interpreter)? What is the type of a string, written in correct Haskell type syntax? What is the type of the expression (5 == 5)? What is the type signature for a function that takes in an integer and puts out a string? <a class="read-more" href="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/reading-guide/">reading-guide</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/ch06/ch06-reading-guide/">Chapter 6 Reading Guide</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Don&rsquo;t do this while this note is here.
- Take in a list of numbers and output a list containing all of the numbers greater than 8.
- Take in a list of numbers and output a list containing all of the numbers between 10 and 20 (inclusive).
- Take in a list of numbers. Multiply all of the numbers in a list by 10 to make the output list. <a class="read-more" href="/ap-cs/haskell/ch06/ch06-reading-guide/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/reading-guide/">reading-guide</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/ch05/ch05-reading-guide/">Chapter 5 Reading Guide</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p><p>The purpose of reading this section is to see how an experienced
-author writes functions that work on lists.</p> <a class="read-more" href="/ap-cs/haskell/ch05/ch05-reading-guide/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/reading-guide/">reading-guide</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/ch01/ch01-reading-guide/">Ch01 Reading Guide</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Haskell introduction reading questions  Haskell is supposed to be a purely functional language. Unpack that:
- What does pure mean? What is the difference between functional and imperative? (The book is not so clear on this point. What do you think it says, in your own words?)  Haskell is lazy. What does this mean?
- Haskell is statically typed. This could be unpacked, too.
- What does typed mean? <a class="read-more" href="/ap-cs/haskell/ch01/ch01-reading-guide/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/reading-guide/">reading-guide</a>
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-        
-
-    </footer>
-</article>
-
-
-<div style="margin-bottom:2rem"></div>
-
-<nav class="pagination" role="navigation">
-        
-        <span class="page-number">Page 1 of 1</span>
-        
-</nav>
-
-
+<ol>
+<li>Progress Bar. Given a list of integers (download sizes), produce a list of strings
+of &lsquo;X&rsquo; indicating what percent of the total number has been
+downloaded so far (so <em>cumulative</em> percent).
+<br />
+<br /></li>
+</ol>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-next" href="/ap-cs/" title="AP CS" style="margin-right: 0px;"><label>AP CS</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/haskell/ch06/ch6-discussion-03/" title="Ch6 Discussion 03"> <i class="fa fa-chevron-left"></i><label>Ch6 Discussion 03</label></a>
+    <a class="nav nav-next" href="/ap-cs/haskell/ch06/ch06-reading-guide/" title="Chapter 6 Reading Guide" style="margin-right: 0px;"><label>Chapter 6 Reading Guide</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1255,7 +1163,7 @@ author writes functions that work on lists.</p> <a class="read-more" href="/ap-c
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 02/10/2017
+        <i class='fa fa-calendar'></i> Last update on 19/11/2019
     </div>
     
 
