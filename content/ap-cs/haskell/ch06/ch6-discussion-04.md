@@ -17,17 +17,25 @@ using `scanl`.
 1. Take in a list `[(Float,Bool)]` of `(gpa, admitted)` student data, find all of the
 pairs where the student was admitted with a gpa of less than 3.0.
 
-2. Shopping. Given $200 and a list of `Float` prices of items, find
+2. Shopping. Given $200 and a list of `Int` prices of items, find:
+
+    a. How much money remains after buying each item possible, in order
+    from left to right.
    
-   a. How much money remains after buying each item possible, in order
-   from left to right.
+     b. A list of how much you have at the start, and then your
+   remaining balance after each item.
    
-   b. A list of how much you have at the start, and then after each
-   item whether or not it was purchased.
+      Examples:
    
+        shopA 200 [90,20,60,150,5] == 25
+        shopB 200 [90,20,60,150,5] == [200,110,90,30,30,25]
+
 
 3. Progress Bar. Given a list of integers (download sizes), produce a list of strings
    of 'X' indicating what percent of the total number has been
-   downloaded so far (so *cumulative* percent).
+   downloaded so far (so *cumulative* percent). Each X should
+   represent 5 percent of the total amount. Round the percents down to
+   the nearest multiple of five.
    
-   
+        progressBar [5,8,12,15,10] ==
+           ["", "XX","XXXXX","XXXXXXXXXXXXXXXX","XXXXXXXXXXXXXXXXXXXX"]
