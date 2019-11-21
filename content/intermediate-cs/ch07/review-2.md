@@ -65,5 +65,11 @@ that has half the height of the rectangle.
 {{% figure src="red-sun-random.png" %}}
 
 
+## Math
 
+1. Write a Racket function to compute $g(x) = \sqrt{7-3x}$.
+2. Write a function that takes in a number and puts out a number that
+   is between 20 and 200 by taking numbers smaller than 20 and making
+   them 20, and numbers bigger than 200 become 200, and numbers in the
+   middle do not change.
 
