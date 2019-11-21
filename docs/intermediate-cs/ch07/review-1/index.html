@@ -17,7 +17,7 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.website";
 </script>
-<meta name="description" content="Review of map-image, build-image, randomness.">
+<meta name="description" content="Review of random, max, min, and Chapter 6.">
 
 
 
@@ -1101,12 +1101,51 @@
     
     
     
-    <ol>
-<li>(<code>rq1</code>) Write a function that takes in one input <code>n</code> and gives
+    
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$'], ['\\[','\\]']]
+  }});
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<ol>
+<li><p>Write a function <code>f1</code> to create a random number between 10 and 50.</p></li>
+
+<li><p>Write a function <code>tree</code> to make a tree given a radius and a
+height. We measure the height of the tree to the center of the
+circle, not the very top. The width of the trunk should be the same
+as the radius. Shown below is <code>(tree 90 220)</code>.</p>
+
+<p>Force the trunk to be at
+least twice the radius, so <code>(tree 90 20)</code> should produce the same
+image as <code>(tree 90 180)</code>.</p>
+
+<figure>
+<img src="tree.png"/> 
+</figure></li>
+</ol>
+
+<h2 id="challenging-but-reasonable">Challenging but reasonable</h2>
+
+<ol>
+<li><p>(<code>rq1</code>) Write a function that takes in one input <code>n</code> and gives
 random numbers between 100 and 1000. The first possible random number
-is 100, and after that multiples of <code>n</code> more than 100. Example: When n
-is 500, the only possible results are 100 and 600. When n is 2, every
-even number from 100 to 1000 is possible.</li>
+is 100, and after that increase 100 by multiples of <code>n</code>. Example: When n
+is 500, the only possible results are 100 and 600. When n is 7, the
+first possible number past 100 is 107.</p></li>
+
+<li><p>The <a href="https://en.wikipedia.org/wiki/Golden_ratio">Golden Ratio</a> is
+$(1 + \sqrt{5})/2$. Rectangles whose sides are in the golden ratio
+have been considered aesthetically pleasing since Greek times, and
+are called &ldquo;golden rectangles&rdquo;. Make
+a function that generates a random golden rectangles with one side
+between 100 and 300 pixels long.</p></li>
 </ol>
 
 
