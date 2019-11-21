@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Ch5 Nightly 4 :: WY Computer Science</title>
+<title>Ch5 Nightly 5 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ai/ch05/ch5nightly4/">
+  <body data-url="/ai/ch05/ch05nightly5/">
     
       <header>
   <div class="logo">
@@ -726,10 +726,17 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ai/ch05/ch5nightly4/" class="dd-item active">
+      <li data-nav-id="/ai/ch05/ch05nightly4/" class="dd-item">
         <div>
-          <a href="/ai/ch05/ch5nightly4/">
+          <a href="/ai/ch05/ch05nightly4/">
             Ch5 Nightly 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ai/ch05/ch05nightly5/" class="dd-item active">
+        <div>
+          <a href="/ai/ch05/ch05nightly5/">
+            Ch5 Nightly 5
           </a>
         </div>
     </li>
@@ -1068,7 +1075,8 @@
       <option value="/ai/ch05/ch05nightly1/" >-- Ch5 Nightly 1</option>
       <option value="/ai/ch05/ch05nightly2/" >-- Ch5 Nightly 2</option>
       <option value="/ai/ch05/ch05nightly3/" >-- Ch5 Nightly 3</option>
-      <option value="/ai/ch05/ch5nightly4/"  selected>-- Ch5 Nightly 4</option>
+      <option value="/ai/ch05/ch05nightly4/" >-- Ch5 Nightly 4</option>
+      <option value="/ai/ch05/ch05nightly5/"  selected>-- Ch5 Nightly 5</option>
       <option value="/ai/ch05/ch5hw1/" >-- Ch5 HW1</option>
       <option value="/ai/ch05/ch5hw2/" >-- Ch5 HW2</option>
   
@@ -1095,39 +1103,47 @@
     </div>
     
 
-    <h1>Ch5 Nightly 4</h1>
+    <h1>Ch5 Nightly 5</h1>
 
     
     
     
     
 
-<p>Today we are writing code that attempts to match a segment at every
-possible endpoint. We are building off of a skeleton of
-<code>segment-match</code> that we wrote in class (or for Nightly 3).</p>
+<p>In class we discussed the changes necessary in order to check to see
+if a variable matched an existing value.</p>
 
-<p>Note: as discussed in class, a <code>(x . y)</code> is the same as <code>(cons x
-y)</code>. If <code>y</code> is not a list, this will display as <code>(x . y)</code>. If <code>y</code> is a
-list, say <code>(list a b c)</code>, then <code>(cons x (list a b c))</code> is exactly the
-same as <code>(list x a b c)</code> so that is what you will see displayed.</p>
+<p>We added a keyword argument to <code>pat-match</code> in order to hold the
+association list of <code>(?var . value)</code> pairs.</p>
+
+<p>This was the pseudo-code we wrote for the revised matcher:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">if (variable is already seen) then
+  if current value from input is the same as the seen variable then
+    recursively call pat-match on the rest of the pattern and input.
+  else
+    match fail
+  end if
+else
+  set up new variable binding
+  recursively call pat-match, including new binding
+end if</pre></div>
+<p>I recommend using <code>assoc</code> to find the bindings.</p>
 
 <h2 id="tests">Tests</h2>
 
-<p>Your code should do at least this much.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-equal &#39;((?x . (He ate fast and he drank fast)))
-              (segment-match &#39;((?* ?x) fast)
-                             &#39;(He ate fast and he drank fast)))
-(assert-false (segment-match &#39;((?* ?x) fast) &#39;(He is slow)))
-(assert-false (segment-match &#39;((?* ?x) fast) &#39;(He is fast and slow)))</pre></div>
-<p>Note that the last one will require you to fail from <code>pat-match</code> not
-in the <code>segment-match</code>.</p>
-
+<p>It is ok if you have <code>(T . T)</code> at the end of your association list.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">?x</span> <span style="color:#f92672">.</span> <span style="color:#111">happy</span><span style="color:#111">))</span>
+              <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?x</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">happy</span><span style="color:#111">)))</span>
+<span style="color:#111">(</span><span style="color:#111">assert-false</span> <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?x</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">sad</span><span style="color:#111">)))</span>
+<span style="color:#111">(</span><span style="color:#111">assert-false</span> <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?y</span> <span style="color:#111">end</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">sad</span><span style="color:#111">)))</span> <span style="color:#75715e">; already ok?</span>
+<span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">?y</span> <span style="color:#f92672">.</span> <span style="color:#111">cream</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#f92672">.</span> <span style="color:#111">happy</span><span style="color:#111">))</span>
+              <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">ice</span> <span style="color:#111">?y</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">ice</span> <span style="color:#111">cream</span><span style="color:#111">)))</span></code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ai/ch05/ch05nightly3/" title="Ch5 Nightly 3"> <i class="fa fa-chevron-left"></i><label>Ch5 Nightly 3</label></a>
+<a class="nav nav-prev" href="/ai/ch05/ch05nightly4/" title="Ch5 Nightly 4"> <i class="fa fa-chevron-left"></i><label>Ch5 Nightly 4</label></a>
     <a class="nav nav-next" href="/ai/ch05/ch5hw1/" title="Ch5 HW1" style="margin-right: 0px;"><label>Ch5 HW1</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
@@ -1144,7 +1160,7 @@ in the <code>segment-match</code>.</p>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 18/11/2019
+        <i class='fa fa-calendar'></i> Last update on 20/11/2019
     </div>
     
 
