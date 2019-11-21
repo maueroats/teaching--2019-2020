@@ -52,6 +52,8 @@ starts at 60 and goes down one every second.
 4. Write a function that takes in a number $m$ and puts out a random
    number between 10 and $m$. Bonus: If $m$ is less than 10, always put out
    10.
+6. (Harder.) Write a function that gives a random multiple of 3 between 81 and
+   228.
 5. (This problem was very hard, consider it AP Racket.) Write a
    function that takes in a number $n$ and puts out a random number
    between $-10n$ and $50n$.
@@ -72,4 +74,5 @@ that has half the height of the rectangle.
    is between 20 and 200 by taking numbers smaller than 20 and making
    them 20, and numbers bigger than 200 become 200, and numbers in the
    middle do not change.
+
 
