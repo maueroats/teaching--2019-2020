@@ -5,7 +5,7 @@ weight: 80
 draft: false
 #type: slide
 #theme: white
-description: "Review of random, max, min, and Chapter 6."
+description: "Bare-bones review."
 ---
 
 {{% use-mathjax %}}
@@ -22,7 +22,6 @@ description: "Review of random, max, min, and Chapter 6."
    image as `(tree 90 180)`.
 
     {{% figure src="tree.png" %}}
-
 
 ## Challenging but reasonable
 1. (`rq1`) Write a function that takes in one input `n` and gives
