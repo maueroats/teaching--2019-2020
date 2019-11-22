@@ -1,6 +1,7 @@
 ---
 title: "Connect Four Rubric"
 date: 2017-10-13T10:40:15-05:00
+weight: 250
 draft: false
 ---
 

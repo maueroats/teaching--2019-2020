@@ -1,8 +1,9 @@
 ---
 title: "Connect Four Timeline"
 date: 2017-10-07T08:59:38-05:00
-weight: 1
+weight: 5
 draft: false
+hidden: true
 ---
 
 | Day | Date(s) | Project Assignment  |

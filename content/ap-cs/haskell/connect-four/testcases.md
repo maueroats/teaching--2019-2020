@@ -1,6 +1,7 @@
 ---
 title: "Connect Four Testcases"
 date: 2017-10-25T22:16:15-05:00
+weight: 90
 draft: false
 #type: slide
 #theme: white

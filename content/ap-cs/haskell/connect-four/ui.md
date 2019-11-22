@@ -1,7 +1,7 @@
 ---
 title: "Connect Four UI"
 date: 2017-10-12T09:54:31-05:00
-weight: 5
+weight: 50
 draft: false
 ---
 

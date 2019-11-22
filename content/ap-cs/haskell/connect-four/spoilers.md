@@ -1,9 +1,13 @@
 ---
 title: "Connect Four Spoilers"
 date: 2017-10-06T22:31:43-05:00
-weight: 10
+weight: 100
 draft: false
 ---
+
+**These spoilers are obsolete.** You should be representing the board
+as a list of pieces. Detecting a win should have mostly been part of a
+warm-up in class.
 
 Two problems with connect four: changing an entry in a matrix ([[Int]]) and
 seeing if there is a win.
