@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Chapter 3 :: WY Computer Science</title>
+<title>Ch5 Misc 1 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/intermediate-cs/ch03/">
+  <body data-url="/ai/ch05/ch05misc1/">
     
       <header>
   <div class="logo">
@@ -568,10 +568,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/" class="dd-item haschildren
+    <li data-nav-id="/ai/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ai/">Artificial Intelligence</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ai/">Artificial Intelligence</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ai/ch01/" class="dd-item haschildren
@@ -711,10 +712,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/ch05/" class="dd-item haschildren
+    <li data-nav-id="/ai/ch05/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ai/ch05/">Ch 05 Eliza</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ai/ch05/">Ch 05 Eliza</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ai/ch05/ch05nightly1/" class="dd-item">
@@ -752,7 +754,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ai/ch05/ch05misc1/" class="dd-item">
+      <li data-nav-id="/ai/ch05/ch05misc1/" class="dd-item active">
         <div>
           <a href="/ai/ch05/ch05misc1/">
             Ch5 Misc 1
@@ -799,11 +801,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/intermediate-cs/ch07/" class="dd-item haschildren
@@ -906,11 +907,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/ch03/" class="dd-item parent active haschildren
+    <li data-nav-id="/intermediate-cs/ch03/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/ch03/">Chapter 3</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/ch03/">Chapter 3</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/ch03/ch03-art-project/" class="dd-item">
@@ -1084,23 +1084,38 @@
     <option value="/ap-cs/" >
    AP CS</option>
     <option value="/ai/" >
-   Artificial Intelligence</option>
+   Artificial Intelligence</option> 
+    <option value="/ai/ch01/" >
+  - 
+   Ch 01</option>
+    <option value="/ai/ch02/" >
+  - 
+   Ch 02</option>
+    <option value="/ai/ch03/" >
+  - 
+   Ch 03 Lisp</option>
+    <option value="/ai/ch04/" >
+  - 
+   Ch 04 GPS</option>
+    <option value="/ai/ch05/" >
+  - 
+   Ch 05 Eliza</option> 
+      <option value="/ai/ch05/ch05nightly1/" >-- Ch5 Nightly 1</option>
+      <option value="/ai/ch05/ch05nightly2/" >-- Ch5 Nightly 2</option>
+      <option value="/ai/ch05/ch05nightly3/" >-- Ch5 Nightly 3</option>
+      <option value="/ai/ch05/ch05nightly4/" >-- Ch5 Nightly 4</option>
+      <option value="/ai/ch05/ch05nightly5/" >-- Ch5 Nightly 5</option>
+      <option value="/ai/ch05/ch05misc1/"  selected>-- Ch5 Misc 1</option>
+      <option value="/ai/ch05/ch5hw1/" >-- Ch5 HW1</option>
+      <option value="/ai/ch05/ch5hw2/" >-- Ch5 HW2</option>
+  
+    <option value="/ai/quiz/" >
+  - 
+   Quizzes</option>
+      <option value="/ai/resources/" >- AI Resources</option>
+  
     <option value="/intermediate-cs/" >
-   Intermediate CS</option> 
-    <option value="/intermediate-cs/ch07/" >
-  - 
-   7. Numbers</option>
-    <option value="/intermediate-cs/resources/" >
-  - 
-   Resources</option>
-    <option value="/intermediate-cs/ch03/"  selected >
-  - 
-   Chapter 3</option> 
-      <option value="/intermediate-cs/ch03/ch03-art-project/" >-- Art Project</option>
-      <option value="/intermediate-cs/ch03/additional-exercises/" >-- Exercises</option>
-  
-      <option value="/intermediate-cs/e-courses/" >- Online Help</option>
-  
+   Intermediate CS</option>
     <option value="/robotics/" >
    Robotics</option>
     <option value="/ftc/" >
@@ -1117,31 +1132,76 @@
     </div>
     
 
-    <h1>Chapter 3</h1>
+    <h1>Ch5 Misc 1</h1>
 
     
     
     
+    
 
-<ul class="children children-li">
+<ul>
+<li><p>Learn <code>reduce</code> and <code>every</code>.</p></li>
 
-<span><li>
-                <a href="/intermediate-cs/ch03/ch03-art-project/" >Art Project</a></li>
-</span>
+<li><p><a href="https://riptutorial.com/common-lisp/example/8770/summing-a-list">reduce
+info</a></p></li>
 
-<span><li>
-                <a href="/intermediate-cs/ch03/additional-exercises/" >Exercises</a></li>
-</span>
+<li><p><a href="http://clhs.lisp.se/Body/f_everyc.htm">every</a> including
+friends. Notice how the later examples work on multiple inputs.</p></li>
 </ul>
 
+<p>(SC 7.16-22)</p>
+
+<h2 id="reduce">Reduce</h2>
+
+<ol>
+<li><p>Suppose we had a list of sets ((A B C) (C D A) (F B D) (G)) that we
+wanted to collapse into one big set. If we use APPEND for our
+reducing function, the result won’t be a true set, because some elements
+will appear more than once. What reducing function should be used
+instead?</p></li>
+
+<li><p>Write a function that, given a list of lists, returns the total length of all
+the lists. This problem can be solved two different ways. Give at
+least two ways to solve.</p></li>
+
+<li><p>Compare <code>(REDUCE #’+ NIL)</code> to <code>(REDUCE #’* NIL)</code>. Say what they are
+and why you think
+the answers are that way.</p></li>
+</ol>
+
+<h2 id="every">Every</h2>
+
+<p>In the exercises below, <code>throdd</code> refers to a number that is 1 or 2
+mod 3.</p>
+
+<ol>
+<li>Write a function ALL-ODD that returns T if every element of a list of
+numbers is throdd.</li>
+<li>Write a function NONE-ODD that returns T if every element of a list of
+numbers is not throdd.</li>
+<li>Write a function NOT-ALL-ODD that returns T if not every element of
+a list of numbers is throdd.</li>
+<li>Write a function NOT-NONE-ODD that returns T if it is not the case
+that a list of numbers contains no throdd elements.</li>
+</ol>
+
+<h2 id="etc">Etc</h2>
+
+<ol>
+<li><p>Write a function <code>both-close</code> that takes as input two lists of the
+same length, and returns true if the corresponding elements are
+within 5 of each other.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-true (both-close &#39;(10 20 30 50) &#39;(8 23 25 45)))
+(assert-false (both-close &#39;(10 20 30) &#39;(15 14 29)))</pre></div></li>
+</ol>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/intermediate-cs/resources/ics-wescheme-note/" title="WeScheme"> <i class="fa fa-chevron-left"></i><label>WeScheme</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/ch03/ch03-art-project/" title="Art Project" style="margin-right: 0px;"><label>Art Project</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ai/ch05/ch05nightly5/" title="Ch5 Nightly 5"> <i class="fa fa-chevron-left"></i><label>Ch5 Nightly 5</label></a>
+    <a class="nav nav-next" href="/ai/ch05/ch5hw1/" title="Ch5 HW1" style="margin-right: 0px;"><label>Ch5 HW1</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1157,7 +1217,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 12/09/2019
+        <i class='fa fa-calendar'></i> Last update on 25/11/2019
     </div>
     
 
