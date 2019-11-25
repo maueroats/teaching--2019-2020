@@ -1193,6 +1193,19 @@ same length, and returns true if the corresponding elements are
 within 5 of each other.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-true (both-close &#39;(10 20 30 50) &#39;(8 23 25 45)))
 (assert-false (both-close &#39;(10 20 30) &#39;(15 14 29)))</pre></div></li>
+
+<li><p>Write a function <code>ALL-EQUAL</code> that returns T if the first
+element of a list is equal to the second, the second is equal to the third,
+the third is equal to the fourth, and so on. <code>(ALL-EQUAL ’(I I I I))</code>
+should return T. <code>(ALL-EQUAL ’(I I E I))</code> should return NIL. <code>ALL-
+EQUAL</code> should return T for lists with less than two elements.</p></li>
+
+<li><p>Write <code>EVERY-OTHER</code>, a function that returns every other
+element of a list—the first, third, fifth, and so on. <code>(EVERY-OTHER
+’(A B C D E F G))</code> should return <code>(A C E G)</code>. <code>(EVERY-OTHER ’(I
+CAME I SAW I CONQUERED))</code> should return <code>(I I I)</code>. This is designed to
+be a recursive function exercise, so try it that way in addition to
+another way.</p></li>
 </ol>
 
 

@@ -56,3 +56,15 @@ that a list of numbers contains no throdd elements.
         (assert-true (both-close '(10 20 30 50) '(8 23 25 45)))
         (assert-false (both-close '(10 20 30) '(15 14 29)))
 
+2. Write a function `ALL-EQUAL` that returns T if the first
+element of a list is equal to the second, the second is equal to the third,
+the third is equal to the fourth, and so on. `(ALL-EQUAL ’(I I I I))`
+should return T. `(ALL-EQUAL ’(I I E I))` should return NIL. `ALL-
+EQUAL` should return T for lists with less than two elements.
+
+3. Write `EVERY-OTHER`, a function that returns every other
+element of a list—the first, third, fifth, and so on. `(EVERY-OTHER
+’(A B C D E F G))` should return `(A C E G)`. `(EVERY-OTHER ’(I
+CAME I SAW I CONQUERED))` should return `(I I I)`. This is designed to
+be a recursive function exercise, so try it that way in addition to
+another way.
