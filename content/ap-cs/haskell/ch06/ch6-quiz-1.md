@@ -12,7 +12,9 @@ Please write your answers on paper and turn in the paper.
 1. Explain in your own words what `foldl` is good for. 
    
 2. Use `foldl` to remove duplicates from a list. Write your own fold
-   function. 
+   function. Example:
+   
+        undup [1,1,1,2,3,2] == [1,2,3] 
 
 3. You are going to hide a secret message inside a public message by
    inserting the letters of the secret message every given number (n)
