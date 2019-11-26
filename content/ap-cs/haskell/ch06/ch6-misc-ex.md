@@ -1,7 +1,7 @@
 ---
 title: "Ch6 Misc Ex"
 date: 2019-11-21T13:51:41-06:00
-#weight: 
+weight: 164
 draft: false
 #type: slide
 #theme: white
