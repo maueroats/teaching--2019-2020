@@ -73,8 +73,18 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/models-1/</loc>
+    <lastmod>2018-11-13T14:25:10-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/</loc>
     <lastmod>2018-09-05T11:26:51-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-1/</loc>
+    <lastmod>2017-10-26T12:56:12-05:00</lastmod>
   </url>
   
   <url>
@@ -193,6 +203,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-2/</loc>
+    <lastmod>2017-10-27T09:08:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ftc/git/</loc>
     <lastmod>2017-10-10T10:20:47-05:00</lastmod>
   </url>
@@ -230,6 +245,11 @@
   <url>
     <loc>https://wy-cs.website/resources/apcs-syllabus-2019-2020/</loc>
     <lastmod>2019-09-07T09:08:30-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-3/</loc>
+    <lastmod>2018-11-26T08:27:25-06:00</lastmod>
   </url>
   
   <url>
@@ -303,6 +323,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-4/</loc>
+    <lastmod>2017-10-31T10:15:38-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-problemset/</loc>
     <lastmod>2017-09-20T20:32:15-05:00</lastmod>
   </url>
@@ -323,6 +348,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-review/</loc>
+    <lastmod>2017-10-31T14:31:08-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/connect-four/ui/</loc>
     <lastmod>2017-10-12T09:54:31-05:00</lastmod>
   </url>
@@ -340,6 +370,11 @@
   <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-quiz-c/</loc>
     <lastmod>2019-10-16T15:46:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-review-2/</loc>
+    <lastmod>2018-11-28T07:25:03-06:00</lastmod>
   </url>
   
   <url>
@@ -378,13 +413,28 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-graph-zoom/</loc>
+    <lastmod>2018-11-30T17:31:57-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch07/</loc>
     <lastmod>2018-11-13T07:38:12-06:00</lastmod>
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-project/</loc>
+    <lastmod>2018-12-02T22:38:33-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch07/review-1/</loc>
     <lastmod>2018-11-13T07:38:18-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/</loc>
+    <lastmod>2018-11-05T07:44:46-06:00</lastmod>
   </url>
   
   <url>
@@ -395,6 +445,11 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/ch07/review-2/</loc>
     <lastmod>2019-11-21T12:57:17-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-finale/</loc>
+    <lastmod>2018-12-02T23:37:17-06:00</lastmod>
   </url>
   
   <url>
@@ -678,6 +733,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-test/</loc>
+    <lastmod>2018-12-06T14:19:06-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/daily/2018-10-16/</loc>
     <lastmod>2018-10-17T08:46:50-05:00</lastmod>
   </url>
@@ -730,6 +790,16 @@
   <url>
     <loc>https://wy-cs.website/ecs-teach/scratch/</loc>
     <lastmod>2017-12-01T23:01:28-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/test-corrections/</loc>
+    <lastmod>2017-11-10T16:44:02-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch08/number-review-more/</loc>
+    <lastmod>2017-11-06T08:27:17-06:00</lastmod>
   </url>
   
   <url>
