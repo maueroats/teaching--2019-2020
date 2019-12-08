@@ -19,9 +19,10 @@ Robophins, and team 15659, Young Droids, from [Whitney Young](http://wyoung.org/
 Monday and Thursday, 3:20-4:50pm. Room 109.
 
 ## Meet Schedule
-
+    
 * November 9, 2019 at DePaul, 247 S State Street, 10am-4pm.
-* December 14, 2019 at U of C Lab School, 5840 S. Kenwood, 10am-4pm.
+* December 14, 2019 at U of C Lab School, 5840 S. Kenwood,
+  10am-4pm. [Meet Info](https://docs.google.com/document/d/1YtxHLqVdGZKBEm1mxWnZ6-6baibl_-8HH7RqHt4B55I/edit?usp=sharing)
 * January 11, 2020 at Juarez, 1450-1510 W Cermak Road, 8am-1pm.
 * February 1, 2020 at Horizon Science Academy, 2245 W Pershing Ave, 8am-6pm.
 
