@@ -1,7 +1,7 @@
 ---
-title: "Chapter 3"
+title: "3. Images"
 date: 2019-09-12T10:57:37-05:00
-#weight: 
+weight: 30
 draft: false
 #type: slide
 #theme: white

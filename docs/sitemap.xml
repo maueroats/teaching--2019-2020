@@ -73,6 +73,16 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/posn-util/</loc>
+    <lastmod>2019-01-08T08:32:15-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch15/15-slides/</loc>
+    <lastmod>2018-12-11T08:52:32-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch08/models-1/</loc>
     <lastmod>2018-11-13T14:25:10-06:00</lastmod>
   </url>
@@ -80,6 +90,11 @@
   <url>
     <loc>https://wy-cs.website/ap-cs/haskell/</loc>
     <lastmod>2018-09-05T11:26:51-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/pro/pro-string/</loc>
+    <lastmod>2017-11-19T15:30:06-06:00</lastmod>
   </url>
   
   <url>
@@ -163,6 +178,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/haskell/ch07/ch7-maybe/</loc>
+    <lastmod>2019-12-12T16:27:36-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/ch04/ch04-notes/</loc>
     <lastmod>2019-10-09T18:46:29-05:00</lastmod>
   </url>
@@ -198,8 +218,23 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch15/15-cond-patterns/</loc>
+    <lastmod>2018-12-17T14:16:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch13/ch13-exb/</loc>
+    <lastmod>2018-12-12T14:17:52-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ftc/git/everyday/</loc>
     <lastmod>2018-02-11T07:33:00-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/pro/build-image/</loc>
+    <lastmod>2017-12-06T09:53:22-06:00</lastmod>
   </url>
   
   <url>
@@ -228,6 +263,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch15/15-challenge/</loc>
+    <lastmod>2018-12-15T16:58:14-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/resources/generic-cs-syllabus/</loc>
     <lastmod>2017-09-09T15:50:00-05:00</lastmod>
   </url>
@@ -235,6 +275,11 @@
   <url>
     <loc>https://wy-cs.website/ai/ch03/</loc>
     <lastmod>2019-09-13T20:59:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch03/</loc>
+    <lastmod>2019-09-12T10:57:37-05:00</lastmod>
   </url>
   
   <url>
@@ -248,8 +293,23 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/click-circle/</loc>
+    <lastmod>2019-01-08T08:34:06-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch13/ch13-exc/</loc>
+    <lastmod>2018-12-13T14:04:03-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch08/number-3/</loc>
     <lastmod>2018-11-26T08:27:25-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/pro/struct/</loc>
+    <lastmod>2018-10-12T21:21:50-05:00</lastmod>
   </url>
   
   <url>
@@ -278,6 +338,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/click-circle-questions/</loc>
+    <lastmod>2019-01-08T08:34:10-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-discussion-03/</loc>
     <lastmod>2018-09-23T11:47:31-05:00</lastmod>
   </url>
@@ -293,8 +358,18 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/click-mega/</loc>
+    <lastmod>2019-01-09T14:30:07-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch04/ch04-discussion-06/</loc>
     <lastmod>2019-11-04T14:30:20-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/square-a/</loc>
+    <lastmod>2019-01-10T08:29:42-06:00</lastmod>
   </url>
   
   <url>
@@ -323,6 +398,16 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/pro/match/</loc>
+    <lastmod>2018-02-21T15:01:29-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/tightrope/</loc>
+    <lastmod>2017-12-19T08:25:54-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch08/number-4/</loc>
     <lastmod>2017-10-31T10:15:38-05:00</lastmod>
   </url>
@@ -345,6 +430,16 @@
   <url>
     <loc>https://wy-cs.website/ai/ch05/</loc>
     <lastmod>2019-11-11T21:21:53-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/pro/for/</loc>
+    <lastmod>2019-03-22T15:46:17-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/map-image/</loc>
+    <lastmod>2017-12-20T13:59:24-06:00</lastmod>
   </url>
   
   <url>
@@ -378,8 +473,18 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch15/15-graphing-review/</loc>
+    <lastmod>2018-12-19T20:32:27-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch08/number-review-2/</loc>
     <lastmod>2018-11-28T07:25:03-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/color-enhancing/</loc>
+    <lastmod>2017-12-20T10:51:18-06:00</lastmod>
   </url>
   
   <url>
@@ -413,8 +518,23 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch15/15-heatmap/</loc>
+    <lastmod>2018-12-19T20:54:29-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/resources/academic-integrity/</loc>
     <lastmod>2017-09-09T16:51:48-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ap-cs/haskell/ch07/</loc>
+    <lastmod>2019-12-12T16:27:28-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch15/15-heat-contour/</loc>
+    <lastmod>2018-12-21T07:24:27-06:00</lastmod>
   </url>
   
   <url>
@@ -425,6 +545,11 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/ch07/</loc>
     <lastmod>2018-11-13T07:38:12-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/ch20-review/</loc>
+    <lastmod>2018-01-10T09:54:08-06:00</lastmod>
   </url>
   
   <url>
@@ -573,6 +698,16 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch13/</loc>
+    <lastmod>2017-11-27T08:39:00-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch15/</loc>
+    <lastmod>2017-12-05T10:22:50-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch06/ch6-misc-ex/</loc>
     <lastmod>2019-11-21T13:51:41-06:00</lastmod>
   </url>
@@ -595,6 +730,11 @@
   <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch02/ch02-test/</loc>
     <lastmod>2019-09-12T13:34:57-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/</loc>
+    <lastmod>2017-12-13T09:43:23-06:00</lastmod>
   </url>
   
   <url>
@@ -658,8 +798,18 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/pro/</loc>
+    <lastmod>2017-11-19T15:30:06-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/quiz/2019-10-04/</loc>
     <lastmod>2019-10-04T09:06:44-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch13/ch13-intro-ex1/</loc>
+    <lastmod>2019-12-17T09:32:52-06:00</lastmod>
   </url>
   
   <url>
@@ -713,11 +863,6 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.website/intermediate-cs/ch03/</loc>
-    <lastmod>2019-09-12T10:57:37-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch03/additional-exercises/</loc>
     <lastmod>2019-09-12T10:57:27-05:00</lastmod>
   </url>
@@ -735,6 +880,16 @@
   <url>
     <loc>https://wy-cs.website/resources/senioritis/</loc>
     <lastmod>2019-03-09T15:06:06-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/trollquiz/</loc>
+    <lastmod>2019-01-11T14:28:43-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/aimbooster/</loc>
+    <lastmod>2019-01-10T14:21:43-06:00</lastmod>
   </url>
   
   <url>
@@ -793,8 +948,18 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch15/15-practice-quiz/</loc>
+    <lastmod>2017-12-10T21:55:22-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ecs-teach/scratch/</loc>
     <lastmod>2017-12-01T23:01:28-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch13/ch13-exa/</loc>
+    <lastmod>2017-11-27T10:03:20-06:00</lastmod>
   </url>
   
   <url>
