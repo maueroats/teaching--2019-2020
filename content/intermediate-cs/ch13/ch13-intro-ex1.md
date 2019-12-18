@@ -1,7 +1,7 @@
 ---
-title: "13. Intro Exercises"
+title: "13. Intro Exercises 1"
 date: 2019-12-17T09:32:52-06:00
-#weight: 
+weight: 110
 draft: false
 #type: slide
 #theme: white
