@@ -25,11 +25,24 @@ draft: false
       (< 15 (/ 100 n))))
 ```
 
-3. The `lucky-charm? : image -> boolean`. Give true if the image
-matches `pic:unicorn` (you can pick this image) or an orange star (of
-any size). Write some check-expects first!
+3. Does writing the function above in a different way matter?
+```racket
+(define (mystery2 n)
+  (or (< 15 (/ 100 n)
+      (= n 0))))
+```
 
 
+4. (Challenge) The `lucky-charm? : image -> boolean`. Give true if the image
+matches `pic:unicorn` (you can pick this image) or an orange star
+(must work for every size orange star). Write some check-expects first! 
 
-
+        (check-expect (lucky-charm? (star 20 "solid" "orange"))
+                      true)
+        (check-expect (lucky-charm? (star 30 "solid" "orange"))
+                      true)
+        (check-expect (lucky-charm? pic:hacker)
+                      false)
+        (check-expect (lucky-charm? pic:unicorn)
+                      true)
 
