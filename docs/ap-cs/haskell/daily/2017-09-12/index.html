@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1513,6 +1535,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1540,29 +1565,39 @@
     
     
     <ul>
-<li><p>Memorize how to write a basic main method:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">main = do putStrLn &#34;Loaded&#34;</pre></div></li>
-
-<li><p>Use &ldquo;&ndash;&rdquo; (two dashes) to comment to the end of the line. This is
-equivalent to Racket &ldquo;;&rdquo; (semicolon).</p></li>
-
-<li><p>Function name rules:</p>
-
+<li>
+<p>Memorize how to write a basic main method:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">  main = do putStrLn &#34;Loaded&#34;
+</code></pre></div></li>
+<li>
+<p>Use &ldquo;&ndash;&rdquo; (two dashes) to comment to the end of the line. This is
+equivalent to Racket &ldquo;;&rdquo; (semicolon).</p>
+</li>
+<li>
+<p>Function name rules:</p>
 <ul>
-<li>Must begin with lowercase letter.</li>
-<li>Hyphens (-) are not allowed in names.</li>
-
-<li><p>Underscore (_) may be used instead.</p></li>
-
-<li><p>Traditionally <code>camelCase</code> is used for functions. (First letter
-lowercase, then uppercase each new word.)</p></li>
-</ul></li>
-
-<li><p>We will learn about the <code>$</code> sign soon, but it is a substitute for
+<li>
+<p>Must begin with lowercase letter.</p>
+</li>
+<li>
+<p>Hyphens (-) are not allowed in names.</p>
+</li>
+<li>
+<p>Underscore (_) may be used instead.</p>
+</li>
+<li>
+<p>Traditionally <code>camelCase</code> is used for functions. (First letter
+lowercase, then uppercase each new word.)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>We will learn about the <code>$</code> sign soon, but it is a substitute for
 putting parentheses from somewhere to the end of the line. That means</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  putStrLn ( show ( grapher f 0 10 ) )</pre></div>
-<p>could be written as</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  putStrLn $ show $ grapher f 0 10</pre></div></li>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    putStrLn ( show ( grapher f 0 10 ) )
+</code></pre></div><p>could be written as</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    putStrLn $ show $ grapher f 0 10
+</code></pre></div></li>
 </ul>
 
 

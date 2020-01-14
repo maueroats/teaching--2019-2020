@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1520,22 +1542,22 @@
     
     <p>The purpose of this assignment is so you keep up with what we are
 doing in class.</p>
-
 <p>Write the <code>pat-match</code> function that returns <code>T</code> when the pattern
 matches, and <code>NIL</code> otherwise.</p>
-
 <p>It should pass the following checks:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"> (assert-true (pat-match &#39;?x &#39;a))
- (assert-true (pat-match &#39;a  &#39;a))
- (assert-false (pat-match &#39;b &#39;a))
- (assert-true (pat-match &#39;(I like cream) &#39;(I like cream)))
- (assert-false (pat-match &#39;(I like cream) &#39;(I like cookies)))
- (assert-true (pat-match &#39;(I ?y cream) &#39;(I hate cream)))
- (assert-false (pat-match &#39;(I ?z cream) &#39;(I hate cookies)))
- (assert-true (pat-match &#39;(I am (?x) but ?y)
-                         &#39;(I am (complicated) but right)))
- (assert-false (pat-match &#39;(I am (not ?x))
-                         &#39;(I am (simple))))</pre></div>
+<pre><code> (assert-true (pat-match '?x 'a))
+ (assert-true (pat-match 'a  'a))
+ (assert-false (pat-match 'b 'a))
+ (assert-true (pat-match '(I like cream) '(I like cream)))
+ (assert-false (pat-match '(I like cream) '(I like cookies)))
+ (assert-true (pat-match '(I ?y cream) '(I hate cream)))
+ (assert-false (pat-match '(I ?z cream) '(I hate cookies)))
+ (assert-true (pat-match '(I am (?x) but ?y)
+                         '(I am (complicated) but right)))
+ (assert-false (pat-match '(I am (not ?x))
+                         '(I am (simple))))
+</code></pre>
+
 
     
     

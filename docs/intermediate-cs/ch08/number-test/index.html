@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1526,61 +1548,38 @@
     
     
     
-    
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-  inlineMath: [['$','$'], ['\\(','\\)']],
-  displayMath: [['$$','$$'], ['\\[','\\]']]
-  }});
-</script>
-
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>The model is a time we will call $t$. The time will be between $0$ and $6\pi$.</p>
-
 <p>The people coordinates are given by:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  (define (x-blue t) (* 200 (cos t))
-  (define (y-red  t) (* 150 (sin t))</pre></div>
+<pre><code>  (define (x-blue t) (* 200 (cos t))
+  (define (y-red  t) (* 150 (sin t))
+</code></pre>
 <h2 id="yellow-box">Yellow Box</h2>
-
 <p>Make a 400x50 yellow rectangle for the background.
 Place a single horizontal gray line in the middle (for the axis).</p>
-
 <p>The horizontal axis of the graph will be &ldquo;t&rdquo;. On the vertical axis,
 graph the <code>y-red</code> function with a red dot.</p>
-
 <ul>
 <li>Computer coordinates are $0 \le x \le 400$ and $0 \le y \le 50$.</li>
 <li>People coordinates are horizontally $0\le t \le 6\pi$ and vertically
 $-200 \le
-y \le 200$.
-<br /></li>
+y \le 200$.</li>
 </ul>
-
 <p>After have the first part working, on the same image, graph the
 <code>x-blue</code> function vertically with a blue dot. (So really the <code>x-blue</code> will
 be a vertical amount.)</p>
-
 <h2 id="side-bars">Side Bars</h2>
-
 <p>The right side bar is a 50x400 white rectangle.  The red dot moves
 with x-coordinate 25 and y-coordinate given by <code>y-red</code>, using the same model <code>t</code> as the rest of the animation.</p>
-
 <p>The bottom side bar is a 400x50 white rectangle. The blue dot moves with x-coordinate <code>x-red</code> and y-coordinate 25.</p>
-
 <h2 id="center-box">Center Box</h2>
-
 <p>The center box is a 400x400 outlined rectangle. The purple dot moves
 with x-coordinate from <code>x-blue</code> and y-coordinate from <code>y-red</code>.</p>
-
 <h2 id="demo">Demo</h2>
-
-<figure>
-    <img src="ch08-complex.gif"/> 
-</figure>
+<!-- raw HTML omitted -->
 
 
     

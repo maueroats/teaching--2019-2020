@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,25 +1540,20 @@
     
     
     
-    
-
-<p>Today we are writing code that attempts to match a segment at every
+    <p>Today we are writing code that attempts to match a segment at every
 possible endpoint. We are building off of a skeleton of
 <code>segment-match</code> that we wrote in class (or for Nightly 3).</p>
-
-<p>Note: as discussed in class, a <code>(x . y)</code> is the same as <code>(cons x
-y)</code>. If <code>y</code> is not a list, this will display as <code>(x . y)</code>. If <code>y</code> is a
+<p>Note: as discussed in class, a <code>(x . y)</code> is the same as <code>(cons x y)</code>. If <code>y</code> is not a list, this will display as <code>(x . y)</code>. If <code>y</code> is a
 list, say <code>(list a b c)</code>, then <code>(cons x (list a b c))</code> is exactly the
 same as <code>(list x a b c)</code> so that is what you will see displayed.</p>
-
 <h2 id="tests">Tests</h2>
-
 <p>Your code should do at least this much.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-equal &#39;((?x . (He ate fast and he drank fast)))
-              (segment-match &#39;((?* ?x) fast)
-                             &#39;(He ate fast and he drank fast)))
-(assert-false (segment-match &#39;((?* ?x) fast) &#39;(He is slow)))
-(assert-false (segment-match &#39;((?* ?x) fast) &#39;(He is fast and slow)))</pre></div>
+<pre><code>(assert-equal '((?x . (He ate fast and he drank fast)))
+              (segment-match '((?* ?x) fast)
+                             '(He ate fast and he drank fast)))
+(assert-false (segment-match '((?* ?x) fast) '(He is slow)))
+(assert-false (segment-match '((?* ?x) fast) '(He is fast and slow)))
+</code></pre>
 <p>Note that the last one will require you to fail from <code>pat-match</code> not
 in the <code>segment-match</code>.</p>
 

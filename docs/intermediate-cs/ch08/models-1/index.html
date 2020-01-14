@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1328,6 +1350,48 @@
       <a href="/robotics/cad/">CAD (Onshape)</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/robotics/cad/onshape/" class="dd-item">
+        <div>
+          <a href="/robotics/cad/onshape/">
+            Onshape 1: Info
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/robotics/cad/2019-09-05-class/" class="dd-item">
+        <div>
+          <a href="/robotics/cad/2019-09-05-class/">
+            OnShape 2: 2D Shapes
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/robotics/cad/2019-09-06-class/" class="dd-item">
+        <div>
+          <a href="/robotics/cad/2019-09-06-class/">
+            OnShape 3: Dimensioning
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/robotics/cad/hw1/" class="dd-item">
+        <div>
+          <a href="/robotics/cad/hw1/">
+            CAD: HW 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/robotics/cad/hw2/" class="dd-item">
+        <div>
+          <a href="/robotics/cad/hw2/">
+            CAD: HW 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/robotics/cad/hw3/" class="dd-item">
+        <div>
+          <a href="/robotics/cad/hw3/">
+            CAD: HW 3
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
         </ul>
@@ -1484,9 +1548,7 @@
     
     
     
-    
-
-<script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
 tex2jax: {
   inlineMath: [['$','$'], ['\\(','\\)']],
@@ -1498,29 +1560,32 @@ tex2jax: {
 </script>
 
 
-
 <ol>
-<li><p>A circle increases its radius by 5 every tick. Hitting a key
-reduces the radius by 50%.</p></li>
-
-<li><p>A square moves along a horizontal line. Every time you move the mouse, it moves right 1 pixel. When you hit a key it moves left 4 pixels.</p></li>
-
-<li><p>A small solid circle randomly moves between x=20, x=60, and x=100 on a fixed horizontal line. (You pick the $y$ coordinate.)</p></li>
-
-<li><p>Make the graph of $y=x(200-x)/50$. See below.</p></li>
+<li>
+<p>A circle increases its radius by 5 every tick. Hitting a key
+reduces the radius by 50%.</p>
+</li>
+<li>
+<p>A square moves along a horizontal line. Every time you move the mouse, it moves right 1 pixel. When you hit a key it moves left 4 pixels.</p>
+</li>
+<li>
+<p>A small solid circle randomly moves between x=20, x=60, and x=100 on a fixed horizontal line. (You pick the $y$ coordinate.)</p>
+</li>
+<li>
+<p>Make the graph of $y=x(200-x)/50$. See below.</p>
+</li>
 </ol>
-
 <h2 id="graphing-a-function">Graphing a function</h2>
-
 <p>Method for graphing $y=f(x)$ using <code>build-image</code>: color points based
 on $c(x,y) = y-f(x)$. When $c(x,y)=0$, the point $(x,y)$ is exactly on the graph. Depending on how thick you want the line, try $c(x,y)&lt;5$ to make black or gray.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">c</span> <span style="color:#111">x</span> <span style="color:#111">y</span><span style="color:#111">)</span>
-    <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">y</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">1/2</span> <span style="color:#111">x</span><span style="color:#111">)))</span>
+    <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">y</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">1/2</span> <span style="color:#111">x</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">color-f</span> <span style="color:#111">x</span> <span style="color:#111">y</span><span style="color:#111">)</span>
-    <span style="color:#111">(</span><span style="color:#111">gray</span> <span style="color:#111">(</span><span style="color:#111">limit</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">50</span> <span style="color:#111">(</span><span style="color:#111">c</span> <span style="color:#111">x</span> <span style="color:#111">y</span><span style="color:#111">)))))</span>
+    <span style="color:#111">(</span><span style="color:#111">gray</span> <span style="color:#111">(</span><span style="color:#111">limit</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">50</span> <span style="color:#111">(</span><span style="color:#111">c</span> <span style="color:#111">x</span> <span style="color:#111">y</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">gray</span> <span style="color:#111">n</span><span style="color:#111">)</span>
-    <span style="color:#111">(</span><span style="color:#111">make-color</span> <span style="color:#111">n</span> <span style="color:#111">n</span> <span style="color:#111">n</span><span style="color:#111">))</span>
-<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">limit</span> <span style="color:#111">n</span><span style="color:#111">)</span> <span style="color:#111">n</span><span style="color:#111">)</span> <span style="color:#75715e">; FIX: you should fix this one yourself</span></code></pre></div>
+    <span style="color:#111">(</span><span style="color:#111">make-color</span> <span style="color:#111">n</span> <span style="color:#111">n</span> <span style="color:#111">n</span><span style="color:#111">)</span><span style="color:#111">)</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">limit</span> <span style="color:#111">n</span><span style="color:#111">)</span> <span style="color:#111">n</span><span style="color:#111">)</span> <span style="color:#75715e">; FIX: you should fix this one yourself</span>
+</code></pre></div>
 
     
     

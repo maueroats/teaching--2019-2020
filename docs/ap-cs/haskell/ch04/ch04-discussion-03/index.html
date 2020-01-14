@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,6 +1536,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1543,62 +1568,69 @@
     <p>All of these problems are stolen from
 <a href="https://codingbat.com">CodingBat</a>.
 Write function signatures as well as the actual function.</p>
-
 <p>Make sure to write a list of test cases so you have thought through
 what every part of the problem description means before you start
 coding.</p>
-
 <p>Some test cases <a href="ch04disc03tests.hs">as a haskell file</a> or <a href="/ap-cs/haskell/ch04/ch04-discussion-03/ch04disc03tests/">as a web
 page</a></p>
-
 <ol>
-<li><p>(<a href="https://codingbat.com/prob/p137188"><code>makeLast</code></a>): Given a list of <code>Int</code>, return a new list twice the
+<li>
+<p>(<a href="https://codingbat.com/prob/p137188"><code>makeLast</code></a>): Given a list of <code>Int</code>, return a new list twice the
 length of the original. The last element of the result is
 the same as the last element of the original list, and all
-other elements are 0.</p></li>
-
-<li><p>(<code>swapEnds</code>) Given a list, return a new list with the first and last elements
-exchanged.</p></li>
-
-<li><p>(<code>unluckyOne</code>) Say that a 1 immediately followed by a 3 in a list
+other elements are 0.</p>
+</li>
+<li>
+<p>(<code>swapEnds</code>) Given a list, return a new list with the first and last elements
+exchanged.</p>
+</li>
+<li>
+<p>(<code>unluckyOne</code>) Say that a 1 immediately followed by a 3 in a list
 is an &ldquo;unlucky&rdquo; 1. Return true if the given list contains an
-unlucky 1 in the first 2 or last 2 positions in the list.</p></li>
-
-<li><p><code>withoutDoubles:: Int -&gt; Int -&gt; Bool -&gt; Int</code>. The first two inputs
+unlucky 1 in the first 2 or last 2 positions in the list.</p>
+</li>
+<li>
+<p><code>withoutDoubles:: Int -&gt; Int -&gt; Bool -&gt; Int</code>. The first two inputs
 represent rolls of six-sided dice ([1..6]). Return the sum of the
 inputs. If the boolean is true, if the dice show the same value,
 increment one die to the next value, wrapping around to a 1 if the
 value was a six.</p>
-
 <p>Examples:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">withoutDoubles 2 3 True == 5
-withoutDoubles 3 3 True == 7
-withoutDoubles 3 3 False == 6</pre></div></li>
-
-<li><p>(<code>teenSum</code>) Given 2 ints, return their sum. However, &ldquo;teen&rdquo; values
+<pre><code> withoutDoubles 2 3 True == 5
+ withoutDoubles 3 3 True == 7
+ withoutDoubles 3 3 False == 6
+</code></pre>
+</li>
+<li>
+<p>(<code>teenSum</code>) Given 2 ints, return their sum. However, &ldquo;teen&rdquo; values
 in the range 13..19 inclusive, are extra lucky. So if either value
-is a teen, just return 19.</p></li>
-
-<li><p>(<code>teaParty</code>) We are having a party with amounts of tea and
+is a teen, just return 19.</p>
+</li>
+<li>
+<p>(<code>teaParty</code>) We are having a party with amounts of tea and
 candy. Return the int outcome of the party encoded as 0=bad,
 1=good, or 2=great. A party is good (1) if both tea and candy are
 at least 5. However, if either tea or candy is at least double the
 amount of the other one, the party is great (2). However, in all
 cases, if either tea or candy is less than 5, the party is always
-bad (0).</p></li>
-
-<li><p>(<code>xyBalance</code>) We&rsquo;ll say that a String is xy-balanced if for all the
+bad (0).</p>
+</li>
+<li>
+<p>(<code>xyBalance</code>) We'll say that a String is xy-balanced if for all the
 &lsquo;x&rsquo; chars in the string, there exists a &lsquo;y&rsquo; char somewhere later in
 the string. So &ldquo;xxy&rdquo; is balanced, but &ldquo;xyx&rdquo; is not. One &lsquo;y&rsquo; can
-balance multiple &lsquo;x&rsquo;s. Return true if the given string is
+balance multiple &lsquo;x's. Return true if the given string is
 xy-balanced.
-  Examples:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"> xyBalance &#34;pixxa&#34; == False
- xyBalance &#34;pixely art&#34; == True
- xyBalance &#34;xay anythxng&#34; == False</pre></div></li>
-
-<li><p>(<code>unluckyOne2</code>) Continuing the <code>unluckyOne</code> problem, return true if a
-list contains an unlucky 1 in any position.</p></li>
+Examples:</p>
+<pre><code>  xyBalance &quot;pixxa&quot; == False
+  xyBalance &quot;pixely art&quot; == True
+  xyBalance &quot;xay anythxng&quot; == False
+</code></pre>
+</li>
+<li>
+<p>(<code>unluckyOne2</code>) Continuing the <code>unluckyOne</code> problem, return true if a
+list contains an unlucky 1 in any position.</p>
+</li>
 </ol>
 
 

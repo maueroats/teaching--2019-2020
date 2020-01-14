@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,6 +1536,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1540,63 +1565,75 @@
     
     
     
-    
-
-<h2 id="sections-4-1-4-3">Sections 4.1&ndash;4.3</h2>
-
+    <h2 id="sections-41--43">Sections 4.1&ndash;4.3</h2>
 <ol>
-<li><p>A pattern starts out with &ldquo;dog&rdquo;,&ldquo;cat&rdquo;, &ldquo;cat dog&rdquo;, &ldquo;cat dog cat&rdquo;,
-&ldquo;cat dog cat cat dog&rdquo;, &ldquo;cat dog cat cat dog cat dog cat&rdquo; and so on - each new string is created by appending the previous two with a space in between them. Write a function that takes in the number of the word in the sequence and returns the word, starting with 1 is &ldquo;dog&rdquo;.</p></li>
-
-<li><p>Write the function <code>scalar_mult :: (Num a) =&gt; a -&gt; (a,a) -&gt; (a,a)</code> that multiplies each number in a coordinate pair by the same number, so <code>scalar_mult 5 (1,3) == (5,15)</code>.</p></li>
-
-<li><p>Write a signature and function body for <code>pair_prod</code> that takes in a list of ordered pairs of numbers and returns a list of the products of the pairs, so <code>pair_prod [(3,5), (10,0), (7,3)]===[15,0,21]</code>.</p></li>
-
-<li><p>What pattern do you use to recursively process the first item in a list and the rest of the list?</p></li>
-
-<li><p>Are parentheses necessary when writing a function using the pattern from the previous question? Explain why or why not.</p></li>
-
-<li><p>What Haskell function is used to indicate that the user is asking the program to do something impossible?</p></li>
-
-<li><p>A function <code>two_of</code> takes in a list of showable numbers and puts out a String that says &ldquo;__ is item 2 of __&ldquo;. For example <code>two_of [10,25,50] == &quot;25 is item 2 of [10,25,50]&quot;. Write the signature and function definition for</code>two_of`.</p></li>
-
-<li><p>Write the type signature and function definition for <code>double_double</code> which takes in any list and produces the same kind of list. The <code>double_double</code> function makes a list where the first term of the input appears twice, follwed by the whole input twice, so</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">double_double</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">15</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">15</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">15</span><span style="color:#111">]</span></code></pre></div></li>
-
-<li><p>Write a function that takes in a number and returns &ldquo;small&rdquo; if the number is below 10, &ldquo;medium&rdquo; if the number is between 10 and 20 (inclusive), and &ldquo;large&rdquo; if the number is larger than 20. Do not use the <code>if...then...else</code> construct.</p></li>
-
-<li><p>Define the function <code>burgers_of</code> using an infix definition so that</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#ae81ff">3</span> <span style="color:#111">`</span><span style="color:#111">burgers_of</span><span style="color:#111">`</span> <span style="color:#d88200">&#34;beef&#34;</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;Three hamburgers&#34;</span>
-<span style="color:#ae81ff">5</span> <span style="color:#111">`</span><span style="color:#111">burgers_of</span><span style="color:#111">`</span> <span style="color:#d88200">&#34;soy&#34;</span>  <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;Five tofu burgers&#34;</span>
-<span style="color:#75af00">any</span> <span style="color:#111">other</span> <span style="color:#111">set</span> <span style="color:#00a8c8">of</span> <span style="color:#111">inputs</span> <span style="color:#111">gives</span> <span style="color:#d88200">&#34;No thanks, not hungry&#34;</span></code></pre></div></li>
-
-<li><p>Repeating yourself.</p>
-
+<li>
+<p>A pattern starts out with &ldquo;dog&rdquo;,&ldquo;cat&rdquo;, &ldquo;cat dog&rdquo;, &ldquo;cat dog cat&rdquo;,
+&ldquo;cat dog cat cat dog&rdquo;, &ldquo;cat dog cat cat dog cat dog cat&rdquo; and so on - each new string is created by appending the previous two with a space in between them. Write a function that takes in the number of the word in the sequence and returns the word, starting with 1 is &ldquo;dog&rdquo;.</p>
+</li>
+<li>
+<p>Write the function <code>scalar_mult :: (Num a) =&gt; a -&gt; (a,a) -&gt; (a,a)</code> that multiplies each number in a coordinate pair by the same number, so <code>scalar_mult 5 (1,3) == (5,15)</code>.</p>
+</li>
+<li>
+<p>Write a signature and function body for <code>pair_prod</code> that takes in a list of ordered pairs of numbers and returns a list of the products of the pairs, so <code>pair_prod [(3,5), (10,0), (7,3)]===[15,0,21]</code>.</p>
+</li>
+<li>
+<p>What pattern do you use to recursively process the first item in a list and the rest of the list?</p>
+</li>
+<li>
+<p>Are parentheses necessary when writing a function using the pattern from the previous question? Explain why or why not.</p>
+</li>
+<li>
+<p>What Haskell function is used to indicate that the user is asking the program to do something impossible?</p>
+</li>
+<li>
+<p>A function <code>two_of</code> takes in a list of showable numbers and puts out a String that says &ldquo;__ is item 2 of __&quot;. For example <code>two_of [10,25,50] == &quot;25 is item 2 of [10,25,50]&quot;. Write the signature and function definition for </code>two_of`.</p>
+</li>
+<li>
+<p>Write the type signature and function definition for <code>double_double</code> which takes in any list and produces the same kind of list. The <code>double_double</code> function makes a list where the first term of the input appears twice, follwed by the whole input twice, so</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#111">double_double</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">15</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">15</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">15</span><span style="color:#111">]</span>
+</code></pre></div><ol start="8">
+<li>
+<p>Write a function that takes in a number and returns &ldquo;small&rdquo; if the number is below 10, &ldquo;medium&rdquo; if the number is between 10 and 20 (inclusive), and &ldquo;large&rdquo; if the number is larger than 20. Do not use the <code>if...then...else</code> construct.</p>
+</li>
+<li>
+<p>Define the function <code>burgers_of</code> using an infix definition so that</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#ae81ff">3</span> <span style="color:#111">`</span><span style="color:#111">burgers_of</span><span style="color:#111">`</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">beef</span><span style="color:#d88200">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">Three hamburgers</span><span style="color:#d88200">&#34;</span>
+    <span style="color:#ae81ff">5</span> <span style="color:#111">`</span><span style="color:#111">burgers_of</span><span style="color:#111">`</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">soy</span><span style="color:#d88200">&#34;</span>  <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">Five tofu burgers</span><span style="color:#d88200">&#34;</span>
+    <span style="color:#111">any</span> <span style="color:#111">other</span> <span style="color:#111">set</span> <span style="color:#00a8c8">of</span> <span style="color:#111">inputs</span> <span style="color:#111">gives</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">No thanks, not hungry</span><span style="color:#d88200">&#34;</span>
+</code></pre></div><ol start="10">
+<li>Repeating yourself.
 <ol>
 <li>What code segment do you see repeated in the version of the <code>bmi</code> function that includes the bmi calculating code?</li>
 <li>What experience does the author compare writing to writing this code?</li>
 <li>What does the book suggest that you should do instead of this coding style?</li>
-</ol></li>
 </ol>
-
-<h2 id="sections-4-4-4-5">Sections 4.4&ndash;4.5</h2>
-
-<ol>
-<li><p><em>Visibility</em>. What is the difference between where you can see terms from <code>let</code> bindings and <code>where</code> bindings?</p></li>
-
-<li><p>The book says <code>let</code> bindings are expressions. What does this mean? Even if you don&rsquo;t know, at least give one consequence of that fact.</p></li>
-
-<li><p>List five different ways to use <code>let</code> bindings:</p></li>
-
-<li><p>You want to define two different variables in one let binding. Give two ways you can separate those definitions.</p></li>
-
-<li><p>Are patterns in function definitions and the &ldquo;case&rdquo; statement interchangeable? Give one way they are and one way they are not.</p></li>
+</li>
 </ol>
-
-<!-- 15. Write a function that takes in a string and puts out a string
-"localhost" should produce "127.0.0.1"
-"(anything).cps.k12.il.us" should produce "wyoung.org"
--->
+<h2 id="sections-44--45">Sections 4.4&ndash;4.5</h2>
+<ol start="11">
+<li>
+<p><em>Visibility</em>. What is the difference between where you can see terms from <code>let</code> bindings and <code>where</code> bindings?</p>
+</li>
+<li>
+<p>The book says <code>let</code> bindings are expressions. What does this mean? Even if you don't know, at least give one consequence of that fact.</p>
+</li>
+<li>
+<p>List five different ways to use <code>let</code> bindings:</p>
+</li>
+<li>
+<p>You want to define two different variables in one let binding. Give two ways you can separate those definitions.</p>
+</li>
+<li>
+<p>Are patterns in function definitions and the &ldquo;case&rdquo; statement interchangeable? Give one way they are and one way they are not.</p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
     

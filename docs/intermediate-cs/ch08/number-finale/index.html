@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1474,6 +1496,19 @@
     <option value="/intermediate-cs/ch08/" >
   - 
    8. Number Models</option> 
+      <option value="/intermediate-cs/ch08/models-1/" >-- 8. Number Models 1</option>
+      <option value="/intermediate-cs/ch08/number-1/" >-- Number Models 1</option>
+      <option value="/intermediate-cs/ch08/number-2/" >-- Number Models 2</option>
+      <option value="/intermediate-cs/ch08/number-3/" >-- Number Models 3</option>
+      <option value="/intermediate-cs/ch08/number-4/" >-- Number Models 4</option>
+      <option value="/intermediate-cs/ch08/number-review/" >-- Number Model Review</option>
+      <option value="/intermediate-cs/ch08/number-review-2/" >-- Number Model Review II</option>
+      <option value="/intermediate-cs/ch08/number-graph-zoom/" >-- Number Graph Zoom</option>
+      <option value="/intermediate-cs/ch08/number-project/" >-- 8. Number Project</option>
+      <option value="/intermediate-cs/ch08/number-finale/"  selected>-- 8. Number Finale</option>
+      <option value="/intermediate-cs/ch08/number-test/" >-- 8. Build It Test</option>
+      <option value="/intermediate-cs/ch08/test-corrections/" >-- 8. Test Corrections</option>
+      <option value="/intermediate-cs/ch08/number-review-more/" >-- Number Review More</option>
   
     <option value="/intermediate-cs/ch13/" >
   - 
@@ -1513,77 +1548,71 @@
     
     
     
-    
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-  inlineMath: [['$','$'], ['\\(','\\)']],
-  displayMath: [['$$','$$'], ['\\[','\\]']]
-  }});
-</script>
-
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>We are going to make this graph:</p>
-
-<figure>
-    <img src="warmup-graph.png"/> 
-</figure>
-
+<!-- raw HTML omitted -->
 <p>The equation we are using is:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define (func x)
+<pre><code>(define (func x)
   (* (- x 5)
      (+ x 2)
-     (- x 7)))</pre></div>
+     (- x 7)))
+</code></pre>
 <p>The range of people coordinates we want to graph is:
 $$-5 \le x \le 7 $$
 $$-400 \le y \le 100 $$</p>
-
 <p>Your want to make the graph have dimensions 360x250 (in computer
 coordinates).</p>
-
 <ol>
-<li><p>Write two checks for the function <code>x-computer-&gt;x-people</code> that
-takes in a computer coordinate and puts out a people coordinate.</p></li>
-
-<li><p>Possibly using <a href="https://www.wolframalpha.com/">WolframAlpha</a>, write
-the function <code>x-computer-&gt;x-people</code>.</p></li>
-
-<li><p>Write two checks for the function <code>y-people-&gt;y-computer</code>.</p></li>
-
-<li><p>Write and test the function <code>y-people-&gt;y-computer</code>.</p></li>
-
-<li><p>Check your work.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(check-expect (x-computer-&gt;x-people 150) 0)
-(check-expect (y-people-&gt;y-computer 0) 50)</pre></div></li>
-
-<li><p>Write a draw handler that will place a dot on the graph of the
-function. The model will be the computer x-coordinate.</p></li>
-
-<li><p>Design and test a tick handler that will start on the left side of
-the screen, trace the curve to the right side, then repeat.</p></li>
+<li>
+<p>Write two checks for the function <code>x-computer-&gt;x-people</code> that
+takes in a computer coordinate and puts out a people coordinate.</p>
+</li>
+<li>
+<p>Possibly using <a href="https://www.wolframalpha.com/">WolframAlpha</a>, write
+the function <code>x-computer-&gt;x-people</code>.</p>
+</li>
+<li>
+<p>Write two checks for the function <code>y-people-&gt;y-computer</code>.</p>
+</li>
+<li>
+<p>Write and test the function <code>y-people-&gt;y-computer</code>.</p>
+</li>
+<li>
+<p>Check your work.</p>
+<pre><code> (check-expect (x-computer-&gt;x-people 150) 0)
+ (check-expect (y-people-&gt;y-computer 0) 50)
+</code></pre>
+</li>
+<li>
+<p>Write a draw handler that will place a dot on the graph of the
+function. The model will be the computer x-coordinate.</p>
+</li>
+<li>
+<p>Design and test a tick handler that will start on the left side of
+the screen, trace the curve to the right side, then repeat.</p>
+</li>
 </ol>
-
 <h2 id="bonus-graph-of-the-line">Bonus: Graph of the line</h2>
-
 <ol>
-<li><p>Write <code>rf</code> (or <code>real-func</code>), which takes in a computer x-coordinate, changes
+<li>
+<p>Write <code>rf</code> (or <code>real-func</code>), which takes in a computer x-coordinate, changes
 it to people x-coordinates, applies your function, and then changes
 the result back to computer y-coordinates. You may have already
-written this as part of your animation.</p></li>
-
-<li><p>Use <code>build-image</code> to create a 360x250 image where the amount of
+written this as part of your animation.</p>
+</li>
+<li>
+<p>Use <code>build-image</code> to create a 360x250 image where the amount of
 gray at (x,y) is given by limiting
-$$ 100 * \left| y - \text{rf}(x) \right| . $$</p></li>
-
-<li><p>It took a little extra work to get the axes to show with this method&hellip;</p></li>
+$$ 100 * \left| y - \text{rf}(x) \right| . $$</p>
+</li>
+<li>
+<p>It took a little extra work to get the axes to show with this method&hellip;</p>
+</li>
 </ol>
-
-<figure>
-    <img src="warmup-animated.gif"/> 
-</figure>
+<!-- raw HTML omitted -->
 
 
     

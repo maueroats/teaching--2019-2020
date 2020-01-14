@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1523,45 +1545,31 @@
     
     
     
-    
-
-<ul>
-<li><p>Random numbers: <code>(random 3)</code> gives a random number 0, 1, or 2. Notice that there are three possible answers, but they start counting at 0. Run the code below and you should get different answers each time.</p>
+    <ul>
+<li>Random numbers: <code>(random 3)</code> gives a random number 0, 1, or 2. Notice that there are three possible answers, but they start counting at 0. Run the code below and you should get different answers each time.</li>
+</ul>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">10</span><span style="color:#111">)</span> 
 <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">10</span><span style="color:#111">)</span> 
-<span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">10</span><span style="color:#111">)</span> </code></pre></div></li>
-</ul>
-
-<h2 id="random-ranges">Random ranges</h2>
-
+<span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">10</span><span style="color:#111">)</span> 
+</code></pre></div><h2 id="random-ranges">Random ranges</h2>
 
 <div class="notices note" ><p>We use the phrase &ldquo;from 10 to 200&rdquo; or &ldquo;between 10 and 200&rdquo; to both mean all of the integers n so that 10&lt;=n&lt;=200.</p>
 </div>
 
-
-<p>How many numbers are there from 10 to 200, inclusive? It&rsquo;s easy to make a mistake. My favorite method is to subtract a number to make the bottom of the range start counting at one.</p>
-
+<p>How many numbers are there from 10 to 200, inclusive? It's easy to make a mistake. My favorite method is to subtract a number to make the bottom of the range start counting at one.</p>
 <p>Be sure you understand the previous paragraph before reading on!</p>
-
 <p>When you already have a random number from 0 to 50, how can you get a random number between 30 and 80?</p>
-
 <h2 id="using-randomness">Using randomness</h2>
-
 <p>It is hard to test random functions, so write non-random versions first, and use the randomness as an input. Test the non-random functions!</p>
-
 <p>Example: Make an ellipse of a random height 150-250 pixels tall, and twice as wide.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">; make-ellipse-nr: string(color) number(height) -&gt; image</span>
 <span style="color:#75715e">; purpose: make an ellipse height units tall and 2*height units wide in the given color</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">make-ellipse-nr</span> <span style="color:#111">color</span> <span style="color:#111">height</span><span style="color:#111">)</span>
-    <span style="color:#111">(</span><span style="color:#111">ellipse</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">2</span> <span style="color:#111">height</span><span style="color:#111">)</span> <span style="color:#111">height</span> <span style="color:#d88200">&#34;solid&#34;</span> <span style="color:#111">color</span><span style="color:#111">))</span>
+    <span style="color:#111">(</span><span style="color:#111">ellipse</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">2</span> <span style="color:#111">height</span><span style="color:#111">)</span> <span style="color:#111">height</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">solid</span><span style="color:#d88200">&#34;</span> <span style="color:#111">color</span><span style="color:#111">)</span><span style="color:#111">)</span>
 <span style="color:#75715e">; see below for check-expect</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">make-ellipse</span> <span style="color:#111">color</span><span style="color:#111">)</span>
-    <span style="color:#111">(</span><span style="color:#111">make-ellipse-nr</span> <span style="color:#111">color</span> <span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#ae81ff">150</span> <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">101</span><span style="color:#111">))))</span></code></pre></div>
-<figure>
-    <img src="nonrandom-check.png"/> <figcaption>
-            <h4>Test your nonrandom function well!</h4>
-        </figcaption>
-</figure>
+    <span style="color:#111">(</span><span style="color:#111">make-ellipse-nr</span> <span style="color:#111">color</span> <span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#ae81ff">150</span> <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">101</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><!-- raw HTML omitted -->
 
 
     

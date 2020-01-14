@@ -590,6 +590,14 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1091,6 +1099,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1502,6 +1517,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1529,113 +1547,109 @@
     
     
 
-
-
 <p>The <a href="https://en.wikipedia.org/wiki/Scrabble_letter_distributions#English">Scrabble entry in
 Wikipedia</a>
 gives the point values of each letter in the game.</p>
-
-<p><a href="https://parade.com/327792/scrabble-winning-board/"><figure>
-    <img src="https://static.parade.com/wp-content/uploads/2014/08/scrabble-winning-board.jpg" width="200"/>
-</figure>
-</a></p>
-
+<p>[<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>Your job is to create the game of Scrabble.</p>
-
-<figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Scrabble-example.png/594px-Scrabble-example.png" width="200"/> 
-</figure>
-
+<!-- raw HTML omitted -->
 <p>This page should be broken into multiple pages once we start working
 on it.</p>
-
 <h2 id="data-structures">Data Structures</h2>
-
 <p>We will use the <code>type</code> command to create &ldquo;aliases&rdquo; - a shorthand ways of
 referring to another type.
 Advanced students should read about
-<a href="http://learnyouahaskell.com/making-our-own-types-and-typeclasses">Haskell&rsquo;s
+<a href="http://learnyouahaskell.com/making-our-own-types-and-typeclasses">Haskell's
 structs</a>
 and more.</p>
-
 <ul>
-<li><p>Represent the state of the board as a list of tuples
+<li>
+<p>Represent the state of the board as a list of tuples
 <code>(Char,(Int,Int))</code> with the first integer giving the x-coordinate of
 the letter and the second integer the y-coordinate.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">type Place = (Int,Int)
-type PlacedLetter = (Char,Place)
-type Board = [PlacedLetter]</pre></div></li>
-
-<li><p>A play will given by the word, its starting place, and <code>True</code> if horizontal.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">type Play = (String,Place,Bool)</pre></div></li>
-
-<li><p>A particular special letter will denote blank spaces on the board
-when you ask for the contents of a square: <code>'*'</code>.</p></li>
+<pre><code>  type Place = (Int,Int)
+  type PlacedLetter = (Char,Place)
+  type Board = [PlacedLetter]
+</code></pre>
+</li>
+<li>
+<p>A play will given by the word, its starting place, and <code>True</code> if horizontal.</p>
+<pre><code>  type Play = (String,Place,Bool)
+</code></pre>
+</li>
+<li>
+<p>A particular special letter will denote blank spaces on the board
+when you ask for the contents of a square: <code>'*'</code>.</p>
+</li>
 </ul>
-
 <h2 id="functions">Functions</h2>
-
 <ol>
-<li><p>Create variable holding the letter-valuations. You could just type everything,
+<li>
+<p>Create variable holding the letter-valuations. You could just type everything,
 but instead make a list of <code>(String,Int)</code> pairs that lists the
 letters and then the value they have. For example, the entry
 <code>(&quot;BCMP&quot;,3)</code> indicates that each of the letters <code>'B'</code>, <code>'C'</code>, <code>'M'</code>
-and <code>'P'</code> are worth 3 points. Use a space for the blank.</p></li>
-
-<li><p>Write a function <code>valueLetter1 :: Char -&gt; Int</code> that finds the value
+and <code>'P'</code> are worth 3 points. Use a space for the blank.</p>
+</li>
+<li>
+<p>Write a function <code>valueLetter1 :: Char -&gt; Int</code> that finds the value
 of a single letter. It should fail with an error when asked about
-an unknown letter.</p></li>
-
-<li><p>Write a function <code>valueWord :: String -&gt; Int</code> that finds the
+an unknown letter.</p>
+</li>
+<li>
+<p>Write a function <code>valueWord :: String -&gt; Int</code> that finds the
 &ldquo;simple&rdquo; value of a word (without considering its placement on the
-board).</p></li>
-
-<li><p>Write a function <code>letterPlace :: Play -&gt; [PlacedLetter]</code> that
-generates the list of places where the letters are played.</p></li>
-
-<li><p>The <code>getLetter :: Board Place -&gt; Char</code> gets the letter at the given
-place, or <code>'*'</code> if the space is empty.</p></li>
-
-<li><p>Drawing the board happens in several steps:</p>
-
+board).</p>
+</li>
+<li>
+<p>Write a function <code>letterPlace :: Play -&gt; [PlacedLetter]</code> that
+generates the list of places where the letters are played.</p>
+</li>
+<li>
+<p>The <code>getLetter :: Board Place -&gt; Char</code> gets the letter at the given
+place, or <code>'*'</code> if the space is empty.</p>
+</li>
+<li>
+<p>Drawing the board happens in several steps:</p>
 <ol>
 <li>Make a string for a single row using <code>renderRow :: Board Int -&gt; String</code>.</li>
-<li>Make a list of strings, one for each row using <code>renderBoard1 ::
-Board -&gt; [String]</code>.</li>
-<li>Join everything into one long string using <code>renderBoard ::
-Board -&gt; String</code>.</li>
-</ol></li>
-
-<li><p>The <code>legalPlay1</code> function determines whether a single <code>PlacedLetter</code>
+<li>Make a list of strings, one for each row using <code>renderBoard1 :: Board -&gt; [String]</code>.</li>
+<li>Join everything into one long string using <code>renderBoard :: Board -&gt; String</code>.</li>
+</ol>
+</li>
+<li>
+<p>The <code>legalPlay1</code> function determines whether a single <code>PlacedLetter</code>
 conflicts with any letters that are already on the
 board. It is OK if a letter is already in the desired position, but
 not of a different letter is there.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">legalPlay1 :: Board -&gt; PlacedLetter -&gt; Bool</pre></div></li>
-
-<li><p>The <code>legalPlay :: Board -&gt; [PlacedLetter] -&gt; Bool</code> function
+<pre><code> legalPlay1 :: Board -&gt; PlacedLetter -&gt; Bool
+</code></pre>
+</li>
+<li>
+<p>The <code>legalPlay :: Board -&gt; [PlacedLetter] -&gt; Bool</code> function
 determines whether the result of the <code>letterPlace</code> function can
-legally be played (every letter should be ok to play).<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p></li>
-
-<li><p>The <code>updateBoard :: Board -&gt; [PlacedLetter] -&gt; Board</code> function
+legally be played (every letter should be ok to play).<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</li>
+<li>
+<p>The <code>updateBoard :: Board -&gt; [PlacedLetter] -&gt; Board</code> function
 creates a new board that includes all of the additional letters from its
-second argument.</p></li>
-
-<li><p>The <code>usedLetters :: Board -&gt; [PlacedLetter] -&gt; [Char]</code> function
+second argument.</p>
+</li>
+<li>
+<p>The <code>usedLetters :: Board -&gt; [PlacedLetter] -&gt; [Char]</code> function
 gives a list of the letters actually used to make a given
 play. This may not be every letter in the list because some of them
-may already be on the board.</p></li>
+may already be on the board.</p>
+</li>
 </ol>
-
 <h2 id="user-interface">User Interface</h2>
-
 <p>Eventually, this section will contain code so you can interact with
 your game.</p>
-
 <h2 id="further-work">Further Work</h2>
-
-<p>That&rsquo;s probably enough work. Continuing to make the whole game
- includes a lot more details:</p>
-
+<p>That's probably enough work. Continuing to make the whole game
+includes a lot more details:</p>
 <ul>
 <li>Create a way of denoting the double and triple letter
 score squares as well as the double and triple word squares.</li>
@@ -1649,15 +1663,14 @@ are created by that play: &ldquo;MAR&rdquo;, &ldquo;MI&rdquo;, &ldquo;AG&rdquo;,
 all be scored. The triple word score counts for both &ldquo;MAR&rdquo; and &ldquo;AG&rdquo;.</li>
 <li>A dictionary of legal words?!</li>
 </ul>
-<div class="footnotes">
-
-<hr />
-
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">Ignore the requirement that a word connect somehow with another play on the board. That is quite challenging since the played word can form other words with letters adjacent to the play.
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>Ignore the requirement that a word connect somehow with another play on the board. That is quite challenging since the played word can form other words with letters adjacent to the play. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
 
 

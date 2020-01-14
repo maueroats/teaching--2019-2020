@@ -328,45 +328,17 @@
       <a href="/ap-cs/haskell/ch05/">5. Recursion</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ap-cs/haskell/ch02/ch02-reading-guide/" class="dd-item">
+      <li data-nav-id="/ap-cs/haskell/ch05/ch05-quiz/" class="dd-item">
         <div>
-          <a href="/ap-cs/haskell/ch02/ch02-reading-guide/">
-            Chapter 2 Reading Guide
+          <a href="/ap-cs/haskell/ch05/ch05-quiz/">
+            Chapter 5 Quiz
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/ch02/cw-a2/" class="dd-item">
+      <li data-nav-id="/ap-cs/haskell/ch05/ch05-reading-guide/" class="dd-item">
         <div>
-          <a href="/ap-cs/haskell/ch02/cw-a2/">
-            Haskell CW II.2
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ap-cs/haskell/ch02/cw-3/" class="dd-item">
-        <div>
-          <a href="/ap-cs/haskell/ch02/cw-3/">
-            Haskell CW II.3
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ap-cs/haskell/ch02/hw-a2/" class="dd-item">
-        <div>
-          <a href="/ap-cs/haskell/ch02/hw-a2/">
-            Haskell HW 2
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ap-cs/haskell/ch02/ch02-summary/" class="dd-item">
-        <div>
-          <a href="/ap-cs/haskell/ch02/ch02-summary/">
-            Chapter 2 Summary
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ap-cs/haskell/ch02/ch02-test/" class="dd-item">
-        <div>
-          <a href="/ap-cs/haskell/ch02/ch02-test/">
-            Chapter 2 Test
+          <a href="/ap-cs/haskell/ch05/ch05-reading-guide/">
+            Chapter 5 Reading Guide
           </a>
         </div>
     </li>
@@ -611,6 +583,21 @@
         <div>
           <a href="/ap-cs/haskell/ghci-details/">
             Source Code Files (ghci)
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
           </a>
         </div>
     </li>
@@ -1119,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1542,30 +1536,24 @@
     
     
     
-    
-
-<p>The is the code that I recommend at the start of each file. The first line sets
+    <p>The is the code that I recommend at the start of each file. The first line sets
 the debug level to maximum, and the last three load the &ldquo;check-expect&rdquo;
 system and set it to print out details about every failure.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">declaim</span> <span style="color:#111">(</span><span style="color:#00a8c8">optimize</span> <span style="color:#111">(</span><span style="color:#111">debug</span> <span style="color:#ae81ff">3</span><span style="color:#111">)))</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">declaim</span> <span style="color:#111">(</span><span style="color:#00a8c8">optimize</span> <span style="color:#111">(</span><span style="color:#111">debug</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#111">ql:quickload</span> <span style="color:#d88200">:lisp-unit</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#75af00">use-package</span> <span style="color:#d88200">:lisp-unit</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">defparameter</span> <span style="color:#111">*print-failures*</span> <span style="color:#00a8c8">t</span><span style="color:#111">)</span></code></pre></div>
-<h3 id="unit-tests">Unit tests</h3>
-
+<span style="color:#111">(</span><span style="color:#111">defparameter</span> <span style="color:#111">*print-failures*</span> <span style="color:#00a8c8">t</span><span style="color:#111">)</span>
+</code></pre></div><h3 id="unit-tests">Unit tests</h3>
 <p>Defining tests follows the pattern below.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">define-test</span> <span style="color:#111">test-addition</span>
   <span style="color:#d88200">&#34;Test the basic addition function. Duh.&#34;</span>
-  <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#ae81ff">5</span> <span style="color:#111">(</span><span style="color:#75af00">+</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span><span style="color:#111">))</span>
-  <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#ae81ff">8</span> <span style="color:#111">(</span><span style="color:#75af00">+</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">-2</span><span style="color:#111">)))</span></code></pre></div>
-<p>There is <a href="https://github.com/OdonataResearchLLC/lisp-unit/wiki">a complete writeup of lisp-unit</a> on GitHub, including advanced features like tagging tests and only running some of them.</p>
-
+  <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#ae81ff">5</span> <span style="color:#111">(</span><span style="color:#75af00">+</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#ae81ff">8</span> <span style="color:#111">(</span><span style="color:#75af00">+</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">-2</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+</code></pre></div><p>There is <a href="https://github.com/OdonataResearchLLC/lisp-unit/wiki">a complete writeup of lisp-unit</a> on GitHub, including advanced features like tagging tests and only running some of them.</p>
 <h3 id="running-tests">Running tests</h3>
-
 <p>Just call run-tests at the end of your file.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">run-tests</span><span style="color:#111">)</span></code></pre></div>
-<h2 id="lisp-functions">Lisp Functions</h2>
-
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">run-tests</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="lisp-functions">Lisp Functions</h2>
 <ul>
 <li>apply</li>
 <li>funcall</li>
@@ -1573,11 +1561,8 @@ system and set it to print out details about every failure.</p>
 <li>mappend: Learn how to write this one.</li>
 <li><code>(format t &quot;One line~%&quot;)</code></li>
 </ul>
-
 <h2 id="emacs-shortcuts">Emacs Shortcuts</h2>
-
 <p>These are the shortcuts I regularly use:</p>
-
 <ul>
 <li>C-g to abort when Emacs hangs.</li>
 <li>C-c C-l to load a file into lisp.</li>
@@ -1586,10 +1571,8 @@ system and set it to print out details about every failure.</p>
 <li>M-enter: Submit a command even if your cursor is not at the end of
 the line.</li>
 </ul>
-
 <p>Occasionally I need this one to reset a messed up state (remember the
 lisp interpreter does not restart between times when you load files).</p>
-
 <ul>
 <li>M-x slime-restart-inferior-lisp</li>
 </ul>

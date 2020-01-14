@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,14 +1536,11 @@
     
     
     
-    
-
-<p>Read pages 99-101 in the book and write <code>complement</code> and <code>find-all</code>,
+    <p>Read pages 99-101 in the book and write <code>complement</code> and <code>find-all</code>,
 possibly copying them from the book.</p>
-
 <ol>
-<li><p>(<code>ball</code>)</p>
-
+<li>
+<p>(<code>ball</code>)</p>
 <ul>
 <li>Make a structure <code>ball</code> that holds the <code>kind</code> of ball (a symbol)
 and the <code>circ</code>-umference of the ball (in inches, a number).</li>
@@ -1530,66 +1549,68 @@ and the <code>circ</code>-umference of the ball (in inches, a number).</li>
 <li>Write a function that takes in anything (even lists and numbers)
 and returns true if the item is a ball of circumference greater
 than 10.</li>
-</ul></li>
-
-<li><p>The function <code>pos+</code> takes in a list and returns a list of each
+</ul>
+</li>
+<li>
+<p>The function <code>pos+</code> takes in a list and returns a list of each
 element plus its position.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(pos+ &#39;(7 5 1 4))
-=&gt; (7 6 3 7)</pre></div>
+<pre><code> (pos+ '(7 5 1 4))
+ =&gt; (7 6 3 7)
+</code></pre>
 <p>Write the <code>pos+</code> function using (i) recursion; (ii) iteration
- (like loop); and
- (iii) <code>mapcar</code>.</p></li>
-
-<li><p>Write a function <code>rle</code> that takes in a list and outputs a list of
+(like loop); and
+(iii) <code>mapcar</code>.</p>
+</li>
+<li>
+<p>Write a function <code>rle</code> that takes in a list and outputs a list of
 pairs <code>(item repeats)</code>, where <code>repeats</code> tells how many times in a
 row the item is repeated.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(rle &#39;(7 7 7 7 7 4 1 4 4 4))
-=&gt; ((7 5) (4 1) (1 1) (4 3))</pre></div></li>
-
-<li><p>(<code>div2</code>) You will write the function <code>div2</code>, divides a number by
+<pre><code> (rle '(7 7 7 7 7 4 1 4 4 4))
+ =&gt; ((7 5) (4 1) (1 1) (4 3))
+</code></pre>
+</li>
+<li>
+<p>(<code>div2</code>) You will write the function <code>div2</code>, divides a number by
 two. It has a keyword argument <code>:skip-odd</code> which defaults to false
 (<code>nil</code>).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(div2 5) =&gt; 2.5
-(div2 8) =&gt; 4
-(div2 5 :skip-odd T) =&gt; 5
-(div2 8 :skip-odd T) =&gt; 4</pre></div></li>
-
-<li><p>(<code>add2len</code>) Use <code>&amp;rest</code> to make a function that returns the first
+<pre><code> (div2 5) =&gt; 2.5
+ (div2 8) =&gt; 4
+ (div2 5 :skip-odd T) =&gt; 5
+ (div2 8 :skip-odd T) =&gt; 4
+</code></pre>
+</li>
+<li>
+<p>(<code>add2len</code>) Use <code>&amp;rest</code> to make a function that returns the first
 number added to the number of arguments it receives.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(add2len 5 10 20 30 40 50 60) =&gt; 5 + 7 = 12        </pre></div></li>
+<pre><code> (add2len 5 10 20 30 40 50 60) =&gt; 5 + 7 = 12        
+</code></pre>
+</li>
 </ol>
-
 <h2 id="fixit">Fixit</h2>
-
 <p>A classmate is trying to write a function that reteurns the sum of all
 of the non-nil elements in a list. Neither version below
 works. Explain why and fix each (in the style it is written):</p>
-
 <p>A.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#111">lst</span><span style="color:#111">)</span>
   <span style="color:#111">(</span><span style="color:#75af00">remove</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">lst</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#75af00">apply</span> <span style="color:#75af00">#&#39;+</span> <span style="color:#111">lst</span><span style="color:#111">))</span></code></pre></div>
-<p>B.</p>
+  <span style="color:#111">(</span><span style="color:#75af00">apply</span> <span style="color:#75af00">#&#39;</span><span style="color:#75af00">+</span> <span style="color:#111">lst</span><span style="color:#111">)</span><span style="color:#111">)</span>
+</code></pre></div><p>B.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#111">lst</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#00a8c8">let</span> <span style="color:#111">((</span><span style="color:#111">x</span> <span style="color:#111">(</span><span style="color:#75af00">car</span> <span style="color:#111">lst</span><span style="color:#111">)))</span>
+  <span style="color:#111">(</span><span style="color:#00a8c8">let</span> <span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">x</span> <span style="color:#111">(</span><span style="color:#75af00">car</span> <span style="color:#111">lst</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
     <span style="color:#111">(</span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">null</span> <span style="color:#111">x</span><span style="color:#111">)</span>
-      <span style="color:#111">(</span><span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">lst</span><span style="color:#111">))</span>
-      <span style="color:#111">(</span><span style="color:#75af00">+</span> <span style="color:#111">x</span> <span style="color:#111">(</span><span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">lst</span><span style="color:#111">))))))</span></code></pre></div>
-<h2 id="utility-functions">Utility Functions</h2>
-
+      <span style="color:#111">(</span><span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">lst</span><span style="color:#111">)</span><span style="color:#111">)</span>
+      <span style="color:#111">(</span><span style="color:#75af00">+</span> <span style="color:#111">x</span> <span style="color:#111">(</span><span style="color:#111">summit</span> <span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">lst</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="utility-functions">Utility Functions</h2>
 <p>Make a file called &ldquo;utility.lisp&rdquo; and write the functions below, all
 recommended by Paul Graham. Make sure to test them! We will keep adding to our utility functions file every week.</p>
-
 <ul>
 <li><code>(last1 lst)</code>: The last item in a list.</li>
 <li><code>(single lst)</code>: True if the argument is a length 1 list. (Do not use
-<code>length</code> it is slow.) Test your function on: <code>'(a)</code> and <code>'(a
-b)</code>. We will discuss the weird case of <code>'()</code> in class.</li>
+<code>length</code> it is slow.) Test your function on: <code>'(a)</code> and <code>'(a b)</code>. We will discuss the weird case of <code>'()</code> in class.</li>
 <li><code>(append1 lst item)</code>: Append a single item to the end of a list.</li>
 <li><code>(mklist obj)</code>: If the object is not already a list, put it in one.</li>
 <li><code>(longer x y)</code>: Give true if the list x is longer than y, but do not traverse the whole list - once you know enough to deduce x is longer (or not), stop and give the answer.</li>
 </ul>
-
 <p>The last function is a little more complex than the other
 ones, I am thinking of a recursive solution that goes through both
 lists at the same time.</p>

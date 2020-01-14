@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1516,27 +1538,33 @@
     <p>Write a table-based parser to handle the goofy situations illustrated
 on this page. If your parser does not recognize a term, it should just
 pass it through unchanged.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(?gerbil NAME ACTIVITY)
-=&gt; (The gerbil NAME loves to ACTIVITY)</pre></div>
+<pre><code>(?gerbil NAME ACTIVITY)
+=&gt; (The gerbil NAME loves to ACTIVITY)
+</code></pre>
 <p>There are two different kind of dog patterns. In the second, the
 number indicates how many times to dog barks.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(?dog NAME)
+<pre><code>(?dog NAME)
 =&gt; (NAME loves to bark)
 
 (?dog NAME 4)
-=&gt; (NAME loves to bark. Bark! Bark! Bark! Bark!)</pre></div>
+=&gt; (NAME loves to bark. Bark! Bark! Bark! Bark!)
+</code></pre>
 <p>A cat has a random activity. The <code>(purr|meow|rawwr)</code> term below
 indicates that one of those is chosen at random for each appearance of
 <code>(?cat NAME)</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(?cat NAME)
-=&gt; (The cat NAME loves to (purr|meow|raawr))</pre></div>
+<pre><code>(?cat NAME)
+=&gt; (The cat NAME loves to (purr|meow|raawr))
+</code></pre>
 <p>There are also some math operations</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(?+ 5 8) =&gt; 13
-(?* 5 8) =&gt; 40</pre></div>
+<pre><code>(?+ 5 8) =&gt; 13
+(?* 5 8) =&gt; 40
+</code></pre>
 <p>Random choice is one of the possibilities. You should randomly choose
 between the rest of the items in the rest of the list. There are three
 choices possible in this example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(?random Aleatorea Aviator (Big Dog))</pre></div>
+<pre><code>(?random Aleatorea Aviator (Big Dog))
+</code></pre>
+
 
     
     

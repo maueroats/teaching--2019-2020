@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,34 +1540,30 @@
     
     
     
-    
-
-<p>We are creating a way to match pattern segments &ndash; not just individual
+    <p>We are creating a way to match pattern segments &ndash; not just individual
 words &ndash; using <code>(?* ?x)</code>. Today you are writing <code>segment-match</code>, which
 takes in a pattern (assumed to begin with a <code>?*</code>-pattern) and an input
 to match.</p>
-
 <h2 id="tests">Tests</h2>
-
 <p>Your code should do at least this much.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-equal (list (&#39;?x . &#39;(the food was))) 
-              (segment-match &#39;((?* ?x) great)
-                             &#39;(the food was great)))
+<pre><code>(assert-equal (list ('?x . '(the food was))) 
+              (segment-match '((?* ?x) great)
+                             '(the food was great)))
 (assert-equal NIL
-              (segment-match &#39;((?* ?x) terrible)
-                             &#39;(the food was great)))</pre></div>
+              (segment-match '((?* ?x) terrible)
+                             '(the food was great)))
+</code></pre>
 <h2 id="eventual-goals">Eventual Goals</h2>
-
-<p>If your code matches more than one pattern, that&rsquo;s great but it could
+<p>If your code matches more than one pattern, that's great but it could
 be a little tricky without reading the book.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-equal (list (&#39;?x . &#39;(really fun)) (&#39;?y . (at the museum)))
-              (segment-match &#39;(I had a (?* ?x) time (?* ?y) thanks)
-                             &#39;(I had a really fun time at the museum thanks)))
+<pre><code>(assert-equal (list ('?x . '(really fun)) ('?y . (at the museum)))
+              (segment-match '(I had a (?* ?x) time (?* ?y) thanks)
+                             '(I had a really fun time at the museum thanks)))
 
-(assert-false (segment-match &#39;(I went (?* ?x) zoo)
-                             &#39;(I went golfing at the park)))</pre></div>
+(assert-false (segment-match '(I went (?* ?x) zoo)
+                             '(I went golfing at the park)))
+</code></pre>
 <h2 id="tools">Tools</h2>
-
 <ul>
 <li><code>(position 'x '(a b x c) :start 1)</code></li>
 <li><code>(subseq '(a b x c) 1 3)</code></li>

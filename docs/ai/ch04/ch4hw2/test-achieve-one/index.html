@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,30 +1536,26 @@
     
     
     
-    
-
-<p>This mock achieve all function is surprisingly simple (to me).</p>
-
+    <p>This mock achieve all function is surprisingly simple (to me).</p>
 <ul>
 <li>If all of the goals are achieved, it does nothing.</li>
 <li>If <code>'s4</code> is in the goals, then call <code>achieve-one</code>.</li>
 <li>Otherwise pretend the goals were achieved and give back the current
 state.</li>
 </ul>
-
 <p>The mocking is first, followed by the testing code.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">mock-achieve-all</span> <span style="color:#111">(</span><span style="color:#111">state</span> <span style="color:#111">goals</span>
                          <span style="color:#00a8c8">&amp;key</span> <span style="color:#111">(</span><span style="color:#111">achieve-one</span> <span style="color:#75af00">#&#39;</span><span style="color:#00a8c8">error</span><span style="color:#111">)</span>
                            <span style="color:#111">(</span><span style="color:#111">goal-stack</span> <span style="color:#00a8c8">nil</span><span style="color:#111">)</span>
                            <span style="color:#111">(</span><span style="color:#111">ops</span> <span style="color:#111">*test-big-ops*</span><span style="color:#111">)</span>
                            <span style="color:#00a8c8">&amp;allow-other-keys</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#00a8c8">declare</span> <span style="color:#111">(</span><span style="color:#00a8c8">ignore</span> <span style="color:#111">achieve-one</span> <span style="color:#111">goal-stack</span><span style="color:#111">))</span>
-  <span style="color:#111">(</span><span style="color:#111">cond</span> <span style="color:#111">((</span><span style="color:#111">all-achieved</span> <span style="color:#111">goals</span> <span style="color:#111">state</span><span style="color:#111">)</span> <span style="color:#111">state</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#00a8c8">declare</span> <span style="color:#111">(</span><span style="color:#00a8c8">ignore</span> <span style="color:#111">achieve-one</span> <span style="color:#111">goal-stack</span><span style="color:#111">)</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">cond</span> <span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">all-achieved</span> <span style="color:#111">goals</span> <span style="color:#111">state</span><span style="color:#111">)</span> <span style="color:#111">state</span><span style="color:#111">)</span>
         <span style="color:#75715e">;; auto-achieve goal even if it is not true</span>
-        <span style="color:#111">((</span><span style="color:#111">member-*</span> <span style="color:#d88200">&#39;s4</span> <span style="color:#111">goals</span><span style="color:#111">)</span>
-         <span style="color:#111">(</span><span style="color:#111">achieve-one</span> <span style="color:#111">state</span> <span style="color:#d88200">&#39;s4</span> <span style="color:#d88200">:achieve-all</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">mock-achieve-all</span> <span style="color:#d88200">:ops</span> <span style="color:#111">ops</span><span style="color:#111">))</span>
-        <span style="color:#111">(</span><span style="color:#00a8c8">t</span> <span style="color:#111">state</span><span style="color:#111">)))</span></code></pre></div>
-<h2 id="actual-testing">Actual Testing</h2>
+        <span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">member-*</span> <span style="color:#d88200">&#39;s4</span> <span style="color:#111">goals</span><span style="color:#111">)</span>
+         <span style="color:#111">(</span><span style="color:#111">achieve-one</span> <span style="color:#111">state</span> <span style="color:#d88200">&#39;s4</span> <span style="color:#d88200">:achieve-all</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">mock-achieve-all</span> <span style="color:#d88200">:ops</span> <span style="color:#111">ops</span><span style="color:#111">)</span><span style="color:#111">)</span>
+        <span style="color:#111">(</span><span style="color:#00a8c8">t</span> <span style="color:#111">state</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="actual-testing">Actual Testing</h2>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">define-test</span> <span style="color:#111">test-achieve-one</span>
   <span style="color:#d88200">&#34;Use mock achieve-all to test achieve-one&#34;</span>
 
@@ -1545,31 +1563,32 @@ state.</li>
   <span style="color:#75715e">;; all prerequisites satsified</span>
   <span style="color:#111">(</span><span style="color:#111">assert-equality</span>
    <span style="color:#75af00">#&#39;</span><span style="color:#111">set-equalp</span>
-   <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">start</span> <span style="color:#111">s1</span> <span style="color:#111">s3</span> <span style="color:#111">(</span><span style="color:#111">executing</span> <span style="color:#111">b</span><span style="color:#111">))</span>
+   <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">start</span> <span style="color:#111">s1</span> <span style="color:#111">s3</span> <span style="color:#111">(</span><span style="color:#111">executing</span> <span style="color:#111">b</span><span style="color:#111">)</span><span style="color:#111">)</span>
    <span style="color:#111">(</span><span style="color:#111">achieve-one</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">start</span> <span style="color:#111">s1</span> <span style="color:#111">s2</span><span style="color:#111">)</span> <span style="color:#d88200">&#39;s3</span>
                 <span style="color:#d88200">:ops</span> <span style="color:#111">(</span><span style="color:#111">make-oplist</span>
-                      <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">a</span> <span style="color:#111">(</span><span style="color:#111">s1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s1</span> <span style="color:#111">start</span><span style="color:#111">))</span>
-                        <span style="color:#111">(</span><span style="color:#111">b</span> <span style="color:#111">(</span><span style="color:#111">s2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s3</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s2</span><span style="color:#111">))))</span>
-                <span style="color:#d88200">:remaining-goals</span> <span style="color:#f92672">&#39;</span><span style="color:#111">()</span>
-                <span style="color:#d88200">:achieve-all</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">mock-achieve-all</span><span style="color:#111">))</span>
+                      <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">a</span> <span style="color:#111">(</span><span style="color:#111">s1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s1</span> <span style="color:#111">start</span><span style="color:#111">)</span><span style="color:#111">)</span>
+                        <span style="color:#111">(</span><span style="color:#111">b</span> <span style="color:#111">(</span><span style="color:#111">s2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s3</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s2</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+                <span style="color:#d88200">:remaining-goals</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">)</span>
+                <span style="color:#d88200">:achieve-all</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">mock-achieve-all</span><span style="color:#111">)</span><span style="color:#111">)</span>
 
   <span style="color:#75715e">;; a chain of two operations is required</span>
   <span style="color:#75715e">;; one problem this exposed was not passing :ops to all achieve-* functions</span>
   <span style="color:#111">(</span><span style="color:#111">assert-equality</span>
    <span style="color:#75af00">#&#39;</span><span style="color:#111">set-equalp</span>
-   <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">executing</span> <span style="color:#111">a</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">executing</span> <span style="color:#111">b</span><span style="color:#111">))</span>
+   <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">executing</span> <span style="color:#111">a</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">executing</span> <span style="color:#111">b</span><span style="color:#111">)</span><span style="color:#111">)</span>
    <span style="color:#111">(</span><span style="color:#111">only-executing</span>
     <span style="color:#111">(</span><span style="color:#111">achieve-one</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">start</span> <span style="color:#111">s1</span> <span style="color:#111">s2</span><span style="color:#111">)</span> <span style="color:#d88200">&#39;s3</span>
                  <span style="color:#d88200">:ops</span> <span style="color:#111">(</span><span style="color:#111">make-oplist</span>
-                       <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">a</span> <span style="color:#111">(</span><span style="color:#111">s1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s1</span> <span style="color:#111">start</span><span style="color:#111">))</span>
-                         <span style="color:#111">(</span><span style="color:#111">b</span> <span style="color:#111">(</span><span style="color:#111">s2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s3</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s2</span><span style="color:#111">))))</span>
+                       <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">a</span> <span style="color:#111">(</span><span style="color:#111">s1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s1</span> <span style="color:#111">start</span><span style="color:#111">)</span><span style="color:#111">)</span>
+                         <span style="color:#111">(</span><span style="color:#111">b</span> <span style="color:#111">(</span><span style="color:#111">s2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s3</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">s2</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
                  <span style="color:#d88200">:remaining-goals</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">s4</span><span style="color:#111">)</span>
-                 <span style="color:#d88200">:achieve-all</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">mock-achieve-all</span><span style="color:#111">))))</span>
+                 <span style="color:#d88200">:achieve-all</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">mock-achieve-all</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
 
 
 <span style="color:#111">(</span><span style="color:#111">define-test</span> <span style="color:#111">test-gps</span>
   <span style="color:#d88200">&#34;Make sure cycles are handled.&#34;</span>
-  <span style="color:#111">(</span><span style="color:#111">assert-true</span> <span style="color:#111">(</span><span style="color:#111">gps</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">s1</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">s5</span> <span style="color:#111">big</span><span style="color:#111">)</span> <span style="color:#111">*test-big-ops*</span><span style="color:#111">)))</span></code></pre></div>
+  <span style="color:#111">(</span><span style="color:#111">assert-true</span> <span style="color:#111">(</span><span style="color:#111">gps</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">s1</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">s5</span> <span style="color:#111">big</span><span style="color:#111">)</span> <span style="color:#111">*test-big-ops*</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+</code></pre></div>
 
     
     

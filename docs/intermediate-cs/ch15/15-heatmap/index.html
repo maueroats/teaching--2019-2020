@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1520,15 +1542,9 @@
     
     
     
-    
-
-<p>The figure below is 100 pixels wide and 300 pixels tall. Each 100
+    <p>The figure below is 100 pixels wide and 300 pixels tall. Each 100
 pixel color segment is a color gradient.</p>
-
-<figure>
-    <img src="heatmap.png"/> 
-</figure>
-
+<!-- raw HTML omitted -->
 <table>
 <thead>
 <tr>
@@ -1537,38 +1553,32 @@ pixel color segment is a color gradient.</p>
 <th>color value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>0</td>
 <td>blue</td>
 <td>125</td>
 </tr>
-
 <tr>
 <td>99</td>
 <td>blue</td>
 <td>224</td>
 </tr>
-
 <tr>
 <td>100</td>
 <td>green</td>
 <td>125</td>
 </tr>
-
 <tr>
 <td>199</td>
 <td>green</td>
 <td>224</td>
 </tr>
-
 <tr>
 <td>200</td>
 <td>red</td>
 <td>125</td>
 </tr>
-
 <tr>
 <td>300</td>
 <td>red</td>
@@ -1576,46 +1586,53 @@ pixel color segment is a color gradient.</p>
 </tr>
 </tbody>
 </table>
-
 <p>For example, when y=150, the color produced is <code>(make-color 0 175 0)</code>
 because the color is supposed to be green when y is between 100 and 199.</p>
-
 <ol>
-<li><p>Write a function <code>heat-color: number(y) -&gt; color</code> that produces the
-correct color.</p></li>
-
-<li><p>Write a function <code>color-helper: number(x) number(y) -&gt; color</code> that
-just calls the <code>heat-color</code> function to get the correct color.</p></li>
-
-<li><p>Use <code>build-image</code> to create the 100x300 rectangle pictured above.</p></li>
-
-<li><p><strong>Challenge</strong>. Modify your work on the <a href="/intermediate-cs/ch15/15-graphing-review/">graphing review</a> so that the background is colored based
+<li>
+<p>Write a function <code>heat-color: number(y) -&gt; color</code> that produces the
+correct color.</p>
+</li>
+<li>
+<p>Write a function <code>color-helper: number(x) number(y) -&gt; color</code> that
+just calls the <code>heat-color</code> function to get the correct color.</p>
+</li>
+<li>
+<p>Use <code>build-image</code> to create the 100x300 rectangle pictured above.</p>
+</li>
+<li>
+<p><strong>Challenge</strong>. Modify your work on the <a href="/intermediate-cs/ch15/15-graphing-review/">graphing review</a> so that the background is colored based
 on the distance a point (x,y) is from the graph of y=f(x).</p>
-
-<figure>
-<img src="vivrant.png"/> 
-</figure></li>
+<!-- raw HTML omitted -->
+</li>
 </ol>
-
+<!-- raw HTML omitted -->
 <h2 id="sketch-of-the-challenge-solution">Sketch of the challenge solution</h2>
-
 <ol>
-<li><p>The idea is to use the <code>heat-color</code> function that we wrote earlier.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define (color-outline-1 xc yc)
-  (heat-color (- yc (f xc)))</pre></div>
+<li>
+<p>The idea is to use the <code>heat-color</code> function that we wrote earlier.</p>
+<pre><code> (define (color-outline-1 xc yc)
+   (heat-color (- yc (f xc)))
+</code></pre>
 <p>Unfortunately, <code>xc</code> is in computer coordinates, but <code>f</code> works only in
-people coordinates, so we need to add our conversion functions.</p></li>
-
-<li><p>Change the use of <code>f</code> to the <code>fc</code> version that works in computer coordinates.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define (fc x)
-  (yptyc (f (xctxp x))))))</pre></div></li>
-
-<li><p>Sometimes we get negative values and decimals, so add a <code>fixer</code> and
+people coordinates, so we need to add our conversion functions.</p>
+</li>
+<li>
+<p>Change the use of <code>f</code> to the <code>fc</code> version that works in computer coordinates.</p>
+<pre><code> (define (fc x)
+   (yptyc (f (xctxp x))))))
+</code></pre>
+</li>
+<li>
+<p>Sometimes we get negative values and decimals, so add a <code>fixer</code> and
 use it in the <code>color-outline</code> function to fix the input to <code>heat-color</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define (fixer v)
-  (real-&gt;int (abs v)))</pre></div></li>
-
-<li><p>For more vivrant colors, multiply by two in the fixer (or modify the <code>heat-color</code> function).</p></li>
+<pre><code> (define (fixer v)
+   (real-&gt;int (abs v)))
+</code></pre>
+</li>
+<li>
+<p>For more vivrant colors, multiply by two in the fixer (or modify the <code>heat-color</code> function).</p>
+</li>
 </ol>
 
 

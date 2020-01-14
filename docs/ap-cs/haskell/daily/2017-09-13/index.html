@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1513,6 +1535,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1539,38 +1564,30 @@
     
     
     
-    
-
-<p>Indentation is significant in Haskell. Haskell uses indentation to
+    <p>Indentation is significant in Haskell. Haskell uses indentation to
 group pieces of code together. This is similar to Python, but there
 are &ldquo;false cognates&rdquo; - similar code that is indented differently in
 the two languages.  In Racket, grouping is done only by parentheses.</p>
-
 <h2 id="indenting-to-the-same-level">Indenting to the same level</h2>
-
 
 <div class="notices tip" ><p>&ldquo;All grouped expressions must be exactly aligned.&rdquo;</p>
 </div>
 
-
 <p>Example 1a: good indentation</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#00a8c8">if</span> <span style="color:#111">x</span> <span style="color:#111">`</span><span style="color:#111">mod</span><span style="color:#111">`</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span>
 	   <span style="color:#111">x</span> <span style="color:#111">`</span><span style="color:#111">mod</span><span style="color:#111">`</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>          <span style="color:#75715e">-- good. aligned with top x.</span>
-    <span style="color:#f92672">...</span></code></pre></div>
-<p>Example 1a: bad indentation</p>
+    <span style="color:#f92672">...</span>
+</code></pre></div><p>Example 1a: bad indentation</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#00a8c8">if</span> <span style="color:#111">x</span> <span style="color:#111">`</span><span style="color:#111">mod</span><span style="color:#111">`</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span>
 	 <span style="color:#111">x</span> <span style="color:#111">`</span><span style="color:#111">mod</span><span style="color:#111">`</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>          <span style="color:#75715e">-- wrong. not aligned with top x</span>
-    <span style="color:#f92672">...</span></code></pre></div>
-<h2 id="indenting-further">Indenting further</h2>
-
+    <span style="color:#f92672">...</span>
+</code></pre></div><h2 id="indenting-further">Indenting further</h2>
 
 <div class="notices warning" ><p>&ldquo;Code which is part of some expression [must]
 be indented further than the beginning of that expression.</p>
 </div>
 
-
 <h3 id="not-enough-indentation">Not enough indentation</h3>
-
 <p>On one hand, this means that if you do not indent, you are not continuing
 a preceding expression. Example 2:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#00a8c8">if</span> <span style="color:#111">x</span> <span style="color:#111">`</span><span style="color:#111">mod</span><span style="color:#111">`</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span>
@@ -1578,16 +1595,13 @@ a preceding expression. Example 2:</p>
     <span style="color:#00a8c8">then</span> <span style="color:#75715e">-- wrong; needs to be indented further than the if</span>
 	   <span style="color:#111">x</span>
     <span style="color:#00a8c8">else</span> <span style="color:#75715e">-- wrong again</span>
-	   <span style="color:#ae81ff">0</span></code></pre></div>
-<h3 id="too-much-indentation">Too much indentation</h3>
-
+	   <span style="color:#ae81ff">0</span>
+</code></pre></div><h3 id="too-much-indentation">Too much indentation</h3>
 <p>On the other hand, if you do indent, you may be
 continuing something you wrote previously.</p>
-
 <p>How could this be an issue? If you write one function and then indent a
 later function, Haskell thinks you want the second function to be inside
 the first function (as in, a &ldquo;sub-function&rdquo;).</p>
-
 <p>Example:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#111">main</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">do</span> 
 	    <span style="color:#111">putStrLn</span> <span style="color:#f92672">$</span> <span style="color:#111">helper</span> <span style="color:#ae81ff">5</span>
@@ -1595,13 +1609,12 @@ the first function (as in, a &ldquo;sub-function&rdquo;).</p>
     <span style="color:#75715e">-- all this space does not change anything... --</span>
 
         <span style="color:#111">answer</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span> <span style="color:#f92672">*</span> <span style="color:#111">x</span>
-    <span style="color:#111">helper</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#111">answer</span> <span style="color:#111">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span></code></pre></div>
-<p>Notice how <code>answer</code> is indented more than <code>main</code>? That makes the <code>answer</code>
+    <span style="color:#111">helper</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#111">answer</span> <span style="color:#111">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Notice how <code>answer</code> is indented more than <code>main</code>? That makes the <code>answer</code>
 function live inside of <code>main</code>&hellip; this will cause all sorts of
 problems, but the first one is that <code>helper</code> cannot see <code>answer</code>
 because <code>helper</code> cannot see anything inside of another function like
 <code>main</code>.</p>
-
 <p>The source for all quotes in this article is the <a href="https://en.wikibooks.org/wiki/Haskell/Indentation">Haskell article on indentation</a>.
 Other example issues came from observations in class.</p>
 

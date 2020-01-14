@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -45,6 +45,11 @@
   <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ch05/</loc>
     <lastmod>2017-09-24T13:52:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ap-cs/java/karel/strategy-ex1/</loc>
+    <lastmod>2020-01-14T14:21:13-06:00</lastmod>
   </url>
   
   <url>
@@ -708,6 +713,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch13/ch13-intro-ex3/</loc>
+    <lastmod>2019-12-19T08:47:17-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch13/</loc>
     <lastmod>2017-11-27T08:39:00-06:00</lastmod>
   </url>
@@ -815,6 +825,11 @@
   <url>
     <loc>https://wy-cs.website/ai/quiz/2019-10-04/</loc>
     <lastmod>2019-10-04T09:06:44-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ap-cs/java/karel/</loc>
+    <lastmod>2020-01-14T14:21:00-06:00</lastmod>
   </url>
   
   <url>

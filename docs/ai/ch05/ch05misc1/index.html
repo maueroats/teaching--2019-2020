@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,43 +1540,43 @@
     
     
     
-    
-
-<ul>
-<li><p>Learn <code>reduce</code> and <code>every</code>.</p></li>
-
-<li><p><a href="https://riptutorial.com/common-lisp/example/8770/summing-a-list">reduce
-info</a></p></li>
-
-<li><p><a href="http://clhs.lisp.se/Body/f_everyc.htm">every</a> including
-friends. Notice how the later examples work on multiple inputs.</p></li>
+    <ul>
+<li>
+<p>Learn <code>reduce</code> and <code>every</code>.</p>
+</li>
+<li>
+<p><a href="https://riptutorial.com/common-lisp/example/8770/summing-a-list">reduce
+info</a></p>
+</li>
+<li>
+<p><a href="http://clhs.lisp.se/Body/f_everyc.htm">every</a> including
+friends. Notice how the later examples work on multiple inputs.</p>
+</li>
 </ul>
-
 <p>(SC 7.16-22)</p>
-
 <h2 id="reduce">Reduce</h2>
-
 <ol>
-<li><p>Suppose we had a list of sets ((A B C) (C D A) (F B D) (G)) that we
+<li>
+<p>Suppose we had a list of sets ((A B C) (C D A) (F B D) (G)) that we
 wanted to collapse into one big set. If we use APPEND for our
 reducing function, the result won’t be a true set, because some elements
 will appear more than once. What reducing function should be used
-instead?</p></li>
-
-<li><p>Write a function that, given a list of lists, returns the total length of all
+instead?</p>
+</li>
+<li>
+<p>Write a function that, given a list of lists, returns the total length of all
 the lists. This problem can be solved two different ways. Give at
-least two ways to solve.</p></li>
-
-<li><p>Compare <code>(REDUCE #’+ NIL)</code> to <code>(REDUCE #’* NIL)</code>. Say what they are
+least two ways to solve.</p>
+</li>
+<li>
+<p>Compare <code>(REDUCE #’+ NIL)</code> to <code>(REDUCE #’* NIL)</code>. Say what they are
 and why you think
-the answers are that way.</p></li>
+the answers are that way.</p>
+</li>
 </ol>
-
 <h2 id="every">Every</h2>
-
 <p>In the exercises below, <code>throdd</code> refers to a number that is 1 or 2
 mod 3.</p>
-
 <ol>
 <li>Write a function ALL-ODD that returns T if every element of a list of
 numbers is throdd.</li>
@@ -1565,28 +1587,28 @@ a list of numbers is throdd.</li>
 <li>Write a function NOT-NONE-ODD that returns T if it is not the case
 that a list of numbers contains no throdd elements.</li>
 </ol>
-
 <h2 id="etc">Etc</h2>
-
 <ol>
-<li><p>Write a function <code>both-close</code> that takes as input two lists of the
+<li>
+<p>Write a function <code>both-close</code> that takes as input two lists of the
 same length, and returns true if the corresponding elements are
 within 5 of each other.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-true (both-close &#39;(10 20 30 50) &#39;(8 23 25 45)))
-(assert-false (both-close &#39;(10 20 30) &#39;(15 14 29)))</pre></div></li>
-
-<li><p>Write a function <code>ALL-EQUAL</code> that returns T if the first
+<pre><code> (assert-true (both-close '(10 20 30 50) '(8 23 25 45)))
+ (assert-false (both-close '(10 20 30) '(15 14 29)))
+</code></pre>
+</li>
+<li>
+<p>Write a function <code>ALL-EQUAL</code> that returns T if the first
 element of a list is equal to the second, the second is equal to the third,
 the third is equal to the fourth, and so on. <code>(ALL-EQUAL ’(I I I I))</code>
-should return T. <code>(ALL-EQUAL ’(I I E I))</code> should return NIL. <code>ALL-
-EQUAL</code> should return T for lists with less than two elements.</p></li>
-
-<li><p>Write <code>EVERY-OTHER</code>, a function that returns every other
-element of a list—the first, third, fifth, and so on. <code>(EVERY-OTHER
-’(A B C D E F G))</code> should return <code>(A C E G)</code>. <code>(EVERY-OTHER ’(I
-CAME I SAW I CONQUERED))</code> should return <code>(I I I)</code>. This is designed to
+should return T. <code>(ALL-EQUAL ’(I I E I))</code> should return NIL. <code>ALL- EQUAL</code> should return T for lists with less than two elements.</p>
+</li>
+<li>
+<p>Write <code>EVERY-OTHER</code>, a function that returns every other
+element of a list—the first, third, fifth, and so on. <code>(EVERY-OTHER ’(A B C D E F G))</code> should return <code>(A C E G)</code>. <code>(EVERY-OTHER ’(I CAME I SAW I CONQUERED))</code> should return <code>(I I I)</code>. This is designed to
 be a recursive function exercise, so try it that way in addition to
-another way.</p></li>
+another way.</p>
+</li>
 </ol>
 
 

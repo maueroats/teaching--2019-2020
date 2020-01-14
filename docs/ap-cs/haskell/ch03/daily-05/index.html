@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,6 +1537,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1541,88 +1566,91 @@
     
     
     
-    <!--
-2. (SKIP, NO QUESTION) Binary decimals: the binary number 110.101 means 
-
-        2**2 + 2**1 + 2**(-1) + 2**(-3) == 6.625
-
-    Haskell does not believe in negative exponents for integers (using
-    `^`), but will happily do them for decimals (`**`). Check the type
-    signatures... when the inputs to a function are integers, expect
-    the output to be an integer as well.
--->
-
-<div class="alert alert-warning" role="alert">
-    Updates for txtToBin: put the space first and remove the question mark.
-    </div>
-
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Some <a href="examples.hs">longer example tests</a> are available. <a href="read-lyrics.hs">Additional
 example</a> showing how to read a bunch of lyrics from a file (for
 a cool thing to encrypt in problem 8).</p>
-
 <ol>
-<li><p>How many numbers are between two given binary numbers, including
+<li>
+<p>How many numbers are between two given binary numbers, including
 the start and end number?</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">bcount :: [Int] -&gt; [Int] -&gt; Int
-bcount [1,0,0,1,1] [1,1,0,1,0] == 8</pre></div></li>
-
-<li><p>(<code>ensureLen :: Int -&gt; [Int] -&gt; [Int]</code>). The call <code>ensureLen 6 xs</code>
+<pre><code> bcount :: [Int] -&gt; [Int] -&gt; Int
+ bcount [1,0,0,1,1] [1,1,0,1,0] == 8
+</code></pre>
+</li>
+<li>
+<p>(<code>ensureLen :: Int -&gt; [Int] -&gt; [Int]</code>). The call <code>ensureLen 6 xs</code>
 add leading zeros to <code>xs</code> if necessary to ensure it has a length of at least 6.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ensureLen 4 [1] == [0,0,0,1]
-ensureLen 3 [1,0,1,0,1] == [1,0,1,0,1]</pre></div></li>
-
-<li><p>(<code>and' :: Int -&gt; Int -&gt; Int</code>). Helper function. Give 1 if both
-inputs are 1, otherwise 0.</p></li>
-
-<li><p>(<code>bitwiseAnd</code>) Given two binary integers <code>a</code> and <code>b</code> (represented
+<pre><code> ensureLen 4 [1] == [0,0,0,1]
+ ensureLen 3 [1,0,1,0,1] == [1,0,1,0,1]
+</code></pre>
+</li>
+<li>
+<p>(<code>and' :: Int -&gt; Int -&gt; Int</code>). Helper function. Give 1 if both
+inputs are 1, otherwise 0.</p>
+</li>
+<li>
+<p>(<code>bitwiseAnd</code>) Given two binary integers <code>a</code> and <code>b</code> (represented
 as lists of 0 and 1), produce the
 binary number given by lining up the ones places and the then
 &ldquo;and&rdquo;-ing the digits of <code>a</code> and <code>b</code> together.
 The shorter number should be padded
-with zeros to be the same length as the long number.</p></li>
-
-<li><p>(<code>bitwise</code>) Given a binary operation (<code>op :: Int -&gt; Int -&gt; Int</code>) and two
+with zeros to be the same length as the long number.</p>
+</li>
+<li>
+<p>(<code>bitwise</code>) Given a binary operation (<code>op :: Int -&gt; Int -&gt; Int</code>) and two
 binary integers, create a number by performing the operation bitwise
 as in the previous exercise. The shorter number should be padded
 with zeros to be the same length as the long number.</p>
-
 <p>The type signature for <code>op</code> in the big <code>bitwise</code> signature is
 <code>(Int-&gt;Int-&gt;Int)</code>.  Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">xor&#39; :: Int -&gt; Int -&gt; Int
-xor&#39; a b = if a == b then 0 else 1
+<pre><code> xor' :: Int -&gt; Int -&gt; Int
+ xor' a b = if a == b then 0 else 1
 
-bitwise xor&#39; [1,0,1,0] [0,1,1,0] = [1,1,0,0]</pre></div></li>
-
-<li><p><code>txtToBin :: String -&gt; [[Int]]</code>. Translate a string into a list of
+ bitwise xor' [1,0,1,0] [0,1,1,0] = [1,1,0,0]
+</code></pre>
+</li>
+<li>
+<p><code>txtToBin :: String -&gt; [[Int]]</code>. Translate a string into a list of
 binary numbers using the location each character is found in the
 (abbreviated) list below. If a character is not found, produce the
 empty list to represent it.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[space]A-Za-z0-9.</pre></div></li>
-
-<li><p><code>binToMsg :: [[Int]] -&gt; [Int]</code>. Make sure each binary number is 6
+<pre><code> [space]A-Za-z0-9.
+</code></pre>
+</li>
+<li>
+<p><code>binToMsg :: [[Int]] -&gt; [Int]</code>. Make sure each binary number is 6
 digits, and then concatenate all of the binary
-numbers into one long list of integers.</p></li>
-
-<li><p><code>msgDecode :: [Int] -&gt; String</code>. Now decode the big binary number,
-changing it back into text.</p></li>
-
-<li><p><code>encrypt :: String -&gt; String -&gt; String</code>. The encrypt function takes
+numbers into one long list of integers.</p>
+</li>
+<li>
+<p><code>msgDecode :: [Int] -&gt; String</code>. Now decode the big binary number,
+changing it back into text.</p>
+</li>
+<li>
+<p><code>encrypt :: String -&gt; String -&gt; String</code>. The encrypt function takes
 in a message string and a key string. The encryption lines up the
 letters in the message and the string, changes the characters into
 binary numbers, joins the binary numbers with <code>xor</code>, and then
 changes the resulting number back into a string. The string will be
 nonsense.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">encrypt &#34;Key&#34; &#34;Secret&#34;</pre></div>
+<pre><code> encrypt &quot;Key&quot; &quot;Secret&quot;
+</code></pre>
 <p>The key is repeated and lined up with the secret message, then
 the values of the binary numbers are combined with <code>xor</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;KeyKeyK&#34;
-&#34;Secrets&#34;
-&#34;X tm cl&#34;</pre></div>
-<p>Note: this function is likely to require helper functions!</p></li>
-
-<li><p><code>decrypt :: String -&gt; String -&gt; String</code>. Given an encrypted
+<pre><code> &quot;KeyKeyK&quot;
+ &quot;Secrets&quot;
+ &quot;X tm cl&quot;
+</code></pre>
+<p>Note: this function is likely to require helper functions!</p>
+</li>
+<li>
+<p><code>decrypt :: String -&gt; String -&gt; String</code>. Given an encrypted
 message and a key, reverse the encryption process. This is kind of
-tricky without experimentation; try just re-encrypting the message and see if you can figure out a pattern.</p></li>
+tricky without experimentation; try just re-encrypting the message and see if you can figure out a pattern.</p>
+</li>
 </ol>
 
 

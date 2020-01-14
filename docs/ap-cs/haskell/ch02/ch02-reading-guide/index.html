@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1509,6 +1531,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1535,63 +1560,64 @@
     
     
     
-    
-
-<h1 id="haskell-starting-out-questions">Haskell Starting Out Questions</h1>
-
-<h2 id="a-sections-2-1-2-3">A. Sections 2.1&ndash;2.3</h2>
-
+    <h1 id="haskell-starting-out-questions">Haskell Starting Out Questions</h1>
+<h2 id="a-sections-21--23">A. Sections 2.1&ndash;2.3</h2>
 <ol>
-<li><p>There is an annoyance with negative numbers that is mentioned.</p>
-
+<li>
+<p>There is an annoyance with negative numbers that is mentioned.</p>
 <ul>
 <li>What is the correct way to write five times negative three in Haskell?</li>
 <li>What is a wrong way to do the same thing?</li>
-</ul></li>
-
-<li><p>Logical operations are basic building blocks of programs. How do you write:</p>
-
+</ul>
+</li>
+<li>
+<p>Logical operations are basic building blocks of programs. How do you write:</p>
 <ul>
 <li>and</li>
 <li>or</li>
 <li>not</li>
 <li>equals</li>
 <li>not equals</li>
-</ul></li>
-
-<li><p>Haskell follows mostly the normal order of operations from mathematics. However, in math functions must be written <code>f(x)</code> with parentheses, whereas in Haskell functions can be written <code>f x</code> without parentheses. This means we need to fit functions into the order of operations.</p>
-
+</ul>
+</li>
+<li>
+<p>Haskell follows mostly the normal order of operations from mathematics. However, in math functions must be written <code>f(x)</code> with parentheses, whereas in Haskell functions can be written <code>f x</code> without parentheses. This means we need to fit functions into the order of operations.</p>
 <ul>
 <li>Where does function calling fit in the order of operations?</li>
 <li>Give an example of a problem that this could create. (That is, the program does not do what a math student would expect it to do.)</li>
-</ul></li>
-
-<li><p>Write the function <code>hypSquare a b</code> that computes the square of the length of the hypotenuse of a right triangle with legs <code>a</code> and <code>b</code>.</p></li>
-
-<li><p>The apostrophe character (<code>'</code>) is usually used for one of two purposes. List both:</p>
-
+</ul>
+</li>
+<li>
+<p>Write the function <code>hypSquare a b</code> that computes the square of the length of the hypotenuse of a right triangle with legs <code>a</code> and <code>b</code>.</p>
+</li>
+<li>
+<p>The apostrophe character (<code>'</code>) is usually used for one of two purposes. List both:</p>
 <ol>
 <li>Purpose 1:</li>
 <li>Purpose 2:</li>
-</ol></li>
-
-<li><p>Are you allowed to use the apostrophe in function or variable names?</p></li>
-
-<li><p>In Racket you used (cons x listy) to make a list with x before an existing list. How do you do that in Haskell?</p></li>
-
-<li><p>In Racket you used (concatenate firstStr secondStr) to put two strings together. How do you do that in Haskell?</p></li>
-
-<li><p>Slightly longer exercise:</p>
-
+</ol>
+</li>
+<li>
+<p>Are you allowed to use the apostrophe in function or variable names?</p>
+</li>
+<li>
+<p>In Racket you used (cons x listy) to make a list with x before an existing list. How do you do that in Haskell?</p>
+</li>
+<li>
+<p>In Racket you used (concatenate firstStr secondStr) to put two strings together. How do you do that in Haskell?</p>
+</li>
+<li>
+<p>Slightly longer exercise:</p>
 <ol>
 <li>Make a list <code>learn</code> containing the words &ldquo;this&rdquo; &ldquo;is&rdquo; &ldquo;all&rdquo; &ldquo;good&rdquo;.</li>
 <li>Make a new list called <code>learnMore</code> containing &ldquo;Hopefully&rdquo; &ldquo;this&rdquo; &ldquo;is&rdquo; &ldquo;all&rdquo; &ldquo;good&rdquo;</li>
 <li>What is <code>learnMore !! 4</code>.</li>
-</ol></li>
-
-<li><p>Complete the table of equivalents</p></li>
 </ol>
-
+</li>
+<li>
+<p>Complete the table of equivalents</p>
+</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -1599,89 +1625,91 @@
 <th>Haskell language equivalent functions</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>first</td>
 <td>&hellip;</td>
 </tr>
-
 <tr>
 <td>rest</td>
 <td>&hellip;</td>
 </tr>
-
 <tr>
 <td>length</td>
 <td>&hellip;</td>
 </tr>
-
 <tr>
 <td>empty?</td>
 <td>&hellip;</td>
 </tr>
 </tbody>
 </table>
-
-<ol>
-<li><p>What are the signatures and purposes of these functions?</p>
-
+<ol start="11">
+<li>
+<p>What are the signatures and purposes of these functions?</p>
 <ol>
 <li>init</li>
 <li>last</li>
 <li>take</li>
 <li>drop</li>
-</ol></li>
-
-<li><p>How can you ask the computer if the list called <code>xs</code> contains the number 5?</p></li>
-
-<li><p>There are several more functions that are used less often, but still make it into the basic starting out chapter. Write quick summaries as necessary.</p>
-
+</ol>
+</li>
+<li>
+<p>How can you ask the computer if the list called <code>xs</code> contains the number 5?</p>
+</li>
+<li>
+<p>There are several more functions that are used less often, but still make it into the basic starting out chapter. Write quick summaries as necessary.</p>
 <ol>
 <li>reverse</li>
 <li>maximum</li>
 <li>minimum</li>
 <li>sum</li>
 <li>product</li>
-</ol></li>
 </ol>
-
-<h2 id="b-sections-2-4-2-6">B. Sections 2.4&ndash;2.6</h2>
-
+</li>
+</ol>
+<h2 id="b-sections-24--26">B. Sections 2.4&ndash;2.6</h2>
 <ol>
-<li><p>Create a list of integers from 1 to 1000 (inclusive).</p></li>
-
-<li><p>Create a list of letters from <code>'m'</code> to <code>'a'</code> in that order.</p></li>
-
-<li><p>New functions: write signature and purpose for each.</p>
-
+<li>
+<p>Create a list of integers from 1 to 1000 (inclusive).</p>
+</li>
+<li>
+<p>Create a list of letters from <code>'m'</code> to <code>'a'</code> in that order.</p>
+</li>
+<li>
+<p>New functions: write signature and purpose for each.</p>
 <ol>
 <li>cycle</li>
 <li>repeat</li>
 <li>replicate</li>
-</ol></li>
-
-<li><p>Write a function that removes all of the vowels from a word.</p></li>
-
-<li><p>What is the main difference between a tuple and a list?</p></li>
-
-<li><p>New functions: write signature and purpose for each.</p>
-
+</ol>
+</li>
+<li>
+<p>Write a function that removes all of the vowels from a word.</p>
+</li>
+<li>
+<p>What is the main difference between a tuple and a list?</p>
+</li>
+<li>
+<p>New functions: write signature and purpose for each.</p>
 <ol>
 <li>fst</li>
 <li>snd</li>
 <li>zip</li>
-</ol></li>
-
-<li><p>Write a function that takes in a list of words and puts out a list of ordered pairs (word, length of word).</p></li>
-
-<li><p>Write a function that takes in a list of words and puts out a list with the second word doubled in its own list, the third word tripled in its own list, etc.</p></li>
 </ol>
-
+</li>
+<li>
+<p>Write a function that takes in a list of words and puts out a list of ordered pairs (word, length of word).</p>
+</li>
+<li>
+<p>Write a function that takes in a list of words and puts out a list with the second word doubled in its own list, the third word tripled in its own list, etc.</p>
+</li>
+</ol>
 <p>For example, the function call</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">amplify [&#34;hill&#34;,&#34;rock&#34;,&#34;star&#34;,&#34;four&#34;]</pre></div>
-<p>should produce</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[&#34;hill&#34;],[&#34;rock&#34;,&#34;rock&#34;],[&#34;star&#34;,&#34;star&#34;,&#34;star&#34;], [&#34;four&#34;,&#34;four&#34;,&#34;four&#34;,&#34;four&#34;]]</pre></div>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">amplify [&#34;hill&#34;,&#34;rock&#34;,&#34;star&#34;,&#34;four&#34;]
+</code></pre></div><p>should produce</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[[&#34;hill&#34;],[&#34;rock&#34;,&#34;rock&#34;],[&#34;star&#34;,&#34;star&#34;,&#34;star&#34;], [&#34;four&#34;,&#34;four&#34;,&#34;four&#34;,&#34;four&#34;]]
+</code></pre></div>
 
     
     

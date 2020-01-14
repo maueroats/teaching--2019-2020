@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1524,37 +1546,27 @@
     
     
     
-    
-
-<p>The <code>map-image</code> command runs a function on every pixel of an image. See the <a href="https://docs.racket-lang.org/picturing-programs/index.html?q=map-image#%28def._%28%28lib._picturing-programs%2Fprivate%2Fmap-image..rkt%29._map-image%29%29">map-image documentation</a> for the official info.</p>
-
+    <p>The <code>map-image</code> command runs a function on every pixel of an image. See the <a href="https://docs.racket-lang.org/picturing-programs/index.html?q=map-image#%28def._%28%28lib._picturing-programs%2Fprivate%2Fmap-image..rkt%29._map-image%29%29">map-image documentation</a> for the official info.</p>
 <h2 id="exercises-for-map-image">Exercises for map-image</h2>
-
 <ol>
 <li><code>blue-only</code>: Keep only the blue, removing red and green.</li>
 <li><code>black-white</code>: Turn an image to black and white. You will need to decide how to set the threshold.</li>
 <li><code>grayscale</code>: Turn an image to grayscale.</li>
 <li><code>green-to-white</code>: Change only green pixels to white.</li>
 </ol>
-
 <h2 id="color">Color</h2>
-
 <p>There are several logical ways of combining the red, green, and blue components to get one number. The most common is averaging, but it is not the only way.</p>
-
 <ol>
 <li>Average the numbers.</li>
 <li>Use the maximum of the numbers.</li>
 <li>Use the minimum of the numbers. (?!)</li>
 <li>Other unusual math methods like the geometric mean.</li>
 </ol>
-
 <h2 id="extras">Extras</h2>
-
 <p>Make the function <code>color-distance: color-&gt;color</code>, which measures the distance between two colors in the same way that <code>distance</code> measures the distance between two posns.</p>
-
 <p>The formula for color distance would be:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-math" data-lang="math">(square root of (r1-r2)^2 + (g1-g2)^2 + (b1-b2)^2)</code></pre></div>
-<p>Your <code>color-distance</code> function can be used to change colors <em>near</em> green to white, so you don&rsquo;t have to have perfect green to see it work.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(square root of (r1-r2)^2 + (g1-g2)^2 + (b1-b2)^2)
+</code></pre></div><p>Your <code>color-distance</code> function can be used to change colors <em>near</em> green to white, so you don't have to have perfect green to see it work.</p>
 
 
     

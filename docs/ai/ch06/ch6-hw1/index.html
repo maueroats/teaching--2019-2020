@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,24 +1537,27 @@
     
     <p>Definition: A predicate is a function that takes in an argument that
 can be anything, and returns a boolean.</p>
-
 <ol>
-<li><p>Write <code>find-all</code>, which return a list of all items in the sequence
+<li>
+<p>Write <code>find-all</code>, which return a list of all items in the sequence
 that match the given item, possibly with an unusual <code>:test</code>. Also
 <code>:test-not t</code> should give the opposite results (include items that
 would be excluded, and vice versa).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(defun find-all (item sequence 
-                 &amp;key (test #&#39;eql) test-not)
-        ...)</pre></div></li>
-
-<li><p>Write a function to break a list into two lists, the first where
+<pre><code> (defun find-all (item sequence 
+                  &amp;key (test #'eql) test-not)
+         ...)
+</code></pre>
+</li>
+<li>
+<p>Write a function to break a list into two lists, the first where
 the predicate is satisfied, the second where it is not satisfied.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(defun partition-if (pred list)
-    ;; define satisfies-list and not-satisfies-list
-    ;; ...
-   (values satisfies-list not-satisfies-list))</pre></div></li>
+<pre><code> (defun partition-if (pred list)
+     ;; define satisfies-list and not-satisfies-list
+     ;; ...
+    (values satisfies-list not-satisfies-list))
+</code></pre>
+</li>
 </ol>
-
 <p>TO BE CONTINUED</p>
 
 

@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,16 +1540,12 @@
     
     
     
-    
-
-<p>In class we discussed the changes necessary in order to check to see
+    <p>In class we discussed the changes necessary in order to check to see
 if a variable matched an existing value.</p>
-
 <p>We added a keyword argument to <code>pat-match</code> in order to hold the
 association list of <code>(?var . value)</code> pairs.</p>
-
 <p>This was the pseudo-code we wrote for the revised matcher:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">if (variable is already seen) then
+<pre><code>if (variable is already seen) then
   if current value from input is the same as the seen variable then
     recursively call pat-match on the rest of the pattern and input.
   else
@@ -1536,18 +1554,18 @@ association list of <code>(?var . value)</code> pairs.</p>
 else
   set up new variable binding
   recursively call pat-match, including new binding
-end if</pre></div>
+end if
+</code></pre>
 <p>I recommend using <code>assoc</code> to find the bindings.</p>
-
 <h2 id="tests">Tests</h2>
-
 <p>It is ok if you have <code>(T . T)</code> at the end of your association list.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">?x</span> <span style="color:#f92672">.</span> <span style="color:#111">happy</span><span style="color:#111">))</span>
-              <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?x</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">happy</span><span style="color:#111">)))</span>
-<span style="color:#111">(</span><span style="color:#111">assert-false</span> <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?x</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">sad</span><span style="color:#111">)))</span>
-<span style="color:#111">(</span><span style="color:#111">assert-false</span> <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?y</span> <span style="color:#111">end</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">sad</span><span style="color:#111">)))</span> <span style="color:#75715e">; already ok?</span>
-<span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">?y</span> <span style="color:#f92672">.</span> <span style="color:#111">cream</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#f92672">.</span> <span style="color:#111">happy</span><span style="color:#111">))</span>
-              <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">ice</span> <span style="color:#111">?y</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">ice</span> <span style="color:#111">cream</span><span style="color:#111">)))</span></code></pre></div>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#f92672">.</span> <span style="color:#111">happy</span><span style="color:#111">)</span><span style="color:#111">)</span>
+              <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?x</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">happy</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+<span style="color:#111">(</span><span style="color:#111">assert-false</span> <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?x</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">sad</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+<span style="color:#111">(</span><span style="color:#111">assert-false</span> <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">?y</span> <span style="color:#111">end</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">sad</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#75715e">; already ok?</span>
+<span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">?y</span> <span style="color:#f92672">.</span> <span style="color:#111">cream</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#f92672">.</span> <span style="color:#111">happy</span><span style="color:#111">)</span><span style="color:#111">)</span>
+              <span style="color:#111">(</span><span style="color:#111">pat-match</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">?x</span> <span style="color:#111">is</span> <span style="color:#111">ice</span> <span style="color:#111">?y</span><span style="color:#111">)</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">happy</span> <span style="color:#111">is</span> <span style="color:#111">ice</span> <span style="color:#111">cream</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+</code></pre></div>
 
     
     

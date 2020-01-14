@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1516,44 +1538,40 @@
     
     
     
-    
-
-<p>The game of Craps is played with two dice. Read about <a href="https://ourpastimes.com/play-street-craps-4505587.html">street
+    <p>The game of Craps is played with two dice. Read about <a href="https://ourpastimes.com/play-street-craps-4505587.html">street
 craps</a> but
 ignore the betting.</p>
-
 <p>You are going to create a rule-based craps simulator.</p>
-
 <p>You begin with a set of rules. Our rules will be a list of 3-tuples
 <code>(point roll outcome)</code>:</p>
-
 <ul>
 <li><code>point</code> is the current point value (0 at the start),</li>
 <li><code>roll</code> is the current roll, and</li>
 <li><code>outcome</code> is +1 for a win, -1 for a loss and 0 if the game continues.</li>
 </ul>
-
 <p>For example: <code>(3 7 -1)</code> indicates that the rule applies when trying to
 get a point of 3, if the current roll is a 7, then the game is lost.</p>
-
 <p>The rules will include a symbol <code>POINT</code> which is replaced by the
 current value of the point wherever it occurs, so you can say &ldquo;getting
 the same value as the point&rdquo; by using the rule:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(POINT POINT 1)</pre></div>
+<pre><code>(POINT POINT 1)
+</code></pre>
 <p>Think: How would you use <code>POINT</code> to indicate that rolling a 7 when you are
 trying for any other number results in a loss?</p>
-
 <h2 id="technical-orientation">Technical Orientation</h2>
-
 <p>You will define a list of rules:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(defparameter *CRAPS-RULES* &#39;((0 7 1) (POINT POINT 1) ...))</pre></div>
+<pre><code>(defparameter *CRAPS-RULES* '((0 7 1) (POINT POINT 1) ...))
+</code></pre>
 <ol>
-<li><p>Write a function <code>simulate-1</code> that takes in the current point
+<li>
+<p>Write a function <code>simulate-1</code> that takes in the current point
 value as well as the current roll total, and puts out an outcome
-(0,+1,-1) using the <code>*CRAPS-RULES*</code>.</p></li>
-
-<li><p>Write a function <code>simulate</code> that uses <code>simulate-1</code> repeatedly to
-generate a list of all of the dice roll totals in one play of the game.</p></li>
+(0,+1,-1) using the <code>*CRAPS-RULES*</code>.</p>
+</li>
+<li>
+<p>Write a function <code>simulate</code> that uses <code>simulate-1</code> repeatedly to
+generate a list of all of the dice roll totals in one play of the game.</p>
+</li>
 </ol>
 
 

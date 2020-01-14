@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1510,6 +1532,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1537,29 +1562,36 @@
     
     
     <p>Please write your answers on paper and turn in the paper.</p>
-
 <ol>
-<li><p>Explain in your own words what <code>foldl</code> is good for.</p></li>
-
-<li><p>Use <code>foldl</code> to remove duplicates from a list. Write your own fold
+<li>
+<p>Explain in your own words what <code>foldl</code> is good for.</p>
+</li>
+<li>
+<p>Use <code>foldl</code> to remove duplicates from a list. Write your own fold
 function. Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">undup [1,1,1,2,3,2] == [1,2,3] </pre></div></li>
-
-<li><p>You are going to hide a secret message inside a public message by
+<pre><code> undup [1,1,1,2,3,2] == [1,2,3] 
+</code></pre>
+</li>
+<li>
+<p>You are going to hide a secret message inside a public message by
 inserting the letters of the secret message every given number (n)
 of the public message letters. If there are not enough letters in
 the public message, just put the unused part of the secret message
 at the end. Begin the output with part of the public message.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">steg &#34;Whitney Young&#34; &#34;ABC&#34; 4
-  == &#34;WhitAney BYounCg&#34;
-
-steg &#34;Whitney Young&#34; &#34;Long Message&#34; 5
-  == &#34;WhitnLey Yooungng Message&#34;</pre></div></li>
-
-<li><p>Write a decoder for messages like the first one, which are able to
+<pre><code> steg &quot;Whitney Young&quot; &quot;ABC&quot; 4
+   == &quot;WhitAney BYounCg&quot;
+    
+ steg &quot;Whitney Young&quot; &quot;Long Message&quot; 5
+   == &quot;WhitnLey Yooungng Message&quot;
+</code></pre>
+</li>
+<li>
+<p>Write a decoder for messages like the first one, which are able to
 fit completely inside the second. Take in the number of letters
 between each secret letter.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">unsteg 4 &#34;WhitAney BYounCg&#34; == &#34;ABC&#34;</pre></div></li>
+<pre><code> unsteg 4 &quot;WhitAney BYounCg&quot; == &quot;ABC&quot;
+</code></pre>
+</li>
 </ol>
 
 

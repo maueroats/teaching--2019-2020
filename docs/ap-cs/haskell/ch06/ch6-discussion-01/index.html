@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1510,6 +1532,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1536,61 +1561,57 @@
     
     
     
-    
-
-<h2 id="partial-evaluation">Partial Evaluation</h2>
-
+    <h2 id="partial-evaluation">Partial Evaluation</h2>
 <h3 id="p1">P1</h3>
-
 <p>Given</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">f x y = 2*x+3*y
-moo = f</pre></div>
+<pre><code>f x y = 2*x+3*y
+moo = f
+</code></pre>
 <p>What kind of thing is <code>moo</code>? A number? A function? An error?</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">moo 10 1 == f 10 1
-         == 23</pre></div>
+<pre><code>moo 10 1 == f 10 1
+         == 23
+</code></pre>
 <h3 id="p2">P2</h3>
-
 <p>Continuing:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">oom = f 100 10</pre></div>
+<pre><code>oom = f 100 10
+</code></pre>
 <p>What kind of thing is <code>oom</code>? A number? A function? An error?</p>
-
 <h3 id="p3">P3</h3>
-
 <p>Continuing:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">oof = f 10</pre></div>
+<pre><code>oof = f 10
+</code></pre>
 <p>What kind of thing is <code>oof</code>? A number? A function? An error?</p>
-
 <h2 id="p4">P4</h2>
-
 <p>What if you want to fill in <code>y</code> not <code>x</code>?</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">f x y = 2*x+3*y</pre></div>
+<pre><code>f x y = 2*x+3*y
+</code></pre>
 <p>Options:</p>
-
 <ol>
 <li>Named function: <code>g x = f x 1</code></li>
 <li>Unnamed function (&ldquo;lambda&rdquo;): <code>\x -&gt; f x 1</code></li>
 <li>Flip: <code>(flip f) 1</code></li>
 </ol>
-
-<p>What&rsquo;s flip? It exchanges two inputs, like this:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">flip f x y = f y x</pre></div>
+<p>What's flip? It exchanges two inputs, like this:</p>
+<pre><code>flip f x y = f y x
+</code></pre>
 <h2 id="map">Map</h2>
-
 <p>List comprehensions apply a function to everything in a list:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[ f x | x &lt;- xs ]</pre></div>
+<pre><code>[ f x | x &lt;- xs ]
+</code></pre>
 <p>The map function does the same thing:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">map f xs</pre></div>
+<pre><code>map f xs
+</code></pre>
 <h2 id="exericses">Exericses</h2>
-
 <p>Try using some of the methods above (under P4 and map) to do these two
 exercises several different ways.</p>
-
 <ol>
-<li><p>Given input <code>[3,1,8]</code> produce the output <code>[&quot;abc&quot;, &quot;a&quot;,
-&quot;abcdefgh&quot;]</code>. That is, give the first num letters of the alphabet.</p></li>
-
-<li><p>Input: a list of points. Output: the greatest distance any of those
-points is from <code>(2,7)</code>.</p></li>
+<li>
+<p>Given input <code>[3,1,8]</code> produce the output <code>[&quot;abc&quot;, &quot;a&quot;, &quot;abcdefgh&quot;]</code>. That is, give the first num letters of the alphabet.</p>
+</li>
+<li>
+<p>Input: a list of points. Output: the greatest distance any of those
+points is from <code>(2,7)</code>.</p>
+</li>
 </ol>
 
 

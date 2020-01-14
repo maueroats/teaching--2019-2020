@@ -590,6 +590,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1501,6 +1523,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/"  selected>-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1528,62 +1553,59 @@
     
     
     <p>Writing a file is different from typing in an interpreter like repl.it or ghci.</p>
-
 <p>The differences include no <code>let</code> statements at
 the top level and no automatic printing of results.</p>
-
 <h2 id="interpreter-vs-file">Interpreter vs file</h2>
-
 <p>An interpreter is what the &ldquo;interactions pane&rdquo; is called. In DrRacket, the interactions pane is the one on the bottom. In repl.it, the interactions pane is on the right side. Interactions with an interpreter can not be saved. There is a command line interpeter in the Haskell Platform called <code>ghci</code>.</p>
-
 <p>A file is equivalent to the &ldquo;definitions pane&rdquo; in DrRacket. In repl.it, the left hand side of the window is a file. Files can be saved. You need to load (or &ldquo;play&rdquo;) a file to see the results.</p>
-
 <h2 id="no-let-statements-needed-to-make-variables-or-functions">No let statements needed to make variables or functions</h2>
-
 <p>Writing a file is different than typing in an interpreter.
 The whole file is loaded and (usually)
 the <code>main</code> function is run. When defining functions and variables a
 file, the word <code>let</code> is not used and the results are not immediately printed.
 A file equivalent might be written:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">w = &#34;Cat&#34;
+<pre><code>w = &quot;Cat&quot;
 wlen = length w
-main = do putStrLn (show wlen)</pre></div>
+main = do putStrLn (show wlen)
+</code></pre>
 <p>Typing in an interpreter, every statement gives an immediate result, so the following is similar code for comparison:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Prelude&gt; let w = &#34;Cat&#34;
+<pre><code>Prelude&gt; let w = &quot;Cat&quot;
 Prelude&gt; length w
-3</pre></div>
+3
+</code></pre>
 <h2 id="output-to-screen-when-running-a-file">Output to screen when running a file</h2>
-
 <p>Loading or running a file will not automatically cause results to print.</p>
-
 
 <div class="notices info" ><p>Use the <code>putStrLn</code> function to output a string.</p>
 </div>
 
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">w = &#34;Cat&#34;
+<pre><code>w = &quot;Cat&quot;
 main = do
-    putStrLn w</pre></div>
+    putStrLn w
+</code></pre>
 <p>Printing items that are not strings requires the use of <code>show</code> to make
 the string that is printed.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Prelude&gt; let w = [&#34;list&#34;,&#34;of&#34;,&#34;big words&#34;]
+<pre><code>Prelude&gt; let w = [&quot;list&quot;,&quot;of&quot;,&quot;big words&quot;]
 Prelude&gt; putStrLn (show w)
-[&#34;list&#34;,&#34;of&#34;,&#34;big words&#34;]</pre></div>
+[&quot;list&quot;,&quot;of&quot;,&quot;big words&quot;]
+</code></pre>
 <p>Omitting the <code>show</code> will produce an error message:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Prelude&gt; putStrLn w
+<pre><code>Prelude&gt; putStrLn w
 &lt;interactive&gt;:7:10: error:
-• Couldn&#39;t match type ‘[Char]’ with ‘Char’
+• Couldn't match type ‘[Char]’ with ‘Char’
   Expected type: String
     Actual type: [[Char]]
 • In the first argument of ‘putStrLn’, namely ‘w’
   In the expression: putStrLn w
-  In an equation for ‘it’: it = putStrLn w</pre></div>
+  In an equation for ‘it’: it = putStrLn w
+</code></pre>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/connect-four/rubric/" title="Connect Four Rubric"> <i class="fa fa-chevron-left"></i><label>Connect Four Rubric</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/ch01/" title="1. Intro" style="margin-right: 0px;"><label>1. Intro</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/haskell/replit/" title="Repl.it"> <i class="fa fa-chevron-left"></i><label>Repl.it</label></a>
+    <a class="nav nav-next" href="/ap-cs/java/karel/" title="Karel" style="margin-right: 0px;"><label>Karel</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 

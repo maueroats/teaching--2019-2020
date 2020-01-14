@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1513,6 +1535,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1540,21 +1565,17 @@
     
     
     <p>We discussed problem 7 from the homework. You should finish it based on the discussion.</p>
-
 <p>Mentioned from Chapter 5: <code>type</code> to make short ways to say types. Examples:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#00a8c8">type</span> <span style="color:#00a8c8">Pt</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span><span style="color:#00a8c8">Int</span><span style="color:#111">,</span><span style="color:#00a8c8">Int</span><span style="color:#111">)</span>
     <span style="color:#00a8c8">type</span> <span style="color:#00a8c8">Ship</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#00a8c8">Pt</span><span style="color:#111">]</span>
-    <span style="color:#00a8c8">type</span> <span style="color:#00a8c8">Shots</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#00a8c8">Pt</span><span style="color:#111">]</span></code></pre></div>
-<p>We wrote the function <code>is_sunk</code> for battleship.</p>
-
+    <span style="color:#00a8c8">type</span> <span style="color:#00a8c8">Shots</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#00a8c8">Pt</span><span style="color:#111">]</span>
+</code></pre></div><p>We wrote the function <code>is_sunk</code> for battleship.</p>
 <p>Functions we discussed:</p>
-
 <ul>
 <li>[<code>&amp;&amp;</code>]: Join two Boolean values with logical and.</li>
 <li><a href="http://hackage.haskell.org/package/base-4.10.0.0/docs/Prelude.html#v:and"><code>and</code></a>: Join a list of Boolean values with logical and.</li>
 <li><a href="http://hackage.haskell.org/package/base-4.10.0.0/docs/Prelude.html#v:any"><code>all</code></a>: Apply a tester function and then join all of the values together with &ldquo;and&rdquo;.</li>
 </ul>
-
 <p>All of these functions have counterparts for logical or; they are: <code>||</code>, <code>or</code>, <code>any</code>.</p>
 
 

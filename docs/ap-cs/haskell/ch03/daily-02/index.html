@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,6 +1537,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1542,26 +1567,36 @@
     
     
     <ol>
-<li><p>(<code>hd</code>) Write a helper function take in a single integer between 0
+<li>
+<p>(<code>hd</code>) Write a helper function take in a single integer between 0
 and 15 (inclusive) and return a string containing the corresponding
-hexadecimal digit. The digits are 10=&ldquo;A&rdquo;, 11=&ldquo;B&rdquo;, etc.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;B&#34; == hd 11</pre></div></li>
-
-<li><p>(<code>hexShow</code>) Take in a list of values of hexadecimal digits (so
+hexadecimal digit. The digits are 10=&quot;A&rdquo;, 11=&quot;B&rdquo;, etc.</p>
+<pre><code> &quot;B&quot; == hd 11
+</code></pre>
+</li>
+<li>
+<p>(<code>hexShow</code>) Take in a list of values of hexadecimal digits (so
 integers, like <code>[10,11]</code>. Output a string with the hex number
 &ldquo;AB&rdquo;.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;F00D&#34; == hexShow [15,0,0,13]</pre></div></li>
-
-<li><p>(<code>hexDec</code>) Input a list of values of hexadecimal digits, like
+<pre><code> &quot;F00D&quot; == hexShow [15,0,0,13]
+</code></pre>
+</li>
+<li>
+<p>(<code>hexDec</code>) Input a list of values of hexadecimal digits, like
 <code>[15,0,0,13]</code> and output the value of the actual number.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">61453 == hexDec [15,0,0,13]</pre></div>
+<pre><code> 61453 == hexDec [15,0,0,13]
+</code></pre>
 <p>Each number represents the decimal value of a base 16
 digit:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">15*16^3 + 0*16^2 + 0*16^1 + 13*16^0</pre></div></li>
-
-<li><p>Later we will write <code>hexParse :: String -&gt; [Int]</code> to produce a the
+<pre><code> 15*16^3 + 0*16^2 + 0*16^1 + 13*16^0
+</code></pre>
+</li>
+<li>
+<p>Later we will write <code>hexParse :: String -&gt; [Int]</code> to produce a the
 list of values of hexadecimal digits.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[15,0,0,13] == hexParse &#34;F00D&#34;</pre></div></li>
+<pre><code> [15,0,0,13] == hexParse &quot;F00D&quot;
+</code></pre>
+</li>
 </ol>
 
 

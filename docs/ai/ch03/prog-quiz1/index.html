@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1516,65 +1538,62 @@
     
     
     
-    
-
-<p>This quiz covers through Chapter 2 and roughly the first half of the
+    <p>This quiz covers through Chapter 2 and roughly the first half of the
 problem set from Chapter 3.</p>
-
 <ol>
-<li><p>Produce a list of the first 55 multiples of 5 that are greater than
-     or equal to the input number.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"> m555: integer(num) -&gt; list of integers</pre></div></li>
-
-<li><p>The cities in states are stored in a list <code>*ATLAS*</code>, like this:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">((pennsylvania pittsburg)
- (pennsylvania harrisburg)
- (new-jersey newark)
- (ohio columbus))</pre></div>
-<p>Write a function that returns all of the cities in a given state.</p></li>
-
-<li><p>In playing craps, the first throw of the dice is crucial. A throw of
+<li>
+<p>Produce a list of the first 55 multiples of 5 that are greater than
+or equal to the input number.</p>
+<pre><code>  m555: integer(num) -&gt; list of integers
+</code></pre>
+</li>
+<li>
+<p>The cities in states are stored in a list <code>*ATLAS*</code>, like this:</p>
+<pre><code> ((pennsylvania pittsburg)
+  (pennsylvania harrisburg)
+  (new-jersey newark)
+  (ohio columbus))
+</code></pre>
+<p>Write a function that returns all of the cities in a given state.</p>
+</li>
+<li>
+<p>In playing craps, the first throw of the dice is crucial. A throw of
 7 or 11 is an instant win. A throw of 2, 3, or 12 is an instant
-loss.</p></li>
-</ol>
-
+loss.</p>
 <p>a. The function <code>throw-dice</code> returns  alist of two random numbers,
-   each from 1 to 6.</p>
-
+each from 1 to 6.</p>
 <p>b. Two ones is &ldquo;snake eyes&rdquo; and two sixes is &ldquo;boxcars&rdquo;. Write two
-   predicates <code>snake-eyes-p</code> and <code>boxcars-p</code> that take in a throw and
-   return T in the appropriate situation.</p>
-
+predicates <code>snake-eyes-p</code> and <code>boxcars-p</code> that take in a throw and
+return T in the appropriate situation.</p>
 <p>c. Write predicates <code>instant-win-p</code> and <code>instant-loss-p</code> to detect
-   the instant win/loss conditions for the first roll. Each hould take a throw as input.</p>
-
+the instant win/loss conditions for the first roll. Each hould take a throw as input.</p>
 <p>d. Write a function <code>say-throw</code> that takes a throw as input asd
-   returns either the sum of the two dice or the symbol SNAKE-EYES or
-   BOXCARS if the sum is 2 or 12.</p>
-
-<p>e. If you don&rsquo;t win or lose, the value that you get becomes your
-   &ldquo;point&rdquo;. Once the point is established, you continue throwing the
-   dice until you either win by making the point again, or lose by
-   throwing a 7. Write a simulation of the craps game that produce a
-   list of values that ends when you win or lose the game.</p>
-
+returns either the sum of the two dice or the symbol SNAKE-EYES or
+BOXCARS if the sum is 2 or 12.</p>
+<p>e. If you don't win or lose, the value that you get becomes your
+&ldquo;point&rdquo;. Once the point is established, you continue throwing the
+dice until you either win by making the point again, or lose by
+throwing a 7. Write a simulation of the craps game that produce a
+list of values that ends when you win or lose the game.</p>
 <p>f. Write a <code>say-craps</code> function that takes in the list that you
-   produced and puts out a list like one of these:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">   * `(SNAKE-EYES YOU-LOSE)`
-   * `(7 YOU-WIN)`
-   * `(11 YOU-WIN)`
-   * `(YOUR POINT IS 5 10 3 11 5 YOU-WIN)` 
-   * `(BOXCARS YOU-LOSE)` 
-   * `(YOUR POINT IS 4 8 7 YOU-LOSE)`</pre></div>
+produced and puts out a list like one of these:</p>
+<pre><code>* `(SNAKE-EYES YOU-LOSE)`
+* `(7 YOU-WIN)`
+* `(11 YOU-WIN)`
+* `(YOUR POINT IS 5 10 3 11 5 YOU-WIN)` 
+* `(BOXCARS YOU-LOSE)` 
+* `(YOUR POINT IS 4 8 7 YOU-LOSE)`
+</code></pre>
+</li>
+</ol>
 <h2 id="ignore-this-part">Ignore this part</h2>
-
 <p>Write a simple English to Spanish language translator in an
-   extensible way. It should keep vocabulary tables <code>*nouns*</code>,
-   <code>*verbs*</code>, and <code>*misc*</code> that it
-   uses to translate nouns in English to Spanish.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">a. Noun lookups: house - la casa, school - la escuela,
+extensible way. It should keep vocabulary tables <code>*nouns*</code>,
+<code>*verbs*</code>, and <code>*misc*</code> that it
+uses to translate nouns in English to Spanish.</p>
+<pre><code>a. Noun lookups: house - la casa, school - la escuela,
 student - el estudiante, homework - la tarea. Each single noun
-should be &#34;translated&#34; into a two item list containing the article
+should be &quot;translated&quot; into a two item list containing the article
 and the noun in Spanish, so `homework` becomes `(la tarea)`. 
 b. Verb lookups: work - trabajar, study - estudiar, attend -
 asistir.
@@ -1585,8 +1604,10 @@ recognize should just remain the same.
 e. Use the same data to write an attempt at a reverse translation:
 `(Yo asisto a la escuela)` becomes `(I attend a the school)`. In
 order to try to figure out the verb stem, you will need the
-`symbol-name` function `(symbol-name &#39;FOO) =&gt; &#34;FOO&#34;` as well as
-some string-manipulation functions.</pre></div>
+`symbol-name` function `(symbol-name 'FOO) =&gt; &quot;FOO&quot;` as well as
+some string-manipulation functions.
+</code></pre>
+
 
     
     

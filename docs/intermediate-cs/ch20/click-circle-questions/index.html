@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1524,12 +1546,8 @@
     
     
     
-    
-
-<p>Main questions about the click circle project (20.6.4):</p>
-
+    <p>Main questions about the click circle project (20.6.4):</p>
 <h2 id="stopping-an-animation">Stopping an animation</h2>
-
 <table>
 <thead>
 <tr>
@@ -1537,37 +1555,36 @@
 <th>How?</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>user action</td>
 <td>return <code>(stop-with model)</code> from a handler</td>
 </tr>
-
 <tr>
 <td>model state</td>
 <td><code>(stop-when ...)</code> in big-bang</td>
 </tr>
 </tbody>
 </table>
-
 <h2 id="win-screen">Win screen</h2>
-
 <p>Question: How do you make a win screen show?</p>
-
 <p>Answer: There are three steps:</p>
-
 <ol>
-<li>Write a <code>win-draw-handler</code> function.</li>
-
-<li><p>Write a <code>should-stop?</code> function. This is a technical annoyance.
-  For now this can do nothing:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket">      <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">should-stop?</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
-          <span style="color:#00a8c8">false</span><span style="color:#111">)</span></code></pre></div></li>
-
-<li><p>Add a <code>(stop-when should-stop? win-draw-handler)</code> clause to your <code>big-bang</code>.</p></li>
+<li>
+<p>Write a <code>win-draw-handler</code> function.</p>
+</li>
+<li>
+<p>Write a <code>should-stop?</code> function. This is a technical annoyance.
+For now this can do nothing:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket">   <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">should-stop?</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
+       <span style="color:#00a8c8">false</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div></li>
 </ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+   2. Add a `(stop-when should-stop? win-draw-handler)` clause to your `big-bang`.
+     
 
+</code></pre></div>
 
     
     

@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1509,6 +1531,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1535,59 +1560,58 @@
     
     
     
-    
-
-<p><strong>These spoilers are obsolete.</strong> You should be representing the board
+    <p><strong>These spoilers are obsolete.</strong> You should be representing the board
 as a list of pieces. Detecting a win should have mostly been part of a
 warm-up in class.</p>
-
 <p>Two problems with connect four: changing an entry in a matrix ([[Int]]) and
 seeing if there is a win.</p>
-
 <h2 id="changing-entries-in-the-board">Changing entries in the board</h2>
-
 <p>The biggest problem with the representation of the board as <code>[[Int]]</code>
 is that it is really hard to change the entries. If you use
-[((Int,Int),Player)] then it&rsquo;s lots easier to make moves.</p>
-
+[((Int,Int),Player)] then it's lots easier to make moves.</p>
 <p>Outline of plan:</p>
-
 <ol>
-<li><p>(<code>changeCol: [Int] -&gt; Int -&gt; Int -&gt; [Int]</code>)
+<li>(<code>changeCol: [Int] -&gt; Int -&gt; Int -&gt; [Int]</code>)
 Change value at index <code>col</code> in a single row to
-<code>newVal</code>; every other value in the list just output unchanged.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">changeCol</span> <span style="color:#111">[</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">11</span><span style="color:#111">,</span><span style="color:#ae81ff">12</span><span style="color:#111">]</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">99</span> <span style="color:#f92672">==</span> <span style="color:#111">[</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">11</span><span style="color:#111">,</span><span style="color:#ae81ff">99</span><span style="color:#111">]</span></code></pre></div>
-<p>We have basically written this function as a Coding Bat problem.</p></li>
-
-<li><p>(<code>changeRowCol: [[Int]] -&gt; Int -&gt; Int -&gt; Int -&gt; [[Int]]</code>)
-Run changeCol only on the index <code>row</code> entry, everything else stays the same.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">changeRowCol</span> <span style="color:#111">[[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">],[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">8</span><span style="color:#111">]]</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">99</span> <span style="color:#f92672">==</span> <span style="color:#111">[[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">],[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">99</span><span style="color:#111">]]</span></code></pre></div></li>
+<code>newVal</code>; every other value in the list just output unchanged.</li>
 </ol>
-
-<p>There is actually <a href="change-entry.hs">spoiler code</a> and <a href="change-entry-enhanced.hs">fancy spoiler
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#111">changeCol</span> <span style="color:#111">[</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">11</span><span style="color:#111">,</span><span style="color:#ae81ff">12</span><span style="color:#111">]</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">99</span> <span style="color:#f92672">==</span> <span style="color:#111">[</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span><span style="color:#ae81ff">11</span><span style="color:#111">,</span><span style="color:#ae81ff">99</span><span style="color:#111">]</span>
+</code></pre></div><p>We have basically written this function as a Coding Bat problem.</p>
+<ol start="2">
+<li>(<code>changeRowCol: [[Int]] -&gt; Int -&gt; Int -&gt; Int -&gt; [[Int]]</code>)
+Run changeCol only on the index <code>row</code> entry, everything else stays the same.</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#111">changeRowCol</span> <span style="color:#111">[</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">]</span><span style="color:#111">,</span><span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">8</span><span style="color:#111">]</span><span style="color:#111">]</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">99</span> <span style="color:#f92672">==</span> <span style="color:#111">[</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">]</span><span style="color:#111">,</span><span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">99</span><span style="color:#111">]</span><span style="color:#111">]</span>
+</code></pre></div><p>There is actually <a href="change-entry.hs">spoiler code</a> and <a href="change-entry-enhanced.hs">fancy spoiler
 code that uses Chapter 6</a>.</p>
-
 <h2 id="detecting-a-win">Detecting a win</h2>
-
 <p>Please email me questions. I know this is tricky. My own breakdown was:</p>
-
 <ol>
-<li><p>Generate a list containing four ordered pairs in a row. Input: (x,y) coordinates of the first entry, and (dx,dy) to be added to (x,y) to get the other three pairs needed.</p></li>
-
-<li><p>Given a board and one list of four ordered pairs, return True if all of the ordered pairs are legal coordinates for that board.</p></li>
-
-<li><p>Given a board, return a list of all possible lists of four ordered
-pairs in straight lines. For example, if the board is just the flat 5x1 board <code>[[0,0,0,0,0]]</code>, then this function should give a list of the two possible 4-in-a-rows: <code>[[(0,0),(1,0),(2,0),(3,0)], [(1,0),(2,0),(3,0),(4,0)]]</code>.</p></li>
-
-<li><p>Given a board and a single ordered pair, get the corresponding value from the board.</p></li>
-
-<li><p>Given a board and four ordered pairs, return True if all of the corrsponding values are the same.</p></li>
-
-<li><p>Do the preceding to a whole list of 4 pairs of coordinates.</p></li>
-
-<li><p>Given a board, return True if it is won.</p></li>
-
-<li><p>There are a few more steps but you are almost there!</p></li>
+<li>
+<p>Generate a list containing four ordered pairs in a row. Input: (x,y) coordinates of the first entry, and (dx,dy) to be added to (x,y) to get the other three pairs needed.</p>
+</li>
+<li>
+<p>Given a board and one list of four ordered pairs, return True if all of the ordered pairs are legal coordinates for that board.</p>
+</li>
+<li>
+<p>Given a board, return a list of all possible lists of four ordered
+pairs in straight lines. For example, if the board is just the flat 5x1 board <code>[[0,0,0,0,0]]</code>, then this function should give a list of the two possible 4-in-a-rows: <code>[[(0,0),(1,0),(2,0),(3,0)], [(1,0),(2,0),(3,0),(4,0)]]</code>.</p>
+</li>
+<li>
+<p>Given a board and a single ordered pair, get the corresponding value from the board.</p>
+</li>
+<li>
+<p>Given a board and four ordered pairs, return True if all of the corrsponding values are the same.</p>
+</li>
+<li>
+<p>Do the preceding to a whole list of 4 pairs of coordinates.</p>
+</li>
+<li>
+<p>Given a board, return True if it is won.</p>
+</li>
+<li>
+<p>There are a few more steps but you are almost there!</p>
+</li>
 </ol>
 
 

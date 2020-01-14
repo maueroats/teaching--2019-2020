@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,12 +1540,8 @@
     
     
     
-    
-
-<p>This page contains information about advanced topics that I have been asked.</p>
-
+    <p>This page contains information about advanced topics that I have been asked.</p>
 <h2 id="randomizing-letters-of-a-string">Randomizing Letters of a String</h2>
-
 <p>The <code>implode</code> and <code>explode</code> functions change strings to and from lists of single letters.
 To randomize a list, import <code>racket/list</code> and then use the <code>shuffle</code> function.
 If you are actually looking at lists, you should change to Beginning Student with List Abbreviations.</p>
@@ -1532,20 +1550,24 @@ If you are actually looking at lists, you should change to Beginning Student wit
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">mix</span> <span style="color:#111">letters</span><span style="color:#111">)</span>
   <span style="color:#111">(</span><span style="color:#111">implode</span>
    <span style="color:#111">(</span><span style="color:#111">shuffle</span>
-    <span style="color:#111">(</span><span style="color:#111">explode</span> <span style="color:#111">letters</span><span style="color:#111">))))</span>
-<span style="color:#111">(</span><span style="color:#111">mix</span> <span style="color:#d88200">&#34;alphabet soup&#34;</span><span style="color:#111">)</span></code></pre></div>
-<h2 id="advanced-string-making">Advanced String Making</h2>
-
+    <span style="color:#111">(</span><span style="color:#111">explode</span> <span style="color:#111">letters</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+<span style="color:#111">(</span><span style="color:#111">mix</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">alphabet soup</span><span style="color:#d88200">&#34;</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="advanced-string-making">Advanced String Making</h2>
 <ul>
-<li><p>There is an optional second argument to <code>number-&gt;string</code> that is the base to work in.
-<code>(check-expect (number-&gt;string 31 2) &quot;11111&quot;)</code></p></li>
-
-<li><p>Single characters are different from single letter words. Racket uses <code>#\a</code> to denote the character &ldquo;<code>a</code>&rdquo; and <code>&quot;a&quot;</code> to denote the word containing a single letter a. Usually you do not work with characters, but&hellip;</p></li>
-
-<li><p>The <code>make-string</code> command takes in a number and a character to repeat (meaning <code>#\a</code> not <code>&quot;a&quot;</code>). Example: <code>(check-expect (make-string 7 #\a) &quot;aaaaaaa&quot;)</code>.</p></li>
-
-<li><p>The <code>replicate</code> command repeats a string a certain number of times.
-Example: <code>(check-expect (replicate 2 &quot;moo&quot;) &quot;moomoo&quot;)</code>.</p></li>
+<li>
+<p>There is an optional second argument to <code>number-&gt;string</code> that is the base to work in.
+<code>(check-expect (number-&gt;string 31 2) &quot;11111&quot;)</code></p>
+</li>
+<li>
+<p>Single characters are different from single letter words. Racket uses <code>#\a</code> to denote the character &ldquo;<code>a</code>&rdquo; and <code>&quot;a&quot;</code> to denote the word containing a single letter a. Usually you do not work with characters, but&hellip;</p>
+</li>
+<li>
+<p>The <code>make-string</code> command takes in a number and a character to repeat (meaning <code>#\a</code> not <code>&quot;a&quot;</code>). Example: <code>(check-expect (make-string 7 #\a) &quot;aaaaaaa&quot;)</code>.</p>
+</li>
+<li>
+<p>The <code>replicate</code> command repeats a string a certain number of times.
+Example: <code>(check-expect (replicate 2 &quot;moo&quot;) &quot;moomoo&quot;)</code>.</p>
+</li>
 </ul>
 
 

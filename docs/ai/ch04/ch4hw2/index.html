@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,86 +1536,84 @@
     
     
     
-    
-
-<p>In this problem set we are going to develop a version of the General
+    <p>In this problem set we are going to develop a version of the General
 Purpose Solve that fixes the &ldquo;not looking after you do not leap&rdquo;
 problem. This requires a redesign.</p>
-
 <ul>
-<li><code>achieve-all</code>: Check each goal in turn, trying to achieve it with
-<code>achieve-one</code>.</li>
-
-<li><p><code>achieve-one</code>: Given a single goal:</p>
-
-<ol>
-<li>find all of the ops that could result in gaining that goal;</li>
-<li>attempt to satisfy the preconditions of that op</li>
-<li>once preconditions are satisfied, apply the operation and
- then</li>
-<li><strong>recursively</strong> attempt to fulfil all of the rest of the
- desired goals <strong>before</strong> returning success.</li>
-</ol></li>
+<li>
+<p><code>achieve-all</code>: Check each goal in turn, trying to achieve it with
+<code>achieve-one</code>.</p>
+</li>
+<li>
+<p><code>achieve-one</code>: Given a single goal:</p>
+<pre><code>1. find all of the ops that could result in gaining that goal;
+2. attempt to satisfy the preconditions of that op
+3. once preconditions are satisfied, apply the operation and
+   then
+4. **recursively** attempt to fulfil all of the rest of the
+   desired goals **before** returning success.
+</code></pre>
+</li>
 </ul>
-
 <p>The key here is to continue looking for a complete solution before
 taking any irrevocable steps.</p>
-
 <h2 id="utility-functions">Utility Functions</h2>
-
 <p><a href="test-basic">Testing code for utilities</a>. If you want to load a file
 you probably need to read how to <a href="https://stackoverflow.com/questions/25800283/load-file-with-a-relative-path#25801629">load a file in the same directory</a>.</p>
-
 <ul>
-<li><p><code>(remove-* subtract all)</code>: Return items from the list ALL that are
-not in the list SUBTRACT.</p></li>
-
-<li><p><code>(member-* x xs)</code>: Test if <code>x</code> is an elements of <code>xs</code> using <code>equalp</code>.</p></li>
-
-<li><p><code>(all-achieved wanted got)</code>: if WANTED is a subset of GOT, return
-GOT, otherwise return NIL.</p></li>
-
-<li><p><code>(apply-op state op1)</code>: Append the traits gained, remove the traits
-lost in the operation. (<code>op1</code> is a struct of type <code>op</code>)</p></li>
-
-<li><p><code>(appropriate-p op1 goal-list)</code>: True if OP1 produces a goal in
-GOAL-LIST.</p></li>
-
-<li><p><code>(find-appropriate-1 ops goal)</code>: A list of every op from the OPS
-list that lets you (immediately) gain the GOAL.</p></li>
+<li>
+<p><code>(remove-* subtract all)</code>: Return items from the list ALL that are
+not in the list SUBTRACT.</p>
+</li>
+<li>
+<p><code>(member-* x xs)</code>: Test if <code>x</code> is an elements of <code>xs</code> using <code>equalp</code>.</p>
+</li>
+<li>
+<p><code>(all-achieved wanted got)</code>: if WANTED is a subset of GOT, return
+GOT, otherwise return NIL.</p>
+</li>
+<li>
+<p><code>(apply-op state op1)</code>: Append the traits gained, remove the traits
+lost in the operation. (<code>op1</code> is a struct of type <code>op</code>)</p>
+</li>
+<li>
+<p><code>(appropriate-p op1 goal-list)</code>: True if OP1 produces a goal in
+GOAL-LIST.</p>
+</li>
+<li>
+<p><code>(find-appropriate-1 ops goal)</code>: A list of every op from the OPS
+list that lets you (immediately) gain the GOAL.</p>
+</li>
 </ul>
-
 <h2 id="debugging">Debugging</h2>
-
 <p>There is some already-written <a href="/ai/ch04/ch4hw2/debugging/">code for debugging</a>.</p>
-
 <h2 id="signatures-for-achieve-functions">Signatures for Achieve Functions</h2>
-
 <p>The header for <code>achieve-all</code> follows. I have made it take in optional
 arguments for the goal stack, the ops, and the achieve-one
 function. If you are reading this without knowing about &ldquo;mocking&rdquo;,
 please go <a href="/ai/ch04/mock/">read about mocking now</a>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(defun achieve-all (state goals
-                    &amp;key (achieve-one #&#39;achieve-one)
+<pre><code>(defun achieve-all (state goals
+                    &amp;key (achieve-one #'achieve-one)
                       (goal-stack nil)
                       (ops *test-big-ops*))
-    nil)</pre></div>
+    nil)
+</code></pre>
 <p>The <code>achieve-one</code> function keeps track of the stack of goals currently
 being worked on, as well as the goals that remain to be completed.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(defun achieve-one (state goal
+<pre><code>(defun achieve-one (state goal
                     &amp;key (remaining-goals nil)
                       (goal-stack nil)
                       (ops *test-big-ops*)
-                      (achieve-all #&#39;achieve-all))
-    nil)</pre></div>
+                      (achieve-all #'achieve-all))
+    nil)
+</code></pre>
 <p>An example call to achieve one would look like this:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(achieve-one state (first goals) 
+<pre><code>(achieve-one state (first goals) 
              :remaining-goals (rest goals)
-             :achieve-all #&#39;mock-achieve-all)</pre></div>
+             :achieve-all #'mock-achieve-all)
+</code></pre>
 <h2 id="achieve-all">Achieve all</h2>
-
 <p>The <code>achieve-all</code> function should do all of the following:</p>
-
 <ol>
 <li>Just return the state if all goals are already satisfied.</li>
 <li>Examine each of the goals in turn, using <code>achieve-one</code> to attempt
@@ -1604,50 +1624,44 @@ really satisfied and then return state as an answer. (You could be
 careful and continue to attempt more goals if a supposedly correct
 solution fails to check, but even this method is pretty good.)</li>
 <li>You should add lots of debugging output so you can trace what the
-program is doing. (See the debugging section.)
-<br /></li>
+program is doing. (See the debugging section.)</li>
 </ol>
-
 <p>There is <a href="test-achieve-all">code to test your achieve-all function</a>,
 including already written mock functions.</p>
-
 <h2 id="achieve-one">Achieve One</h2>
-
 <p>This is possibly the most complex function, write and test it
 carefully. Make sure you think through everything that should occur.</p>
-
 <ol>
-<li>Give up if being asked to complete a goal that you have already
+<li>
+<p>Give up if being asked to complete a goal that you have already
 attempted in the goal stack. (This could become more sophisticated
 if you kept track of goals you had accomplished vs were just
-working on.)</li>
-<li>Think: what will happen if you are being asked to accomplish a goal
+working on.)</p>
+</li>
+<li>
+<p>Think: what will happen if you are being asked to accomplish a goal
 that you already have completed? (See the eating desert example in
-the book.) Save this idea until other parts work.</li>
-
-<li><p>Examine every appropriate operation, one by one.</p>
-
+the book.) Save this idea until other parts work.</p>
+</li>
+<li>
+<p>Examine every appropriate operation, one by one.</p>
 <ul>
 <li>Attempt to use <code>achieve-all</code> to achieve the prerequisites of the
 op. What should happen to the <code>goal-stack</code>?</li>
 <li>Apply the operation to update the state.</li>
 <li>Use <code>achieve-all</code> to attempt to complete all of the remaining
 goals, returning the result of that call as your answer.</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-
 <p>Advice: annotate everything that happens in your <code>achieve-one</code>
 function with debugging output so you can verify that your code is
 doing what you think it is doing.</p>
-
 <p>There is <a href="test-achieve-one">achieve-one testing code</a>, including a
 mock function. It should do more. Add to it when you have problems.</p>
-
 <h2 id="final-testing">Final Testing</h2>
-
 <p>You are responsible for submitting tests from the book or of your own
 devising to show that your code works. In particular, include:</p>
-
 <ul>
 <li>Exercise 4.3</li>
 <li>Section 4.16 the example from page 143 (PDF page 152).</li>

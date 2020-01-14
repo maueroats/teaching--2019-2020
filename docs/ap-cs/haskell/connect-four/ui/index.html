@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1509,6 +1531,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1535,38 +1560,29 @@
     
     
     
-    
-
-<p>The <a href="ui-connect-four.hs">user interface code</a> for Connect Four is a little clunky. (Repl.it <a href="https://repl.it/Marn/0">shared code</a>.)
+    <p>The <a href="ui-connect-four.hs">user interface code</a> for Connect Four is a little clunky. (Repl.it <a href="https://repl.it/Marn/0">shared code</a>.)
 You may use the linked code. You do not have to learn this part of writing Haskell programs (yet).</p>
-
 <h2 id="code-outline">Code Outline</h2>
-
 <p>main: just make board and call event loop</p>
-
 <p>event loop:</p>
-
 <ul>
 <li>draw board</li>
 <li>is it won?
-
 <ul>
 <li>print the win message</li>
-</ul></li>
+</ul>
+</li>
 <li>not won?
-
 <ul>
 <li>get a move</li>
 <li>recursive call to event loop with updated board, next player</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="code">Code</h2>
-
 <p>All of the <a href="ui-connect-four.hs">user interface code</a> is linked separately (open in WordPad if necessary).</p>
-
 <p>The setup of the code, which you should change to match your own functions is below. You need: <code>drawBoard</code>, <code>is_won</code>, <code>is_move_legal</code>, and <code>make_move</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#00a8c8">type</span> <span style="color:#00a8c8">Board</span> <span style="color:#f92672">=</span> <span style="color:#111">[[</span><span style="color:#00a8c8">Int</span><span style="color:#111">]]</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#00a8c8">type</span> <span style="color:#00a8c8">Board</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#111">[</span><span style="color:#00a8c8">Int</span><span style="color:#111">]</span><span style="color:#111">]</span>
 
 <span style="color:#75af00">drawBoard</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Board</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">String</span>
 <span style="color:#75af00">drawBoard</span> <span style="color:#111">board</span> <span style="color:#f92672">=</span> <span style="color:#111">show</span> <span style="color:#f92672">$</span> <span style="color:#111">simplify</span> <span style="color:#111">board</span>
@@ -1578,11 +1594,11 @@ You may use the linked code. You do not have to learn this part of writing Haske
 <span style="color:#75af00">is_move_legal</span> <span style="color:#111">board</span> <span style="color:#111">col</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span><span style="color:#111">col</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span><span style="color:#111">)</span>
 
 <span style="color:#75af00">make_move</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Board</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Int</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Int</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Board</span>
-<span style="color:#75af00">make_move</span> <span style="color:#111">board</span> <span style="color:#111">col</span> <span style="color:#111">player</span> <span style="color:#f92672">=</span> <span style="color:#111">[[</span><span style="color:#111">player</span><span style="color:#111">]]</span>
+<span style="color:#75af00">make_move</span> <span style="color:#111">board</span> <span style="color:#111">col</span> <span style="color:#111">player</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#111">[</span><span style="color:#111">player</span><span style="color:#111">]</span><span style="color:#111">]</span>
 
 <span style="color:#75715e">-- Just for the demo: force the board to be 1x1.</span>
-<span style="color:#75af00">simplify</span> <span style="color:#111">board</span> <span style="color:#f92672">=</span> <span style="color:#111">[[</span><span style="color:#111">board</span><span style="color:#f92672">!!</span><span style="color:#ae81ff">0</span><span style="color:#f92672">!!</span><span style="color:#ae81ff">0</span><span style="color:#111">]]</span></code></pre></div>
-<p>The essentials of the code are an event loop function, which draws the
+<span style="color:#75af00">simplify</span> <span style="color:#111">board</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#111">[</span><span style="color:#111">board</span><span style="color:#f92672">!!</span><span style="color:#ae81ff">0</span><span style="color:#f92672">!!</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span><span style="color:#111">]</span>
+</code></pre></div><p>The essentials of the code are an event loop function, which draws the
 board, checks to see if it is won, gets the next move, and then calls
 a sepeate function to handle the move.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">event_loop</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Board</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Int</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">IO</span><span style="color:#111">()</span>
@@ -1594,8 +1610,8 @@ a sepeate function to handle the move.</p>
     <span style="color:#111">return</span> <span style="color:#111">()</span>
   <span style="color:#00a8c8">else</span> <span style="color:#00a8c8">do</span>
     <span style="color:#111">col</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">get_move</span> <span style="color:#111">player</span>
-    <span style="color:#111">handle_move</span> <span style="color:#111">board</span> <span style="color:#111">player</span> <span style="color:#111">col</span></code></pre></div>
-<p>The handle move function recursively calls the event loop with an
+    <span style="color:#111">handle_move</span> <span style="color:#111">board</span> <span style="color:#111">player</span> <span style="color:#111">col</span>
+</code></pre></div><p>The handle move function recursively calls the event loop with an
 improved board and sets the next player. If the attempted move is
 illegal, then the recursive call to event loop does not update the
 board or player, so the same player moves again.</p>
@@ -1605,12 +1621,12 @@ board or player, so the same player moves again.</p>
     <span style="color:#f92672">|</span> <span style="color:#111">is_move_legal</span> <span style="color:#111">board</span> <span style="color:#111">col</span> <span style="color:#f92672">=</span> <span style="color:#111">event_loop</span> <span style="color:#111">new_board</span> <span style="color:#111">(</span><span style="color:#111">next_</span> <span style="color:#111">player</span><span style="color:#111">)</span>
     <span style="color:#f92672">|</span> <span style="color:#111">otherwise</span> <span style="color:#f92672">=</span> <span style="color:#111">complain_and_restart</span>
     <span style="color:#00a8c8">where</span> <span style="color:#111">complain_and_restart</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">do</span>
-              <span style="color:#111">putStrLn</span> <span style="color:#d88200">&#34;ERROR: That is not a legal move.&#34;</span>
+              <span style="color:#111">putStrLn</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">ERROR: That is not a legal move.</span><span style="color:#d88200">&#34;</span>
               <span style="color:#111">event_loop</span> <span style="color:#111">board</span> <span style="color:#111">player</span>
           <span style="color:#111">new_board</span> <span style="color:#f92672">=</span> <span style="color:#111">make_move</span> <span style="color:#111">board</span> <span style="color:#111">col</span> <span style="color:#111">player</span>
-          <span style="color:#111">goodbye</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">do</span> <span style="color:#111">putStrLn</span> <span style="color:#d88200">&#34;You quit&#34;</span></code></pre></div>
-<h2 id="example-run">Example run</h2>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">*Main&gt; main
+          <span style="color:#111">goodbye</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">do</span> <span style="color:#111">putStrLn</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">You quit</span><span style="color:#d88200">&#34;</span>
+</code></pre></div><h2 id="example-run">Example run</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">*Main&gt; main
         
         
         
@@ -1681,7 +1697,8 @@ Column [0-7]?   5
      X  
   OOOX  
 The game is over
-Player 1 won!</pre></div>
+Player 1 won!
+</code></pre></div>
 
     
     

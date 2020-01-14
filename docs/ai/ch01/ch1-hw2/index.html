@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,32 +1536,27 @@
     
     
     
-    
-
-<h2 id="warmups">Warmups</h2>
-
+    <h2 id="warmups">Warmups</h2>
 <ol>
-<li><p>GREET-IZE: String -&gt; (String-&gt;String). Take in a greeting. Return a
+<li>GREET-IZE: String -&gt; (String-&gt;String). Take in a greeting. Return a
 function that takes in a name and outputs the string &ldquo;greeting,
-name&rdquo;.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define-test TEST-GREET-IZE 
-&#34;Verify you understand function-returning functions.&#34;
-(assert-equal &#34;Hello, Doc&#34; (funcall (greet-ize &#34;Hello&#34;) &#34;Doc&#34;))
-(assert-equal &#34;Goodbye, World&#34; (funcall (greet-ize &#34;Goodbye&#34;) &#34;World&#34;)))</pre></div></li>
-
-<li><p>WIPE-NESTED: List -&gt; List. Change every non-list any nested list
-of the input to &lsquo;BLACK.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">define-test</span> <span style="color:#111">TEST-WIPE</span>
-<span style="color:#d88200">&#34;Make sure the structure of the list is retained when wiping.&#34;</span>
-<span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">BLACK</span> <span style="color:#111">BLACK</span> <span style="color:#111">BLACK</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">wipe-nested</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">orange</span> <span style="color:#111">blue</span> <span style="color:#111">green</span><span style="color:#111">)))</span>
-<span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">BLACK</span> <span style="color:#111">(</span><span style="color:#111">BLACK</span> <span style="color:#111">BLACK</span> <span style="color:#111">BLACK</span><span style="color:#111">)</span> <span style="color:#111">BLACK</span> <span style="color:#111">((</span><span style="color:#111">BLACK</span><span style="color:#111">)))</span>
-            <span style="color:#111">(</span><span style="color:#111">wipe-nested</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">R</span> <span style="color:#111">(</span><span style="color:#111">R</span> <span style="color:#111">G</span> <span style="color:#111">B</span><span style="color:#111">)</span> <span style="color:#111">G</span> <span style="color:#111">((</span><span style="color:#111">B</span><span style="color:#111">))))))</span></code></pre></div></li>
+name&rdquo;.</li>
 </ol>
-
-<h2 id="homework">Homework</h2>
-
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define-test TEST-GREET-IZE 
+  &#34;Verify you understand function-returning functions.&#34;
+  (assert-equal &#34;Hello, Doc&#34; (funcall (greet-ize &#34;Hello&#34;) &#34;Doc&#34;))
+  (assert-equal &#34;Goodbye, World&#34; (funcall (greet-ize &#34;Goodbye&#34;) &#34;World&#34;)))
+</code></pre></div><ol start="2">
+<li>WIPE-NESTED: List -&gt; List. Change every non-list any nested list
+of the input to &lsquo;BLACK.</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">define-test</span> <span style="color:#111">TEST-WIPE</span>
+  <span style="color:#d88200">&#34;Make sure the structure of the list is retained when wiping.&#34;</span>
+  <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">BLACK</span> <span style="color:#111">BLACK</span> <span style="color:#111">BLACK</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">wipe-nested</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">orange</span> <span style="color:#111">blue</span> <span style="color:#111">green</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">assert-equal</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">BLACK</span> <span style="color:#111">(</span><span style="color:#111">BLACK</span> <span style="color:#111">BLACK</span> <span style="color:#111">BLACK</span><span style="color:#111">)</span> <span style="color:#111">BLACK</span> <span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">BLACK</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+                <span style="color:#111">(</span><span style="color:#111">wipe-nested</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">R</span> <span style="color:#111">(</span><span style="color:#111">R</span> <span style="color:#111">G</span> <span style="color:#111">B</span><span style="color:#111">)</span> <span style="color:#111">G</span> <span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">B</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="homework">Homework</h2>
 <p>This is practice programming from Chapter 1.</p>
-
 <ol>
 <li>Function DUBL: doubles its input.</li>
 <li>Write a single test for DUBL.</li>

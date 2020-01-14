@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1521,35 +1543,43 @@
     <p>The purpose of this homework is for you to practice your Lisp
 program-writing skills. If you find yourself writing &ldquo;Racket code&rdquo;,
 ask for help before the end of the week!</p>
-
 <ol>
-<li><p>(<code>addlength</code>) (SC 3.12) Write a function that takes a list as input
+<li>
+<p>(<code>addlength</code>) (SC 3.12) Write a function that takes a list as input
 and returns a new list with the length of the input added onton the
 front of it.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(addlength &#39;(a big cat)) ==&gt; &#39;(3 a big cat)</pre></div></li>
-
-<li><p>(<code>crank-call</code>) (SC 3.14) (a) Without running the function: what is
+<pre><code> (addlength '(a big cat)) ==&gt; '(3 a big cat)
+</code></pre>
+</li>
+<li>
+<p>(<code>crank-call</code>) (SC 3.14) (a) Without running the function: what is
 the result of <code>(crank-call 'wanda 'fred)</code>? (b) Modify the function
 so it behaves as a
 non-crank call using &ldquo;quasiquote&rdquo; but not &ldquo;list&rdquo;.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(defun crank-call (caller callee)
-  &#39;(hello callee this is caller calling))</pre></div></li>
-
-<li><p>(SC Section 4.8, EX 4.14) Carefully state the rules for evaluating <code>and</code> and
+<pre><code> (defun crank-call (caller callee)
+   '(hello callee this is caller calling))
+</code></pre>
+</li>
+<li>
+<p>(SC Section 4.8, EX 4.14) Carefully state the rules for evaluating <code>and</code> and
 <code>or</code>. What is <code>(and 'a 'b)</code>? What is <code>(or nil 'bank 'money)</code>?
 Give the results of each without typing them:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">   (and ’fee ’fie ’foe)
-   (or ’fee ’fie ’foe)
-   (or nil ’foe nil)
-   (and ’fee ’fie nil)
-   (and (equal ’abc ’abc) ’yes)
-   (or (equal ’abc ’abc) ’yes)</pre></div></li>
-
-<li><p>(<code>same-sign</code>) (SC, Page 124) Write a function <code>(same-sign a b)</code>
-that returns true if <code>a</code> and <code>b</code> have the same sign (choices: +,-, or 0).</p></li>
-
-<li><p>Get the handout and do exercise 6.41 (SC, Ex 6.41). Use the <a href="housemaze.lisp">starter
-code</a> that loads the house definition.</p></li>
+<pre><code>    (and ’fee ’fie ’foe)
+    (or ’fee ’fie ’foe)
+    (or nil ’foe nil)
+    (and ’fee ’fie nil)
+    (and (equal ’abc ’abc) ’yes)
+    (or (equal ’abc ’abc) ’yes)
+</code></pre>
+</li>
+<li>
+<p>(<code>same-sign</code>) (SC, Page 124) Write a function <code>(same-sign a b)</code>
+that returns true if <code>a</code> and <code>b</code> have the same sign (choices: +,-, or 0).</p>
+</li>
+<li>
+<p>Get the handout and do exercise 6.41 (SC, Ex 6.41). Use the <a href="housemaze.lisp">starter
+code</a> that loads the house definition.</p>
+</li>
 </ol>
 
 

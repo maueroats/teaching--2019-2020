@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,6 +1537,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1542,22 +1567,24 @@
     
     
     <p>Design process:</p>
-
 <ul>
 <li>examples which turn into checkExpects</li>
 <li>signatures</li>
 <li>break down into simple pieces</li>
 </ul>
-
 <p>The checks that you write should go from simple to complicated, giving
 you a road map for how to build the function.</p>
-
 <ol>
-<li><p><code>ct</code>: Convert a list of base 2 digits into an integer.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">46 == ct [1,0,1,1,1,0] </pre></div></li>
-
-<li><p><code>tobin</code>: Convert an integer into a list of base 2 digits.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[1,0,1,1,1,0] == tobin 46</pre></div></li>
+<li>
+<p><code>ct</code>: Convert a list of base 2 digits into an integer.</p>
+<pre><code> 46 == ct [1,0,1,1,1,0] 
+</code></pre>
+</li>
+<li>
+<p><code>tobin</code>: Convert an integer into a list of base 2 digits.</p>
+<pre><code> [1,0,1,1,1,0] == tobin 46
+</code></pre>
+</li>
 </ol>
 
 

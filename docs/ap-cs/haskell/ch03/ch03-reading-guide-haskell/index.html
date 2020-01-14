@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,6 +1537,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1541,93 +1566,103 @@
     
     
     
-    
-
-<p>You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.</p>
-
+    <p>You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.</p>
 <h2 id="basics">Basics</h2>
-
-<ol>
-<li>How do you find the type of an expression (when using the interpreter)?</li>
-<li>What is the type of a string, written in correct Haskell type syntax?</li>
-<li>What is the type of the expression (5 == 5)?</li>
-<li>What is the type signature for a function that takes in an integer and puts out a string?</li>
-<li>What is the type signature for a function that takes in two integers and multiplies them?</li>
-<li>What is the type of (factorial 50) from the book? How is that different from an Int?</li>
-<li>Write the signature of a function <code>prob7</code> that takes in a number
-(an integer) and puts out a string.</li>
-
-<li><p>What is the correct way to write the type signature of a function
+<ol start="5">
+<li>
+<p>How do you find the type of an expression (when using the interpreter)?</p>
+</li>
+<li>
+<p>What is the type of a string, written in correct Haskell type syntax?</p>
+</li>
+<li>
+<p>What is the type of the expression (5 == 5)?</p>
+</li>
+<li>
+<p>What is the type signature for a function that takes in an integer and puts out a string?</p>
+</li>
+<li>
+<p>What is the type signature for a function that takes in two integers and multiplies them?</p>
+</li>
+<li>
+<p>What is the type of (factorial 50) from the book? How is that different from an Int?</p>
+</li>
+<li>
+<p>Write the signature of a function <code>prob7</code> that takes in a number
+(an integer) and puts out a string.</p>
+</li>
+<li>
+<p>What is the correct way to write the type signature of a function
 <code>prob8</code> that take single number (integer) and a list of numbers
-(integers) and puts out a list of numbers (integers)?</p></li>
-
-<li><p>Find out the difference between Float and Double. Summarize it here.</p></li>
-
-<li><p>How can you tell whether the text &ldquo;string&rdquo; in a program refers to a variable or a type?</p></li>
-
-<li><p>Write the type signature for:</p>
-
+(integers) and puts out a list of numbers (integers)?</p>
+</li>
+<li>
+<p>Find out the difference between Float and Double. Summarize it here.</p>
+</li>
+<li>
+<p>How can you tell whether the text &ldquo;string&rdquo; in a program refers to a variable or a type?</p>
+</li>
+<li>
+<p>Write the type signature for:</p>
 <ol>
 <li>snd</li>
 <li>repeat</li>
-<li>init
-<br /></li>
-</ol></li>
+<li>init</li>
 </ol>
-
+</li>
+</ol>
 <h2 id="class-constraints">Class Constraints</h2>
-
-<ol>
-<li>Where can you find a class constraint?</li>
-<li>What special symbol separates a class constraint from a function&rsquo;s type?</li>
-
-<li><p>What is the best type to give the function:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"> mystery a b = if ( a &lt; b ) then &#34;A small&#34; else &#34;A large&#34;</pre></div></li>
-
-<li><p>What familiar typeclass indicates that something can be written in string form?</p></li>
+<ol start="13">
+<li>
+<p>Where can you find a class constraint?</p>
+</li>
+<li>
+<p>What special symbol separates a class constraint from a function's type?</p>
+</li>
+<li>
+<p>What is the best type to give the function:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"> mystery a b = if ( a &lt; b ) then &#34;A small&#34; else &#34;A large&#34;
+</code></pre></div></li>
+<li>
+<p>What familiar typeclass indicates that something can be written in string form?</p>
+</li>
 </ol>
-
 <h2 id="the-read-typeclass">The Read Typeclass</h2>
-
-<ol>
+<ol start="17">
 <li>What does being in the Read typeclass indicate?</li>
 <li>How can you convert the string &ldquo;10230&rdquo; to an integer?</li>
 </ol>
-
 <h2 id="miscellaneous-typeclasses">Miscellaneous Typeclasses</h2>
-
-<ol>
+<ol start="19">
 <li>What is the main use of the Enum typeclass?</li>
 <li>Aside from integers, give two other examples of things in the Enum typeclass.</li>
 <li>What typeclass tells you that something has a largest and smallest value?</li>
 <li>How would you find the smallest possible Int in Haskell?</li>
 </ol>
-
 <h2 id="math">Math</h2>
-
-<ol>
+<ol start="23">
 <li>What is the difference between 5 and (5 :: Int)?</li>
 <li>Can you do this math?
-
 <ol>
 <li>3.2 * (5 :: Int)</li>
 <li>5.63 * 20</li>
-</ol></li>
+</ol>
+</li>
 <li>What will happen when you use the following function?
 listBigSize aList = 3 * (length aList)</li>
 </ol>
-
 <h2 id="integral-vs-floating">Integral vs Floating</h2>
-
-<ol>
-<li><p>The last function discussed in the chapter is the most important by far.</p>
-
+<ol start="26">
+<li>
+<p>The last function discussed in the chapter is the most important by far.</p>
 <ol>
 <li>Write its name and signature here.</li>
 <li>What is it used for?</li>
-</ol></li>
-
-<li><p>Programming exercise: the quadratic formula. Write and test a function that takes in a,b, and c, and produces the larger root of ax^2+bx+c. (Assume there is at least one real root.)</p></li>
+</ol>
+</li>
+<li>
+<p>Programming exercise: the quadratic formula. Write and test a function that takes in a,b, and c, and produces the larger root of ax^2+bx+c. (Assume there is at least one real root.)</p>
+</li>
 </ol>
 
 

@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1505,6 +1527,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1531,55 +1556,59 @@
     
     
     
-    
-
-<p>No notes, no book, do by yourself.</p>
-
+    <p>No notes, no book, do by yourself.</p>
 <h2 id="stone-age">Stone Age</h2>
-
 <p>Write each of the following, using nothing but &ldquo;stone age&rdquo; tools:
 guards, patterns, <code>==</code> (etc), <code>:</code>, <code>++</code>. No length, head, tail, etc.</p>
-
 <ol>
-<li><p><code>myintercalate :: String -&gt; [String] -&gt; String</code>. Given a separator
+<li>
+<p><code>myintercalate :: String -&gt; [String] -&gt; String</code>. Given a separator
 and a list of strings, create a string containing the separator in
 between each of the strings (but not before the first or after the last).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">myintercalate &#34;, &#34; [&#34;Witch&#34;,&#34;Bat&#34;,&#34;Broom&#34;] == &#34;Witch, Bat, Broom&#34;</pre></div></li>
-
-<li><p><code>myfindGE :: Int -&gt; [Int] -&gt; [Int]</code>.  a list of
+<pre><code> myintercalate &quot;, &quot; [&quot;Witch&quot;,&quot;Bat&quot;,&quot;Broom&quot;] == &quot;Witch, Bat, Broom&quot;
+</code></pre>
+</li>
+<li>
+<p><code>myfindGE :: Int -&gt; [Int] -&gt; [Int]</code>.  a list of
 everything greater than or equal to the first argument.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">myfindGE 5 [3,13,8,4,9] == [13,8,9]</pre></div></li>
+<pre><code> myfindGE 5 [3,13,8,4,9] == [13,8,9]
+</code></pre>
+</li>
 </ol>
-
 <h2 id="bronze-age">Bronze Age</h2>
-
 <p>Here you are allowed to use tools.</p>
-
 <ol>
-<li><p><code>boxMaker :: Int -&gt; String</code>. Make a function to create an square.</p>
-
+<li>
+<p><code>boxMaker :: Int -&gt; String</code>. Make a function to create an square.</p>
 <p>Calling <code>boxMaker 5</code> gives the string</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;xxxxx\nx   x\nx   x\nx   x\nxxxxx&#34;</pre></div>
+<pre><code> &quot;xxxxx\nx   x\nx   x\nx   x\nxxxxx&quot;
+</code></pre>
 <p>to see this more beautifully, print it with <code>putStrLn</code> in your
 main method.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">main = do putStrLn $ boxMaker 5 </pre></div>
+<pre><code> main = do putStrLn $ boxMaker 5 
+</code></pre>
 <p>(Use <code>\n</code> in a string to go to the next line.) The output looks
 like this:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">xxxxx
-x   x
-x   x
-x   x
-xxxxx</pre></div></li>
-
-<li><p><code>alphaBox :: String -&gt; String</code>. Make a square using the letters
-from the word provided. Add extra x&rsquo;s at the end if needed to make
+<pre><code> xxxxx
+ x   x
+ x   x
+ x   x
+ xxxxx
+</code></pre>
+</li>
+<li>
+<p><code>alphaBox :: String -&gt; String</code>. Make a square using the letters
+from the word provided. Add extra x's at the end if needed to make
 a square. Omit spaces in the input from your box.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">alphaBox &#34;Fox in a Box Rox&#34;</pre></div>
+<pre><code> alphaBox &quot;Fox in a Box Rox&quot;
+</code></pre>
 <p>prints out as</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"> Foxi
- x  n
- o  a
- RxoB</pre></div></li>
+<pre><code>  Foxi
+  x  n
+  o  a
+  RxoB
+</code></pre>
+</li>
 </ol>
 
 

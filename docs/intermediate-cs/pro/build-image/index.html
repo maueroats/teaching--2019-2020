@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,27 +1540,22 @@
     
     
     
-    
-
-<p>You should learn how to use <code>build-image</code> to make the pictures in Chapter 15.</p>
-
+    <p>You should learn how to use <code>build-image</code> to make the pictures in Chapter 15.</p>
 <h2 id="advanced-build-image">Advanced: build-image</h2>
-
 <p>The <a href="http://docs.racket-lang.org/picturing-programs/index.html?q=build-image#%28def._%28%28lib._picturing-programs%2Fprivate%2Fmap-image..rkt%29._build-image%29%29">build-image</a> uses a function that specifies the pixel color to create a rectangular image.</p>
-
 <p>The first example is a function that always returns orange, so it makes an orange square:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">pixel-color</span> <span style="color:#111">x</span> <span style="color:#111">y</span><span style="color:#111">)</span>
-  <span style="color:#d88200">&#34;orange&#34;</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">build-image</span> <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">200</span> <span style="color:#111">pixel-color</span><span style="color:#111">)</span></code></pre></div>
-<p>Notice that <code>pixel-color</code> does not appear in parentheses. The build-image command needs to activate (run) the <code>pixel-color</code> function over and over again, so needs to know the name of the function.</p>
-
+  <span style="color:#d88200">&#34;</span><span style="color:#d88200">orange</span><span style="color:#d88200">&#34;</span><span style="color:#111">)</span>
+<span style="color:#111">(</span><span style="color:#111">build-image</span> <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">200</span> <span style="color:#111">pixel-color</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Notice that <code>pixel-color</code> does not appear in parentheses. The build-image command needs to activate (run) the <code>pixel-color</code> function over and over again, so needs to know the name of the function.</p>
 <p>The second example is to give different colors in different circumstances. This example uses a mathematical formula to make a nice picture. Try it.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">pixel-color-ii</span> <span style="color:#111">x</span> <span style="color:#111">y</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#00a8c8">cond</span> <span style="color:#111">[(</span><span style="color:#111">&lt;=</span> <span style="color:#111">(</span><span style="color:#111">abs</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">y</span> <span style="color:#111">x</span><span style="color:#111">))</span> <span style="color:#ae81ff">30</span><span style="color:#111">)</span>
-         <span style="color:#d88200">&#34;orange&#34;</span><span style="color:#111">]</span>
+  <span style="color:#111">(</span><span style="color:#00a8c8">cond</span> <span style="color:#111">[</span><span style="color:#111">(</span><span style="color:#111">&lt;=</span> <span style="color:#111">(</span><span style="color:#111">abs</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">y</span> <span style="color:#111">x</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#ae81ff">30</span><span style="color:#111">)</span>
+         <span style="color:#d88200">&#34;</span><span style="color:#d88200">orange</span><span style="color:#d88200">&#34;</span><span style="color:#111">]</span>
         <span style="color:#111">[</span><span style="color:#00a8c8">else</span> 
-         <span style="color:#d88200">&#34;blue&#34;</span><span style="color:#111">]))</span>
-<span style="color:#111">(</span><span style="color:#111">build-image</span> <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">200</span> <span style="color:#111">pixel-color-ii</span><span style="color:#111">)</span></code></pre></div>
+         <span style="color:#d88200">&#34;</span><span style="color:#d88200">blue</span><span style="color:#d88200">&#34;</span><span style="color:#111">]</span><span style="color:#111">)</span><span style="color:#111">)</span>
+<span style="color:#111">(</span><span style="color:#111">build-image</span> <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">200</span> <span style="color:#111">pixel-color-ii</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
 
     
     

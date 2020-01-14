@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1509,6 +1531,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1535,41 +1560,44 @@
     
     
     
-    
-
-<p>All of the points you should work with have <code>Int</code> coordinates. So far
+    <p>All of the points you should work with have <code>Int</code> coordinates. So far
 you only know <code>Int</code>, <code>String</code>, and lists of each of those.</p>
-
-<ol>
-<li><p>Write a function <code>onLine</code> that takes in a slope <code>m</code>, a y-intercept <code>b</code>, and a point <code>(x0,y0)</code> and gives back True if the point is on the line <code>y=m*x+b</code> and false otherwise.</p></li>
-
-<li><p>Write a function <code>moreThan100</code> that takes in a list of numbers and puts out a list of numbers. The output is the same as the input with all of the numbers less than or equal to 100 removed.</p></li>
-
-<li><p>Write the &ldquo;grapher&rdquo; function whose inputs are (i) a function f that takes in a number and puts out a number, (ii) a lower bound, and (iii) an upper bound.  The grapher function should return a list of coordinates <code>(x,y)</code> where <code>y=f(x)</code> and <code>x</code> goes from the lower bound to the upper bound increasing by 1 each time.</p></li>
-
-<li><p><em>Target Practice 1</em>. Given a point <code>(x0,y0)</code> and a list of ordered
+<ol start="5">
+<li>
+<p>Write a function <code>onLine</code> that takes in a slope <code>m</code>, a y-intercept <code>b</code>, and a point <code>(x0,y0)</code> and gives back True if the point is on the line <code>y=m*x+b</code> and false otherwise.</p>
+</li>
+<li>
+<p>Write a function <code>moreThan100</code> that takes in a list of numbers and puts out a list of numbers. The output is the same as the input with all of the numbers less than or equal to 100 removed.</p>
+</li>
+<li>
+<p>Write the &ldquo;grapher&rdquo; function whose inputs are (i) a function f that takes in a number and puts out a number, (ii) a lower bound, and (iii) an upper bound.  The grapher function should return a list of coordinates <code>(x,y)</code> where <code>y=f(x)</code> and <code>x</code> goes from the lower bound to the upper bound increasing by 1 each time.</p>
+</li>
+<li>
+<p><em>Target Practice 1</em>. Given a point <code>(x0,y0)</code> and a list of ordered
 pairs, return the square of the smallest distance from <code>(x0,y0)</code> to
 a point on the list. (Working with the squared distance means you
-can keep using <code>Int</code> for the type of your result.)</p></li>
-</ol>
-
+can keep using <code>Int</code> for the type of your result.)</p>
 <p>Example: <code>targetPractice1 (0,1) [(10,20),(3,5),(7,-1)] == 25</code></p>
-
-<ol>
-<li><p><em>Break It Up</em>. (<em>Challenge</em>) Given a list of numbers, create a list containing every sequence of four numbers in a row. Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">breakItUp [5,10,20,3,8,9] = [ [5,10,20,3], [10,20,3,8], [20,3,8,9] ]</pre></div></li>
-
-<li><p><em>Target Practice 2</em>. (<em>Challenge</em>) Given a point <code>(x0,y0)</code> and a list of ordered pairs, return the point in the list that is closest to the given point.</p>
-
-<p>Example: <code>targetPractice2 (0,1) [(10,20),(3,5),(7,-1)] == (3,5)</code></p></li>
+</li>
+<li>
+<p><em>Break It Up</em>. (<em>Challenge</em>) Given a list of numbers, create a list containing every sequence of four numbers in a row. Example:</p>
+<pre><code> breakItUp [5,10,20,3,8,9] = [ [5,10,20,3], [10,20,3,8], [20,3,8,9] ]
+</code></pre>
+</li>
+<li>
+<p><em>Target Practice 2</em>. (<em>Challenge</em>) Given a point <code>(x0,y0)</code> and a list of ordered pairs, return the point in the list that is closest to the given point.</p>
+<pre><code>Example: `targetPractice2 (0,1) [(10,20),(3,5),(7,-1)] == (3,5)`
+</code></pre>
+</li>
 </ol>
-
 <h2 id="omit">OMIT</h2>
-
-<ol>
-<li><p>Write a function <code>addp</code> that adds two ordered pairs.</p></li>
-
-<li><p>(<em>Bonus</em>) The function <code>nextInDirection</code> takes in start point <code>(x0,y0)</code>, a direction <code>(dx,dy)</code>, and a list of ordered pairs. The function returns the point in the list that is closest to the start point and can be reached by beginning at the start and going in the given direction.</p></li>
+<ol start="9">
+<li>
+<p>Write a function <code>addp</code> that adds two ordered pairs.</p>
+</li>
+<li>
+<p>(<em>Bonus</em>) The function <code>nextInDirection</code> takes in start point <code>(x0,y0)</code>, a direction <code>(dx,dy)</code>, and a list of ordered pairs. The function returns the point in the list that is closest to the start point and can be reached by beginning at the start and going in the given direction.</p>
+</li>
 </ol>
 
 

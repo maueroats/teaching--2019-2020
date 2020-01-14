@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1511,42 +1533,30 @@
     
     
     
-    
-
-<h2 id="associations-and-properties">Associations and Properties</h2>
-
-<p>An &ldquo;association list&rdquo; has the form <code>((key1 value1) (key2
-value2))</code>. The <code>assoc</code> function takes in a key and returns the
+    <h2 id="associations-and-properties">Associations and Properties</h2>
+<p>An &ldquo;association list&rdquo; has the form <code>((key1 value1) (key2 value2))</code>. The <code>assoc</code> function takes in a key and returns the
 <code>(key value)</code> list .</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defparameter</span> <span style="color:#111">*info*</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">good</span> <span style="color:#ae81ff">50</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">bad</span> <span style="color:#ae81ff">-10</span><span style="color:#111">)))</span>
-<span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">get-good</span> <span style="color:#111">()</span>
-  <span style="color:#111">(</span><span style="color:#75af00">assoc</span> <span style="color:#d88200">&#39;good</span> <span style="color:#111">*info*</span><span style="color:#111">))</span>
-<span style="color:#75715e">; (get-good) =&gt; &#39;(good 50)</span></code></pre></div>
-<p>For completeness, a &ldquo;property list&rdquo; has the form <code>(:key1 value1 :key2 value2)</code>.
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defparameter</span> <span style="color:#111">*info*</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">(</span><span style="color:#111">good</span> <span style="color:#ae81ff">50</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">bad</span> <span style="color:#ae81ff">-10</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
+<span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">get-good</span> <span style="color:#111">(</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#75af00">assoc</span> <span style="color:#d88200">&#39;good</span> <span style="color:#111">*info*</span><span style="color:#111">)</span><span style="color:#111">)</span>
+<span style="color:#75715e">; (get-good) =&gt; &#39;(good 50)</span>
+</code></pre></div><p>For completeness, a &ldquo;property list&rdquo; has the form <code>(:key1 value1 :key2 value2)</code>.
 You could <a href="https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node108.html">read more about property lists</a> or just <a href="https://riptutorial.com/common-lisp/example/12948/property-lists">see a few examples</a>.</p>
-
 <h2 id="debugging">Debugging</h2>
-
 <ul>
 <li><code>(trace cow-graze)</code>: Show the inputs and outputs of every call to <code>cow-graze</code>.</li>
 <li><code>(untrace cow-graze)</code></li>
 </ul>
-
 <h2 id="variables">Variables</h2>
-
 <ul>
 <li><code>defvar</code>: A variable expected to be changed, maybe by a human. Does
 not reset when the file is reloaded. Changing this is not considered
 a change to the program.</li>
 <li><code>defparameter</code>: A &ldquo;constant&rdquo;. Reset when the file is
-reloaded. Changing this is considered a change to the program.
-<br /></li>
+reloaded. Changing this is considered a change to the program.</li>
 </ul>
-
 <h2 id="utility">Utility</h2>
-
 <p>Download the <a href="base-code.lisp">base-code</a>.</p>
-
 <script type="application/javascript" src="https://gist.github.com/maueroats/81107dd8d89108e970b4af3c61891f4b.js"></script>
 
 

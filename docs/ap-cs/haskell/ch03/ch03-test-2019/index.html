@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,6 +1537,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1542,46 +1567,57 @@
     
     
     <p><strong>Write type signatures for each function.</strong></p>
-
 <p>On a piece of paper, a person has written what they claim are the
 results of flipping a coin 120 consecutive times, writing heads as 1
 and tails as 0. The numbers are written in rows of 10.</p>
-
 <ol>
-<li><p>(<code>q1</code>) A human transcribed the numbers into a computer, but in order to
+<li>
+<p>(<code>q1</code>) A human transcribed the numbers into a computer, but in order to
 make it easier to type quickly, they type &lsquo;x&rsquo; for 1 and &lsquo;c&rsquo; for 0.
 They still break the data every line. Translate the data into
 numbers.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[1,0,1,0,1,0,1,1,1,0],
- [1,0,1,1,0,1,1,1,0,0]] == 
-   q1 [&#34;xcxcxcxxxc&#34;, &#34;xcxxcxxxcc&#34;]</pre></div></li>
-
-<li><p>(<code>q2</code>) The nested list format is good for writing, but not necessarily the
+<pre><code> [[1,0,1,0,1,0,1,1,1,0],
+  [1,0,1,1,0,1,1,1,0,0]] == 
+    q1 [&quot;xcxcxcxxxc&quot;, &quot;xcxxcxxxcc&quot;]
+</code></pre>
+</li>
+<li>
+<p>(<code>q2</code>) The nested list format is good for writing, but not necessarily the
 best for analyzing. Write a program to &ldquo;flatten&rdquo; the nested input
 lists into one great big long list.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[1,0,1,0,1,0,1,1,1] ==
-   q2 [[1,0,1,0], [1,0,1,1,1]]</pre></div></li>
-
-<li><p>(<code>q3</code>) Now you start to suspect that the person may not actually
+<pre><code> [1,0,1,0,1,0,1,1,1] ==
+    q2 [[1,0,1,0], [1,0,1,1,1]]
+</code></pre>
+</li>
+<li>
+<p>(<code>q3</code>) Now you start to suspect that the person may not actually
 have flipped a coin 120 times, so you want to find out how many
 heads and tails they actually got. Take in a flattened list (like
 <code>q2</code> outputs) and output a tuple containing the number of 0s and
 number of 1s in the data.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(3, 6) ==  q3 [1,0,1,0,1,0,1,1,1]</pre></div></li>
-
-<li><p>(<code>q4</code>) One way in which random data and human-faked data are
+<pre><code> (3, 6) ==  q3 [1,0,1,0,1,0,1,1,1]
+</code></pre>
+</li>
+<li>
+<p>(<code>q4</code>) One way in which random data and human-faked data are
 different is that humans tend to make shorter runs of the same
 number than actually occur in truely random data. You are going to
 write a program to find the length of the first run of the same
 number.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">5 == q4 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]</pre></div></li>
-
-<li><p>(<code>q5</code>) Now write a function that outputs a list of all of the run-lengths.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[5,1,1,7] == q5 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]</pre></div></li>
-
-<li><p>(<code>q6</code>) <em>Bonus</em> Given the output from <code>q5</code>, produce a list of tuples
+<pre><code> 5 == q4 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]
+</code></pre>
+</li>
+<li>
+<p>(<code>q5</code>) Now write a function that outputs a list of all of the run-lengths.</p>
+<pre><code> [5,1,1,7] == q5 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]
+</code></pre>
+</li>
+<li>
+<p>(<code>q6</code>) <em>Bonus</em> Given the output from <code>q5</code>, produce a list of tuples
 (run length, number of runs of that length). Order does not matter.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[(1,2),(5,1),(7,1)] == q6 $ q5 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]</pre></div></li>
+<pre><code> [(1,2),(5,1),(7,1)] == q6 $ q5 [1,1,1,1,1,0,1,0,0,0,0,0,0,0]
+</code></pre>
+</li>
 </ol>
 
 

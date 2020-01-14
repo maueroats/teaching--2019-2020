@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,6 +1537,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1541,69 +1566,72 @@
     
     
     
-    <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-  inlineMath: [['$','$'], ['\\(','\\)']],
-  displayMath: [['$$','$$'], ['\\[','\\]']]
-  }});
-</script>
-
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>You may use the book, but not other reference materials, especially not Stack
 Overflow or any of your old homework.</p>
-
 <ol>
-<li><p>Find the product of all odd negative integers greater than -2017.
+<li>
+<p>Find the product of all odd negative integers greater than -2017.
 Create a tuple called <code>answer1</code> containing the sign (+1
 or -1) and the last two digits (the tens and units digit). Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">answer1 = (-1, 23)</pre></div></li>
-
-<li><p>Create a list of lists to represent the inside of <a href="https://en.wikipedia.org/wiki/File:Vigen%C3%A8re_square_shading.svg">this Vigènere
-cipher table</a>.</p></li>
-
-<li><p>(<code>base3</code>) Write a function to convert a number to a list
+<pre><code> answer1 = (-1, 23)
+</code></pre>
+</li>
+<li>
+<p>Create a list of lists to represent the inside of <a href="https://en.wikipedia.org/wiki/File:Vigen%C3%A8re_square_shading.svg">this Vigènere
+cipher table</a>.</p>
+</li>
+<li>
+<p>(<code>base3</code>) Write a function to convert a number to a list
 representing the number in base 3.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">base3 (81+9+2*3+1) == [1,0,1,2,1]</pre></div></li>
-
-<li><p>(<code>inCirc</code>) Given an integer <code>w</code>,  create a list of all integers <code>x</code>
+<pre><code> base3 (81+9+2*3+1) == [1,0,1,2,1]
+</code></pre>
+</li>
+<li>
+<p>(<code>inCirc</code>) Given an integer <code>w</code>,  create a list of all integers <code>x</code>
 that have the property that the point <code>(x,-x)</code> (meaning $y$ is the opposite of $x$) inside the circle of
 radius <code>2*w</code> centered at <code>(w,w)</code>. This means you are looking for
 integer coordinate points on the line $y=-x$ that are within
 distance $2*w$ of the point $(w,w)$.</p>
-
 <p>Haskell will prefer that you call all of the points involved
- <code>Double</code>. The other choice is to write your own distance function
- and use <code>fromIntegral</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">inCirc :: Double -&gt; [Double]</pre></div>
+<code>Double</code>. The other choice is to write your own distance function
+and use <code>fromIntegral</code>.</p>
+<pre><code> inCirc :: Double -&gt; [Double]
+</code></pre>
 <p>You can use your own distance function or this one:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">dist :: (Double,Double) -&gt; (Double,Double) -&gt; Double
-dist (x0,y0) (x,y) = sqrt $ (x-x0)^2 + (y-y0)^2</pre></div>
+<pre><code> dist :: (Double,Double) -&gt; (Double,Double) -&gt; Double
+ dist (x0,y0) (x,y) = sqrt $ (x-x0)^2 + (y-y0)^2
+</code></pre>
 <p>Here is an image showing the situation where $w=4$ and there are 9
 integer coordinate points that are distance $d \le 8$ from $(4,4)$ and on
 the line $y=-x$.</p>
-
-<figure>
-<img src="CircleLinePic2.png" width="200"/> 
-</figure></li>
-
-<li><p>(<code>vig</code>) You can encode messages using the table from question 2. Write a
+<!-- raw HTML omitted -->
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<ol start="5">
+<li>
+<p>(<code>vig</code>) You can encode messages using the table from question 2. Write a
 single letter encoder by using the letter from the message to
 choose the row and the letter from the key to choose the column:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vig :: Char -&gt; Char -&gt; Char
-vig msg key = undefined
-checkit = (vig &#39;C&#39; &#39;X&#39; == &#39;Z&#39;) -- should be True</pre></div></li>
-
-<li><p>(<code>vigen</code>) Enhance your single letter encoder from the previous question to
+<pre><code> vig :: Char -&gt; Char -&gt; Char
+ vig msg key = undefined
+ checkit = (vig 'C' 'X' == 'Z') -- should be True
+</code></pre>
+</li>
+<li>
+<p>(<code>vigen</code>) Enhance your single letter encoder from the previous question to
 encode messages. Take in two strings: the message and a key, and
 match up corresponding letters. (Repeat the key as necessary.)</p>
-
 <p><a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher#Description">An example from Wikipedia</a>
 using the secret key &ldquo;LEMON&rdquo;.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vigen :: String -&gt; String -&gt; String
-vigen &#34;ATTACKATDAWN&#34; &#34;LEMON&#34; == &#34;LXFOPVEFRNHR&#34;</pre></div></li>
+<pre><code> vigen :: String -&gt; String -&gt; String
+ vigen &quot;ATTACKATDAWN&quot; &quot;LEMON&quot; == &quot;LXFOPVEFRNHR&quot;
+</code></pre>
+</li>
 </ol>
 
 

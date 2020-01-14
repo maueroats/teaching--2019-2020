@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,6 +1536,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1541,30 +1566,36 @@
     
     
     <p>The alternating series is</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[1, -1/2, +1/3, -1/4, +1/5, -1/6, ...]</pre></div>
+<pre><code>[1, -1/2, +1/3, -1/4, +1/5, -1/6, ...]
+</code></pre>
 <ol>
-<li><p>Define <code>altTerm n</code> to be the nth term in the sequence.</p></li>
-
-<li><p>Define <code>altSeq m</code> to be the first first m terms in the
-sequence.</p></li>
-
-<li><p>Write a function to find the first <code>k</code> terms of the alternating
-series.</p></li>
-
-<li><p>Write <code>waltSum</code>, which takes in a list of numbers, multiplies each
+<li>
+<p>Define <code>altTerm n</code> to be the nth term in the sequence.</p>
+</li>
+<li>
+<p>Define <code>altSeq m</code> to be the first first m terms in the
+sequence.</p>
+</li>
+<li>
+<p>Write a function to find the first <code>k</code> terms of the alternating
+series.</p>
+</li>
+<li>
+<p>Write <code>waltSum</code>, which takes in a list of numbers, multiplies each
 term by the corresponding term in the alternating series, and then
 adds up the sums.</p>
-
 <p>Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">waltSum [5,10,20] == 1*5 + (-1/2)*10 + (1/3)*15</pre></div></li>
-
-<li><p>The <code>goalt x</code> function adds up the terms in the alternating series
+<pre><code> waltSum [5,10,20] == 1*5 + (-1/2)*10 + (1/3)*15
+</code></pre>
+</li>
+<li>
+<p>The <code>goalt x</code> function adds up the terms in the alternating series
 until it comes on a term that is less than <code>x</code> in absolute value.</p>
-
 <p>Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">goalt 0.21 == 0.5833...</pre></div></li>
+<pre><code> goalt 0.21 == 0.5833...
+</code></pre>
+</li>
 </ol>
-
 <p>Remember: <code>fromIntegral</code> when you need to divide something by an
 Int.</p>
 

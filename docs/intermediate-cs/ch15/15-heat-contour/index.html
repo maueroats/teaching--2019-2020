@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1520,31 +1542,16 @@
     
     
     
-    
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-  inlineMath: [['$','$'], ['\\(','\\)']],
-  displayMath: [['$$','$$'], ['\\[','\\]']]
-  }});
-</script>
-
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>We are going to make a beautiful icy winter picture using that idea.</p>
-
-<figure>
-    <img src="astral.png"/> 
-</figure>
-
+<!-- raw HTML omitted -->
 <h2 id="outline">Outline</h2>
-
 <p>We use a function of x and y to create a number. Use the number in a
 heatmap function to produce a color. Build-image to make a picture
 from this process.</p>
-
 <link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="/mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -1556,44 +1563,32 @@ graph LR;
   E --> F[number]
   F --> |heatmap| G[color]
 </div>
-
 <p>When we draw, we will have conversion functions so we can draw in computer
 coordinates and do math in people coordinates.</p>
-
 <p>Some people found it confusing to
-take in a single number to the heatmap function&hellip; just don&rsquo;t call the
+take in a single number to the heatmap function&hellip; just don't call the
 input to your heatmap either x or y.</p>
-
 <h2 id="decide-the-function">Decide the function</h2>
-
 <p>The picture above is made using this function:</p>
-
 <p>$$ f(x,y) = 325 \left( \sin(x) + \cos(x\cdot y /10) \right) $$</p>
-
 <p>In Racket you would type the function:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define (f x y)
+<pre><code>(define (f x y)
   (* 350 
      (+ (sin x)
-        (cos (* x y 1/10)))))</pre></div>
+        (cos (* x y 1/10)))))
+</code></pre>
 <h2 id="computer-coordinates-and-people-coordinates">Computer coordinates and people coordinates</h2>
-
 <p>The picture above is a 600x600 computer coordinate window, with people
 coordinates $-22.5 \le x \le 22.5$ and $-15 \le y \le 15$.</p>
-
 <p>Create functions to change x and y computer coordinates to people
 coordinates. Follow the process of making a number line, writing
 check-expects, and then using a solver to get the equations.</p>
-
 <p><strong>Note</strong>: For this project you will only need to change computer to
 people coordinates.</p>
-
 <h2 id="colorize-the-results">Colorize the results</h2>
-
 <p>The function $f(x,y)$ above gives numbers from -600 to 600.</p>
-
 <p>Use the ideas from the heatmap to use different colors for
 different values. I made mine in three pieces:</p>
-
 <table>
 <thead>
 <tr>
@@ -1601,52 +1596,40 @@ different values. I made mine in three pieces:</p>
 <th>color</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>0</td>
 <td>blue 175</td>
 </tr>
-
 <tr>
 <td>250</td>
 <td>blue 250</td>
 </tr>
-
 <tr>
 <td>251</td>
 <td>green 1, blue 250</td>
 </tr>
-
 <tr>
 <td>500</td>
 <td>green 250, blue 250</td>
 </tr>
-
 <tr>
 <td>501</td>
 <td>red 1, blue 250</td>
 </tr>
-
 <tr>
 <td>750</td>
 <td>red 250, blue 250</td>
 </tr>
 </tbody>
 </table>
-
 <h2 id="contour-lines">Contour lines</h2>
-
 <p>The picture at the top has little white areas every 75 units &mdash; check
 to see if the value is close to a multiple of 75 and if so, make the
 color white. These lines are called contour lines.</p>
-
 <p>In a map, a contour line shows where the elevation is the same. In
 math plots showing those type of lines are called contour plots.</p>
-
-<figure>
-    <img src="contour-lines.gif"/> 
-</figure>
+<!-- raw HTML omitted -->
 
 
     

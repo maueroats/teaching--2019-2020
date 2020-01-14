@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,57 +1540,52 @@
     
     
     
-    
-
-<p>Pattern matching lets you take apart structures into their component
+    <p>Pattern matching lets you take apart structures into their component
 variables in a simple way.</p>
-
 <p>You can use <code>(require racket/match)</code> to activate <a href="https://docs.racket-lang.org/guide/match.html?q=pattern%20match">pattern matching</a>.</p>
-
 <h2 id="matching">Matching</h2>
-
 <p>The <code>match</code> function is like <code>cond</code> except it checks to see if a value
 matches a certain &ldquo;literal&rdquo; pattern or question. It can create
 variables to use immediately instead of requiring a helper function.</p>
-
 <h3 id="problem">Problem</h3>
-
 <p>Write a function that takes in a number or a posn and returns the
 distance to the correct origin (either 0 or (0,0)) depending on which
 type it gets.</p>
-
 <h3 id="example-solution-cond">Example Solution: Cond</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define (cond-to-zero w)
+<pre><code>(define (cond-to-zero w)
   (cond [(posn? w)    (sqrt (+ (sqr (posn-x w))
                                (sqr (posn-y w))))]
-        [(number? w)  (abs w)]))</pre></div>
+        [(number? w)  (abs w)]))
+</code></pre>
 <h3 id="example-solution-match">Example Solution: Match</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define (match-to-zero w)
+<pre><code>(define (match-to-zero w)
   (match n
     [(posn x y)  (sqrt (+ (sqr x)
                           (sqr y)))]
-    [number?     (abs w)]))</pre></div>
+    [number?     (abs w)]))
+</code></pre>
 <h2 id="ignoring-parts-of-a-model">Ignoring parts of a model</h2>
-
 <p>You can use the underscore <code>_</code> to match places that you want to
 ignore. This example shows how to pull out two scores from a model and
 use them to find the total number of points in the game.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define-struct game (p1pos p1score p2pos p2score))
+<pre><code>(define-struct game (p1pos p1score p2pos p2score))
 (define (total-score model)
   (match model
     [(game _ s1 _ s2)
-     (+ s1 s2)]</pre></div>
+     (+ s1 s2)]
+</code></pre>
 <h2 id="list-processing-with-matching">List processing with matching</h2>
-
 <p>Suppose you want to add all of the numbers in a list. You can use the
 <code>'()</code> pattern to match the empty list. The pattern <code>(list a more ...)</code>
 makes <code>a</code> match the first of the list and <code>more</code> match the rest of the list.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define (add-all data)
+<pre><code>(define (add-all data)
     (match data
-      [&#39;()
+      ['()
        0]
       [(list a more ...)
-       (+ a (add-add more))]))</pre></div>
+       (+ a (add-add more))]))
+</code></pre>
+
 
     
     

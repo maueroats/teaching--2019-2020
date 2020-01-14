@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1526,68 +1548,63 @@
     
     
     
-    
-
-<p>Things to know:</p>
-
+    <p>Things to know:</p>
 <ol>
-<li><p>Animation following the graph of an equation:</p>
-
+<li>
+<p>Animation following the graph of an equation:</p>
 <ul>
 <li>Computer coordinates</li>
 <li>People coordinates</li>
-</ul></li>
-
-<li><p>Repetition using <code>remainder</code>.</p></li>
-
-<li><p>Max/min to keep values large/small.</p></li>
-
-<li><p>Randomness</p>
-
+</ul>
+</li>
+<li>
+<p>Repetition using <code>remainder</code>.</p>
+</li>
+<li>
+<p>Max/min to keep values large/small.</p>
+</li>
+<li>
+<p>Randomness</p>
 <ul>
 <li>Range of random numbers (e.g., 10&lt;=x&lt;=50).</li>
 <li>Write and test a non-random function first.</li>
-</ul></li>
-
-<li><p>Write checks for a function that you do not yet know how to write.</p></li>
+</ul>
+</li>
+<li>
+<p>Write checks for a function that you do not yet know how to write.</p>
+</li>
 </ol>
-
 <p>Terms:</p>
-
 <ul>
 <li>Computer coordinates: (0,0) in the upper left, positive y going down.</li>
 <li>People coordinates: (0,0) in the center, positive y going up.</li>
 </ul>
-
 <p>Sample code:</p>
-
 <ul>
 <li><a href="people-coordinates-demo.rkt">People coordinates demo</a></li>
 </ul>
-
 <h2 id="review-problems">Review Problems</h2>
-
 <ol>
-<li><p>Make a sunset: a half circle.</p>
-
+<li>
+<p>Make a sunset: a half circle.</p>
 <ul>
 <li>shrinks in radius</li>
 <li>changes color from red(ish) to black as the sun sets.
 (Advanced: yellow to magenta.)</li>
-</ul></li>
-
-<li><p>Make a point that follows the graph of the equation y=((x-50)/10)^2</p>
-
+</ul>
+</li>
+<li>
+<p>Make a point that follows the graph of the equation y=((x-50)/10)^2</p>
 <ul>
 <li>Use &ldquo;people coordinates&rdquo;. Each quadrant should be 75x100.</li>
 <li>Move from x=-75 to x=75 in people coordinates.</li>
 <li>Repeats the path from over and over.</li>
 <li>Hit a key make the point go to x=0 people coordinates (and start moving).</li>
 <li>Move the mouse to make the point move. (The point should seem to move faster when you move the mouse.)</li>
-</ul></li>
-
-<li><p>Make a rectangle that is three times as wide as it is tall.</p>
-
+</ul>
+</li>
+<li>
+<p>Make a rectangle that is three times as wide as it is tall.</p>
 <ul>
 <li>Height is determined by y-coordinate of the mouse.</li>
 <li>Height decreases 5 units every time you hit a key.</li>
@@ -1595,19 +1612,18 @@
 <li>Height cannot go above 150 units using mouse.</li>
 <li>You choose the color.
 (Advanced: color of grey depends on y-coordinate.)</li>
-</ul></li>
-
-<li><p>(Maybe omit.) (&hellip; feel free to skip.)
+</ul>
+</li>
+<li>
+<p>(Maybe omit.) (&hellip; feel free to skip.)
 Make a line that you can move up and down with the mouse.</p>
-
 <ul>
 <li>Straight line through x=0, y=70</li>
 <li>Passes through the point where the mouse is sitting.</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-
 <h2 id="information-flow-for-question-2">Information Flow for Question 2</h2>
-
 <link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="/mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >

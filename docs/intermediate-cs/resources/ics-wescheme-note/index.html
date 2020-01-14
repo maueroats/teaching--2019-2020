@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,34 +1537,32 @@
     
     
     
-    
-
-<p>WeScheme is a browser-based version of Racket. It works well for at
+    <p>WeScheme is a browser-based version of Racket. It works well for at
 least the first semester of Intermediate Computer Science.</p>
-
 <h2 id="special-notes-for-wescheme-users">Special notes for WeScheme users</h2>
-
-<p>You can use <a href="http://wescheme.org">WeScheme</a> if you cannot install <a href="http://racket
--lang.org">DrRacket</a>. For example, if you have a Chromebook for your home computer.</p>
-
+<p>You can use <a href="http://wescheme.org">WeScheme</a> if you cannot install [DrRacket](http://racket
+-lang.org). For example, if you have a Chromebook for your home computer.</p>
 <p>There are a few differences:</p>
-
 <ul>
-<li><p>Omit the <code>(require picturing-programs)</code> line.</p></li>
-
-<li><p>(<strong>Chapter 3</strong>)
+<li>
+<p>Omit the <code>(require picturing-programs)</code> line.</p>
+</li>
+<li>
+<p>(<strong>Chapter 3</strong>)
 Instead of copy and pasting in a picture, you need to copy the link for the image and use <code>bitmap/url</code> like this:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;https://www.what-dog.net/Images/faces2/main004.jpg&#34;</span><span style="color:#111">)</span></code></pre></div></li>
-
-<li><p>(<strong>Chapter 6</strong>) Inside <code>big-bang</code> you need to use the phrase <code>to-draw</code> instead of <code>on-draw</code> that we use in DrRacket.
+</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">https://www.what-dog.net/Images/faces2/main004.jpg</span><span style="color:#d88200">&#34;</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><ul>
+<li>(<strong>Chapter 6</strong>) Inside <code>big-bang</code> you need to use the phrase <code>to-draw</code> instead of <code>on-draw</code> that we use in DrRacket.
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">draw-handler</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
-    <span style="color:#111">(</span><span style="color:#111">overlay</span> <span style="color:#111">model</span> <span style="color:#111">(</span><span style="color:#111">empty-scene</span> <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">200</span><span style="color:#111">)))</span>
+    <span style="color:#111">(</span><span style="color:#111">overlay</span> <span style="color:#111">model</span> <span style="color:#111">(</span><span style="color:#111">empty-scene</span> <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">200</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">tick-handler</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
-    <span style="color:#111">(</span><span style="color:#111">scale</span> <span style="color:#ae81ff">1.01</span> <span style="color:#111">model</span><span style="color:#111">))</span>
+    <span style="color:#111">(</span><span style="color:#111">scale</span> <span style="color:#ae81ff">1.01</span> <span style="color:#111">model</span><span style="color:#111">)</span><span style="color:#111">)</span>
 
-<span style="color:#111">(</span><span style="color:#111">big-bang</span> <span style="color:#111">(</span><span style="color:#111">circle</span> <span style="color:#ae81ff">10</span> <span style="color:#d88200">&#34;solid&#34;</span> <span style="color:#d88200">&#34;green&#34;</span><span style="color:#111">)</span>
+<span style="color:#111">(</span><span style="color:#111">big-bang</span> <span style="color:#111">(</span><span style="color:#111">circle</span> <span style="color:#ae81ff">10</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">solid</span><span style="color:#d88200">&#34;</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">green</span><span style="color:#d88200">&#34;</span><span style="color:#111">)</span>
           <span style="color:#111">(</span><span style="color:#111">on-tick</span> <span style="color:#111">tick-handler</span><span style="color:#111">)</span>
-<span style="display:block;width:100%;background-color:#e1e1e1">          <span style="color:#111">(</span><span style="color:#111">to-draw</span> <span style="color:#111">draw-handler</span><span style="color:#111">))</span></span></code></pre></div></p></li>
+<span style="display:block;width:100%;background-color:#e1e1e1">          <span style="color:#111">(</span><span style="color:#111">to-draw</span> <span style="color:#111">draw-handler</span><span style="color:#111">)</span><span style="color:#111">)</span></span></code></pre></div></li>
 </ul>
 
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>homework on WY Computer Science</title>
@@ -19,7 +19,7 @@
       <guid>https://wy-cs.website/ap-cs/haskell/ch02/hw-a2/</guid>
       <description>All of the points you should work with have Int coordinates. So far you only know Int, String, and lists of each of those.
  Write a function onLine that takes in a slope m, a y-intercept b, and a point (x0,y0) and gives back True if the point is on the line y=m*x+b and false otherwise.
- Write a function moreThan100 that takes in a list of numbers and puts out a list of numbers.</description>
+  Write a function moreThan100 that takes in a list of numbers and puts out a list of numbers.</description>
     </item>
     
     <item>
@@ -42,8 +42,8 @@ and dealing with Integral to Fractional conversions when they are needed.&lt;/p&
       <description>Key new concepts: patterns, guards, where, let, case.
 Please write function signatures for every solution.
  Some of these problems are classical exercises with solutions online. Please do not search for them or read them before turning in your work. (See Academic Integrity.)
-Exercises  First Third. Return the sum of the first and third elements in the list. Example: firstThird [10,30,50,90] == 60.
- Take a list of items that can be compared for equality (Eq a) and reduce repeats to a single element.</description>
+Exercises   First Third. Return the sum of the first and third elements in the list. Example: firstThird [10,30,50,90] == 60.
+  Take a list of items that can be compared for equality (Eq a) and reduce repeats to a single element.</description>
     </item>
     
   </channel>

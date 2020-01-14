@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1510,6 +1532,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1536,27 +1561,23 @@
     
     
     
-    
-
-<p>The <code>cityscape</code> function takes in a list of integers representing the
+    <p>The <code>cityscape</code> function takes in a list of integers representing the
 heights of buildings and puts out a single string that will show
-skyscrapers built of X&rsquo;s in columns whose heights correspond to the
+skyscrapers built of X's in columns whose heights correspond to the
 integers.</p>
-
 <p>Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cityscape [4,2,6,1]</pre></div>
+<pre><code>cityscape [4,2,6,1]
+</code></pre>
 <p>Output:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  x
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">  x
   x
 x x
 x x
 xxx
-xxxx</pre></div>
-<p>Make sure you test your program to verify that it works with two
+xxxx
+</code></pre></div><p>Make sure you test your program to verify that it works with two
 skyscrapers of the same height.</p>
-
 <h2 id="editing-checklist">Editing Checklist</h2>
-
 <ul>
 <li>Only uses of <code>length</code> are absolutely essential.</li>
 <li>Recursion uses <code>(x:xs)</code> not <code>head</code> and <code>tail</code>.</li>

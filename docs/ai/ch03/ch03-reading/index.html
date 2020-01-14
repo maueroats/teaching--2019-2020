@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1516,186 +1538,192 @@
     
     
     
-    
-
-<h2 id="learning-guide">Learning Guide</h2>
-
+    <h2 id="learning-guide">Learning Guide</h2>
 <p>Of course you should read this chapter carefully. It is a quick
 introduction to the major features of Common Lisp. There are
 additional sources to read about lightly covered topics:</p>
-
 <ul>
 <li><a href="https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node141.html">Sequences</a>.</li>
 </ul>
-
 <h2 id="questions">Questions</h2>
-
 <ol>
-<li><p>Pick what you believe are the three most important of the six
-&ldquo;maxims&rdquo;? List each and give a one sentence example.</p></li>
-
-<li><p>What does the function <code>caddar</code> do, anyway?</p></li>
-
-<li><p>Why is <code>find</code> preferred over a <code>loop</code>? Give two reasons.</p></li>
-
-<li><p>Which two ways are offered for setting variable to a value? Is
+<li>
+<p>Pick what you believe are the three most important of the six
+&ldquo;maxims&rdquo;? List each and give a one sentence example.</p>
+</li>
+<li>
+<p>What does the function <code>caddar</code> do, anyway?</p>
+</li>
+<li>
+<p>Why is <code>find</code> preferred over a <code>loop</code>? Give two reasons.</p>
+</li>
+<li>
+<p>Which two ways are offered for setting variable to a value? Is
 there a maxim that would apply to help you make the choice? How
-about overall guidance about using these ways in your program?</p></li>
+about overall guidance about using these ways in your program?</p>
+</li>
 </ol>
-
 <h2 id="special-forms">Special Forms</h2>
-
-<ol>
-<li><p>List two definitions special forms that you do not know how to use
-right now.</p></li>
-
-<li><p>What do you think the <code>incf</code> and <code>decf</code> special forms do?</p></li>
-
-<li><p>Under what circumstances does <code>(defvar x 5)</code> set the variable <code>x</code>
-to the value 5?</p></li>
+<ol start="5">
+<li>
+<p>List two definitions special forms that you do not know how to use
+right now.</p>
+</li>
+<li>
+<p>What do you think the <code>incf</code> and <code>decf</code> special forms do?</p>
+</li>
+<li>
+<p>Under what circumstances does <code>(defvar x 5)</code> set the variable <code>x</code>
+to the value 5?</p>
+</li>
 </ol>
-
 <h3 id="student">Student</h3>
-
-<ol>
-<li><p>Write the form to define a <code>student</code> structure that contains name,
+<ol start="8">
+<li>
+<p>Write the form to define a <code>student</code> structure that contains name,
 division, id, and an optional <code>home-phone</code> which is set to <code>nil</code> if
-it is not available.</p></li>
-
-<li><p>Create a student with name DocMo, division A321, and id number 666321.</p></li>
-
-<li><p>Create a student with your name, division, id number, and a home
-phone of 773-534-7500.</p></li>
-
-<li><p>How can you test to see if a variable <code>v</code> holds a <code>student</code>?</p></li>
-
-<li><p>Given the student from two exercises ago, how do you make a list
-containing just the name and division number.</p></li>
-
-<li><p>Set the division of <code>DocMo</code> to 934.</p></li>
-
-<li><p>Which is more efficient, storing a list with (name, division, id,
-home phone) or using a structure? Explain.</p></li>
+it is not available.</p>
+</li>
+<li>
+<p>Create a student with name DocMo, division A321, and id number 666321.</p>
+</li>
+<li>
+<p>Create a student with your name, division, id number, and a home
+phone of 773-534-7500.</p>
+</li>
+<li>
+<p>How can you test to see if a variable <code>v</code> holds a <code>student</code>?</p>
+</li>
+<li>
+<p>Given the student from two exercises ago, how do you make a list
+containing just the name and division number.</p>
+</li>
+<li>
+<p>Set the division of <code>DocMo</code> to 934.</p>
+</li>
+<li>
+<p>Which is more efficient, storing a list with (name, division, id,
+home phone) or using a structure? Explain.</p>
+</li>
 </ol>
-
 <h2 id="conditionals">Conditionals</h2>
-
-<ol>
-<li><p>What is the most basic special form?</p></li>
-
-<li><p>What form should you use to replace <code>(if good-friend nil
-(run-fast))</code>?</p></li>
-
-<li><p>Given an example when the table on page 53 (pdf page 62) does not
+<ol start="15">
+<li>
+<p>What is the most basic special form?</p>
+</li>
+<li>
+<p>What form should you use to replace <code>(if good-friend nil (run-fast))</code>?</p>
+</li>
+<li>
+<p>Given an example when the table on page 53 (pdf page 62) does not
 contain a perfectly accurate translation of the conditional
-form. Be specific.</p></li>
-
-<li><p>Give one way to print a string.</p></li>
-
-<li><p>Read the examples using <code>and</code> or <code>or</code> to run conditionals and then
+form. Be specific.</p>
+</li>
+<li>
+<p>Give one way to print a string.</p>
+</li>
+<li>
+<p>Read the examples using <code>and</code> or <code>or</code> to run conditionals and then
 write an example that prints out &ldquo;Go Fish&rdquo; if the function <code>q19</code>
 is called with neither the color <code>'red</code> nor the suit <code>'clubs</code>.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">q19</span> <span style="color:#111">(</span><span style="color:#111">color</span> <span style="color:#111">suit</span><span style="color:#111">)</span>
-  <span style="color:#f92672">...</span><span style="color:#111">)</span></code></pre></div></li>
-
-<li><p>Which special forms are preferred when the main purpose is to take
-an action? How about returning a value?</p></li>
-
-<li><p>Given a bunch of tests in a <code>cond</code> that all evaluate to
-true, which value should be returned?</p></li>
-
-<li><p>Suppose you want to perform different actions depending on
-whether an input <code>dk</code> is a number or a list. What special form do
-you use?</p></li>
-
-<li><p>Write a function that doubles any number it is given and returns
-only the first element if given a list.</p></li>
+  <span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#111">)</span>
+</code></pre></div></li>
 </ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+20. Which special forms are preferred when the main purpose is to take
+    an action? How about returning a value?
 
-<h2 id="repetition">Repetition</h2>
+21. Given a bunch of tests in a `cond` that all evaluate to
+    true, which value should be returned?
 
-<ol>
-<li><p>What is <code>mapc</code>? <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">Look it
-up</a>
-and summarize.</p></li>
+22. Suppose you want to perform different actions depending on
+    whether an input `dk` is a number or a list. What special form do
+    you use?
+	
+23. Write a function that doubles any number it is given and returns
+    only the first element if given a list.
 
-<li><p>What is the difference between <code>remove</code> and <code>delete</code>? List a few
-useful variants of <code>remove</code>.</p></li>
+## Repetition
 
-<li><p>How do you find the index of an element in a list? Why are there
-two possibilities?</p></li>
+24. What is `mapc`? [Look it
+    up](http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm)
+    and summarize.
 
-<li><p>There is an important difference between the <code>length9</code> (page 62 /
-PDF 73) and <code>length10</code> (page 63 / PDF 74) functions. Carefully
-explain the difference and the implications this difference has
-for the memory usage of the two functions. (<strong>Discuss.</strong>)</p></li>
-</ol>
+25. What is the difference between `remove` and `delete`? List a few
+    useful variants of `remove`.
 
-<h2 id="other">Other</h2>
+26. How do you find the index of an element in a list? Why are there
+    two possibilities? 
 
-<ol>
-<li><p>What is the value of <code>(progn 1 2 3)</code>?</p></li>
+27. There is an important difference between the `length9` (page 62 /
+    PDF 73) and `length10` (page 63 / PDF 74) functions. Carefully
+    explain the difference and the implications this difference has
+    for the memory usage of the two functions. (**Discuss.**)
 
-<li><p>Give an example of a situation where using <code>progn</code> is helpful.</p></li>
+## Other
 
-<li><p>What is the result of using the <code>magic</code> function below in <code>(magic
-(list 5 10 40 8))</code>? Explain carefully.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">magic</span> <span style="color:#111">(</span><span style="color:#111">numbers</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#75af00">*</span> <span style="color:#ae81ff">3</span> 
-     <span style="color:#111">(</span><span style="color:#00a8c8">let</span> <span style="color:#111">((</span><span style="color:#111">ans</span> <span style="color:#ae81ff">5</span><span style="color:#111">))</span>
-       <span style="color:#111">(</span><span style="color:#111">dolist</span> <span style="color:#111">(</span><span style="color:#111">x</span> <span style="color:#111">numbers</span> <span style="color:#111">ans</span><span style="color:#111">)</span>
-         <span style="color:#111">(</span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">=</span> <span style="color:#111">x</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
-             <span style="color:#111">(</span><span style="color:#111">return</span> <span style="color:#ae81ff">42</span><span style="color:#111">)</span>
-             <span style="color:#111">(</span><span style="color:#111">setf</span> <span style="color:#111">ans</span> <span style="color:#111">(</span><span style="color:#75af00">*</span> <span style="color:#111">ans</span> <span style="color:#111">x</span><span style="color:#111">)))))))</span></code></pre></div></li>
-</ol>
+28. What is the value of `(progn 1 2 3)`? 
 
-<h2 id="macros">Macros</h2>
+29. Give an example of a situation where using `progn` is helpful.
 
-<ol>
-<li><p>Write what you understand a macro to be, in your own words. If you
-are not sure, write a question or two that you have about macros.</p></li>
+30. What is the result of using the `magic` function below in `(magic
+    (list 5 10 40 8))`? Explain carefully.
 
-<li><p>How do you get one step of expansion of a macro?</p></li>
-</ol>
+	```lisp
+	(defun magic (numbers)
+	  (* 3 
+		 (let ((ans 5))
+		   (dolist (x numbers ans)
+			 (if (= x 1)
+				 (return 42)
+				 (setf ans (* ans x)))))))
+	```
 
-<h2 id="equality-and-sequences-3-4-3-5">Equality and Sequences (3.4-3.5)</h2>
+## Macros
 
-<ol>
-<li><p>There are five main ways to compare items for equality: <code>=</code>, <code>eq</code>,
-<code>eql</code>, <code>equal</code>, <code>equalp</code>. Briefly explain what each one does and
-how they differ.</p></li>
+31. Write what you understand a macro to be, in your own words. If you
+    are not sure, write a question or two that you have about macros.
+	
+32. How do you get one step of expansion of a macro?
 
-<li><p>How is <code>nth</code> different from all of the other &ldquo;getter&rdquo; functions in
-Section 3.5?</p></li>
+## Equality and Sequences (3.4-3.5)
 
-<li><p>What is the difference between <code>assoc</code> and <code>rassoc</code>?</p></li>
+33. There are five main ways to compare items for equality: `=`, `eq`,
+    `eql`, `equal`, `equalp`. Briefly explain what each one does and
+    how they differ.
 
-<li><p>What is a disadvantage of an association list?</p></li>
+34. How is `nth` different from all of the other &#34;getter&#34; functions in
+    Section 3.5?
+	
+35. What is the difference between `assoc` and `rassoc`? 
 
-<li><p>What more complex data structure can perform the same basic
-function as an association list, but more quickly?</p></li>
-</ol>
+36. What is a disadvantage of an association list?
 
-<h2 id="exercises">Exercises</h2>
+37. What more complex data structure can perform the same basic
+    function as an association list, but more quickly?
+	
+## Exercises
 
-<ol>
-<li><p>Do something different depending on the type of an input. Error if
-not one of the choices.</p></li>
+1. Do something different depending on the type of an input. Error if
+   not one of the choices.
+   
+2. Truncate a list after the third element. (Note that this is a
+   horrible idea.)
+   
+3. Exercise 3.1, page 56 (PDF page 67).
 
-<li><p>Truncate a list after the third element. (Note that this is a
-horrible idea.)</p></li>
+4. Exercises 3.3 and 3.4, page 70 (PDF page 81): printing an
+   expression using dotted pair notation.
 
-<li><p>Exercise 3.1, page 56 (PDF page 67).</p></li>
+5. Write a function that takes in a hash table an a symbol, and
+   returns the value from the hash table. Unless the symbol is
+   `&#39;DANGER`, in which case it removes the associations for `&#39;MAD` and
+   `&#39;ROBOT` from the hash table.
 
-<li><p>Exercises 3.3 and 3.4, page 70 (PDF page 81): printing an
-expression using dotted pair notation.</p></li>
 
-<li><p>Write a function that takes in a hash table an a symbol, and
-returns the value from the hash table. Unless the symbol is
-<code>'DANGER</code>, in which case it removes the associations for <code>'MAD</code> and
-<code>'ROBOT</code> from the hash table.</p></li>
-</ol>
 
+</code></pre></div>
 
     
     

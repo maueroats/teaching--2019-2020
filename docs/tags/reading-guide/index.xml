@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>reading-guide on WY Computer Science</title>
@@ -17,7 +17,7 @@
       <pubDate>Sun, 17 Sep 2017 20:47:05 -0500</pubDate>
       
       <guid>https://wy-cs.website/ap-cs/haskell/ch04/ch04-reading-guide/</guid>
-      <description>Sections 4.1&amp;ndash;4.3  A pattern starts out with &amp;ldquo;dog&amp;rdquo;,&amp;ldquo;cat&amp;rdquo;, &amp;ldquo;cat dog&amp;rdquo;, &amp;ldquo;cat dog cat&amp;rdquo;, &amp;ldquo;cat dog cat cat dog&amp;rdquo;, &amp;ldquo;cat dog cat cat dog cat dog cat&amp;rdquo; and so on - each new string is created by appending the previous two with a space in between them. Write a function that takes in the number of the word in the sequence and returns the word, starting with 1 is &amp;ldquo;dog&amp;rdquo;.</description>
+      <description>Sections 4.1&amp;ndash;4.3   A pattern starts out with &amp;ldquo;dog&amp;rdquo;,&amp;ldquo;cat&amp;rdquo;, &amp;ldquo;cat dog&amp;rdquo;, &amp;ldquo;cat dog cat&amp;rdquo;, &amp;ldquo;cat dog cat cat dog&amp;rdquo;, &amp;ldquo;cat dog cat cat dog cat dog cat&amp;rdquo; and so on - each new string is created by appending the previous two with a space in between them. Write a function that takes in the number of the word in the sequence and returns the word, starting with 1 is &amp;ldquo;dog&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -26,9 +26,9 @@
       <pubDate>Sat, 09 Sep 2017 15:57:47 -0500</pubDate>
       
       <guid>https://wy-cs.website/ap-cs/haskell/ch02/ch02-reading-guide/</guid>
-      <description>Haskell Starting Out Questions A. Sections 2.1&amp;ndash;2.3  There is an annoyance with negative numbers that is mentioned.
- What is the correct way to write five times negative three in Haskell? What is a wrong way to do the same thing?  Logical operations are basic building blocks of programs. How do you write:
- and or not equals not equals  Haskell follows mostly the normal order of operations from mathematics.</description>
+      <description>Haskell Starting Out Questions A. Sections 2.1&amp;ndash;2.3   There is an annoyance with negative numbers that is mentioned.
+ What is the correct way to write five times negative three in Haskell? What is a wrong way to do the same thing?    Logical operations are basic building blocks of programs. How do you write:
+ and or not equals not equals    Haskell follows mostly the normal order of operations from mathematics.</description>
     </item>
     
     <item>
@@ -38,7 +38,10 @@
       
       <guid>https://wy-cs.website/ap-cs/haskell/ch03/ch03-reading-guide-haskell/</guid>
       <description>You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.
-Basics  How do you find the type of an expression (when using the interpreter)? What is the type of a string, written in correct Haskell type syntax? What is the type of the expression (5 == 5)? What is the type signature for a function that takes in an integer and puts out a string?</description>
+Basics  How do you find the type of an expression (when using the interpreter)?
+  What is the type of a string, written in correct Haskell type syntax?
+  What is the type of the expression (5 == 5)?
+  What is the type signature for a function that takes in an integer and puts out a string?</description>
     </item>
     
     <item>
@@ -47,10 +50,10 @@ Basics  How do you find the type of an expression (when using the interpreter)? 
       <pubDate>Mon, 02 Oct 2017 09:19:07 -0500</pubDate>
       
       <guid>https://wy-cs.website/ap-cs/haskell/ch06/ch06-reading-guide/</guid>
-      <description>Don&amp;rsquo;t do this while this note is here.
- Take in a list of numbers and output a list containing all of the numbers greater than 8.
- Take in a list of numbers and output a list containing all of the numbers between 10 and 20 (inclusive).
- Take in a list of numbers. Multiply all of the numbers in a list by 10 to make the output list.</description>
+      <description>Don&#39;t do this while this note is here.
+  Take in a list of numbers and output a list containing all of the numbers greater than 8.
+  Take in a list of numbers and output a list containing all of the numbers between 10 and 20 (inclusive).
+  Take in a list of numbers. Multiply all of the numbers in a list by 10 to make the output list.</description>
     </item>
     
     <item>
@@ -69,10 +72,9 @@ author writes functions that work on lists.&lt;/p&gt;</description>
       <pubDate>Sat, 09 Sep 2017 15:36:40 -0500</pubDate>
       
       <guid>https://wy-cs.website/ap-cs/haskell/ch01/ch01-reading-guide/</guid>
-      <description>Haskell introduction reading questions  Haskell is supposed to be a purely functional language. Unpack that:
- What does pure mean? What is the difference between functional and imperative? (The book is not so clear on this point. What do you think it says, in your own words?)  Haskell is lazy. What does this mean?
- Haskell is statically typed. This could be unpacked, too.
- What does typed mean?</description>
+      <description>Haskell introduction reading questions   Haskell is supposed to be a purely functional language. Unpack that:
+ What does pure mean? What is the difference between functional and imperative? (The book is not so clear on this point. What do you think it says, in your own words?)    Haskell is lazy. What does this mean?
+  Haskell is statically typed. This could be unpacked, too.</description>
     </item>
     
   </channel>

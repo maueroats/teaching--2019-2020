@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on WY Computer Science</title>
@@ -17,12 +17,12 @@
       <pubDate>Wed, 25 Oct 2017 19:55:58 -0500</pubDate>
       
       <guid>https://wy-cs.website/ftc/git/getting-started/</guid>
-      <description>Downloads for Home  Git package for all operating systems. Tortoise Git for Windows only.  Tutorials  A command line intro to git in 15 minutes.
- Git for Beginners.
- Beautiful and simple Git Guide.
-  Local instructions  Make an account on GitHub. Use your CPS email.
- Apply for an education account.
- Join our class in the GitHub Classroom. (Tell the teacher your username and get added manually.</description>
+      <description>Downloads for Home  Git package for all operating systems. Tortoise Git for Windows only.  Tutorials   A command line intro to git in 15 minutes.
+  Git for Beginners.
+  Beautiful and simple Git Guide.
+  Local instructions   Make an account on GitHub. Use your CPS email.
+  Apply for an education account.
+  Join our class in the GitHub Classroom.</description>
     </item>
     
     <item>

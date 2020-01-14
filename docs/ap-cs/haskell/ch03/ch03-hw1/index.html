@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1515,6 +1537,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1544,58 +1569,59 @@
     <p>The essentials of the Types and Typeclasses chapter are: writing type
 signatures for functions, reading string inputs with the <code>Read</code> class,
 and dealing with Integral to Fractional conversions when they are needed.</p>
-
 <ol>
-<li><p>You can explicitly say what type a number is by using two
+<li>
+<p>You can explicitly say what type a number is by using two
 colons and the type you want - for example, (5::Int) or
 (5::Float). Find the types of each of the operations below, or say <em>in English</em>
 why it does not work. Do not just copy error messages.</p>
-
 <ul>
 <li>(/)</li>
 <li>(5::Int) / (10::Int)</li>
 <li>(5::Int) / (10::Float)</li>
-<li>(5::Float) / (10::Float)
-<br /></li>
-</ul></li>
-
-<li><p>Write a function to find the average of numbers in a list. This
+<li>(5::Float) / (10::Float)</li>
+</ul>
+</li>
+<li>
+<p>Write a function to find the average of numbers in a list. This
 should bring up the difficulty that you cannot divide an integer by an integer(!).</p>
-
-<p>Examples: <code>avg [10,20]</code> should give <code>15</code> or <code>15.0</code>, and <code>avg [3.5, 4.5]</code> should give <code>4.0</code>.</p></li>
-
-<li><p>Write a signature and function body for <code>add10Word</code> which reads an
+<p>Examples: <code>avg [10,20]</code> should give <code>15</code> or <code>15.0</code>, and <code>avg [3.5, 4.5]</code> should give <code>4.0</code>.</p>
+</li>
+<li>
+<p>Write a signature and function body for <code>add10Word</code> which reads an
 integer from a string and adds 10 to it.</p>
-
-<p>Example: <code>add10Word &quot;15&quot;</code> should produce <code>25</code>.</p></li>
-
-<li><p>Write a signature and function body for <code>numberInSentence</code>, which
+<p>Example: <code>add10Word &quot;15&quot;</code> should produce <code>25</code>.</p>
+</li>
+<li>
+<p>Write a signature and function body for <code>numberInSentence</code>, which
 takes a number and returns the sentence &ldquo;I have ___ pounds of flour.&rdquo;</p>
-
-<p>Example: <code>numberInSentence 5.5</code> reports &ldquo;I have 5.5 pounds of flour.&rdquo;</p></li>
-
-<li><p>Write a signature and function body for <code>doubleDebt</code> which takes a
+<p>Example: <code>numberInSentence 5.5</code> reports &ldquo;I have 5.5 pounds of flour.&rdquo;</p>
+</li>
+<li>
+<p>Write a signature and function body for <code>doubleDebt</code> which takes a
 String and puts out a Float. The String contains a floating point
 number that represents how much money someone owes, and the Float output
 is twice that much.</p>
-
-<p>Example: <code>doubleDebt &quot;50.10&quot;</code> produces <code>100.20</code>.</p></li>
-
-<li><p>Write a signature and function body for <code>sampleStdDev</code> that finds
-the <a href="https://en.wikipedia.org/wiki/Standard_deviation">sample standard deviation</a> of a list of
+<p>Example: <code>doubleDebt &quot;50.10&quot;</code> produces <code>100.20</code>.</p>
+</li>
+<li>
+<p>Write a signature and function body for <code>sampleStdDev</code> that finds
+the [sample standard deviation]
+(<a href="https://en.wikipedia.org/wiki/Standard_deviation">https://en.wikipedia.org/wiki/Standard_deviation</a>) of a list of
 (the right kind of) numbers. Check the type signature for square
 root (<a href="http://hoogle.haskell.org/?hoogle=sqrt&amp;scope=set%3Ahaskell-platform"><code>sqrt</code></a>)!</p>
-
-<p>Please do not skip this problem with the excuse that you do not know how to find standard deviation. Look it up or ask someone who knows!</p></li>
-
-<li><p><em>Possibly Challenging</em>: Write the function <code>median</code> to find the
+<p>Please do not skip this problem with the excuse that you do not know how to find standard deviation. Look it up or ask someone who knows!</p>
+</li>
+<li>
+<p><em>Possibly Challenging</em>: Write the function <code>median</code> to find the
 median of a list of items that can be ordered. (Use the type <code>Int</code>, if
-you prefer.) Assume the list is sorted.</p></li>
+you prefer.) Assume the list is sorted.</p>
+</li>
 </ol>
-
 <p>We will learn how to sort a list later, but it goes like this:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#00a8c8">import</span> <span style="color:#111">Data.List</span>
-    <span style="color:#111">result</span> <span style="color:#f92672">=</span> <span style="color:#111">sort</span> <span style="color:#111">xs</span></code></pre></div>
+    <span style="color:#111">result</span> <span style="color:#f92672">=</span> <span style="color:#111">sort</span> <span style="color:#111">xs</span>
+</code></pre></div>
 
     
     

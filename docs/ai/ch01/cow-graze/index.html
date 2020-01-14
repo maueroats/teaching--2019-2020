@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,28 +1536,21 @@
     
     
     
-    
-
-<ul>
+    <ul>
 <li>A pasture looks like <code>(....)</code></li>
 <li>Pastures either have grass (written <code>'G</code>) and/or cows (written <code>'COW</code>), or other
 sub-pastures inside them.</li>
 <li>The <code>GRAZE</code> function takes pastures with at least one cow and
 removes all of their grass. It leaves pastures without cows unchanged.</li>
 </ul>
-
 <h2 id="assignment">Assignment</h2>
-
 <p>Write the <code>GRAZE</code> function.</p>
-
 <p>Extra credit: cows in a pasture without at least one grass die (are
 removed), leaving only the empty pasture.</p>
-
 <h2 id="example">Example</h2>
-
 <p>There are three pastures with grass in this example, two
-  inside a pasture that only has sub-pastures.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">|-------------|
+inside a pasture that only has sub-pastures.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">|-------------|
 |  (1)        |
 | G COW COW   |
 | G G G       |
@@ -1546,17 +1561,16 @@ removed), leaving only the empty pasture.</p>
 ||G  |  |G G ||
 ||(2)|  |G G ||
 ||---|  |----||
-|-------------|</pre></div>
-<p>Written in Lisp:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define 
+|-------------|
+</code></pre></div><p>Written in Lisp:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define 
   pasture-ex
     &#39;((G COW COW G G G)
       ((G G G G G)
-       (G G G COW))))</pre></div>
-<h2 id="tests">Tests</h2>
-
+       (G G G COW))))
+</code></pre></div><h2 id="tests">Tests</h2>
 <p>Cow is C, grass is G.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(define-test test-graze
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define-test test-graze
   &#34;Make sure the grazing works.&#34;
   (assert-equal &#39;(C C) (graze &#39;(G C C G G)))
   (assert-equal &#39;((G G G G) (C C))
@@ -1566,7 +1580,9 @@ removed), leaving only the empty pasture.</p>
                    (C C)))
                 (graze &#39;((G C C G G)
                         ((G G G G)
-                         (G C C G G))))))</pre></div>
+                         (G C C G G))))))
+
+</code></pre></div>
 
     
     

@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1510,6 +1532,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1536,38 +1561,36 @@
     
     
     
-    
-
-<p>Learn: <code>scanl</code>.</p>
-
-<p>Find the first 40 partial sums of the sequence 1+<sup>1</sup>&frasl;<sub>2</sub>+<sup>1</sup>&frasl;<sub>3</sub>+<sup>1</sup>&frasl;<sub>4</sub>+&hellip; by
+    <p>Learn: <code>scanl</code>.</p>
+<p>Find the first 40 partial sums of the sequence 1+1/2+1/3+1/4+&hellip; by
 using <code>scanl</code>.</p>
-
 <h2 id="exercises">Exercises</h2>
-
 <ol>
-<li><p>Take in a list <code>[(Float,Bool)]</code> of <code>(gpa, admitted)</code> student data, find all of the
-pairs where the student was admitted with a gpa of less than 3.0.</p></li>
-
-<li><p>Shopping. Given $200 and a list of <code>Int</code> prices of items, find:</p>
-
+<li>
+<p>Take in a list <code>[(Float,Bool)]</code> of <code>(gpa, admitted)</code> student data, find all of the
+pairs where the student was admitted with a gpa of less than 3.0.</p>
+</li>
+<li>
+<p>Shopping. Given $200 and a list of <code>Int</code> prices of items, find:</p>
 <p>a. How much money remains after buying each item possible, in order
 from left to right.</p>
-
 <p>b. A list of how much you have at the start, and then your
 remaining balance after each item.</p>
-
 <p>Examples:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">shopA 200 [90,20,60,150,5] == 25
-shopB 200 [90,20,60,150,5] == [200,110,90,30,30,25]</pre></div></li>
-
-<li><p>Progress Bar. Given a list of integers (download sizes), produce a list of strings
+<pre><code> shopA 200 [90,20,60,150,5] == 25
+ shopB 200 [90,20,60,150,5] == [200,110,90,30,30,25]
+</code></pre>
+</li>
+<li>
+<p>Progress Bar. Given a list of integers (download sizes), produce a list of strings
 of &lsquo;X&rsquo; indicating what percent of the total number has been
 downloaded so far (so <em>cumulative</em> percent). Each X should
 represent 5 percent of the total amount. Round the percents down to
 the nearest multiple of five.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">progressBar [5,8,12,15,10] ==
-   [&#34;&#34;, &#34;XX&#34;,&#34;XXXXX&#34;,&#34;XXXXXXXXXXXXXXXX&#34;,&#34;XXXXXXXXXXXXXXXXXXXX&#34;]</pre></div></li>
+<pre><code> progressBar [5,8,12,15,10] ==
+    [&quot;&quot;, &quot;XX&quot;,&quot;XXXXX&quot;,&quot;XXXXXXXXXXXXXXXX&quot;,&quot;XXXXXXXXXXXXXXXXXXXX&quot;]
+</code></pre>
+</li>
 </ol>
 
 

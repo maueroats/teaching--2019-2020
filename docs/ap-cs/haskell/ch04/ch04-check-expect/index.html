@@ -591,6 +591,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1092,6 +1107,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1514,6 +1536,9 @@
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
   
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option>
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -1540,23 +1565,17 @@
     
     
     
-    
-
-<p>This page explains how to write <code>check-expect</code> in Haskell in a basic
+    <p>This page explains how to write <code>check-expect</code> in Haskell in a basic
 way that can be used on repl.it (or anywhere). This method works for
 small numbers of tests. Hopefully it work well enough for now.</p>
-
 <p>If you have your own computer, you can learn to use the
 <a href="https://hackage.haskell.org/package/HUnit">HUnit</a> testing system.</p>
-
 <ol>
 <li>Write out tests in a list so each gives True when it passes.</li>
 <li>Define a testing main function <code>test_main</code>.</li>
 <li>Run the <code>test_main</code> yourself.</li>
 </ol>
-
 <h2 id="example-of-testing">Example of Testing</h2>
-
 <p>This program is supposed to give True if every 5 is followed by
 a 6. It has a bug in it which we can uncover by testing.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- Is every five followed immediately by a six?</span>
@@ -1565,36 +1584,33 @@ a 6. It has a bug in it which we can uncover by testing.</p>
 <span style="color:#75af00">fiveSix</span> <span style="color:#111">(</span><span style="color:#ae81ff">5</span><span style="color:#00a8c8">:</span><span style="color:#ae81ff">6</span><span style="color:#00a8c8">:</span><span style="color:#111">xs</span><span style="color:#111">)</span> <span style="color:#f92672">=</span> <span style="color:#111">fiveSix</span> <span style="color:#111">xs</span>
 <span style="color:#75af00">fiveSix</span> <span style="color:#111">(</span><span style="color:#ae81ff">5</span><span style="color:#00a8c8">:</span><span style="color:#111">ys</span><span style="color:#111">)</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">False</span>
 <span style="color:#75af00">fiveSix</span> <span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#00a8c8">:</span><span style="color:#111">b</span><span style="color:#00a8c8">:</span><span style="color:#111">xs</span><span style="color:#111">)</span> <span style="color:#f92672">=</span> <span style="color:#111">fiveSix</span> <span style="color:#111">xs</span>
-<span style="color:#75af00">fiveSix</span> <span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#00a8c8">:</span><span style="color:#111">xs</span><span style="color:#111">)</span> <span style="color:#f92672">=</span> <span style="color:#111">fiveSix</span> <span style="color:#111">xs</span></code></pre></div>
-<p>Testing should make sure that the basic situation works, then check
+<span style="color:#75af00">fiveSix</span> <span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#00a8c8">:</span><span style="color:#111">xs</span><span style="color:#111">)</span> <span style="color:#f92672">=</span> <span style="color:#111">fiveSix</span> <span style="color:#111">xs</span>
+</code></pre></div><p>Testing should make sure that the basic situation works, then check
 the &ldquo;edge&rdquo; cases, usually involving the start and end of the list.</p>
-
 <ol>
 <li>Does it work in basic cases?</li>
 <li>Does it work when there is a 5,6 at the start?</li>
 <li>Does it work when there is a 5,6 at the end?</li>
 <li>What if a 5 by itself is at the start?</li>
-
-<li><p>What if a 5 by itself is at the end?</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">test56</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span> <span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">]</span>
-      <span style="color:#111">,</span><span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">8</span><span style="color:#111">]</span>
-      <span style="color:#111">,</span><span style="color:#00a8c8">False</span> <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">8</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
-      <span style="color:#111">,</span><span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">8</span><span style="color:#111">]</span>  <span style="color:#75715e">-- end basic</span>
-      <span style="color:#111">,</span><span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">]</span>
-      <span style="color:#111">,</span><span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">]</span>
-      <span style="color:#111">,</span><span style="color:#00a8c8">False</span> <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">]</span>
-      <span style="color:#111">,</span><span style="color:#00a8c8">False</span> <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">]</span> 
-      <span style="color:#111">]</span></code></pre></div></li>
+<li>What if a 5 by itself is at the end?</li>
 </ol>
-
-<p>The testing function:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">test56</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span> <span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">]</span>
+          <span style="color:#111">,</span><span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">8</span><span style="color:#111">]</span>
+          <span style="color:#111">,</span><span style="color:#00a8c8">False</span> <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">8</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
+          <span style="color:#111">,</span><span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">7</span><span style="color:#111">,</span><span style="color:#ae81ff">8</span><span style="color:#111">]</span>  <span style="color:#75715e">-- end basic</span>
+          <span style="color:#111">,</span><span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">]</span>
+          <span style="color:#111">,</span><span style="color:#00a8c8">True</span>  <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">6</span><span style="color:#111">]</span>
+          <span style="color:#111">,</span><span style="color:#00a8c8">False</span> <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">]</span>
+          <span style="color:#111">,</span><span style="color:#00a8c8">False</span> <span style="color:#f92672">==</span> <span style="color:#111">fiveSix</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">]</span> 
+          <span style="color:#111">]</span>
+</code></pre></div><p>The testing function:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">testMain</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">IO</span><span style="color:#111">()</span>
 <span style="color:#75af00">testMain</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">do</span>
-  <span style="color:#111">putStr</span> <span style="color:#d88200">&#34;All tests passed? &#34;</span>
-  <span style="color:#111">putStrLn</span> <span style="color:#f92672">$</span> <span style="color:#00a8c8">case</span> <span style="color:#111">(</span><span style="color:#111">and</span> <span style="color:#111">test56</span><span style="color:#111">)</span> <span style="color:#00a8c8">of</span> <span style="color:#00a8c8">True</span> <span style="color:#f92672">-&gt;</span> <span style="color:#d88200">&#34;YES&#34;</span><span style="color:#111">;</span> <span style="color:#00a8c8">False</span> <span style="color:#f92672">-&gt;</span> <span style="color:#d88200">&#34;NO&#34;</span><span style="color:#111">;</span>
-  <span style="color:#111">putStrLn</span> <span style="color:#d88200">&#34;Results:&#34;</span>
-  <span style="color:#111">print</span> <span style="color:#f92672">$</span> <span style="color:#111">map</span> <span style="color:#111">show</span> <span style="color:#111">test56</span></code></pre></div>
-<p>You will see that this method has a lot of repetition. You could make
+  <span style="color:#111">putStr</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">All tests passed? </span><span style="color:#d88200">&#34;</span>
+  <span style="color:#111">putStrLn</span> <span style="color:#f92672">$</span> <span style="color:#00a8c8">case</span> <span style="color:#111">(</span><span style="color:#111">and</span> <span style="color:#111">test56</span><span style="color:#111">)</span> <span style="color:#00a8c8">of</span> <span style="color:#00a8c8">True</span> <span style="color:#f92672">-&gt;</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">YES</span><span style="color:#d88200">&#34;</span><span style="color:#111">;</span> <span style="color:#00a8c8">False</span> <span style="color:#f92672">-&gt;</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">NO</span><span style="color:#d88200">&#34;</span><span style="color:#111">;</span>
+  <span style="color:#111">putStrLn</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">Results:</span><span style="color:#d88200">&#34;</span>
+  <span style="color:#111">print</span> <span style="color:#f92672">$</span> <span style="color:#111">map</span> <span style="color:#111">show</span> <span style="color:#111">test56</span>
+</code></pre></div><p>You will see that this method has a lot of repetition. You could make
 functions that would handle the repetition for you. That is one of the
 things the HUnit package would do.</p>
 

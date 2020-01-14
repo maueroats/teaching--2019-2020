@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,29 +1540,29 @@
 printouts from individual functions by removing their <code>:names</code> from
 the <code>*dbg-ids*</code> variable. See the tests for
 <code>achieve-all</code> for examples of the use of these functions.</p>
-
 <p>The difference between them is that <code>dbg1</code> returns the value that you
 give it, so you can  sneak it in to show what is happening as you are
 using or returning a value.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defvar</span> <span style="color:#111">*dbg-ids*</span> <span style="color:#f92672">&#39;</span><span style="color:#111">()</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defvar</span> <span style="color:#111">*dbg-ids*</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#111">)</span>
   <span style="color:#d88200">&#34;Identifiers you are debugging&#34;</span><span style="color:#111">)</span>
 
 <span style="color:#111">(</span><span style="color:#111">setf</span> <span style="color:#111">*dbg-ids*</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">:achieve-all</span> <span style="color:#d88200">:mock-achieve-one</span>
-                  <span style="color:#d88200">:achieve-one</span> <span style="color:#d88200">:mock-achieve-all</span><span style="color:#111">))</span>
+                  <span style="color:#d88200">:achieve-one</span> <span style="color:#d88200">:mock-achieve-all</span><span style="color:#111">)</span><span style="color:#111">)</span>
 
 <span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">dbg</span> <span style="color:#111">(</span><span style="color:#111">id</span> <span style="color:#111">indent</span> <span style="color:#111">format-string</span> <span style="color:#00a8c8">&amp;rest</span> <span style="color:#111">args</span><span style="color:#111">)</span>
   <span style="color:#111">(</span><span style="color:#111">when</span> <span style="color:#111">(</span><span style="color:#75af00">member</span> <span style="color:#111">id</span> <span style="color:#111">*dbg-ids*</span><span style="color:#111">)</span>
     <span style="color:#111">(</span><span style="color:#75af00">fresh-line</span> <span style="color:#111">*debug-io*</span><span style="color:#111">)</span>
-    <span style="color:#111">(</span><span style="color:#111">dotimes</span> <span style="color:#111">(</span><span style="color:#111">i</span> <span style="color:#111">(</span><span style="color:#75af00">length</span> <span style="color:#111">indent</span><span style="color:#111">))</span> <span style="color:#111">(</span><span style="color:#75af00">princ</span> <span style="color:#d88200">&#34;  &#34;</span> <span style="color:#111">*debug-io*</span><span style="color:#111">))</span>
-    <span style="color:#111">(</span><span style="color:#75af00">apply</span> <span style="color:#75af00">#&#39;format</span> <span style="color:#111">*debug-io*</span>
+    <span style="color:#111">(</span><span style="color:#111">dotimes</span> <span style="color:#111">(</span><span style="color:#111">i</span> <span style="color:#111">(</span><span style="color:#75af00">length</span> <span style="color:#111">indent</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#75af00">princ</span> <span style="color:#d88200">&#34;  &#34;</span> <span style="color:#111">*debug-io*</span><span style="color:#111">)</span><span style="color:#111">)</span>
+    <span style="color:#111">(</span><span style="color:#75af00">apply</span> <span style="color:#75af00">#&#39;</span><span style="color:#75af00">format</span> <span style="color:#111">*debug-io*</span>
            <span style="color:#111">(</span><span style="color:#75af00">concatenate</span> <span style="color:#d88200">&#39;string</span> <span style="color:#d88200">&#34;[~a] &#34;</span> <span style="color:#111">format-string</span><span style="color:#111">)</span>
-           <span style="color:#111">id</span> <span style="color:#111">args</span><span style="color:#111">)))</span>
+           <span style="color:#111">id</span> <span style="color:#111">args</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
 
 <span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">dbg1</span> <span style="color:#111">(</span><span style="color:#111">id</span> <span style="color:#111">indent</span> <span style="color:#111">format-string</span> <span style="color:#111">value</span><span style="color:#111">)</span>
   <span style="color:#d88200">&#34;Passes VALUE to dbg, also gives VALUE as result.&#34;</span>
   <span style="color:#111">(</span><span style="color:#00a8c8">progn</span>
     <span style="color:#111">(</span><span style="color:#111">dbg</span> <span style="color:#111">id</span> <span style="color:#111">indent</span> <span style="color:#111">format-string</span> <span style="color:#111">value</span><span style="color:#111">)</span>
-    <span style="color:#111">value</span><span style="color:#111">))</span></code></pre></div>
+    <span style="color:#111">value</span><span style="color:#111">)</span><span style="color:#111">)</span>
+</code></pre></div>
 
     
     

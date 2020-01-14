@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item parent haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1519,7 +1541,6 @@
     
     
     <p>We are modifying our pattern matcher to return an association list.</p>
-
 <ul>
 <li>No match should return <code>NIL</code></li>
 <li>No variables to match should return <code>(list (T . T))</code> or you could put
@@ -1528,11 +1549,12 @@ still be an association list, which means <code>(list T)</code> is not what we
 want.</li>
 <li>Variable matching should return <code>(list ('?var . 'value))</code>.</li>
 </ul>
-
 <p>Your job for tonight is to write the 1 item pattern matcher.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(assert-equal (list (T . T))  (pat-match &#39;a &#39;a))
-(assert-equal NIL (pat-match &#39;a &#39;b))
-(assert-equal (list (&#39;?x . &#39;food)) (pat-match &#39;?x &#39;food))</pre></div>
+<pre><code>(assert-equal (list (T . T))  (pat-match 'a 'a))
+(assert-equal NIL (pat-match 'a 'b))
+(assert-equal (list ('?x . 'food)) (pat-match '?x 'food))
+</code></pre>
+
 
     
     

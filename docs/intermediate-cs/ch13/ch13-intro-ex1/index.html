@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1091,6 +1106,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1481,6 +1503,7 @@
       <option value="/intermediate-cs/ch13/ch13-exc/" >-- 13. Exercises C</option>
       <option value="/intermediate-cs/ch13/ch13-intro-ex1/"  selected>-- 13. Intro Exercises 1</option>
       <option value="/intermediate-cs/ch13/ch13-intro-ex2/" >-- 13. Intro Exercises 2</option>
+      <option value="/intermediate-cs/ch13/ch13-intro-ex3/" >-- 13. Intro Exercises 3</option>
       <option value="/intermediate-cs/ch13/ch13-exa/" >-- Ch13 Exercises</option>
   
     <option value="/intermediate-cs/ch15/" >
@@ -1519,35 +1542,39 @@
     
     
     <ol>
-<li><p>What is wrong with this code?</p>
+<li>What is wrong with this code?</li>
+</ol>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; hit-snooze?: boolean number -&gt; boolean</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">hit-snooze?</span> <span style="color:#111">sleepy?</span> <span style="color:#00a8c8">time</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#00a8c8">and</span> <span style="color:#111">(</span><span style="color:#111">boolean=?</span> <span style="color:#111">sleepy?</span> <span style="color:#d88200">&#34;true&#34;</span><span style="color:#111">)</span>
-   <span style="color:#111">(</span><span style="color:#111">&gt;</span> <span style="color:#00a8c8">time</span> <span style="color:#ae81ff">700</span><span style="color:#111">)))</span></code></pre></div></li>
-
-<li><p>Simplify or explain and correct the error.</p>
-
+  <span style="color:#111">(</span><span style="color:#00a8c8">and</span> <span style="color:#111">(</span><span style="color:#111">boolean=?</span> <span style="color:#111">sleepy?</span> <span style="color:#d88200">&#34;</span><span style="color:#d88200">true</span><span style="color:#d88200">&#34;</span><span style="color:#111">)</span>
+       <span style="color:#111">(</span><span style="color:#111">&gt;</span> <span style="color:#00a8c8">time</span> <span style="color:#ae81ff">700</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><ol start="2">
+<li>
+<p>Simplify or explain and correct the error.</p>
 <ul>
 <li><code>(boolean=? (&gt; 17 24) #false)</code></li>
 <li><code>(boolean=? (= 1 1) &quot;true&quot;)</code></li>
 <li><code>(boolean=? practiced-piano? true)</code></li>
-<li><code>(boolean=? hungry? false)</code>
-<br /></li>
-</ul></li>
-
-<li><p>Sometimes you get to sleep a lot (return true). That happens if you
+<li><code>(boolean=? hungry? false)</code></li>
+</ul>
+</li>
+<li>
+<p>Sometimes you get to sleep a lot (return true). That happens if you
 did not have homework, did not do the homework you have, or the
 homework was easy.</p>
-
-<p>Write a function to figure out if you slept a lot.</p>
+<pre><code>Write a function to figure out if you slept a lot.
+</code></pre>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">slept-lots?</span> <span style="color:#111">had-hw?</span> <span style="color:#111">did-hw?</span> <span style="color:#111">was-easy?</span><span style="color:#111">)</span>
-  <span style="color:#00a8c8">...</span><span style="color:#111">)</span></code></pre></div></li>
-
-<li><p>(Shape Sorter I.) Write <code>fit-rect?: image -&gt; boolean</code> that returns
-true if the image fits inside a 150x100 rectangle.</p></li>
-
-<li><p>(Shape Sorter II.) Write <code>ibr?: image -&gt; boolean</code> that returns true
-if the image is a (pure) blue rectangle.</p></li>
+   <span style="color:#00a8c8">...</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div></li>
+<li>
+<p>(Shape Sorter I.) Write <code>fit-rect?: image -&gt; boolean</code> that returns
+true if the image fits inside a 150x100 rectangle.</p>
+</li>
+<li>
+<p>(Shape Sorter II.) Write <code>ibr?: image -&gt; boolean</code> that returns true
+if the image is a (pure) blue rectangle.</p>
+</li>
 </ol>
 
 

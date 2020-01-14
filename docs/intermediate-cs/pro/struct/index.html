@@ -588,6 +588,21 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-ex1/">
+            Strategy 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -1090,6 +1105,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/ch13/ch13-intro-ex3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch13/ch13-intro-ex3/">
+            13. Intro Exercises 3
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/ch13/ch13-exa/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch13/ch13-exa/">
@@ -1518,41 +1540,35 @@
     
     
     
-    
-
-<p>This is Chapter 20 in the text. Since this is the pro section, I
+    <p>This is Chapter 20 in the text. Since this is the pro section, I
 include details you would not usually see.</p>
-
 <ol>
 <li>Using <code>#lang racket</code> allows some advanced features at a cost of
 some complexity.</li>
 <li>Every struct needs <code>#:transparent</code>. This is best explained as a
 design mistake in the Racket language.</li>
-
-<li><p>Read about
+<li>Read about
 <a href="https://docs.racket-lang.org/reference/struct-copy.html?q=struct-copy#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._struct-copy%29%29"><code>struct-copy</code></a>
-or follow the examples below.</p>
+or follow the examples below.</li>
+</ol>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#f92672">#lang </span><span style="color:#111">racket</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">require</span> <span style="color:#111">lang/posn</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define-struct</span> <span style="color:#111">m</span> <span style="color:#111">(</span><span style="color:#111">pos</span> <span style="color:#111">vel</span> <span style="color:#111">color</span><span style="color:#111">)</span> <span style="color:#00a8c8">#:transparent</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">example-1</span>
-<span style="color:#111">(</span><span style="color:#111">make-m</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">12</span><span style="color:#111">)</span> 
+    <span style="color:#111">(</span><span style="color:#111">make-m</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">12</span><span style="color:#111">)</span> 
 	        <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">-1</span><span style="color:#111">)</span> 
-			<span style="color:#111">(</span><span style="color:#111">make-color</span> <span style="color:#ae81ff">255</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">0</span><span style="color:#111">)))</span>
+			<span style="color:#111">(</span><span style="color:#111">make-color</span> <span style="color:#ae81ff">255</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">0</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#111">)</span>
 
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">example-2</span>
-<span style="color:#111">(</span><span style="color:#00a8c8">struct-copy</span> <span style="color:#111">m</span> <span style="color:#111">example-1</span> <span style="color:#111">[</span><span style="color:#111">vel</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">-3</span> <span style="color:#ae81ff">4</span><span style="color:#111">)]))</span></code></pre></div></li>
-</ol>
-
-<h2 id="check-expects">Check-expects</h2>
-
+    <span style="color:#111">(</span><span style="color:#00a8c8">struct-copy</span> <span style="color:#111">m</span> <span style="color:#111">example-1</span> <span style="color:#111">[</span><span style="color:#111">vel</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">-3</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span><span style="color:#111">]</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="check-expects">Check-expects</h2>
 <p>In <code>#lang racket</code> you need to do checks using the
 <a href="https://docs.racket-lang.org/rackunit/api.html?q=rackunit">rackunit</a>
 module.</p>
-
 <p>You need to use <code>check-equal?</code> or do what I do and create an alias for <code>check-expect</code>.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">require</span> <span style="color:#111">rackunit</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">check-expect</span> <span style="color:#111">check-equal?</span><span style="color:#111">)</span></code></pre></div>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">check-expect</span> <span style="color:#111">check-equal?</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
 
     
     
