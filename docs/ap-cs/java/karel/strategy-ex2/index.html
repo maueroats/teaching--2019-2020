@@ -1546,7 +1546,7 @@ class has to find out which <code>UrRobot</code>s in its constructor.</p>
 <pre><code> public static void demo() {
      UrRobot x = new UrRobot(3,1,Directions.East,5);
      UrRobot y = new UrRobot(5,1,Directions.South,2);
-     Controller c = new Controller(x,y);
+     DoubleDot c = new DoubleDot(x,y);
      c.doIt();
      // x puts a beeper and moves to (3,2)
      // y puts a beeper and moves to (4,1)
