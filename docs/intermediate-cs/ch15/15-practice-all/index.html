@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>15 Practice All :: WY Computer Science</title>
+<title>15. Practice All :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -1173,7 +1173,7 @@
       <li data-nav-id="/intermediate-cs/ch15/15-practice-all/" class="dd-item active">
         <div>
           <a href="/intermediate-cs/ch15/15-practice-all/">
-            15 Practice All
+            15. Practice All
           </a>
         </div>
     </li>
@@ -1515,7 +1515,7 @@
       <option value="/intermediate-cs/ch15/15-graphing-review/" >-- 15. Graphing Review</option>
       <option value="/intermediate-cs/ch15/15-heatmap/" >-- 15. Heatmap</option>
       <option value="/intermediate-cs/ch15/15-heat-contour/" >-- 15. Heatmap with Contours</option>
-      <option value="/intermediate-cs/ch15/15-practice-all/"  selected>-- 15 Practice All</option>
+      <option value="/intermediate-cs/ch15/15-practice-all/"  selected>-- 15. Practice All</option>
       <option value="/intermediate-cs/ch15/15-practice-quiz/" >-- 15. Practice Quiz</option>
   
     <option value="/intermediate-cs/ch20/" >
@@ -1545,7 +1545,7 @@
     </div>
     
 
-    <h1>15 Practice All</h1>
+    <h1>15. Practice All</h1>
 
     
     
@@ -1562,13 +1562,13 @@ conditionals inside of conditionals, make a helper function.</p>
 <ol>
 <li>Simplify:</li>
 </ol>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">mess-1</span> <span style="color:#111">in-bed?</span> <span style="color:#111">alarm-time</span> <span style="color:#00a8c8">time</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#00a8c8">cond</span> <span style="color:#111">[</span><span style="color:#111">(</span><span style="color:#111">boolean=?</span> <span style="color:#111">in-bed</span> <span style="color:#111">true</span><span style="color:#111">)</span>
-         <span style="color:#111">(</span><span style="color:#00a8c8">cond</span> <span style="color:#111">[</span><span style="color:#111">(</span><span style="color:#111">&lt;</span> <span style="color:#111">alarm-time</span> <span style="color:#00a8c8">time</span><span style="color:#111">)</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">mess-1</span> <span style="color:#111">in-bed?</span> <span style="color:#111">alarm-time</span> <span style="color:#111">clock-time</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#00a8c8">cond</span> <span style="color:#111">[</span><span style="color:#111">(</span><span style="color:#111">boolean=?</span> <span style="color:#111">in-bed?</span> <span style="color:#111">true</span><span style="color:#111">)</span>
+         <span style="color:#111">(</span><span style="color:#00a8c8">cond</span> <span style="color:#111">[</span><span style="color:#111">(</span><span style="color:#111">&lt;</span> <span style="color:#111">clock-time</span> <span style="color:#111">alarm-time</span><span style="color:#111">)</span>
                 <span style="color:#d88200">&#34;</span><span style="color:#d88200">sleep</span><span style="color:#d88200">&#34;</span><span style="color:#111">]</span>
                <span style="color:#111">[</span><span style="color:#00a8c8">else</span>
                 <span style="color:#d88200">&#34;</span><span style="color:#d88200">wake up</span><span style="color:#d88200">&#34;</span><span style="color:#111">]</span><span style="color:#111">)</span><span style="color:#111">]</span>
-        <span style="color:#111">[</span><span style="color:#111">(</span><span style="color:#111">boolean=?</span> <span style="color:#111">in-bed</span> <span style="color:#00a8c8">false</span><span style="color:#111">)</span>
+        <span style="color:#111">[</span><span style="color:#111">(</span><span style="color:#111">boolean=?</span> <span style="color:#111">in-bed?</span> <span style="color:#00a8c8">false</span><span style="color:#111">)</span>
          <span style="color:#d88200">&#34;</span><span style="color:#d88200">wake up</span><span style="color:#d88200">&#34;</span><span style="color:#111">]</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><ol start="2">
 <li>Simplify:</li>
@@ -1589,7 +1589,17 @@ conditionals inside of conditionals, make a helper function.</p>
 <p>Book problem 15.5.4 (<code>who-won</code>) and 15.5.5 (<code>4-votes-&gt;winner</code>),
 page 219 (pdf page 230).</p>
 </li>
+<li>
+<p>There are three circles of radius 150 drawn on a 500x500
+background. The centers are red (250,325), green (175,175), and
+blue (325,175). Make the area where circles overlap have all of the
+colors from the circles, so where red and green overlap the color
+is (make-color 255 255 0).</p>
+ <figure>
+ <img src="three-circ.png" width="200"/> 
+</li>
 </ol>
+</figure>
 
 
     

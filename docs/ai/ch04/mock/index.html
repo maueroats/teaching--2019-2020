@@ -1173,7 +1173,7 @@
       <li data-nav-id="/intermediate-cs/ch15/15-practice-all/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch15/15-practice-all/">
-            15 Practice All
+            15. Practice All
           </a>
         </div>
     </li>
@@ -1586,8 +1586,19 @@ check functions that have a <code>(random x)</code> in them because well it's
 random so there should be no feasible way to check it. The solution
 uses something very similar to mocking, and with a little adjustment,
 it can actually serve as a good example of mocking.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<!--
+This is that post:
+
+```lisp
+(defun nonrandom-pick-word (n)
+  (elt '("go" "fish" "fry") 
+       n))
+(define-test test-word 
+  (assert-equal "fish" (nonrandom-pick-word 1)))
+(defun random-pick-word ()
+  (nonrandom-pick-word (random 3)))
+```
+-->
 <p>Okay, so back from the beginning let use the example given there. So
 let's say that we want to recreate the <code>random-pick-word</code> function from
 the example earlier.</p>

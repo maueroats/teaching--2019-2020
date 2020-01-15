@@ -1173,7 +1173,7 @@
       <li data-nav-id="/intermediate-cs/ch15/15-practice-all/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch15/15-practice-all/">
-            15 Practice All
+            15. Practice All
           </a>
         </div>
     </li>
@@ -1552,10 +1552,15 @@
     
     
     
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$'], ['\\[','\\]']]
+  }});
+</script>
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
+</script>
 <h2 id="signatures">Signatures</h2>
 <p>Remember that when you are describing a model which is a string, you
 should write model(string) instead of just model or string. This makes
@@ -1601,7 +1606,9 @@ between $-10n$ and $50n$.</li>
 <p>Create a rectangle with a random width from 100 to 400 and a random
 height from 200 to 300. Put a circle in the middle of the rectangle
 that has half the height of the rectangle.</p>
-<!-- raw HTML omitted -->
+<figure>
+    <img src="red-sun-random.png"/> 
+</figure>
 <h2 id="math">Math</h2>
 <ol>
 <li>Write a Racket function to compute $g(x) = \sqrt{7-3x}$.</li>

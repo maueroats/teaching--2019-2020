@@ -1173,7 +1173,7 @@
       <li data-nav-id="/intermediate-cs/ch15/15-practice-all/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch15/15-practice-all/">
-            15 Practice All
+            15. Practice All
           </a>
         </div>
     </li>
@@ -1555,10 +1555,15 @@
     
     
     
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$'], ['\\[','\\]']]
+  }});
+</script>
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
+</script>
 <p>The model is a time we will call $t$. The time will be between $0$ and $6\pi$.</p>
 <p>The people coordinates are given by:</p>
 <pre><code>  (define (x-blue t) (* 200 (cos t))
@@ -1586,7 +1591,9 @@ with x-coordinate 25 and y-coordinate given by <code>y-red</code>, using the sam
 <p>The center box is a 400x400 outlined rectangle. The purple dot moves
 with x-coordinate from <code>x-blue</code> and y-coordinate from <code>y-red</code>.</p>
 <h2 id="demo">Demo</h2>
-<!-- raw HTML omitted -->
+<figure>
+    <img src="ch08-complex.gif"/> 
+</figure>
 
 
     

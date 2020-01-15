@@ -1,5 +1,5 @@
 ---
-title: "15 Practice All"
+title: "15. Practice All"
 date: 2020-01-15T10:06:15-06:00
 #weight: 
 draft: false
@@ -22,13 +22,13 @@ conditionals inside of conditionals, make a helper function.
 1. Simplify:
 
 ```racket
-(define (mess-1 in-bed? alarm-time time)
-  (cond [(boolean=? in-bed true)
-         (cond [(< alarm-time time)
+(define (mess-1 in-bed? alarm-time clock-time)
+  (cond [(boolean=? in-bed? true)
+         (cond [(< clock-time alarm-time)
                 "sleep"]
                [else
                 "wake up"])]
-        [(boolean=? in-bed false)
+        [(boolean=? in-bed? false)
          "wake up"]))
 ```
 
@@ -48,3 +48,10 @@ conditionals inside of conditionals, make a helper function.
 5. Book problem 15.5.4 (`who-won`) and 15.5.5 (`4-votes->winner`),
    page 219 (pdf page 230).
    
+6. There are three circles of radius 150 drawn on a 500x500
+   background. The centers are red (250,325), green (175,175), and
+   blue (325,175). Make the area where circles overlap have all of the
+   colors from the circles, so where red and green overlap the color
+   is (make-color 255 255 0).
+
+    {{% figure src="three-circ.png" width="200" %}}

@@ -61,3 +61,5 @@ identifier = "wy"
 url = "http://wyoung.org"
 weight = 100
 
+[markup.goldmark.renderer]
+unsafe = true
