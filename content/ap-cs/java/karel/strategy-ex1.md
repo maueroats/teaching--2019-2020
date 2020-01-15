@@ -7,8 +7,17 @@ draft: false
 #theme: white
 ---
 
-1. The class `FLF` is a `Strategy` that moves forward, puts down a
-   beeper, turns left, and moves forward again. Write the class `FLF`.
+Skills: 
+
+* Make an instance variable.
+* Define an interface.
+* Implement an interface.
+* Write a constructor given some information.
+
+Questions:
+
+1. The class `MLM` is a `Strategy` that moves forward, puts down a
+   beeper, turns left, and moves forward again. Write the class `MLM`.
    
 2. Write the class `XBot`, which is a class of robot that only moves horizontally.
 
@@ -17,7 +26,8 @@ draft: false
       direction of the original direction
     
 3. Create a new interface `NamedStrategy` which adds a `String
-   stratName()` method to the abilities of a `Strategy`.
+   stratName()` method to the abilities of a `Strategy`. The
+   `stratName()` method should return the strategy's name.
    
 4. Make a class `LaySpeak` which implements `NamedStrategy`. The
    `doIt` method both puts down two beepers and prints out the name of
