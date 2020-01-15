@@ -19,7 +19,7 @@ fi
 
 # cd $www
 i3-msg "workspace 5; append_layout $HOME/.config/i3/layout-www-edit.json"
-emacs --title "Site Editor" content content/ &
+emacs --title "Site Editor" content/ &
 i3-sensible-terminal --title "Hugo Site Generator" -e ./hugo-server &
 i3-sensible-terminal --title "Publisher" -e fish &
 
