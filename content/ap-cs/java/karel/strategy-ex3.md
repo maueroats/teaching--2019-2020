@@ -47,7 +47,7 @@ public static void demoB() {
     E3B y = new E3B (3,7);
     tester(y); // prints 21, 21, 35, 49
     E3B z = new E3B (3,10);
-    tester(y); // prints 30, 30, 50, 70
+    tester(z); // prints 30, 30, 50, 70
     E3B w = new E3B (5,10);
     tester(w); // prints 50, 50, 70, 90
 }
