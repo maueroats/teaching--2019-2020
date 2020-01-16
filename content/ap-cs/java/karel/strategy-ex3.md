@@ -59,9 +59,9 @@ public static void demoB() {
 ```java
 public static void demoC() {
     E3C y = new E3C (3,7);
-    tester(y); // prints 21, 21, 28, 35
+    tester(y); // prints 21, 21, 21, 21
     E3C z = new E3C (5,10);
-    tester(z); // prints 50, 50, 60, 70
+    tester(z); // prints 50, 50, 50, 50
 }
 ```
 
