@@ -7,26 +7,35 @@ draft: false
 #theme: white
 ---
 
-1. The `E3` interface has a `void pickle()` method and a `int count()`
+1. The `E3` interface has a `void pickle()` method and a `int gc()`
    method. Write the complete `E3` interface.
 
-2. The `E3A` class implements the `E3` interface. Make it behave
-   according to the demo code:
-   
+2. There is nothing to do in this question, it just shows the
+`TestStuff` message.
+
 ```java
 public class TestStuff {
    public static void tester(E3 v) {
-        System.out.println(v.count());
+        System.out.println(v.gc());
+        System.out.println(v.gc());
         v.pickle();
-        System.out.println(v.count());
+        System.out.println(v.gc());
         v.pickle();
-        System.out.println(v.count());
+        System.out.println(v.gc());
     }
+}
+```
+
+3. The `E3A` class implements the `E3` interface. Make it behave
+   according to the demo code below. You will need to write a
+   constructor and some methods.
+   
+```java
     public static void demoA() {
         E3A x = new E3A(5);
-        tester(x); // prints 5 7 9
+        tester(x); // prints 5 5 7 9
     }
-}   
+}
 ```
 
 3. The `E3B` class implements the `E3` interface. Add the `demoB`
@@ -36,11 +45,11 @@ public class TestStuff {
 ```java
 public static void demoB() {
     E3B y = new E3B (3,7);
-    tester(y); // prints 21, 35, 49
+    tester(y); // prints 21, 21, 35, 49
     E3B z = new E3B (3,10);
-    tester(y); // prints 30, 50, 70
-    E3B z = new E3B (5,10);
-    tester(y); // prints 50, 70, 90
+    tester(y); // prints 30, 30, 50, 70
+    E3B w = new E3B (5,10);
+    tester(w); // prints 50, 50, 70, 90
 }
 ```
 
@@ -50,9 +59,9 @@ public static void demoB() {
 ```java
 public static void demoC() {
     E3C y = new E3C (3,7);
-    tester(y); // prints 21, 21, 21
+    tester(y); // prints 21, 21, 21, 21
     E3C z = new E3C (5,10);
-    tester(y); // prints 50, 50, 50
+    tester(z); // prints 50, 50, 50, 50
 }
 ```
 
@@ -62,8 +71,8 @@ public static void demoC() {
 
 ```java
 public static E3 bOnly(E3B w) {
-    w.count();
-    return this;
+    w.gc();
+    return w;
 }
 
 public static void demoD() {
