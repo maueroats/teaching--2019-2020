@@ -11,7 +11,7 @@ draft: false
    method. Write the complete `E3` interface.
 
 2. There is nothing to do in this question, it just shows the
-`TestStuff` message.
+`TestStuff` message. All of your `demo` methods should go in this class.
 
 ```java
 public class TestStuff {
