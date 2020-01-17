@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>3. Images :: WY Computer Science</title>
+<title>Strategy 4 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/intermediate-cs/ch03/">
+  <body data-url="/ap-cs/java/karel/strategy-ex4/">
     
       <header>
   <div class="logo">
@@ -68,10 +68,11 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/ap-cs/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/">AP CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
@@ -588,10 +589,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/java/karel/">Karel</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
@@ -615,7 +617,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/java/karel/strategy-ex4/" class="dd-item">
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex4/" class="dd-item active">
         <div>
           <a href="/ap-cs/java/karel/strategy-ex4/">
             Strategy 4
@@ -886,18 +888,16 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/intermediate-cs/ch03/" class="dd-item parent active haschildren
+    <li data-nav-id="/intermediate-cs/ch03/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/ch03/">3. Images</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/ch03/">3. Images</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/ch03/ch03-art-project/" class="dd-item">
@@ -1510,40 +1510,23 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/ap-cs/" >
-   AP CS</option>
+   AP CS</option> 
+    <option value="/ap-cs/haskell/" >
+  - 
+   Haskell</option>
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option> 
+      <option value="/ap-cs/java/karel/strategy-ex1/" >-- Strategy 1</option>
+      <option value="/ap-cs/java/karel/strategy-ex2/" >-- Strategy 2</option>
+      <option value="/ap-cs/java/karel/strategy-ex3/" >-- Strategy 3</option>
+      <option value="/ap-cs/java/karel/strategy-ex4/"  selected>-- Strategy 4</option>
+  
+  
     <option value="/ai/" >
    Artificial Intelligence</option>
     <option value="/intermediate-cs/" >
-   Intermediate CS</option> 
-    <option value="/intermediate-cs/ch03/"  selected >
-  - 
-   3. Images</option> 
-      <option value="/intermediate-cs/ch03/ch03-art-project/" >-- Art Project</option>
-      <option value="/intermediate-cs/ch03/additional-exercises/" >-- Exercises</option>
-  
-    <option value="/intermediate-cs/ch07/" >
-  - 
-   7. Numbers</option>
-    <option value="/intermediate-cs/ch08/" >
-  - 
-   8. Number Models</option>
-    <option value="/intermediate-cs/ch13/" >
-  - 
-   13. Booleans</option>
-    <option value="/intermediate-cs/ch15/" >
-  - 
-   15. Conditionals</option>
-    <option value="/intermediate-cs/ch20/" >
-  - 
-   20. Using Structures</option>
-    <option value="/intermediate-cs/resources/" >
-  - 
-   Resources</option>
-    <option value="/intermediate-cs/pro/" >
-  - 
-   Pro Features</option>
-      <option value="/intermediate-cs/e-courses/" >- Online Help</option>
-  
+   Intermediate CS</option>
     <option value="/robotics/" >
    Robotics</option>
     <option value="/ftc/" >
@@ -1560,29 +1543,89 @@
     </div>
     
 
-    <h1>3. Images</h1>
+    <h1>Strategy 4</h1>
 
     
     
     
-
-<ul class="children children-li">
-<p><span><li>
-<a href="/intermediate-cs/ch03/ch03-art-project/" >Art Project</a></li>
-</span></p>
-<p><span><li>
-<a href="/intermediate-cs/ch03/additional-exercises/" >Exercises</a></li>
-</span></p>
-</ul>
-
+    <p>Write the interface or class in each question.</p>
+<ol>
+<li>
+<p>The interface <code>G</code> has methods <code>String who()</code>, <code>int when()</code>, and
+<code>void walk(int howlong)</code>.</p>
+</li>
+<li>
+<p>Copy or type the tester class.</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">TestG</span> <span style="color:#f92672">{</span>
+  <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">tester</span><span style="color:#f92672">(</span><span style="color:#111">G</span> <span style="color:#111">x</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">who</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">when</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">walk</span><span style="color:#f92672">(</span><span style="color:#111">5</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">when</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="3">
+<li>The class <code>G1</code> implements the <code>G</code> interface. Use <code>+</code> to join strings.</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demoA</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">G1</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">G1</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Samuel&#34;</span><span style="color:#f92672">,</span><span style="color:#111">10</span><span style="color:#f92672">,</span><span style="color:#111">30</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">tester</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span> 
+    <span style="color:#75715e">// Output: &#34;Big Samuel&#34; 1030 1035
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><ol start="4">
+<li>The class <code>G2</code> implements the <code>G</code> interface. When asked to walk for
+N minutes, these objects actually take 2N minutes.</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demoB</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">G2</span> <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">G2</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Jordan&#34;</span><span style="color:#f92672">,</span> <span style="color:#111">8</span><span style="color:#f92672">,</span> <span style="color:#111">20</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">tester</span><span style="color:#f92672">(</span><span style="color:#111">y</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#75715e">// Output: &#34;Little Jordan&#34; 820 830
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><ol start="5">
+<li>The class <code>G2X</code> extends <code>G2</code>. The name changes to add &ldquo;Fast&rdquo; but
+nothing else changes.</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demoC</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">G2</span> <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">G2X</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Jordan&#34;</span><span style="color:#f92672">,</span> <span style="color:#111">8</span><span style="color:#f92672">,</span> <span style="color:#111">20</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">tester</span><span style="color:#f92672">(</span><span style="color:#111">y</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#75715e">// Output: &#34;Fast Little Jordan&#34; 820 830
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><ol start="6">
+<li>Unrelated to the above, create a class <code>H</code> that counts from its
+lower limit to its upper limit. Methods: <code>int start()</code>, <code>boolean done()</code>, <code>int next()</code>.</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">testH</span><span style="color:#f92672">(</span><span style="color:#111">H</span> <span style="color:#111">b</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#00a8c8">int</span> <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">b</span><span style="color:#f92672">.</span><span style="color:#75af00">start</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#00a8c8">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span> <span style="color:#111">b</span><span style="color:#f92672">.</span><span style="color:#75af00">done</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">b</span><span style="color:#f92672">.</span><span style="color:#75af00">next</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">n</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>This <code>demoD</code> method is complicated just to show you how to write a
+conditional (if statement) in Java.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demoD</span><span style="color:#f92672">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">s</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">H</span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">H</span><span style="color:#f92672">(</span><span style="color:#111">30</span><span style="color:#f92672">,</span> <span style="color:#111">40</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#00a8c8">if</span> <span style="color:#f92672">(</span> <span style="color:#111">s</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">0</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Small s, no work.&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#00a8c8">else</span> <span style="color:#f92672">{</span>
+        <span style="color:#111">testH</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Calling <code>demoD(1)</code> produces output: <code>30 31 32 33 34 35 36 37 38 39 40</code>. Calling <code>demoD(1); demoD(1);</code> would produce the same output twice.</p>
+<ol start="7">
+<li>Make a class <code>H5</code> extending <code>H</code>, altering the behavior so it counts
+up by 4.</li>
+</ol>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/intermediate-cs/" title="Intermediate CS"> <i class="fa fa-chevron-left"></i><label>Intermediate CS</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/ch03/ch03-art-project/" title="Art Project" style="margin-right: 0px;"><label>Art Project</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/java/karel/strategy-ex3/" title="Strategy 3"> <i class="fa fa-chevron-left"></i><label>Strategy 3</label></a>
+    <a class="nav nav-next" href="/ai/" title="Artificial Intelligence" style="margin-right: 0px;"><label>Artificial Intelligence</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1598,7 +1641,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 12/09/2019
+        <i class='fa fa-calendar'></i> Last update on 17/01/2020
     </div>
     
 
