@@ -1593,30 +1593,45 @@ nothing else changes.</li>
     <span style="color:#75715e">// Output: &#34;Fast Little Jordan&#34; 820 830
 </span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
 </code></pre></div><ol start="6">
-<li>Unrelated to the above, create a class <code>H</code> that counts from its
-lower limit to its upper limit. Methods: <code>int start()</code>, <code>boolean done()</code>, <code>int next()</code>.</li>
+<li>
+<p>Unrelated to the above, create a class <code>H</code> that counts from its
+lower limit to its upper limit. Methods: <code>int start()</code>, <code>boolean done()</code>, <code>int next()</code>.</p>
+<ul>
+<li>The start() method gives the first number to count from.</li>
+<li>The next() method gives the next number in the sequence.</li>
+<li>The done() method returns true when the count has reached the end number.</li>
+</ul>
+</li>
 </ol>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">testH</span><span style="color:#f92672">(</span><span style="color:#111">H</span> <span style="color:#111">b</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<p>Calling <code>demoD()</code> produces output: <code>31 32 33 34 35 36 37 38 39 40</code></p>
+<p>Below is the <code>demoD</code> and <code>testH</code> method. The <code>demoD</code> method is
+complicated just to show you how to write a
+conditional (if statement) in Java.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demoD</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">H</span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">H</span><span style="color:#f92672">(</span><span style="color:#111">30</span><span style="color:#f92672">,</span> <span style="color:#111">40</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#00a8c8">int</span> <span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#111">0</span><span style="color:#f92672">;</span> <span style="color:#75715e">// choose &#34;else&#34; clause always
+</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">if</span> <span style="color:#f92672">(</span> <span style="color:#111">s</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">0</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Small s, no work.&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#00a8c8">else</span> <span style="color:#f92672">{</span>
+        <span style="color:#111">testH</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">testH</span><span style="color:#f92672">(</span><span style="color:#111">H</span> <span style="color:#111">b</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#00a8c8">int</span> <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">b</span><span style="color:#f92672">.</span><span style="color:#75af00">start</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#00a8c8">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span> <span style="color:#111">b</span><span style="color:#f92672">.</span><span style="color:#75af00">done</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">b</span><span style="color:#f92672">.</span><span style="color:#75af00">next</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">n</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>This <code>demoD</code> method is complicated just to show you how to write a
-conditional (if statement) in Java.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demoD</span><span style="color:#f92672">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">s</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#111">H</span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">H</span><span style="color:#f92672">(</span><span style="color:#111">30</span><span style="color:#f92672">,</span> <span style="color:#111">40</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    <span style="color:#00a8c8">if</span> <span style="color:#f92672">(</span> <span style="color:#111">s</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">0</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Small s, no work.&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span> <span style="color:#00a8c8">else</span> <span style="color:#f92672">{</span>
-        <span style="color:#111">testH</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>Calling <code>demoD(1)</code> produces output: <code>30 31 32 33 34 35 36 37 38 39 40</code>. Calling <code>demoD(1); demoD(1);</code> would produce the same output twice.</p>
-<ol start="7">
-<li>Make a class <code>H5</code> extending <code>H</code>, altering the behavior so it counts
-up by 4.</li>
+</code></pre></div><ol start="7">
+<li>
+<p>Make a class <code>H4</code> extending <code>H</code>, altering the behavior so it counts
+up by 4.</p>
+</li>
+<li>
+<p>Modify your <code>H</code> class if necessary so that it resets to the
+beginning every time <code>start()</code> is called.</p>
+</li>
 </ol>
 
 

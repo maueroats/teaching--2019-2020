@@ -59,7 +59,29 @@ public static void demoC() {
 
 6. Unrelated to the above, create a class `H` that counts from its
    lower limit to its upper limit. Methods: `int start()`, `boolean
-   done()`, `int next()`.
+   done()`, `int next()`. 
+   
+   * The start() method gives the first number to count from.
+   * The next() method gives the next number in the sequence.
+   * The done() method returns true when the count has reached the end number.
+
+Calling `demoD()` produces output: `31 32 33 34 35 36 37 38 39 40`
+
+Below is the `demoD` and `testH` method. The `demoD` method is
+complicated just to show you how to write a 
+conditional (if statement) in Java.
+
+```java
+public static void demoD() {
+    H a = new H(30, 40);
+    int s = 0; // choose "else" clause always
+    if ( s < 0 ) {
+        System.out.println("Small s, no work.");
+    } else {
+        testH(a);
+    }
+}
+```
 
 ```java
 public static void testH(H b) {
@@ -71,23 +93,10 @@ public static void testH(H b) {
 }
 ```
 
-This `demoD` method is complicated just to show you how to write a
-conditional (if statement) in Java.
 
-```java
-public static void demoD(int s) {
-    H a = new H(30, 40);
-    if ( s < 0 ) {
-        System.out.println("Small s, no work.");
-    } else {
-        testH(a);
-    }
-}
-```
-
-Calling `demoD(1)` produces output: `30 31 32 33 34 35 36 37 38 39
-40`. Calling `demoD(1); demoD(1);` would produce the same output twice.
-
-7. Make a class `H5` extending `H`, altering the behavior so it counts
+7. Make a class `H4` extending `H`, altering the behavior so it counts
    up by 4.
+   
+8. Modify your `H` class if necessary so that it resets to the
+   beginning every time `start()` is called.
    
