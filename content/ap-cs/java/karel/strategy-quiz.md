@@ -31,9 +31,9 @@ public static void testK(K x) {
     System.out.println(x.n());  
 }
 public static void testM(M y) {
-    testM(x);
-    x.bump();
-    testM(x);
+    testK(y);
+    y.bump();
+    testK(y);
 }
 public static void demo1() {
     M x = new M("Good", 4, 100);
