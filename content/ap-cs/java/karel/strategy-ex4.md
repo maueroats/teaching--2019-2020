@@ -95,8 +95,24 @@ public static void testH(H b) {
 
 
 7. Make a class `H4` extending `H`, altering the behavior so it counts
-   up by 4.
+   up by 4. Test your class by modifying the `demoD` function or by
+   using the short code segment below (put in the same class as your
+   `testH`).
+   
+```java
+public static void demoE() { 
+    testH(new H4(20,60)); // print 24, 28, ..., 60
+}
+```
    
 8. Modify your `H` class if necessary so that it resets to the
    beginning every time `start()` is called.
+
+```java
+public static void demoF() { 
+    H x = new H(20,30);
+    testH(x); // print 21, 22, ..., 30
+    testH(x); // print 21, 22, ..., 30 again
+}
+```
    

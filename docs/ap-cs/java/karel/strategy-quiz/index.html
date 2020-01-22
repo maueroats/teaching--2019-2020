@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>haskell :: WY Computer Science</title>
+<title>Strategy Quiz :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/tags/haskell/">
+  <body data-url="/ap-cs/java/karel/strategy-quiz/">
     
       <header>
   <div class="logo">
@@ -68,10 +68,11 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/ap-cs/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/">AP CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
@@ -588,10 +589,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/java/karel/">Karel</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
@@ -622,7 +624,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/java/karel/strategy-quiz/" class="dd-item">
+      <li data-nav-id="/ap-cs/java/karel/strategy-quiz/" class="dd-item active">
         <div>
           <a href="/ap-cs/java/karel/strategy-quiz/">
             Strategy Quiz
@@ -1515,7 +1517,20 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/ap-cs/" >
-   AP CS</option>
+   AP CS</option> 
+    <option value="/ap-cs/haskell/" >
+  - 
+   Haskell</option>
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option> 
+      <option value="/ap-cs/java/karel/strategy-ex1/" >-- Strategy 1</option>
+      <option value="/ap-cs/java/karel/strategy-ex2/" >-- Strategy 2</option>
+      <option value="/ap-cs/java/karel/strategy-ex3/" >-- Strategy 3</option>
+      <option value="/ap-cs/java/karel/strategy-ex4/" >-- Strategy 4</option>
+      <option value="/ap-cs/java/karel/strategy-quiz/"  selected>-- Strategy Quiz</option>
+  
+  
     <option value="/ai/" >
    Artificial Intelligence</option>
     <option value="/intermediate-cs/" >
@@ -1536,213 +1551,73 @@
     </div>
     
 
-    <h1>haskell</h1>
+    <h1>Strategy Quiz</h1>
 
     
     
     
-
-
-
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-        
-            <a class="newer-posts" href="/tags/haskell/">&larr; Previous Pages</a>
-        
-        <span class="page-number">Page 2 of 2</span>
-        
-</nav>
-
-</div>
-
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/daily/2017-09-18/">2017-09-18</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>We discussed problem 7 from the homework. You should finish it based on the discussion.
-Mentioned from Chapter 5: type to make short ways to say types. Examples:
-type Pt = (Int,Int) type Ship = [Pt] type Shots = [Pt] We wrote the function is_sunk for battleship.
-Functions we discussed:
- [&amp;&amp;]: Join two Boolean values with logical and. and: Join a list of Boolean values with logical and. all: Apply a tester function and then join all of the values together with &ldquo;and&rdquo;. <a class="read-more" href="/ap-cs/haskell/daily/2017-09-18/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/daily/2017-09-13/">2017-09-14 Indentation</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Indentation is significant in Haskell. Haskell uses indentation to group pieces of code together. This is similar to Python, but there are &ldquo;false cognates&rdquo; - similar code that is indented differently in the two languages. In Racket, grouping is done only by parentheses.
-Indenting to the same level &ldquo;All grouped expressions must be exactly aligned.&rdquo;
- Example 1a: good indentation
-if x `mod` 3 == 0 &amp;&amp; x `mod` 5 == 0 -- good. <a class="read-more" href="/ap-cs/haskell/daily/2017-09-13/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/replit/">Repl.it</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p><p>A summary of any special problems that have arisen with <code>repl.it</code>.</p> <a class="read-more" href="/ap-cs/haskell/replit/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/daily/2017-09-12/">2017-09-12</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Memorize how to write a basic main method:
-main = do putStrLn &#34;Loaded&#34;   Use &ldquo;&ndash;&rdquo; (two dashes) to comment to the end of the line. This is equivalent to Racket &ldquo;;&rdquo; (semicolon).
-  Function name rules:
-  Must begin with lowercase letter.
-  Hyphens (-) are not allowed in names.
-  Underscore (_) may be used instead.
-  Traditionally camelCase is used for functions. <a class="read-more" href="/ap-cs/haskell/daily/2017-09-12/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/daily/2017-09-11/">2017-09-11</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>removeVowels word = [ letter | letter &lt;- word, not (letter elem &ldquo;aeiouAEIOU&rdquo; )]
-wordLenPairs wordlist = [ (word, length word) | word &lt;- wordlist ] <a class="read-more" href="/ap-cs/haskell/daily/2017-09-11/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/daily-notes/">daily-notes</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/ghci-details/">Source Code Files (ghci)</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p><p>Writing a file is different from typing in an interpreter like repl.it or ghci.</p> <a class="read-more" href="/ap-cs/haskell/ghci-details/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post ap-cs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ap-cs/haskell/ch01/ch01-reading-guide/">Ch01 Reading Guide</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Haskell introduction reading questions   Haskell is supposed to be a purely functional language. Unpack that:
- What does pure mean? What is the difference between functional and imperative? (The book is not so clear on this point. What do you think it says, in your own words?)    Haskell is lazy. What does this mean?
-  Haskell is statically typed. This could be unpacked, too. <a class="read-more" href="/ap-cs/haskell/ch01/ch01-reading-guide/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/reading-guide/">reading-guide</a>
-            
-                <a class="label label-default" href="https://wy-cs.websitetags/haskell/">haskell</a>
-            
-        
-
-    </footer>
-</article>
-
-
-<div style="margin-bottom:2rem"></div>
-
-<nav class="pagination" role="navigation">
-        
-            <a class="newer-posts" href="/tags/haskell/">&larr; Previous Pages</a>
-        
-        <span class="page-number">Page 2 of 2</span>
-        
-</nav>
-
-
-
+    <p>Write the interface or class in each question.</p>
+<ol>
+<li>
+<p>The <code>K</code> interface has the following methods:</p>
+<ul>
+<li><code>int n()</code></li>
+<li><code>String s()</code></li>
+<li><code>void t(int k)</code></li>
+</ul>
+</li>
+<li>
+<p>The class <code>M</code> implements the <code>K</code> interface.
+The constructor takes in a String, an initial number, and a bump
+number (<code>bumpnum</code>).
+In addition it has a <code>void bump()</code> method that
+has the same effect as <code>t(bumpnum)</code>.</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">testK</span><span style="color:#f92672">(</span><span style="color:#111">K</span> <span style="color:#111">x</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">s</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">n</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">n</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">n</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">t</span><span style="color:#f92672">(</span><span style="color:#111">10</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">n</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
+<span style="color:#f92672">}</span>
+<span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">testM</span><span style="color:#f92672">(</span><span style="color:#111">M</span> <span style="color:#111">y</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">testM</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">bump</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">testM</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demo1</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">M</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">M</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Good&#34;</span><span style="color:#f92672">,</span> <span style="color:#111">4</span><span style="color:#f92672">,</span> <span style="color:#111">100</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">testM</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span> <span style="color:#75715e">// Good 4 3 2 11
+</span><span style="color:#75715e"></span>              <span style="color:#75715e">// Good 110 109 108 117
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><ol start="3">
+<li>The class <code>MN</code> is a subclass of <code>M</code> that behaves the same as <code>M</code>
+except it prints out &ldquo;Very ___&quot;.</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demo2</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">MN</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">MN</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Medium&#34;</span><span style="color:#f92672">,</span> <span style="color:#111">4</span><span style="color:#f92672">,</span> <span style="color:#111">100</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">testM</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span> <span style="color:#75715e">// Very Medium 4 3 2 11
+</span><span style="color:#75715e"></span>              <span style="color:#75715e">// Very Medium 110 109 108 117
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><ol start="4">
+<li>The class <code>MM</code> is a subclass of <code>M</code>. The <code>bump</code> method of <code>MM</code>
+does the bump of <code>M</code> twice.</li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demo3</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">MM</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">MM</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;Good&#34;</span><span style="color:#f92672">,</span> <span style="color:#111">5</span><span style="color:#f92672">,</span> <span style="color:#111">100</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#111">testM</span><span style="color:#f92672">(</span><span style="color:#111">x</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span> <span style="color:#75715e">// Good 5 4 3 12
+</span><span style="color:#75715e"></span>              <span style="color:#75715e">// Good 211 210 209 218
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/resources/events/" title="CS Events"> <i class="fa fa-chevron-left"></i><label>CS Events</label></a>
-    <a class="nav nav-next" href="/ap-cs/" title="AP CS" style="margin-right: 0px;"><label>AP CS</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/java/karel/strategy-ex4/" title="Strategy 4"> <i class="fa fa-chevron-left"></i><label>Strategy 4</label></a>
+    <a class="nav nav-next" href="/ai/" title="Artificial Intelligence" style="margin-right: 0px;"><label>Artificial Intelligence</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1758,7 +1633,7 @@ wordLenPairs wordlist = [ (word, length word) | word &lt;- wordlist ] <a class="
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 13/09/2019
+        <i class='fa fa-calendar'></i> Last update on 22/01/2020
     </div>
     
 
