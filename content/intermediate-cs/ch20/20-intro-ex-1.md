@@ -1,5 +1,5 @@
 ---
-title: "20 Intro Ex 1"
+title: "20. Intro Ex 1"
 date: 2020-01-23T09:21:34-06:00
 #weight: 
 draft: false
@@ -8,12 +8,14 @@ draft: false
 ---
 
 1. Write a function `f1` that takes in a posn and gives the slope of
- the line that it represents.
+ the line through (0,0) and the posn.
  
         f1 : posn -> number
  
-2. Write a function `f2?` that takes in two posns and 
-   returns true if they represent slopes of perpendicular lines.
+2. Write a function `f2?` that takes in two posns each being 
+   (change in x,
+   change in y) and returns true if they represent slopes of
+   perpendicular lines.
         
         f2? : posn posn -> boolean
         
