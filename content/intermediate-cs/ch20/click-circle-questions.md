@@ -28,11 +28,12 @@ Answer: There are three steps:
    2. Write a `should-stop?` function. This is a technical annoyance. 
       For now this can do nothing:
 
-       ```racket
-          (define (should-stop? model) 
-              false)
+```racket
+(define (should-stop? model) 
+    false)
 ```
 
-   2. Add a `(stop-when should-stop? win-draw-handler)` clause to your `big-bang`.
+3. Add a `(stop-when should-stop? win-draw-handler)` clause to 
+your `big-bang`.
      
 
