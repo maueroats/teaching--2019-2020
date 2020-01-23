@@ -488,6 +488,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/java/karel/strategy-override/</loc>
+    <lastmod>2020-01-23T12:07:54-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/ch06/</loc>
     <lastmod>2019-12-03T09:19:24-06:00</lastmod>
   </url>
@@ -1151,6 +1156,10 @@
   
   <url>
     <loc>https://wy-cs.website/ai/ch04/ch4hw2/test-basic/</loc>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch20/20-intro-ex-1/20-intro-checkexpect/</loc>
   </url>
   
   <url>

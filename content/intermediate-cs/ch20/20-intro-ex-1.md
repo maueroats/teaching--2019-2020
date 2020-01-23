@@ -25,21 +25,12 @@ draft: false
    
         on-line?: number(m) number(b) posn -> boolean
         
-4. Write a function `unitv` that takes in a posn and puts out
+4. Write a function `unit` that takes in a posn and puts out
    the posn with each coordinate divided by the distance the input
-   posn is from the origin.
+   posn is from the origin. For example, the point (3,4) is 5 units
+   from the origin, so the output should be (3/5,4/5).
    
-        unitv : posn -> posn
+        unit : posn -> posn
         
-        
-## Check Expects
-
-```racket
-(check-expect (slope-posn (make-posn 8 15)) 8/15)
-(check-expect (perp? (make-posn 3 4) (make-posn 4 -3)) true)
-(check-expect (perp? (make-posn 3 4) (make-posn 6 8)) false)
-(check-expect (on-line? 5 3 (make-posn 4 23)) true)
-(check-expect (on-line? 2 10 (make-posn 5 21)) false)
-(check-expect (unitv (make-posn 3 4)) (make-posn 3/5 4/5))
-(check-expect (unitv (make-posn 5 12)) (make-posn 5/13 12/13))
-```
+You should write your own check-expects, but there are a few to [test
+your code](20-intro-checkexpect). 

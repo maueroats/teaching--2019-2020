@@ -629,6 +629,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ap-cs/java/karel/strategy-override/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/karel/strategy-override/">
+            Strategy Override
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
         </ul>
@@ -1334,6 +1341,41 @@
       <a href="/intermediate-cs/pro/">Pro Features</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/intermediate-cs/pro/pro-string/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/pro/pro-string/">
+            Strings for Experts
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/pro/build-image/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/pro/build-image/">
+            Build Image
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/pro/struct/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/pro/struct/">
+            Structures
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/pro/match/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/pro/match/">
+            Match
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/pro/for/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/pro/for/">
+            For
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
       <li data-nav-id="/intermediate-cs/e-courses/" class="dd-item">
@@ -1577,22 +1619,17 @@ slopes of perpendicular lines.</p>
 </code></pre>
 </li>
 <li>
-<p>Write a function <code>unitv</code> that takes in a posn and puts out
+<p>Write a function <code>unit</code> that takes in a posn and puts out
 the posn with each coordinate divided by the distance the input
-posn is from the origin.</p>
-<pre><code> unitv : posn -&gt; posn
+posn is from the origin. For example, the point (3,4) is 5 units
+from the origin, so the output should be (3/5,4/5).</p>
+<pre><code> unit : posn -&gt; posn
 </code></pre>
 </li>
 </ol>
-<h2 id="check-expects">Check Expects</h2>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">slope-posn</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">15</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#ae81ff">8/15</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">perp?</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">-3</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#111">true</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">perp?</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">8</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#00a8c8">false</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">on-line?</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">23</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#111">true</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">on-line?</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">10</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">21</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#00a8c8">false</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">unitv</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">3/5</span> <span style="color:#ae81ff">4/5</span><span style="color:#111">)</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">unitv</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">12</span><span style="color:#111">)</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5/13</span> <span style="color:#ae81ff">12/13</span><span style="color:#111">)</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div>
+<p>You should write your own check-expects, but there are a few to <a href="20-intro-checkexpect">test
+your code</a>.</p>
+
 
     
     
