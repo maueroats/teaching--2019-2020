@@ -20,6 +20,7 @@ though it looks similar.
    * Concrete method: `void lunch()` which does wash hands and eat. 
    * Concrete method: `void dinner()` which does wash hands, eat, and
      brush teeth.
+   * A `String ff()` method to get the favorite food.
 
 2. Create a class `R` extending `Q`.
    

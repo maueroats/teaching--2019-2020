@@ -19,7 +19,6 @@ You may use anything from your `posn-util.rkt` without comment.
         p-circle: posn(center) posn(edge-pt) image(background) 
                   -> image
 
-    Draw a red circle with the given center with `edge-pt` at the
-    edge of the circle on the given background.
-    
-    
+    Draw a red circle on the given image background. The center of the circle
+    should be at the posn `center`. The
+    `edge-pt` should be on the perimeter or boundary of the circle.
