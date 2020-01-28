@@ -1,7 +1,7 @@
 ---
 title: "Strategy Quiz"
 date: 2020-01-22T13:17:53-06:00
-weight: 50
+weight: 45
 draft: false
 #type: slide
 #theme: white

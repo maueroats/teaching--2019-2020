@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Quizzes :: WY Computer Science</title>
+<title>Strategy Practice :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ai/quiz/">
+  <body data-url="/ap-cs/java/karel/strategy-ex6/">
     
       <header>
   <div class="logo">
@@ -68,10 +68,11 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/ap-cs/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/">AP CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
@@ -588,10 +589,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/java/karel/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/java/karel/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/java/karel/">Karel</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/java/karel/">Karel</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/java/karel/strategy-ex1/" class="dd-item">
@@ -636,7 +638,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/java/karel/strategy-ex6/" class="dd-item">
+      <li data-nav-id="/ap-cs/java/karel/strategy-ex6/" class="dd-item active">
         <div>
           <a href="/ap-cs/java/karel/strategy-ex6/">
             Strategy Practice
@@ -647,11 +649,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/" class="dd-item parent haschildren
+    <li data-nav-id="/ai/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ai/">Artificial Intelligence</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ai/">Artificial Intelligence</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ai/ch01/" class="dd-item haschildren
@@ -884,11 +885,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/quiz/" class="dd-item parent active haschildren
+    <li data-nav-id="/ai/quiz/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ai/quiz/">Quizzes</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ai/quiz/">Quizzes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ai/quiz/2019-10-04/" class="dd-item">
@@ -1545,34 +1545,24 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/ap-cs/" >
-   AP CS</option>
+   AP CS</option> 
+    <option value="/ap-cs/haskell/" >
+  - 
+   Haskell</option>
+    <option value="/ap-cs/java/karel/" >
+  - 
+   Karel</option> 
+      <option value="/ap-cs/java/karel/strategy-ex1/" >-- Strategy 1</option>
+      <option value="/ap-cs/java/karel/strategy-ex2/" >-- Strategy 2</option>
+      <option value="/ap-cs/java/karel/strategy-ex3/" >-- Strategy 3</option>
+      <option value="/ap-cs/java/karel/strategy-ex4/" >-- Strategy 4</option>
+      <option value="/ap-cs/java/karel/strategy-quiz/" >-- Strategy Quiz</option>
+      <option value="/ap-cs/java/karel/strategy-ex5/" >-- Strategy 5</option>
+      <option value="/ap-cs/java/karel/strategy-ex6/"  selected>-- Strategy Practice</option>
+  
+  
     <option value="/ai/" >
-   Artificial Intelligence</option> 
-    <option value="/ai/ch01/" >
-  - 
-   Ch 01</option>
-    <option value="/ai/ch02/" >
-  - 
-   Ch 02</option>
-    <option value="/ai/ch03/" >
-  - 
-   Ch 03 Lisp</option>
-    <option value="/ai/ch04/" >
-  - 
-   Ch 04 GPS</option>
-    <option value="/ai/ch05/" >
-  - 
-   Ch 05 Eliza</option>
-    <option value="/ai/ch06/" >
-  - 
-   Ch06 Searching</option>
-    <option value="/ai/quiz/"  selected >
-  - 
-   Quizzes</option> 
-      <option value="/ai/quiz/2019-10-04/" >-- 2019-10-04</option>
-  
-      <option value="/ai/resources/" >- AI Resources</option>
-  
+   Artificial Intelligence</option>
     <option value="/intermediate-cs/" >
    Intermediate CS</option>
     <option value="/robotics/" >
@@ -1591,26 +1581,19 @@
     </div>
     
 
-    <h1>Quizzes</h1>
+    <h1>Strategy Practice</h1>
 
     
     
     
-
-<ul class="children children-li">
-<p><span><li>
-<a href="/ai/quiz/2019-10-04/" >2019-10-04</a></li>
-</span></p>
-</ul>
-
-
+    
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ai/ch06/ch6-proj1/" title="Ch6 Proj1"> <i class="fa fa-chevron-left"></i><label>Ch6 Proj1</label></a>
-    <a class="nav nav-next" href="/ai/quiz/2019-10-04/" title="2019-10-04" style="margin-right: 0px;"><label>2019-10-04</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/java/karel/strategy-ex5/" title="Strategy 5"> <i class="fa fa-chevron-left"></i><label>Strategy 5</label></a>
+    <a class="nav nav-next" href="/ai/" title="Artificial Intelligence" style="margin-right: 0px;"><label>Artificial Intelligence</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1626,7 +1609,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 04/10/2019
+        <i class='fa fa-calendar'></i> Last update on 28/01/2020
     </div>
     
 

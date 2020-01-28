@@ -1,10 +1,11 @@
 ---
-title: "Strategy Override"
+title: "Strategy 5"
 date: 2020-01-23T12:07:54-06:00
-weight: 60
+weight: 50
 draft: false
 #type: slide
 #theme: white
+description: "Abstract classes."
 ---
 
 An abstract class is like an interface except you can include
