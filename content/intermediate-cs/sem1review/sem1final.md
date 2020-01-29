@@ -2,7 +2,7 @@
 title: "Sem.I Final Exam"
 date: 2020-01-29T07:26:35-06:00
 weight: 90
-draft: false
+draft: true
 #type: slide
 #theme: white
 ---
