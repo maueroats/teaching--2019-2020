@@ -7,12 +7,20 @@ draft: false
 #theme: white
 ---
 
+## Principles
+
+* Do not repeat variables from the superclass.
+* Do not repeat functions from the superclass.
+* Override little functions instead of rewriting big functions.
+* When the superclass has a constructor, make sure you call it.
+
 ## Almost Simple
 
 1. Make an interface `Booter` that has one functions: `int foot(int x)`.
 2. Make an abstract class `F` that implements the `Booter`
    interface. 
    
+   * Private ints `p` `q` and String `s`.
    * The constructor takes in two int inputs, and a String,
    and remembers all of them. 
    * When `foot(1)` is called, the class increments the int (adds one)
@@ -25,7 +33,7 @@ draft: false
    
         public void grind (int k) {
             while(k>0) {
-                System.out.println(grokk());
+                System.out.println(grokk()+p+s+q);
                 k -= 1;
             }
         }

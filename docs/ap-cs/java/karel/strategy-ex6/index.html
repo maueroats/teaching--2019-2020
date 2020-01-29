@@ -1601,7 +1601,14 @@
     
     
     
-    <h2 id="almost-simple">Almost Simple</h2>
+    <h2 id="principles">Principles</h2>
+<ul>
+<li>Do not repeat variables from the superclass.</li>
+<li>Do not repeat functions from the superclass.</li>
+<li>Override little functions instead of rewriting big functions.</li>
+<li>When the superclass has a constructor, make sure you call it.</li>
+</ul>
+<h2 id="almost-simple">Almost Simple</h2>
 <ol>
 <li>
 <p>Make an interface <code>Booter</code> that has one functions: <code>int foot(int x)</code>.</p>
@@ -1610,6 +1617,9 @@
 <p>Make an abstract class <code>F</code> that implements the <code>Booter</code>
 interface.</p>
 <ul>
+<li>
+<p>Private ints <code>p</code> <code>q</code> and String <code>s</code>.</p>
+</li>
 <li>
 <p>The constructor takes in two int inputs, and a String,
 and remembers all of them.</p>
@@ -1632,7 +1642,7 @@ ten times its current value.</p>
 <p>There is a method <code>void grind(int k)</code>:</p>
 <p>public void grind (int k) {
 while(k&gt;0) {
-System.out.println(grokk());
+System.out.println(grokk()+p+s+q);
 k -= 1;
 }
 }</p>
