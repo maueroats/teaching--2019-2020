@@ -1333,6 +1333,13 @@
       <a href="/intermediate-cs/sem1review/">Sem.I Review</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/intermediate-cs/sem1review/sem1final/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/sem1review/sem1final/">
+            Sem.I Final Exam
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/sem1review/2020-sem1-review-notes/" class="dd-item">
         <div>
           <a href="/intermediate-cs/sem1review/2020-sem1-review-notes/">
@@ -1601,7 +1608,97 @@
     
     
     
-    
+    <h2 id="almost-simple">Almost Simple</h2>
+<ol>
+<li>
+<p>Make an interface <code>Booter</code> that has one functions: <code>int foot(int x)</code>.</p>
+</li>
+<li>
+<p>Make an abstract class <code>F</code> that implements the <code>Booter</code>
+interface.</p>
+<ul>
+<li>
+<p>The constructor takes in two int inputs, and a String,
+and remembers all of them.</p>
+</li>
+<li>
+<p>When <code>foot(1)</code> is called, the class increments the int (adds one)
+and returns it.</p>
+</li>
+<li>
+<p>When <code>foot(2)</code> is called, the integer remembered is altered to be
+ten times its current value.</p>
+</li>
+<li>
+<p>The method <code>String getStr()</code> returns the remembered string.</p>
+</li>
+<li>
+<p>The method <code>String grokk()</code> is not described.</p>
+</li>
+<li>
+<p>There is a method <code>void grind(int k)</code>:</p>
+<p>public void grind (int k) {
+while(k&gt;0) {
+System.out.println(grokk());
+k -= 1;
+}
+}</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Make a class <code>GG</code> that extends <code>F</code>.</p>
+<ul>
+<li>The constructor takes the same information.</li>
+<li>The <code>grokk()</code> method returns <code>getStr() + getStr()</code>.</li>
+</ul>
+</li>
+<li>
+<p>Make a class <code>HH</code> that extends <code>F</code>.</p>
+<ul>
+<li>The constructor takes in a single int <code>n</code> and uses that to determine
+both of the numbers needed by the <code>F</code> constructor: <code>2*n</code> and
+<code>3*n</code>. Use &ldquo;HH&rdquo; for the value of the string passed.</li>
+<li>The <code>grokk()</code> method returns &ldquo;H&rdquo; always.</li>
+</ul>
+</li>
+</ol>
+<h2 id="more-complex">More Complex</h2>
+<ol>
+<li>
+<p>Make an interface <code>A</code> containing the following methods:</p>
+<ul>
+<li><code>void af()</code></li>
+<li><code>int  agg()</code></li>
+<li><code>int  ahhh(int x);</code></li>
+</ul>
+</li>
+<li>
+<p>Write a class <code>B</code> that implements the <code>A</code> interface with the
+following behavior:</p>
+<ul>
+<li><code>B</code> remembers two int variables (<code>m</code> and <code>n</code>)</li>
+<li>The constructor for <code>B</code> takes in one int and sets <code>m</code> to that
+number and <code>n</code> to 5.</li>
+<li>The <code>af()</code> function sets <code>m</code> to <code>n</code>.</li>
+<li>The <code>agg()</code> function gives the product of <code>m</code> and <code>n</code>.</li>
+<li>The <code>ahhh(int x)</code> increases <code>n</code> by <code>x</code> and then returns <code>m</code>.</li>
+</ul>
+</li>
+<li>
+<p>Write a class <code>C</code> extending <code>B</code>.</p>
+<ul>
+<li>The <code>C</code> constructor takes in only one int <code>n</code>, and uses <code>10*n</code>
+as the input to the <code>B</code> constructor.</li>
+<li>The <code>ahhh(int x)</code> function in <code>C</code> does the same with as the
+<code>ahhh(int x)</code> function in <code>B</code>. However, it keeps track of how
+many times it was called and returns the number of times it was
+called.</li>
+</ul>
+</li>
+</ol>
+<p><a href="ATest.java">Testing code for the A interface</a>.</p>
+
 
     
     
