@@ -21,6 +21,8 @@ help from other people (including Stack Overflow).
    * A constructor that takes in the amount of energy and remembers
      it.
    * The `burnRate` method is not specified in this class.
+   * Also include a `int goodGrade()` function that is unspecified in
+     the class.
    * The `gone` method should compute how much energy is going to be
      used by finding the product of pace, miles, and the `burnRate` at
      that pace. If that amount is greater than the amout of energy the
@@ -33,8 +35,10 @@ help from other people (including Stack Overflow).
       energy that the object has.
     * The `burnRate` method returns 0 if the requested pace is greater
       than `maxpace`, otherwise returns `weight/10`. 
+    * The `goodGrade()` function should return 95.
       
-4. Make a class `P` unrelated to the above.
+4. Make a class `P` unrelated to the above. You may not modify the
+   provided code or add new methods.
 
 ```java
 public class P {
@@ -47,24 +51,27 @@ public class P {
         return s;
     }
     public int xy() {
-        // give the product of x and y as an answer
-        // you write
+        // give the product of the two inputs to the constructor as the answer
+        // TODO: you write
     }
     public void delta(int dx, int dy) {
         // increase x by dx and y by dy.
-        // you write
+        // TODO: you write
     }
 }
 ```
 
 5. Write a class `Q` with `P` as a superclass.
 
-    * `Q` also contains an instance variable `int step`
-    * The constructor for `Q` takes in two numbers, `w` and the
+    * `Q` also contains an instance variable `int step` 
+   * The constructor for `Q` takes in two numbers: `w` and the
       step. It uses `w` to compute both x (five more than w) and y
-      (five less than w). 
+      (five less than w). Use your name for the String needed. 
     * The `delta` method is modified so that it will only change `x`
       and `y` if the change of x is less than 3 (not in absolute
       value, to make it easy), and also the change in y is less than 5.
     * `Q` contains methods `void stepX()` and `void stepY()` that
       change `x` and `y` (respectively) by the `step`.
+
+NOTES: This exam was easily done by competent students in 30-40
+minutes. Having test cases might have been easier for `Q`.
