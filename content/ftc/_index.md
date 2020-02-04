@@ -51,4 +51,6 @@ There are tons of Ri3D (robot in 3 days) or Ri1W (robot in 1 week) videos availa
 ```bash
      git clone --depth=1 git@github.com:2017-2018-wy-robophins/ftc_app.git
 ```
-    Make sure to get added to the Robophins organization on github so you can push your changes! You can read how to [Get Started with Git]({{% relref "git/getting-started.md" %}}) elsewhere on this site.
+
+Make sure to get added to the Robophins organization on github so you can push your changes! You can read how to [Get Started with Git]({{% relref "git/getting-started.md" %}}) elsewhere on this site.
+
