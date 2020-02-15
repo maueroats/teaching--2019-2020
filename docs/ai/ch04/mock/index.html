@@ -1650,10 +1650,10 @@ certain controlled circumstances. This lets us make sure the
 <code>achieve-one</code> function in isolation as well.</p>
 <h2 id="example-of-mocking">Example of Mocking</h2>
 <p>This example is courtesy of John Wu.</p>
-<p>Here's a simpler example of this that came up earlier for people who
+<p>Here&rsquo;s a simpler example of this that came up earlier for people who
 are still confused about what mocking is.</p>
 <p>There was a post about how we can
-check functions that have a <code>(random x)</code> in them because well it's
+check functions that have a <code>(random x)</code> in them because well it&rsquo;s
 random so there should be no feasible way to check it. The solution
 uses something very similar to mocking, and with a little adjustment,
 it can actually serve as a good example of mocking.</p>
@@ -1671,7 +1671,7 @@ This is that post:
 ```
 -->
 <p>Okay, so back from the beginning let use the example given there. So
-let's say that we want to recreate the <code>random-pick-word</code> function from
+let&rsquo;s say that we want to recreate the <code>random-pick-word</code> function from
 the example earlier.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp"><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">random-pick-word</span> <span style="color:#111">(</span><span style="color:#111">)</span>
   <span style="color:#d88200">&#34;Picks a random word from &#39;go&#39;, &#39;fish&#39;, or &#39;fry&#39;&#34;</span>
@@ -1700,7 +1700,7 @@ mock-tested our random function.</p>
 <p>Super-technical note: if you actually try this, you will see the
 random choice does not change with different calls to
 <code>(random-pick-word)</code> because the default value is chosen by evaluating
-<code>(random 3)</code> only once when the function is defined. That's too
+<code>(random 3)</code> only once when the function is defined. That&rsquo;s too
 technical to worry about right now.</p>
 
 

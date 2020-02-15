@@ -1799,7 +1799,7 @@ the stack.</p>
         collect item))
    =&gt; (6 A B C D E F)
 </code></pre>
-<p>Use WHILE to terminate a loop that otherwise wouldn't
+<p>Use WHILE to terminate a loop that otherwise wouldn&rsquo;t
 terminate.  Note that WHILE occurs after the WHEN.</p>
 <pre><code>(loop for i fixnum from 3
   when (oddp i) collect i
@@ -1841,10 +1841,10 @@ interact with finally.</p>
       thereis (and (mountain-p x) (mountain-height x)))
    =&gt; (2.86E-13 PARSECS)
 </code></pre>
-<h3 id="fermats-last-theorem">Fermat's Last Theorem</h3>
-<p>The code below searches for a couterexample to Fermat's Last Theorem.</p>
+<h3 id="fermats-last-theorem">Fermat&rsquo;s Last Theorem</h3>
+<p>The code below searches for a couterexample to Fermat&rsquo;s Last Theorem.</p>
 <p>If you could use this code to find a counterexample to
-Fermat's last theorem, it would still not return the value
+Fermat&rsquo;s last theorem, it would still not return the value
 of the counterexample because all of the THEREIS clauses
 in this example return only T.</p>
 <pre><code>(loop for z upfrom 2
@@ -1885,7 +1885,7 @@ COLLECT and APPEND.</p>
       if (oddp i) collect i)
    =&gt; (1 3 5 7 9)
 </code></pre>
-<p>Collect items into local variable, but don't return them.</p>
+<p>Collect items into local variable, but don&rsquo;t return them.</p>
 <pre><code>(loop for i in '(a b c d) by #'cddr
       collect i into my-list
       finally (print my-list)) ;Prints 1 line
