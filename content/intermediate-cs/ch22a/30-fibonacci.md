@@ -23,7 +23,7 @@ description: "Introduction to recursion using Fibonacci numbers."
 |-|-|-|-|-|-|-|-|
 |fib(n)|1|1|2|3|5|8|13|
 
-f(8) = ?
+fib(8) = ?
 
 ---
 

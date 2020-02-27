@@ -5,7 +5,7 @@ weight: 61
 draft: false
 #type: slide
 #theme: white
-description: "Short review questions."
+description: "Short review question."
 ---
 
 1. The `harmonic-add` function takes in a `start` and an `end` number,
