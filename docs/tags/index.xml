@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on WY Computer Science</title>
+    <link>https://wy-cs.website/tags/</link>
+    <description>Recent content in Tags on WY Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Sep 2019 15:59:25 -0500</lastBuildDate>
+    
+	<atom:link href="https://wy-cs.website/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ap-cs</title>
+      <link>https://wy-cs.website/tags/ap-cs/</link>
+      <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/tags/ap-cs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>haskell</title>
+      <link>https://wy-cs.website/tags/haskell/</link>
+      <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/tags/haskell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>homework</title>
+      <link>https://wy-cs.website/tags/homework/</link>
+      <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/tags/homework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hw</title>
+      <link>https://wy-cs.website/tags/hw/</link>
+      <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/tags/hw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project</title>
+      <link>https://wy-cs.website/tags/project/</link>
+      <pubDate>Thu, 20 Sep 2018 22:31:35 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/tags/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://wy-cs.website/tags/git/</link>
+      <pubDate>Sun, 11 Feb 2018 07:33:00 -0600</pubDate>
+      
+      <guid>https://wy-cs.website/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reading-guide</title>
+      <link>https://wy-cs.website/tags/reading-guide/</link>
+      <pubDate>Mon, 02 Oct 2017 09:19:07 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/tags/reading-guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>daily-notes</title>
+      <link>https://wy-cs.website/tags/daily-notes/</link>
+      <pubDate>Mon, 11 Sep 2017 10:47:02 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/tags/daily-notes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

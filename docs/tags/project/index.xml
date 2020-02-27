@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project on WY Computer Science</title>
+    <link>https://wy-cs.website/tags/project/</link>
+    <description>Recent content in project on WY Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Sep 2018 22:31:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://wy-cs.website/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Art Project</title>
+      <link>https://wy-cs.website/intermediate-cs/ch03/ch03-art-project/</link>
+      <pubDate>Thu, 20 Sep 2018 22:31:35 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/intermediate-cs/ch03/ch03-art-project/</guid>
+      <description>Deadline: Turn in by Friday, September 27.
+Produce: One complex piece of art per person.
+Goal: Art projects should demonstrate a range of functions from the chapter, try to use 3-4 from each category in your whole project.
+  Methods of placement: beside, above, overlay, place-image, as well as the &amp;ldquo;/align&amp;rdquo; variations. (Use the variations!)
+  Changing pictures: crop, scale, rotate.
+  Shapes: triangles (many!), lots more listed at the end of Chapter 3 (PDF pages 60&amp;ndash;61).</description>
+    </item>
+    
+  </channel>
+</rss>
