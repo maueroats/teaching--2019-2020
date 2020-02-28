@@ -1,5 +1,5 @@
 ---
-title: "22a. Recursion Quiz"
+title: "22a. Recursion Quiz 2018"
 date: 2018-03-05T07:59:54-06:00
 weight: 81
 draft: false
@@ -24,14 +24,11 @@ Use `define/contract` and have at least two check expects for each function.
 2. `blank-vowels`: string(word) -> string. Change every vowel (a,e,i,o,u) to an underscore (`_`). Example: `(blank-vowels "elephant") => "_l_ph_nt"`.
 
 
-## Period 5,7 Only
-
-4. `circle-circle`: number(big-radius) number(little-radius) number(turn-angle) number(n) -> image. Produce `n` circles of size `little-radius` around the perimeter of a circle of size `big-radius`. In between each, have a central angle of `turn-angle`.
+3. `circle-circle`: number(big-radius) number(little-radius) number(turn-angle) number(n) -> image. Produce `n` circles of size `little-radius` around the perimeter of a circle of size `big-radius`. In between each, have a central angle of `turn-angle`.
 
     {{< figure src="circle-circle.png" title="(circle-circle 100 20 45 8)" >}}
     {{< figure src="circle-circle-partial.png" title="(circle-circle 120 15 30 6)" >}}
     
-## Period 1 Only
 
 3. `hollow-diagonal`: number(radius) number(n): Produce `n` circles of the given radius along a diagonal.
 

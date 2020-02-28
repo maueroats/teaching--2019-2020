@@ -58,6 +58,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/java/karel/</loc>
+    <lastmod>2020-01-14T14:21:00-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/ch03/ch03-reading/</loc>
     <lastmod>2019-09-13T21:00:44-05:00</lastmod>
   </url>
@@ -183,6 +188,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/java/jm/arraylist/15-ex-i/</loc>
+    <lastmod>2020-02-28T14:42:03-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/ch05/ch05nightly5/</loc>
     <lastmod>2019-11-20T22:40:31-06:00</lastmod>
   </url>
@@ -205,6 +215,11 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/ch07/exercises-4/</loc>
     <lastmod>2017-10-24T08:14:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ap-cs/java/jm/</loc>
+    <lastmod>2020-02-27T14:25:19-06:00</lastmod>
   </url>
   
   <url>
@@ -1003,6 +1018,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/java/jm/arraylist/</loc>
+    <lastmod>2020-02-27T14:01:45-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch13/ch13-intro-ex3/</loc>
     <lastmod>2019-12-19T08:47:17-06:00</lastmod>
   </url>
@@ -1178,16 +1198,6 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.website/ap-cs/java/jm/</loc>
-    <lastmod>2020-02-27T14:25:19-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/ap-cs/java/jm/arraylist/</loc>
-    <lastmod>2020-02-27T14:01:45-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wy-cs.website/intermediate-cs/sem1review/2020-sem1-review-notes/</loc>
     <lastmod>2020-01-25T08:23:12-06:00</lastmod>
   </url>
@@ -1205,11 +1215,6 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/ch15/15-practice-all/</loc>
     <lastmod>2020-01-15T10:06:15-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/ap-cs/java/karel/</loc>
-    <lastmod>2020-01-14T14:21:00-06:00</lastmod>
   </url>
   
   <url>
