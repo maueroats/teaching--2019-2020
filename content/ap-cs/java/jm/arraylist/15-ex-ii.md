@@ -39,9 +39,10 @@ draft: false
             System.out.println(merge1(x,nums);
         }
         public static void test_mergeL1() {
-            test_mergeL1_helper(5);
-            test_mergeL1_helper(10);
-            test_mergeL1_helper(15);
+            test_mergeL1_helper(2);
+            test_mergeL1_helper(8);
+            test_mergeL1_helper(13);
+            test_mergeL1_helper(20);
         }
 
 4. The `rangeDel` function deletes all numbers between lower and upper
