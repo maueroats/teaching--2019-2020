@@ -22,14 +22,33 @@ draft: false
     
         
 3. Write a function `mergeL1` that assumes the list `y` is in order
+   from least to greatest, 
    and inserts `x` into a spot where the resulting list is still in order.
 
         public static ArrayList<Integer> merge1 (int x,
                                                  ArrayList<Integer> y)
     
 
+    It is easy to write code that does not work. Make sure to test it!
+    
+        public static void test_mergeL1_helper(int x) {
+            ArrayList<Integer> nums = new ArrayList<>();
+            nums.add(5); nums.add(10); nums.add(15);
+            System.out.println("=== TESTING: "+x+" ===");
+            System.out.println(nums);
+            System.out.println(merge1(x,nums);
+        }
+        public static void test_mergeL1() {
+            test_mergeL1_helper(5);
+            test_mergeL1_helper(10);
+            test_mergeL1_helper(15);
+        }
+
 4. The `rangeDel` function deletes all numbers between lower and upper
-   (inclusive) anywhere they occur in the input ArrayList.
+   (inclusive) anywhere they occur in the input ArrayList. The lower
+   and upper parameters are values, not indices.
    
         public static void rangeDel(int lower, int upper,
                                     ArrayList<Integer> nums)
+
+    

@@ -2092,14 +2092,30 @@ would swap 10 and 5, then leave 10 and 50 alone, then swap 50 and
 </li>
 <li>
 <p>Write a function <code>mergeL1</code> that assumes the list <code>y</code> is in order
+from least to greatest,
 and inserts <code>x</code> into a spot where the resulting list is still in order.</p>
 <pre><code> public static ArrayList&lt;Integer&gt; merge1 (int x,
                                           ArrayList&lt;Integer&gt; y)
 </code></pre>
+<p>It is easy to write code that does not work. Make sure to test it!</p>
+<pre><code> public static void test_mergeL1_helper(int x) {
+     ArrayList&lt;Integer&gt; nums = new ArrayList&lt;&gt;();
+     nums.add(5); nums.add(10); nums.add(15);
+     System.out.println(&quot;=== TESTING: &quot;+x+&quot; ===&quot;);
+     System.out.println(nums);
+     System.out.println(merge1(x,nums);
+ }
+ public static void test_mergeL1() {
+     test_mergeL1_helper(5);
+     test_mergeL1_helper(10);
+     test_mergeL1_helper(15);
+ }
+</code></pre>
 </li>
 <li>
 <p>The <code>rangeDel</code> function deletes all numbers between lower and upper
-(inclusive) anywhere they occur in the input ArrayList.</p>
+(inclusive) anywhere they occur in the input ArrayList. The lower
+and upper parameters are values, not indices.</p>
 <pre><code> public static void rangeDel(int lower, int upper,
                              ArrayList&lt;Integer&gt; nums)
 </code></pre>
