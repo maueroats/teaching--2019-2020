@@ -45,7 +45,7 @@ draft: false
             test_mergeL1_helper(20);
         }
 
-4. The `rangeDel` function deletes all numbers between lower and upper
+4. The `rangeDel` function deletes all items between lower and upper
    (inclusive) anywhere they occur in the input ArrayList. The lower
    and upper parameters are values, not indices.
    
