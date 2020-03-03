@@ -19,7 +19,7 @@ Write a function `count-div`: number(k) number(n) -> number that gives
 `count-divisors`: positive-integer(n) -> positive-integer. Count how
 many integers 1,2,...,n divide the number `n`.
 
-[Count-divisors solution](count-divisors).
+[Count-divisors solution]({{% ref "91-count-divisors.md" %}}).
 
 ## Number Theory
 

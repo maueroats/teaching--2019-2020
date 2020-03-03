@@ -26,3 +26,17 @@ draft: false
    
         public static void kill46 (ArrayList<Integer> nums)
 
+
+## Tester code
+
+```java
+public static void test35 () {
+    ArrayList<Integer> demo = new ArrayList<>();
+    demo.add(1);
+    demo.add(3);
+    demo.add(5);
+    demo.add(7);
+    add35(demo);
+    System.out.println(demo);
+}
+```
