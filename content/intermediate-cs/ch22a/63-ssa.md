@@ -5,6 +5,7 @@ weight: 63
 draft: false
 #type: slide
 #theme: white
+description: "A short summing practice problem."
 ---
 
 Design and test a function `ss3: number(a) number(b) -> number` to sum

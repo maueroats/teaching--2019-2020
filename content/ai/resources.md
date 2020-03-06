@@ -44,3 +44,4 @@ course covers way more than we could ever hope to cover in a high
 school course. Their web site contains detailed information about 
 [Lisp
 programming](https://courses.cs.northwestern.edu/325/readings/readings.php). 
+
