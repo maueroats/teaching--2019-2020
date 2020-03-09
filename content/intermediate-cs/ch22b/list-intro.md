@@ -13,7 +13,7 @@ We started learning about lists. (Chapter 22-23 in Picturing Programs.) Picturin
 
 Things to know:
 
-*    Empty lists: `empty-list` or `(list )` or `'()`
+*    Empty lists: `empty` or `(list )` or `'()`
 *    `empty?` : list -> boolean
 *    (list "a" "b" "c") 
 *    `first`: list of Things -> Thing
@@ -29,10 +29,10 @@ the list is empty or not. The else clause almost always contains
 
 Simplified design process:
 
-1.    Write down lists of length 0, 1, and 2, and their results
-2.     Write a program to get the correct answer with a list of length 0
-3.     Modify your program to get the correct answer with a list of length 1 (and still have length 0 correct)
-4.     Modify that program to keep the correct answers and get the length 2 list to give the right answer. This is the step that will usually involve (rest the-list).
+1. Write down lists of length 0, 1, and 2, and their results
+2. Write a program to get the correct answer with a list of length 0
+3. Modify your program to get the correct answer with a list of length 1 (and still have length 0 correct)
+4. Modify that program to keep the correct answers and get the length 2 list to give the right answer. This is the step that will usually involve (rest the-list).
 
 ## Skeleton 
 

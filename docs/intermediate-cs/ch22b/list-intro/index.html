@@ -2147,7 +2147,7 @@
 <p><a href="/intermediate-cs/ch22b/list-resources/">Alternative sources</a>.</p>
 <p>Things to know:</p>
 <ul>
-<li>Empty lists: <code>empty-list</code> or <code>(list )</code> or <code>'()</code></li>
+<li>Empty lists: <code>empty</code> or <code>(list )</code> or <code>'()</code></li>
 <li><code>empty?</code> : list -&gt; boolean</li>
 <li>(list &ldquo;a&rdquo; &ldquo;b&rdquo; &ldquo;c&rdquo;)</li>
 <li><code>first</code>: list of Things -&gt; Thing</li>
@@ -2162,18 +2162,9 @@ the list is empty or not. The else clause almost always contains
 <p>Simplified design process:</p>
 <ol>
 <li>Write down lists of length 0, 1, and 2, and their results</li>
-<li>
-<pre><code>Write a program to get the correct answer with a list of length 0
-</code></pre>
-</li>
-<li>
-<pre><code>Modify your program to get the correct answer with a list of length 1 (and still have length 0 correct)
-</code></pre>
-</li>
-<li>
-<pre><code>Modify that program to keep the correct answers and get the length 2 list to give the right answer. This is the step that will usually involve (rest the-list).
-</code></pre>
-</li>
+<li>Write a program to get the correct answer with a list of length 0</li>
+<li>Modify your program to get the correct answer with a list of length 1 (and still have length 0 correct)</li>
+<li>Modify that program to keep the correct answers and get the length 2 list to give the right answer. This is the step that will usually involve (rest the-list).</li>
 </ol>
 <h2 id="skeleton">Skeleton</h2>
 <p>The skeleton is very important for list-processing problems. It
