@@ -5,14 +5,14 @@ weight: 51
 draft: false
 #type: slide
 #theme: white
-#markup: mmark
 description: "Randomly generate points on a parabola and graph them in people coordinates."
 ---
 {{< use-mathjax >}}
 
 Note: This page uses MathJax to show fancy formulas.
 
-1. `random-gen`: number(`N`) -> list of numbers. Generate `N` random numbers, each one in the interval $-150 <= x <= 150$. Example (random so numbers will be different each time):
+1. `random-gen`: number(`N`) -> list of numbers. Generate `N` random
+   numbers, each one in the interval $ -150 \le x \le 150 $. Example (random so numbers will be different each time):
 
         (random-gen 5) => (list -75 100 -30 50 21)
 

@@ -13,7 +13,7 @@ description: "A quiz on recursive functions."
 1. (`altsum`) One way to see if a number is divisible by 11 is to find
    the alternating sum (+ then -) of the digits of the number,
    beginning at the ones digit, and see if that number is divisible
-   by 11. The alternating sum of the digits if 1495 is 5-9+4-1 = -1, so 1495
+   by 11. The alternating sum of the digits if 1495 is $5-9+4-1 = -1$, so 1495
    is not divisible by 11. Design and test the function 
    `altsum: number(n) -> number`.
 
