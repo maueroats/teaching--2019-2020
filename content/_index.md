@@ -3,11 +3,17 @@ title: "Mauer-Oats Classes"
 date: 2019-09-05T06:28:23-05:00
 ---
 
+## Remote Learning 2020
+
+* [Schedule (direct link)]({{% ref "/resources/remote-learning/schedule.md" %}}).
+* [Remote learning resources]({{< ref "/resources/remote-learning" >}})
+
+
 ## Classes 2019-2020
 
-* [AP CS](ap-cs/)
+* [AP CS](ap-cs)
 * [Artificial Intelligence](ai)
-* [Intermediate CS](intermediate-cs/)
+* [Intermediate CS](intermediate-cs)
 * [Robotics](robotics)
 
 ## Other Links

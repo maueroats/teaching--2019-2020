@@ -36,5 +36,16 @@
 Simple Merging If you are lucky, you are at school and you know that you just want to use the code from home (the &amp;ldquo;incoming code&amp;rdquo; from the pull).</description>
     </item>
     
+    <item>
+      <title>Git</title>
+      <link>https://wy-cs.website/ftc/git/</link>
+      <pubDate>Tue, 10 Oct 2017 10:20:47 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ftc/git/</guid>
+      <description>Git is a system for keeping track of all of the versions of things you write, both old and new. The whole system is quite complex, so we will limit ourselves to a small portion of what it can do.
+You will use it for several purposes:
+ Turning in your work Backing up your work Transferring work to and from home via the internet instead of using a flash drive Collaborating with a group  Incomplete It is impossible to write down everything you need to know about git.</description>
+    </item>
+    
   </channel>
 </rss>

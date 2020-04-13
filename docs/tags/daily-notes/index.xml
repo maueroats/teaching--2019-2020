@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Haskell Daily Notes</title>
+      <link>https://wy-cs.website/ap-cs/haskell/daily/</link>
+      <pubDate>Mon, 11 Sep 2017 10:03:46 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ap-cs/haskell/daily/</guid>
+      <description>2018-10-16
+notAlone. notAlone :: [Int] -&amp;gt; Int -&amp;gt; [Int] notAlone nums x = undefined Team Tic Tac Toe Write teamWins to determine if a given team wins a given three in a row. teamWins :: String -&amp;gt; [Char] -&amp;gt; Bool teamWins row team = undefined Write allThrees, which gets all of the three in a row segments from a board. allThrees :: [String] -&amp;gt; [String] allThrees board = undefined Write allTeams, which produces a list of all possible teams.</description>
+    </item>
+    
+    <item>
       <title>2017-09-11</title>
       <link>https://wy-cs.website/ap-cs/haskell/daily/2017-09-11/</link>
       <pubDate>Mon, 11 Sep 2017 10:47:02 -0500</pubDate>

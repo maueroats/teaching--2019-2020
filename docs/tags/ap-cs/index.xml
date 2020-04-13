@@ -17,16 +17,16 @@
       <pubDate>Sat, 09 Sep 2017 15:57:47 -0500</pubDate>
       
       <guid>https://wy-cs.website/ap-cs/haskell/ch02/cw-a2/</guid>
-      <description>&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
-MathJax.Hub.Config({
-tex2jax: {
+      <description>&lt;script&gt;
+MathJax = {
+ tex: {
   inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]],
   displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\\[&#39;,&#39;\\]&#39;]]
-  }});
+  }};
 &lt;/script&gt;
+&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
 
-&lt;script async type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML&#34;&gt;
-&lt;/script&gt;
 
 
 &lt;h2 id=&#34;warmup&#34;&gt;Warmup&lt;/h2&gt;

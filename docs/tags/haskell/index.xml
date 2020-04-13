@@ -12,6 +12,47 @@
     
     
     <item>
+      <title>1. Intro</title>
+      <link>https://wy-cs.website/ap-cs/haskell/ch01/</link>
+      <pubDate>Sat, 09 Sep 2017 15:34:07 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ap-cs/haskell/ch01/</guid>
+      <description>&lt;p&gt;A high-level overview of the Haskell language and why its features are good.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>3. Types and Typeclasses</title>
+      <link>https://wy-cs.website/ap-cs/haskell/ch03/</link>
+      <pubDate>Tue, 12 Sep 2017 13:18:35 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ap-cs/haskell/ch03/</guid>
+      <description>&lt;p&gt;Types categorize the kinds of data that appear in a program. Typeclasses provide general abilities that different types can have.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>4. Syntax in Functions</title>
+      <link>https://wy-cs.website/ap-cs/haskell/ch04/</link>
+      <pubDate>Mon, 18 Sep 2017 13:22:05 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ap-cs/haskell/ch04/</guid>
+      <description>&lt;p&gt;Patterns, guards, where, let, and case.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Haskell</title>
+      <link>https://wy-cs.website/ap-cs/haskell/</link>
+      <pubDate>Wed, 05 Sep 2018 11:26:51 -0500</pubDate>
+      
+      <guid>https://wy-cs.website/ap-cs/haskell/</guid>
+      <description>You will need the the text Learn You a Haskell For Great Good.
+ Tip: Use repl.it for programming.
+ Haskell is a pure, lazy, statically typed language. In the first chapter you will learn what those terms mean. Later you will learn how to write programs.
+Chapters  1. Intro
+A high-level overview of the Haskell language and why its features are good.
+  2. Starting Out</description>
+    </item>
+    
+    <item>
       <title>Chapter 4 Reading Guide</title>
       <link>https://wy-cs.website/ap-cs/haskell/ch04/ch04-reading-guide/</link>
       <pubDate>Sun, 17 Sep 2017 20:47:05 -0500</pubDate>
@@ -37,16 +78,16 @@
       <pubDate>Sat, 09 Sep 2017 15:57:47 -0500</pubDate>
       
       <guid>https://wy-cs.website/ap-cs/haskell/ch02/cw-a2/</guid>
-      <description>&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
-MathJax.Hub.Config({
-tex2jax: {
+      <description>&lt;script&gt;
+MathJax = {
+ tex: {
   inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]],
   displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\\[&#39;,&#39;\\]&#39;]]
-  }});
+  }};
 &lt;/script&gt;
+&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
 
-&lt;script async type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML&#34;&gt;
-&lt;/script&gt;
 
 
 &lt;h2 id=&#34;warmup&#34;&gt;Warmup&lt;/h2&gt;
@@ -101,51 +142,6 @@ Basics  How do you find the type of an expression (when using the interpreter)?
       <description>&lt;p&gt;The essentials of the Types and Typeclasses chapter are: writing type
 signatures for functions, reading string inputs with the &lt;code&gt;Read&lt;/code&gt; class,
 and dealing with Integral to Fractional conversions when they are needed.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chapter 4 Problem Set</title>
-      <link>https://wy-cs.website/ap-cs/haskell/ch04/ch04-problemset/</link>
-      <pubDate>Wed, 20 Sep 2017 20:32:15 -0500</pubDate>
-      
-      <guid>https://wy-cs.website/ap-cs/haskell/ch04/ch04-problemset/</guid>
-      <description>Key new concepts: patterns, guards, where, let, case.
-Please write function signatures for every solution.
- Some of these problems are classical exercises with solutions online. Please do not search for them or read them before turning in your work. (See Academic Integrity.)
-Exercises   First Third. Return the sum of the first and third elements in the list. Example: firstThird [10,30,50,90] == 60.
-  Take a list of items that can be compared for equality (Eq a) and reduce repeats to a single element.</description>
-    </item>
-    
-    <item>
-      <title>2017-10-04</title>
-      <link>https://wy-cs.website/ap-cs/haskell/daily/2017-10-04/</link>
-      <pubDate>Wed, 04 Oct 2017 10:55:32 -0500</pubDate>
-      
-      <guid>https://wy-cs.website/ap-cs/haskell/daily/2017-10-04/</guid>
-      <description>Without10 (source). Take a list of numbers and remove all of the tens. The remaining numbers shift toward the start of the list and zeros fill in at the end.
-  NotAlone (source). We will say that an element in an array is &amp;ldquo;alone&amp;rdquo; if there are values before and after it, and those values are different from it. Return a version of the list where every instance of the given value which is alone is replaced by whichever value to its left or right is larger.</description>
-    </item>
-    
-    <item>
-      <title>2017-10-03</title>
-      <link>https://wy-cs.website/ap-cs/haskell/daily/2017-10-03/</link>
-      <pubDate>Tue, 03 Oct 2017 15:48:19 -0500</pubDate>
-      
-      <guid>https://wy-cs.website/ap-cs/haskell/daily/2017-10-03/</guid>
-      <description>(Previous class leftover.) Write only14 (source) that takes in a list of numbers and gives a boolean result. The result is true if every number in the list is either a 1 or a 4.
-  Write isEverywhere(source). &amp;ldquo;We&amp;rsquo;ll say that a value is &amp;ldquo;everywhere&amp;rdquo; in an array if for every pair of adjacent elements in the array, at least one of the pair is that value. Return true if the given value is everywhere in the array.</description>
-    </item>
-    
-    <item>
-      <title>Chapter 6 Reading Guide</title>
-      <link>https://wy-cs.website/ap-cs/haskell/ch06/ch06-reading-guide/</link>
-      <pubDate>Mon, 02 Oct 2017 09:19:07 -0500</pubDate>
-      
-      <guid>https://wy-cs.website/ap-cs/haskell/ch06/ch06-reading-guide/</guid>
-      <description>Don&amp;rsquo;t do this while this note is here.
-  Take in a list of numbers and output a list containing all of the numbers greater than 8.
-  Take in a list of numbers and output a list containing all of the numbers between 10 and 20 (inclusive).
-  Take in a list of numbers. Multiply all of the numbers in a list by 10 to make the output list.</description>
     </item>
     
   </channel>

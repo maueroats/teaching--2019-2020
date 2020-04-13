@@ -1228,6 +1228,21 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/resources/remote-learning/schedule/</loc>
+    <lastmod>2020-04-13T07:33:06-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/resources/remote-learning/</loc>
+    <lastmod>2020-04-13T07:33:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/intermediate-cs/ch22b/parcels/</loc>
+    <lastmod>2020-03-19T13:13:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/sem1review/2020-sem1-review-notes/</loc>
     <lastmod>2020-01-25T08:23:12-06:00</lastmod>
   </url>
@@ -1353,6 +1368,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/tags/project/</loc>
+    <lastmod>2018-10-09T09:37:17-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/resources/events/</loc>
     <lastmod>2018-10-08T10:14:18-05:00</lastmod>
   </url>
@@ -1373,13 +1393,18 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.website/tags/project/</loc>
-    <lastmod>2018-09-20T22:31:35-05:00</lastmod>
+    <loc>https://wy-cs.website/intermediate-cs/resources/why-racket/</loc>
+    <lastmod>2018-09-05T20:12:44-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wy-cs.website/intermediate-cs/resources/why-racket/</loc>
-    <lastmod>2018-09-05T20:12:44-05:00</lastmod>
+    <loc>https://wy-cs.website/categories/ap-cs/</loc>
+    <lastmod>2018-09-05T11:26:51-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/categories/</loc>
+    <lastmod>2018-09-05T11:26:51-05:00</lastmod>
   </url>
   
   <url>
@@ -1493,18 +1518,13 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.website/categories/ap-cs/</loc>
-    <lastmod>2017-09-11T10:12:55-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/categories/</loc>
-    <lastmod>2017-09-11T10:12:55-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wy-cs.website/ap-cs/haskell/ghci-details/</loc>
     <lastmod>2017-09-11T10:12:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/categories/intermediate-cs/</loc>
+    <lastmod>2017-09-09T19:49:27-05:00</lastmod>
   </url>
   
   <url>
