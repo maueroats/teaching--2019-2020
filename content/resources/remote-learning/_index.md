@@ -6,6 +6,8 @@ draft: false
 #type: slide
 #theme: white
 description: "Resources for remote learning."
+aliases:
+   - /remote-learning
 ---
 
 {{% children description="true" %}}
