@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/review/resources/</loc>
+    <lastmod>2020-04-14T14:21:20-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/java/jm/arraylist/10-start/</loc>
     <lastmod>2020-02-27T14:01:54-06:00</lastmod>
   </url>
@@ -218,6 +223,16 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/ap-cs/review/content-overview/</loc>
+    <lastmod>2020-04-14T14:45:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ap-cs/problem-solving/</loc>
+    <lastmod>2020-04-14T14:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/java/jm/arraylist/20-ex-ii/</loc>
     <lastmod>2020-03-02T13:38:28-06:00</lastmod>
   </url>
@@ -355,6 +370,16 @@
   <url>
     <loc>https://wy-cs.website/resources/generic-cs-syllabus/</loc>
     <lastmod>2017-09-09T15:50:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ap-cs/review/details/</loc>
+    <lastmod>2020-04-14T14:47:40-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ap-cs/review/</loc>
+    <lastmod>2020-04-14T14:21:16-05:00</lastmod>
   </url>
   
   <url>
@@ -1225,6 +1250,11 @@
   <url>
     <loc>https://wy-cs.website/ai/quiz/2019-10-04/</loc>
     <lastmod>2019-10-04T09:06:44-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/ap-cs/problem-solving/hackerrank/</loc>
+    <lastmod>2020-04-14T15:39:56-05:00</lastmod>
   </url>
   
   <url>

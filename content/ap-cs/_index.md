@@ -8,7 +8,7 @@ description: "Haskell to expand the way you see the world and Java for object-or
 
 <i class='fa fa-calendar' aria-hidden='true'></i>[AP Exam Calendar
 2020](https://apcentral.collegeboard.org/courses/exam-dates-and-fees):
-May 7 in the afternoon for our class.
+May 15 at 3pm for our class (updated April 14 post-coronavirus).
 
 ## All Topics
 
