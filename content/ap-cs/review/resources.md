@@ -23,6 +23,9 @@ sure you focus on learning problem solving now.
   etc. Some materials are paired with the videos from the AP CS A
   playlist (see above); match materials to videos by looking at the
   units.
-  
+* [Runestone AP CS
+  Review](https://runestone.academy/runestone/books/published/apcsareview/index.html):
+  Free. It does not have a ton of repetitive exercises, but the ones it has are
+  on point. There are some in every content area. 
 
 * Free Response questions [from 2019](https://apcentral.collegeboard.org/pdf/ap19-frq-computer-science-a.pdf), and from [2018 and earlier](https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions).
