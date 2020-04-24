@@ -16,7 +16,7 @@ Define the class `Wire` as outlined below.
 * A wire connects two end locations.
 * Calling `getEnd(0)` and `getEnd(1)` give the two ends.
 * Cut returns an array containing two wires, with ends as you would
-  imagine.
+  imagine (one end to the cut, cut to the other end).
 * `solder` connects two wires to return 1 long wire. If you want you
   can make it work with more.
 
