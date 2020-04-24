@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Typeclass Notes :: WY Computer Science</title>
+<title>120 Review :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.website";
 </script>
-<meta name="description" content="Typeclasses you may encounter in everyday programming.">
+<meta name="description" content="Wire class quiz">
 
 
 
     
   </head>
-  <body data-url="/ap-cs/haskell/typeclass-notes/">
+  <body data-url="/ap-cs/review/120-review/">
     
       <header>
   <div class="logo">
@@ -75,11 +75,10 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/ap-cs/haskell/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/">Haskell</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/">Haskell</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ap-cs/haskell/ch01/" class="dd-item haschildren
@@ -567,7 +566,7 @@
     </li>
         </ul>
     </li>
-      <li data-nav-id="/ap-cs/haskell/typeclass-notes/" class="dd-item active">
+      <li data-nav-id="/ap-cs/haskell/typeclass-notes/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/typeclass-notes/">
             Typeclass Notes
@@ -714,10 +713,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/review/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/review/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/review/">AP Review</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/review/">AP Review</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/review/resources/" class="dd-item">
@@ -748,7 +748,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/review/120-review/" class="dd-item">
+      <li data-nav-id="/ap-cs/review/120-review/" class="dd-item active">
         <div>
           <a href="/ap-cs/review/120-review/">
             120 Review
@@ -2172,44 +2172,7 @@
    AP CS</option> 
     <option value="/ap-cs/haskell/" >
   - 
-   Haskell</option> 
-    <option value="/ap-cs/haskell/ch01/" >
-  -- 
-   1. Intro</option>
-    <option value="/ap-cs/haskell/ch02/" >
-  -- 
-   2. Starting Out</option>
-    <option value="/ap-cs/haskell/ch03/" >
-  -- 
-   3. Types and Typeclasses</option>
-    <option value="/ap-cs/haskell/ch04/" >
-  -- 
-   4. Syntax in Functions</option>
-    <option value="/ap-cs/haskell/ch05/" >
-  -- 
-   5. Recursion</option>
-    <option value="/ap-cs/haskell/ch06/" >
-  -- 
-   6. Higher Order Functions</option>
-    <option value="/ap-cs/haskell/ch07/" >
-  -- 
-   7. Modules</option>
-    <option value="/ap-cs/haskell/usaco/" >
-  -- 
-   USACO Practice</option>
-    <option value="/ap-cs/haskell/daily/" >
-  -- 
-   Haskell Daily Notes</option>
-    <option value="/ap-cs/haskell/scrabble/" >
-  -- 
-   Scrabble</option>
-    <option value="/ap-cs/haskell/connect-four/" >
-  -- 
-   Connect Four</option>
-      <option value="/ap-cs/haskell/typeclass-notes/"  selected>-- Typeclass Notes</option>
-      <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
-      <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
-  
+   Haskell</option>
     <option value="/ap-cs/java/" >
   - 
    Java Essentials</option>
@@ -2218,7 +2181,13 @@
    Problem Solving</option>
     <option value="/ap-cs/review/" >
   - 
-   AP Review</option>
+   AP Review</option> 
+      <option value="/ap-cs/review/resources/" >-- AP Exam Resources</option>
+      <option value="/ap-cs/review/content-overview/" >-- Content Overview</option>
+      <option value="/ap-cs/review/details/" >-- Details 2020</option>
+      <option value="/ap-cs/review/110-review/" >-- 110 Review</option>
+      <option value="/ap-cs/review/120-review/"  selected>-- 120 Review</option>
+  
   
     <option value="/ai/" >
    Artificial Intelligence</option>
@@ -2240,29 +2209,37 @@
     </div>
     
 
-    <h1>Typeclass Notes</h1>
+    <h1>120 Review</h1>
 
     
     
     
-    <ul>
-<li>Num: Addition, multiplication, a way to convert from an integer. Also absolute value and negation.</li>
-<li>Real: Part of the real number line. Ordered numbers. <code>toRational</code>. Does not imply decimals!</li>
-<li>Enum: Next and previous (<code>succ</code>-essor and <code>pred</code>-ecessor).</li>
-<li>Integral: Integer division.</li>
-<li>Fractional: &ldquo;Decimal&rdquo; division.</li>
-<li>Floating: transcendental functions (exponentials, trig, pi, e).</li>
-<li>RealFrac: truncate and round.</li>
-<li>RealFloat: efficient floating point.</li>
+    <h2 id="quiz">Quiz</h2>
+<p>Define the class <code>Wire</code> as outlined below.</p>
+<ul>
+<li>We imagine wires on a number line.</li>
+<li>A wire connects two end locations.</li>
+<li>Calling <code>getEnd(0)</code> and <code>getEnd(1)</code> give the two ends.</li>
+<li>Cut returns an array containing two wires, with ends as you would
+imagine.</li>
+<li><code>solder</code> connects two wires to return 1 long wire. If you want you
+can make it work with more.</li>
 </ul>
-
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">public class Wire {
+    // instance variables to here
+    public Wire (int end1, int end2) { }
+    public int getEnd(int n) { return -1;}
+    public Wire[] cut(int where) { return null; }
+    public Wire solder(Wire[] wires) { return null; }
+}
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/connect-four/rubric/" title="Connect Four Rubric"> <i class="fa fa-chevron-left"></i><label>Connect Four Rubric</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/replit/" title="Repl.it" style="margin-right: 0px;"><label>Repl.it</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/review/110-review/" title="110 Review"> <i class="fa fa-chevron-left"></i><label>110 Review</label></a>
+    <a class="nav nav-next" href="/ai/" title="Artificial Intelligence" style="margin-right: 0px;"><label>Artificial Intelligence</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -2278,7 +2255,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 24/09/2017
+        <i class='fa fa-calendar'></i> Last update on 24/04/2020
     </div>
     
 

@@ -5,6 +5,7 @@ weight: 110
 draft: false
 #type: slide
 #theme: white
+description: "Dog class, working with a List of Dog."
 ---
 
 ArrayList review: given a `List` of `Dog`, modify the list so that 
