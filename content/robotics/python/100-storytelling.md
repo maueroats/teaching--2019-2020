@@ -14,8 +14,11 @@ There are three principles to keep in mind:
 * While loops repeat actions.
 * If statements make choices.
 
-Practice:
+## Practice
 
 * [Live Document, April
   2020](https://docs.google.com/document/d/1ox6JdxlB6SMe7jBv3Qp2w4UaZqQgBo6uQb5y9UT3kgc/edit?usp=sharing)
   
+
+For individual days, see sidebar.
+
