@@ -5,7 +5,7 @@ weight: 100
 draft: false
 #type: slide
 #theme: white
-description: "An introduction to Python with a focus on telling stories."
+description: "An introduction to Python with a focus on telling stories. Includes link to live daily Google Doc."
 ---
 
 There are three principles to keep in mind:
