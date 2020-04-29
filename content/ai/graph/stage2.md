@@ -2,7 +2,7 @@
 title: "Graph B"
 date: 2020-04-27T10:48:55-05:00
 weight: 20
-draft: false
+draft: true
 #type: slide
 #theme: white
 description: "Assignments in graph theory."

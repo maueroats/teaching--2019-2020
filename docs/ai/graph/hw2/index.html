@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Graph A :: WY Computer Science</title>
+<title>Graph HW 2 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.website";
 </script>
-<meta name="description" content="Breadth-first and depth-first search">
+<meta name="description" content="Dual of a triangulation.">
 
 
 
     
   </head>
-  <body data-url="/ai/graph/stage1/">
+  <body data-url="/ai/graph/hw2/">
     
       <header>
   <div class="logo">
@@ -1001,29 +1001,6 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ai/graph/" class="dd-item parent haschildren
-        ">
-      <div>
-      <a href="/ai/graph/">Graph Theory</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
-      </div>
-        <ul>
-      <li data-nav-id="/ai/graph/stage1/" class="dd-item active">
-        <div>
-          <a href="/ai/graph/stage1/">
-            Graph A
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ai/graph/stage2/" class="dd-item">
-        <div>
-          <a href="/ai/graph/stage2/">
-            Graph B
-          </a>
-        </div>
-    </li>
-        </ul>
-    </li>
     <li data-nav-id="/ai/quiz/" class="dd-item haschildren
         ">
       <div>
@@ -1034,6 +1011,29 @@
         <div>
           <a href="/ai/quiz/2019-10-04/">
             2019-10-04
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ai/graph/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ai/graph/">Graph Theory</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ai/graph/hw1/" class="dd-item">
+        <div>
+          <a href="/ai/graph/hw1/">
+            Graph HW 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ai/graph/hw2/" class="dd-item active">
+        <div>
+          <a href="/ai/graph/hw2/">
+            Graph HW 2
           </a>
         </div>
     </li>
@@ -2261,15 +2261,15 @@
     <option value="/ai/ch06/" >
   - 
    Ch06 Searching</option>
-    <option value="/ai/graph/" >
-  - 
-   Graph Theory</option> 
-      <option value="/ai/graph/stage1/"  selected>-- Graph A</option>
-      <option value="/ai/graph/stage2/" >-- Graph B</option>
-  
     <option value="/ai/quiz/" >
   - 
    Quizzes</option>
+    <option value="/ai/graph/" >
+  - 
+   Graph Theory</option> 
+      <option value="/ai/graph/hw1/" >-- Graph HW 1</option>
+      <option value="/ai/graph/hw2/"  selected>-- Graph HW 2</option>
+  
       <option value="/ai/resources/" >- AI Resources</option>
     <option value="/ai/python/" >
   - 
@@ -2293,25 +2293,45 @@
     </div>
     
 
-    <h1>Graph A</h1>
+    <h1>Graph HW 2</h1>
 
     
     
     
-    <p>Short projects:</p>
-<ul>
-<li>Diameter of a graph = maximum distance from any vertex to any other vertex</li>
-<li>Connected components: count.</li>
-<li>Two-coloring: is the graph &ldquo;bipartite&rdquo;</li>
-</ul>
+    <p>The format of a triangulation file is a sequence of vertices numbered
+from 1, followed by a sequence of triangles given by three
+vertices. Example:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">VERTICES 50
+4.3943722230209445  15.415607000180948
+17.65501201136214   4.661809724765199
+3.137045515271147   13.337239648000661
+[...]
+TRIANGLES 89
+1   4   5
+1   3   4
+1   3   8
+1   8   46
+[...]
+</code></pre></div><p>The <a href="https://en.wikipedia.org/wiki/Dual_graph">dual graph</a> of a graph
+G has one vertex for each <em>face</em> (triangle) in the
+original graph G, and one edge for every adjacent face (edge in
+original graph). Note: in spite of what you see on Wikipedia, we will
+not make a vertex for the &ldquo;infinite face&rdquo; = the outside of the graph.</p>
+<p>Here is the <a href="https://gist.github.com/maueroats/490b6cbaa8e8468716824fc3b6ea8649#file-triangles-py">triangulation-reading
+code</a>
+or <a href="triangles.txt">in my site</a>.</p>
+<p>Your job is to produce a graph (like the MGraph from class) that
+represents the dual graph of a triangulation.</p>
+<p>Sample data: triangulations with <a href="triangle-050.txt">50 vertices</a> and
+<a href="triangle-100.txt">100 vertices</a>.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ai/graph/" title="Graph Theory"> <i class="fa fa-chevron-left"></i><label>Graph Theory</label></a>
-    <a class="nav nav-next" href="/ai/graph/stage2/" title="Graph B" style="margin-right: 0px;"><label>Graph B</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ai/graph/hw1/" title="Graph HW 1"> <i class="fa fa-chevron-left"></i><label>Graph HW 1</label></a>
+    <a class="nav nav-next" href="/ai/resources/" title="AI Resources" style="margin-right: 0px;"><label>AI Resources</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -2327,7 +2347,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 15/04/2020
+        <i class='fa fa-calendar'></i> Last update on 29/04/2020
     </div>
     
 

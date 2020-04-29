@@ -1,0 +1,42 @@
+hidden: true
+---
+from typing import TextIO
+
+# Problem: produce the dual graph for a triangulation
+
+example_triangulation = '''
+VERTICES 4
+0.000000 240.000000 0.000000
+204.000000 240.000000 0.000000
+240.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+TRIANGLES 2
+0 1 3
+1 2 3
+'''.strip()
+
+#  Notes: vertices is irrelevant, only triangles matter
+def parse_triangulation(f: TextIO):
+    """Return a reusable list of vertices and triangles.
+    triangles[k] is a list of three numbers = the vertices for triangle k.
+
+    Usage: 
+        import io
+        f = io.StringIO(example_triangulation)
+          (v,t) = parse_triangulation(f) 
+    or 
+        with open("filename.txt") as f:
+          (v,t) = parse_triangulation(f)
+
+    Note - had to explicitly force map so the second iteration through the data would not get nothing. (BUGFIX)"""
+
+    (_, nvertices) = f.readline().split()
+    nvertices = int(nvertices)
+    vertices = [list(map(float, f.readline().split())) for _ in range(nvertices)]
+
+    (_, ntriangles) = f.readline().split()
+    ntriangles = int(ntriangles)
+    triangles = [list(map(int, f.readline().split())) for _ in range(ntriangles)]
+
+    return (vertices, triangles)
+
