@@ -2128,6 +2128,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/robotics/python/150-math-decisions/" class="dd-item">
+        <div>
+          <a href="/robotics/python/150-math-decisions/">
+            Math Decisions
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
         </ul>
@@ -2298,16 +2305,19 @@ increase the y coordinate.</p>
 Maze class.</p>
 <ol>
 <li>
-<p><code>public void clean()</code> method in <code>Maze</code>: removes <code>PD</code> that have
-&ldquo;start&rdquo; or &ldquo;end&rdquo; as their direction.</p>
+<p><code>public void clean()</code> method in <code>Maze</code>: removes any <code>PD</code> that has
+&ldquo;end&rdquo; as its direction.</p>
 </li>
 <li>
 <p><code>public PD next(PD pos)</code>: follow the directions given in <code>pos</code> to
 find the next spot PD in the maze. If there is none, return
-<code>null</code>.</p>
+<code>null</code>. You may assume there is at most 1 point in the maze in the
+direction you are going (but it is more interesting to find the
+closest one).</p>
 <p>Example: Maze has only A = (5,2,&ldquo;up&rdquo;) and B = (5,9,&ldquo;right&rdquo;) then
 calling <code>next(A)</code> gives <code>B</code>. So go in the &ldquo;up&rdquo; direction from A
-until you hit another &ldquo;PD&rdquo; in the maze.</p>
+until you hit another &ldquo;PD&rdquo; in the maze. Calling <code>next(B)</code> would
+return null, since there is no point to the right of B in the maze.</p>
 <p>Check the whole maze list before giving up.</p>
 <p>Plan: go through the list of PD in the maze, find the next one in
 the given direction that is closest.</p>
@@ -2315,7 +2325,8 @@ the given direction that is closest.</p>
 <li>
 <p><code>public ArrayList&lt;PD&gt; solve(int startx, int starty)</code>:
 give the sequence of all PD&rsquo;s from
-(startx,starty) to &ldquo;end&rdquo;. You are guaranteed there is a start and and end. If
+(startx,starty) to &ldquo;end&rdquo;. You are guaranteed there is a PD at the
+starting coordinates. If
 the maze is not solvable, return as far as you get (so it will not
 end at the &ldquo;end&rdquo;).</p>
 <p>This is a Maze:</p>

@@ -32,16 +32,19 @@ public class PD {
 A `Maze` is an `ArrayList<PD>`. Write the following methods for the
 Maze class.
 
-1. `public void clean()` method in `Maze`: removes `PD` that have
-   "start" or "end" as their direction.
+1. `public void clean()` method in `Maze`: removes any `PD` that has
+   "end" as its direction.
    
 2. `public PD next(PD pos)`: follow the directions given in `pos` to
    find the next spot PD in the maze. If there is none, return
-   `null`. 
+   `null`. You may assume there is at most 1 point in the maze in the
+   direction you are going (but it is more interesting to find the
+   closest one).
    
    Example: Maze has only A = (5,2,"up") and B = (5,9,"right") then
    calling `next(A)` gives `B`. So go in the "up" direction from A
-   until you hit another "PD" in the maze.
+   until you hit another "PD" in the maze. Calling `next(B)` would
+   return null, since there is no point to the right of B in the maze.
 
     Check the whole maze list before giving up. 
     
@@ -50,7 +53,8 @@ Maze class.
 
 3. `public ArrayList<PD> solve(int startx, int starty)`:
    give the sequence of all PD's from
-   (startx,starty) to "end". You are guaranteed there is a start and and end. If
+   (startx,starty) to "end". You are guaranteed there is a PD at the
+   starting coordinates. If
    the maze is not solvable, return as far as you get (so it will not
    end at the "end").
 
