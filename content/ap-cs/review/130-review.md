@@ -1,10 +1,11 @@
 ---
-title: "130 Review"
+title: "Maze Review"
 date: 2020-04-28T10:50:43-05:00
 weight: 130
 draft: false
 #type: slide
 #theme: white
+description: "PD and Maze"
 ---
 
 The class `PD` contains integer `x` and `y` coordinates

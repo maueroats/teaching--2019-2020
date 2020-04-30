@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>110 Review :: WY Computer Science</title>
+<title>Farm :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.website";
 </script>
-<meta name="description" content="Dog class, working with a List of Dog.">
+<meta name="description" content="Farm class: grow plants, harvest them.">
 
 
 
     
   </head>
-  <body data-url="/ap-cs/review/110-review/">
+  <body data-url="/ap-cs/review/140-farm/">
     
       <header>
   <div class="logo">
@@ -741,7 +741,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/review/110-review/" class="dd-item active">
+      <li data-nav-id="/ap-cs/review/110-review/" class="dd-item">
         <div>
           <a href="/ap-cs/review/110-review/">
             110 Review
@@ -762,7 +762,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/review/140-farm/" class="dd-item">
+      <li data-nav-id="/ap-cs/review/140-farm/" class="dd-item active">
         <div>
           <a href="/ap-cs/review/140-farm/">
             Farm
@@ -2263,10 +2263,10 @@
       <option value="/ap-cs/review/resources/" >-- AP Exam Resources</option>
       <option value="/ap-cs/review/content-overview/" >-- Content Overview</option>
       <option value="/ap-cs/review/details/" >-- Details 2020</option>
-      <option value="/ap-cs/review/110-review/"  selected>-- 110 Review</option>
+      <option value="/ap-cs/review/110-review/" >-- 110 Review</option>
       <option value="/ap-cs/review/120-review/" >-- 120 Review</option>
       <option value="/ap-cs/review/130-review/" >-- Maze Review</option>
-      <option value="/ap-cs/review/140-farm/" >-- Farm</option>
+      <option value="/ap-cs/review/140-farm/"  selected>-- Farm</option>
   
   
     <option value="/ai/" >
@@ -2289,60 +2289,44 @@
     </div>
     
 
-    <h1>110 Review</h1>
+    <h1>Farm</h1>
 
     
     
     
-    <p>ArrayList review: given a <code>List</code> of <code>Dog</code>, modify the list so that</p>
+    <p>A <code>Farm</code> contains a list of crops.</p>
 <ul>
-<li>dogs whose name begin with A through M should get 1 year older</li>
-<li>dogs with names beginning with N or later are removed from the list</li>
-<li>dogs that are at least 25 years old are removed from the list</li>
+<li>You can add crops to the farm by
+calling the <code>void plant(String crop)</code> method.</li>
+<li>You can harvest a lot of
+crops at once by calling the <code>int harvest(List&lt;String&gt; crops)</code>
+method - this method returns the number of individual crops
+harvested.</li>
+<li>When you <code>void fertilize(String crop)</code>, the grows more &mdash;
+represent that by putting another one of the same crop next to every
+crop you find in the current list of crops.</li>
 </ul>
-<h2 id="dog-class">Dog class</h2>
-<p>The basics of constructors, <code>toString</code>. You should be able to write
-this class.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Dog</span> <span style="color:#f92672">{</span>
-  <span style="color:#00a8c8">private</span> <span style="color:#111">String</span> <span style="color:#111">name</span><span style="color:#f92672">;</span>
-  <span style="color:#00a8c8">private</span> <span style="color:#00a8c8">int</span> <span style="color:#111">age</span><span style="color:#f92672">;</span>
+<h2 id="example">Example</h2>
+<p>A Farm has corn, corn, corn, soybeans, soybeans, and green
+beans.</p>
+<ul>
+<li>Calling the <code>plant(&quot;wheat&quot;)</code> method adds wheat to the list of
+crops.</li>
+<li>Calling the <code>harvest([&quot;corn&quot;,&quot;soybeans&quot;])</code> method removes corn
+and soybeans from the list of crops and returns 5, since 5 items were
+harvested. The farm now has: green beans.</li>
+<li>Using the original example farm, <code>fertilize(&quot;soybeans&quot;)</code> makes the
+farm have corn, corn, corn, soybean, soybeans, soybeans, soybeans, and
+green beans.</li>
+</ul>
 
-  <span style="color:#00a8c8">public</span> <span style="color:#75af00">Dog</span><span style="color:#f92672">(</span><span style="color:#111">String</span> <span style="color:#111">n</span><span style="color:#f92672">,</span> <span style="color:#00a8c8">int</span> <span style="color:#111">a</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#111">name</span> <span style="color:#f92672">=</span> <span style="color:#111">n</span><span style="color:#f92672">;</span> <span style="color:#111">age</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span><span style="color:#f92672">;</span>
-  <span style="color:#f92672">}</span>
-
-  <span style="color:#00a8c8">public</span> <span style="color:#111">String</span> <span style="color:#75af00">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">name</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
-  <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">int</span> <span style="color:#75af00">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">age</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
-  <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">setAge</span><span style="color:#f92672">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">n</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#111">age</span> <span style="color:#f92672">=</span> <span style="color:#111">n</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
-  <span style="color:#00a8c8">public</span> <span style="color:#111">String</span> <span style="color:#75af00">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;[Dog &#34;</span><span style="color:#f92672">+</span><span style="color:#111">name</span><span style="color:#f92672">+</span><span style="color:#d88200">&#34; age=(&#34;</span><span style="color:#f92672">+</span><span style="color:#111">age</span><span style="color:#f92672">+</span><span style="color:#d88200">&#34;)]&#34;</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
-
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="skeleton">Skeleton</h2>
-<p>Put your solution in this skeleton so you can run it to see if it works.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">class</span> <span style="color:#75af00">Main</span> <span style="color:#f92672">{</span>
-  <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">main</span><span style="color:#f92672">(</span><span style="color:#111">String</span><span style="color:#f92672">[]</span> <span style="color:#111">args</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#111">Dog</span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Dog</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#111">5</span><span style="color:#f92672">);</span>
-    <span style="color:#111">Dog</span> <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Dog</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;peeps&#34;</span><span style="color:#f92672">,</span><span style="color:#111">10</span><span style="color:#f92672">);</span>
-
-    <span style="color:#111">Dog</span> <span style="color:#111">bb</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Dog</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;peeeeeps&#34;</span><span style="color:#f92672">,</span><span style="color:#111">11</span><span style="color:#f92672">);</span>
-    <span style="color:#111">Dog</span> <span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Dog</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;freddy&#34;</span><span style="color:#f92672">,</span><span style="color:#111">50</span><span style="color:#f92672">);</span>
-    <span style="color:#111">Dog</span> <span style="color:#111">e</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Dog</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;boss&#34;</span><span style="color:#f92672">,</span> <span style="color:#111">8</span><span style="color:#f92672">);</span>
-    <span style="color:#111">ArrayList</span><span style="color:#f92672">&lt;</span><span style="color:#111">Dog</span><span style="color:#f92672">&gt;</span> <span style="color:#111">dogs</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">ArrayList</span><span style="color:#f92672">&lt;&gt;();</span>
-    <span style="color:#111">dogs</span><span style="color:#f92672">.</span><span style="color:#75af00">add</span><span style="color:#f92672">(</span><span style="color:#111">a</span><span style="color:#f92672">);</span> <span style="color:#111">dogs</span><span style="color:#f92672">.</span><span style="color:#75af00">add</span><span style="color:#f92672">(</span><span style="color:#111">b</span><span style="color:#f92672">);</span> <span style="color:#111">dogs</span><span style="color:#f92672">.</span><span style="color:#75af00">add</span><span style="color:#f92672">(</span><span style="color:#111">bb</span><span style="color:#f92672">);</span> <span style="color:#111">dogs</span><span style="color:#f92672">.</span><span style="color:#75af00">add</span><span style="color:#f92672">(</span><span style="color:#111">c</span><span style="color:#f92672">);</span> <span style="color:#111">dogs</span><span style="color:#f92672">.</span><span style="color:#75af00">add</span><span style="color:#f92672">(</span><span style="color:#111">e</span><span style="color:#f92672">);</span>
-
-    <span style="color:#00a8c8">for</span><span style="color:#f92672">(</span><span style="color:#111">Dog</span> <span style="color:#111">d</span><span style="color:#f92672">:</span> <span style="color:#111">dogs</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">d</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/review/details/" title="Details 2020"> <i class="fa fa-chevron-left"></i><label>Details 2020</label></a>
-    <a class="nav nav-next" href="/ap-cs/review/120-review/" title="120 Review" style="margin-right: 0px;"><label>120 Review</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/review/130-review/" title="Maze Review"> <i class="fa fa-chevron-left"></i><label>Maze Review</label></a>
+    <a class="nav nav-next" href="/ai/" title="Artificial Intelligence" style="margin-right: 0px;"><label>Artificial Intelligence</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -2358,7 +2342,7 @@ this class.</p>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 16/04/2020
+        <i class='fa fa-calendar'></i> Last update on 30/04/2020
     </div>
     
 
