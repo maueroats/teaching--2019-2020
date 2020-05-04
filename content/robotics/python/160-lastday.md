@@ -31,9 +31,10 @@ You are going to go on a water adventure.
   more.
 * A boat that goes 5 miles will discover a secret island.
 * A canoe that goes 4 miles will capsize. 
-        + If you have a life jacket, you can get back in the
+
+    * If you have a life jacket, you can get back in the
           canoe and survive.
-        + If you have no life jacket, you are rescued by pirates,
+    * If you have no life jacket, you are rescued by pirates,
         but the pirates steal all of your money and your canoe.
 
 * At the end, print how much money they have.
@@ -71,7 +72,7 @@ You are going to go on a water adventure.
         You can't see the shore any more.
         Keep going or turn around? keep going
         Your canoe capsizes.
-        You a rescued by pirates, but they steal your canoe and your money.
+        You are rescued by pirates, but they steal your canoe and your money.
         THE END
         
         You paddled a canoe 4 miles from shore.

@@ -20,6 +20,8 @@ harvested.
 represent that by putting another one of the same crop next to every
 crop you find in the current list of crops.
 
+[Skeleton Farm.java code](Farm.java) to help you test.
+
 ## Example
 
 A Farm has corn, corn, corn, soybeans, soybeans, and green
