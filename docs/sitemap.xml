@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/beginning/</loc>
+    <lastmod>2020-05-05T15:59:07-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/robotics/python/essentials/</loc>
     <lastmod>2020-04-24T14:21:46-05:00</lastmod>
   </url>
@@ -233,6 +238,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/python/</loc>
+    <lastmod>2020-04-24T14:21:42-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/review/content-overview/</loc>
     <lastmod>2020-04-14T14:45:52-05:00</lastmod>
   </url>
@@ -383,6 +393,16 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/</loc>
+    <lastmod>2020-05-05T16:33:30-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/</loc>
+    <lastmod>2020-05-05T12:28:21-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ap-cs/review/details/</loc>
     <lastmod>2020-04-14T14:47:40-05:00</lastmod>
   </url>
@@ -433,6 +453,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-intro-1a/</loc>
+    <lastmod>2019-02-10T20:40:55-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch20/click-circle/</loc>
     <lastmod>2019-01-08T08:34:06-06:00</lastmod>
   </url>
@@ -480,6 +505,11 @@
   <url>
     <loc>https://wy-cs.website/resources/apcs-syllabus-2017-2018/</loc>
     <lastmod>2017-09-09T15:49:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-intro-1b/</loc>
+    <lastmod>2019-02-10T20:40:55-06:00</lastmod>
   </url>
   
   <url>
@@ -550,6 +580,16 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/typed/typed-bigbang/</loc>
     <lastmod>2019-05-06T17:27:31-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-intro-2a/</loc>
+    <lastmod>2019-02-11T11:00:35-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-intro-2b/</loc>
+    <lastmod>2019-02-11T11:00:35-06:00</lastmod>
   </url>
   
   <url>
@@ -633,6 +673,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-intro-3a/</loc>
+    <lastmod>2019-02-12T11:07:10-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch22a/50-fibsum/</loc>
     <lastmod>2018-02-26T14:26:20-06:00</lastmod>
   </url>
@@ -665,6 +710,16 @@
   <url>
     <loc>https://wy-cs.website/ai/ch05/ch5hw2/</loc>
     <lastmod>2019-11-20T09:16:01-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-intro-4a/</loc>
+    <lastmod>2019-02-13T11:32:11-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/variables/</loc>
+    <lastmod>2020-05-05T16:09:34-05:00</lastmod>
   </url>
   
   <url>
@@ -763,6 +818,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-6a-treasure/</loc>
+    <lastmod>2019-02-15T11:10:02-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/intermediate-cs/ch15/15-heatmap/</loc>
     <lastmod>2018-12-19T20:54:29-06:00</lastmod>
   </url>
@@ -780,6 +840,11 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/typed/typed-ex3/</loc>
     <lastmod>2019-05-09T07:24:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-7a-baseball/</loc>
+    <lastmod>2019-02-14T10:30:07-06:00</lastmod>
   </url>
   
   <url>
@@ -805,6 +870,11 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/ch20/ch20-review/</loc>
     <lastmod>2018-01-10T09:54:08-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-8a-drown/</loc>
+    <lastmod>2019-02-19T10:57:02-06:00</lastmod>
   </url>
   
   <url>
@@ -855,6 +925,11 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/ch22a/84-strings/</loc>
     <lastmod>2019-02-22T07:53:26-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-9a-dubtv/</loc>
+    <lastmod>2019-02-22T09:59:06-06:00</lastmod>
   </url>
   
   <url>
@@ -958,6 +1033,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-a-pancake/</loc>
+    <lastmod>2019-02-25T13:47:41-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/resources/letters-of-recommendation/</loc>
     <lastmod>2018-10-08T10:01:57-05:00</lastmod>
   </url>
@@ -1023,6 +1103,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/intermediate/</loc>
+    <lastmod>2020-05-05T16:02:07-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/robotics/python/110-story-1/</loc>
     <lastmod>2020-04-26T16:23:44-05:00</lastmod>
   </url>
@@ -1055,6 +1140,11 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/typed/bumper-cars/</loc>
     <lastmod>2019-05-16T13:21:40-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-b-burning/</loc>
+    <lastmod>2019-02-27T10:36:46-06:00</lastmod>
   </url>
   
   <url>
@@ -1100,6 +1190,11 @@
   <url>
     <loc>https://wy-cs.website/intermediate-cs/typed/bumper-two-player/</loc>
     <lastmod>2019-05-20T14:16:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/adventure-game/</loc>
+    <lastmod>2019-02-28T10:44:01-06:00</lastmod>
   </url>
   
   <url>
@@ -1203,6 +1298,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/lists/</loc>
+    <lastmod>2020-05-05T15:43:38-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/graph/hw1/</loc>
     <lastmod>2020-04-29T10:51:43-05:00</lastmod>
   </url>
@@ -1288,6 +1388,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.website/robotics/scratch/advanced/</loc>
+    <lastmod>2020-05-05T12:28:32-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.website/ai/python/pacing/</loc>
     <lastmod>2020-03-04T09:07:21-06:00</lastmod>
   </url>
@@ -1345,11 +1450,6 @@
   <url>
     <loc>https://wy-cs.website/ai/quiz/2019-10-04/</loc>
     <lastmod>2019-10-04T09:06:44-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wy-cs.website/robotics/python/</loc>
-    <lastmod>2020-04-24T14:21:42-05:00</lastmod>
   </url>
   
   <url>
@@ -1465,6 +1565,11 @@
   <url>
     <loc>https://wy-cs.website/resources/senioritis/</loc>
     <lastmod>2019-03-09T15:06:06-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.website/robotics/scratch/funny-projects/variables-c-flying/</loc>
+    <lastmod>2019-03-07T09:38:55-06:00</lastmod>
   </url>
   
   <url>
