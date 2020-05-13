@@ -1033,14 +1033,14 @@
       <li data-nav-id="/ai/graph/hw1/" class="dd-item">
         <div>
           <a href="/ai/graph/hw1/">
-            Graph HW 1
+            Graph HW1
           </a>
         </div>
     </li>
       <li data-nav-id="/ai/graph/hw2/" class="dd-item">
         <div>
           <a href="/ai/graph/hw2/">
-            Graph HW 2
+            Graph HW2
           </a>
         </div>
     </li>
@@ -2430,8 +2430,8 @@
     <option value="/ai/graph/" >
   - 
    Graph Theory</option> 
-      <option value="/ai/graph/hw1/" >-- Graph HW 1</option>
-      <option value="/ai/graph/hw2/" >-- Graph HW 2</option>
+      <option value="/ai/graph/hw1/" >-- Graph HW1</option>
+      <option value="/ai/graph/hw2/" >-- Graph HW2</option>
       <option value="/ai/graph/hw3/" >-- Graph HW3</option>
       <option value="/ai/graph/hw4/"  selected>-- Graph HW4</option>
   
@@ -2463,15 +2463,52 @@
     
     
     
-    <p>A <em>vertex cover</em> is a subset of vertices to that every edge contains
+    <p>A <a href="https://en.wikipedia.org/wiki/Vertex_cover">vertex cover</a>
+is a subset of vertices to that every edge contains
 at least one vertex from the cover.</p>
-<p>We will work on three variations of vertex cover:</p>
+<h2 id="minimal-vertex-cover">Minimal Vertex Cover</h2>
+<p>In this problem we are going to work with the vertex cover for a tree
+only. You should not consider graphs that are not trees - in general
+it is very hard to find a &ldquo;good&rdquo; vertex cover for a graph.</p>
+<p>We will work on three variations of vertex cover for a tree.</p>
 <ol>
 <li>Minimum size</li>
-<li>Minimum weight, where weight = degree of vertex used in the cover.</li>
-<li>Minimum weight, where weight is any positive number associated with
+<li>Minimum weight, where weight(v) = <a href="https://en.wikipedia.org/wiki/Degree_(graph_theory)">degree of the
+vertex v</a>.</li>
+<li>Minimum weight, where weight(v) is any positive number associated with
 the cost of including a vertex in your cover.</li>
 </ol>
+<h2 id="examples">Examples</h2>
+<p>The first thing to do is make up examples. If you can, write them in a
+form you could turn in.</p>
+<ul>
+<li>
+<p>Tree of height 5: draw two different vertex covers. Don&rsquo;t make them
+mostly the same. Compare their size.</p>
+</li>
+<li>
+<p>Analyse your covers using the weight = degree of vertex.</p>
+</li>
+<li>
+<p>Arbitrary Weights I: do your own example like in class, just make up
+any numbers.</p>
+</li>
+<li>
+<p>Arbitrary Weights II: identify a situation in which a vertex can be
+chosen &ldquo;locally&rdquo; because it is definitely the best choice no matter
+what happens in the rest of the graph.</p>
+</li>
+<li>
+<p>Arbitrary Weights III: identify a situation where a vertex cannot be
+chosen &ldquo;locally&rdquo; because the best choice at that vertex depends on
+a choice that is made elsewhere in the graph (tree).</p>
+</li>
+</ul>
+<h2 id="code">Code</h2>
+<p>Plan first! You should not try to hack this out. Figure out an efficient way
+to find at least one of the three vertex cover variations listed using
+the examples you wrote. After you have something you think works,
+<em>then</em> code it.</p>
 
 
     

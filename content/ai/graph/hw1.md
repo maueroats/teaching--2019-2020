@@ -1,5 +1,5 @@
 ---
-title: "Graph HW 1"
+title: "Graph HW1"
 date: 2020-04-29T10:51:43-05:00
 weight: 210
 draft: false
