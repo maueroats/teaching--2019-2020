@@ -13,8 +13,8 @@ Characters: dragon, treasure, sword, armor, door, key.
 * Dragon breathes fire on you when you get close (possibly so close
   you touch it).
   
-      * No armor? You're dead.
-      * Armor on? It burns up.
+    * No armor? You're dead.
+    * Armor on? It burns up.
 
 * Sword: can kill the dragon.
 

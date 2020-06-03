@@ -16,7 +16,7 @@ to use for making the bins.
 ```java
 public class ChartMaker {
   // (a) Constructor
-  public ChartMaker(List<integer> cutscores) {...}
+  public ChartMaker(List<Integer> cutscores) {...}
   
   // (b) ingest: put data in bins according to cutscores
   public void ingest(int[] data) {...}

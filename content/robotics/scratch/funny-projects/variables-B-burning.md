@@ -12,12 +12,10 @@ Sprites: main character, stove, water, paper.
 1. Touch stove while burning 
 
      * main character changes to burning costume
-     * fire variable set to 1
      
 2. Touch water 
 
      * main character no longer burning
-     * fire variable set to 0
      
 3. Touch paper while burning
 
