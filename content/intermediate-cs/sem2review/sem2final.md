@@ -102,8 +102,8 @@ doing what they should be doing.
 
 The `in-triangle?` function takes in four posns: the first three
 specify corners of a triangle, and the fourth one is a point
-`Q`. The function returns true if `Q` is inside the triangle made by connecting
-the other three points, and false otherwise.
+`Q`. The function returns true if `Q` is in the triangle made by connecting
+the other three points, and false otherwise. (On the edge counts as in.)
    
 Write *three* good check-expects for this function. Do
 not write the actual function. You check expects should cover a
@@ -122,6 +122,13 @@ for the checks are correct.
        (<= (posn-y p1) (posn-y q) (posn-y p2))))
 ```
 
+Common questions: 
+
+* Does on the edge of the triangle count as "in" it? Yes.
+* Is the given `in-triangle?` function supposed pass all of the
+  check-expects that I write? NO. Checks are written based on the
+  purpose statement, not what the function actually does. The third
+  bullet point above means you should have one failing check.
 
 ## 5. Lists
 

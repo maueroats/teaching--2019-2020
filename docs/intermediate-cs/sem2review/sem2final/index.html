@@ -2565,8 +2565,8 @@ using your good method.</p>
 </span></code></pre></div><h2 id="4-check-expects">4. Check-Expects</h2>
 <p>The <code>in-triangle?</code> function takes in four posns: the first three
 specify corners of a triangle, and the fourth one is a point
-<code>Q</code>. The function returns true if <code>Q</code> is inside the triangle made by connecting
-the other three points, and false otherwise.</p>
+<code>Q</code>. The function returns true if <code>Q</code> is in the triangle made by connecting
+the other three points, and false otherwise. (On the edge counts as in.)</p>
 <p>Write <em>three</em> good check-expects for this function. Do
 not write the actual function. You check expects should cover a
 range of possible mistakes in the bad function given:</p>
@@ -2580,7 +2580,15 @@ for the checks are correct.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">in-triangle?</span> <span style="color:#111">p1</span> <span style="color:#111">p2</span> <span style="color:#111">p3</span> <span style="color:#111">q</span><span style="color:#111">)</span> <span style="color:#75715e">;; BAD!</span>
   <span style="color:#111">(</span><span style="color:#00a8c8">and</span> <span style="color:#111">(</span><span style="color:#111">&lt;=</span> <span style="color:#111">(</span><span style="color:#111">posn-x</span> <span style="color:#111">p1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-x</span> <span style="color:#111">q</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-x</span> <span style="color:#111">p3</span><span style="color:#111">))</span>
        <span style="color:#111">(</span><span style="color:#111">&lt;=</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">p1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">q</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">p2</span><span style="color:#111">))))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="5-lists">5. Lists</h2>
+</span></code></pre></div><p>Common questions:</p>
+<ul>
+<li>Does on the edge of the triangle count as &ldquo;in&rdquo; it? Yes.</li>
+<li>Is the given <code>in-triangle?</code> function supposed pass all of the
+check-expects that I write? NO. Checks are written based on the
+purpose statement, not what the function actually does. The third
+bullet point above means you should have one failing check.</li>
+</ul>
+<h2 id="5-lists">5. Lists</h2>
 <p>Use the same <code>tstm</code> from question 1 above.</p>
 <p>In this section you are writing a function <code>in-tol</code> that takes in a
 <code>tstm</code> and a <code>tolerance</code> number. Return all of the numbers from the <code>ell</code>
