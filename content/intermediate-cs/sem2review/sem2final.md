@@ -8,7 +8,7 @@ draft: false
 ---
 
 You may use the Picturing Programs book and the Racket Help Desk. You
-may not use your old work. Do not discuss this test with other people
+may not use your old work. Please do not discuss this test with other people
 until after 1:30pm on the day of the exam.
 
 At the last minute, I renumbered the questions, moving question 1 to
