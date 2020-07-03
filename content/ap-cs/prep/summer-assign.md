@@ -19,12 +19,40 @@ good.
 
 ## Project Description
 
-Write the two player board game known as [Reversi](https://en.wikipedia.org/wiki/Reversi) or Othello.
+You have two choices: Reversi (Othello) or Lights Out.
+
+
+### Reversi
+
+Write the two player board game known as
+[Reversi](https://en.wikipedia.org/wiki/Reversi) or Othello. I will
+refer to this game as "Reversi" since that is the
+older, non-trademarked name, but the rules I have in mind are the
+modern rules for Othello.
+
 Follow the initial setup and rules as described for Othello in the
 Wikipedia page.
 
 {{% figure src="reversi.png" %}}
 
+I have written up [details about writing Reversi]({{% relref
+"reversi-walkthrough.md" %}}), including all of the parts that I found
+particularly troublesome. Consult it if you need help. Here is a short
+demo video of how Reversi could work.
+
+{{% youtube vAWcwxsJyTo %}}
+
+### Lights Out
+
+You can play [Lights Out
+online](https://www.neok12.com/games/lights-out/lights-out.htm). The
+Wikipedia page has [lights out rules](https://en.wikipedia.org/wiki/Lights_Out_(game)).
+
+{{% figure src="lights-out.png" %}}
+
+This game is easier to program than Reversi, so I am leaving you with
+fewer (no) details. If there are enough questions, I will add an
+explanation here.
 
 
 ## Exceptions

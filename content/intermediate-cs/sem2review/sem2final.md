@@ -37,7 +37,7 @@ have the correct types in each spot.
 1a. Give a signature for this function
 
 ```racket
-(define (mystery-2a g h)
+(define (mystery-1a g h)
   (make-tstm (make-posn 5 g)
              (sqrt g)
              h
@@ -47,7 +47,7 @@ have the correct types in each spot.
 1b. Give a signature for this function
 
 ```racket
-(define (mystery-2b t)
+(define (mystery-1b t)
   (cond [(empty? (tstm-ell t))
          (tstm-p t)]
         [else

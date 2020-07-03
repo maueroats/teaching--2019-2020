@@ -776,6 +776,35 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/prep/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/prep/">Preparation</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/prep/skills-intro/" class="dd-item">
+        <div>
+          <a href="/ap-cs/prep/skills-intro/">
+            AP CS Skills Intro
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/prep/summer-assign/" class="dd-item">
+        <div>
+          <a href="/ap-cs/prep/summer-assign/">
+            AP CS Summer Assign
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/prep/reversi-walkthrough/" class="dd-item">
+        <div>
+          <a href="/ap-cs/prep/reversi-walkthrough/">
+            Reversi Details
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ai/" class="dd-item haschildren
@@ -2526,13 +2555,13 @@ parts with the correct types above. You do not need to check that
 models you are given are correct, and models you produce must also
 have the correct types in each spot.</p>
 <p>1a. Give a signature for this function</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">mystery-2a</span> <span style="color:#111">g</span> <span style="color:#111">h</span><span style="color:#111">)</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">mystery-1a</span> <span style="color:#111">g</span> <span style="color:#111">h</span><span style="color:#111">)</span>
   <span style="color:#111">(</span><span style="color:#111">make-tstm</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#111">g</span><span style="color:#111">)</span>
              <span style="color:#111">(</span><span style="color:#111">sqrt</span> <span style="color:#111">g</span><span style="color:#111">)</span>
              <span style="color:#111">h</span>
              <span style="color:#111">empty</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>1b. Give a signature for this function</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">mystery-2b</span> <span style="color:#111">t</span><span style="color:#111">)</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">mystery-1b</span> <span style="color:#111">t</span><span style="color:#111">)</span>
   <span style="color:#111">(</span><span style="color:#00a8c8">cond</span> <span style="color:#111">[(</span><span style="color:#111">empty?</span> <span style="color:#111">(</span><span style="color:#111">tstm-ell</span> <span style="color:#111">t</span><span style="color:#111">))</span>
          <span style="color:#111">(</span><span style="color:#111">tstm-p</span> <span style="color:#111">t</span><span style="color:#111">)]</span>
         <span style="color:#111">[</span><span style="color:#00a8c8">else</span>
