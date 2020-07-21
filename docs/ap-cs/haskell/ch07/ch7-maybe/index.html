@@ -17,7 +17,7 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.website";
 </script>
-<meta name="description" content="Ordering lists items. The Maybe typeclass.">
+<meta name="description" content="">
 
 
 
@@ -796,6 +796,13 @@
         <div>
           <a href="/ap-cs/prep/summer-assign/">
             AP CS Summer Assign
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/prep/reversi-walkthrough/" class="dd-item">
+        <div>
+          <a href="/ap-cs/prep/reversi-walkthrough/">
+            Reversi Details
           </a>
         </div>
     </li>
@@ -2444,6 +2451,7 @@
 
 
     </ul>
+
     <section>
     </section>
   </aside>
@@ -2531,6 +2539,7 @@
     
 
     <h1>7. Maybe</h1>
+
     
     
     
@@ -2559,41 +2568,35 @@ from a function.</p>
 </code></pre>
 </li>
 </ul>
-<h3 id="testing-code">Testing code</h3>
-<p>Signatures and tests.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">top3list</span> <span style="color:#111">xs</span> <span style="color:#f92672">=</span> <span style="color:#111">xs</span>
-<span style="color:#75715e">-- gives a list of the greatest 10 integers</span>
-<span style="color:#75715e">-- in the input, in decreasing order</span>
-<span style="color:#75af00">numlist</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">99</span><span style="color:#111">,</span><span style="color:#ae81ff">30</span><span style="color:#111">,</span><span style="color:#ae81ff">40</span><span style="color:#111">,</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">80</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">]</span>
-<span style="color:#75af00">ce1</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
-  <span style="color:#111">[</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span> <span style="color:#ae81ff">99</span><span style="color:#111">,</span> <span style="color:#ae81ff">80</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#111">top3list</span> <span style="color:#111">numlist</span>
-  <span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">99</span><span style="color:#111">,</span><span style="color:#ae81ff">80</span><span style="color:#111">,</span><span style="color:#ae81ff">40</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#111">toplist</span> <span style="color:#ae81ff">4</span> <span style="color:#111">numlist</span>
-  <span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#f92672">-</span><span style="color:#ae81ff">90</span><span style="color:#111">,</span><span style="color:#ae81ff">80</span><span style="color:#111">,</span><span style="color:#f92672">-</span><span style="color:#ae81ff">60</span><span style="color:#111">]</span><span style="color:#f92672">==</span><span style="color:#111">top3By</span> <span style="color:#111">(</span><span style="color:#111">abs</span><span style="color:#111">)</span> <span style="color:#111">[</span><span style="color:#f92672">-</span><span style="color:#ae81ff">90</span><span style="color:#111">,</span><span style="color:#ae81ff">80</span><span style="color:#111">,</span><span style="color:#f92672">-</span><span style="color:#ae81ff">60</span><span style="color:#111">,</span><span style="color:#ae81ff">30</span><span style="color:#111">,</span><span style="color:#ae81ff">40</span><span style="color:#111">]</span>
-  <span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;Jaylin&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;Matt&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;Kid&#34;</span><span style="color:#111">]</span><span style="color:#f92672">==</span><span style="color:#111">top3By</span> <span style="color:#111">(</span><span style="color:#111">length</span><span style="color:#111">)</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;KJ&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;Kid&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;OK&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;Matt&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;Ji&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;Jaylin&#34;</span><span style="color:#111">]</span>
-  <span style="color:#111">]</span>
-<span style="color:#75715e">-- 2. </span>
-<span style="color:#75715e">-- 3. try sort on a tuple</span>
-<span style="color:#75af00">top3By</span> <span style="color:#f92672">::</span> <span style="color:#111">(</span><span style="color:#00a8c8">Ord</span> <span style="color:#111">a</span><span style="color:#111">)</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">(</span><span style="color:#111">a</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Int</span><span style="color:#111">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#111">[</span><span style="color:#111">a</span><span style="color:#111">]</span> <span style="color:#f92672">-&gt;</span> <span style="color:#111">[</span><span style="color:#111">a</span><span style="color:#111">]</span>
-<span style="color:#75af00">top3By</span> <span style="color:#111">f</span> <span style="color:#111">xs</span> <span style="color:#f92672">=</span> <span style="color:#111">xs</span>
-</code></pre></div><h2 id="maybe">Maybe</h2>
+<h2 id="maybe">Maybe</h2>
 <ul>
 <li>Write a function that takes in a number and produces <code>Just</code> that
-number when the number is at most 80, otherwise <code>Nothing</code>.</li>
+number when the number is at most80, otherwise <code>Nothing</code>.</li>
 </ul>
-<h2 id="word-counter">Word Counter</h2>
-<p>Produce a count of how many times each word appears in a list of words
-(<code>wc2</code> below).</p>
-<h2 id="testing-code-1">Testing code</h2>
-<p>Signatures and tests.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">wordCounter</span> <span style="color:#f92672">::</span> <span style="color:#111">[(</span><span style="color:#00a8c8">String</span><span style="color:#111">,</span><span style="color:#00a8c8">Int</span><span style="color:#111">)]</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#111">[(</span><span style="color:#00a8c8">String</span><span style="color:#111">,</span><span style="color:#00a8c8">Int</span><span style="color:#111">)]</span>
-<span style="color:#75af00">wordCounter</span> <span style="color:#00a8c8">_</span> <span style="color:#00a8c8">_</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">[]</span>
-<span style="color:#75715e">-- if word is not seen, add (word,1) to list</span>
-<span style="color:#75715e">-- if word is already seen, add 1 to its count</span>
-<span style="color:#75af00">ce2</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#111">wordCounter</span> <span style="color:#111">[(</span><span style="color:#d88200">&#34;Not&#34;</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">)]</span> <span style="color:#d88200">&#34;Good&#34;</span> <span style="color:#f92672">==</span> <span style="color:#111">[(</span><span style="color:#d88200">&#34;Good&#34;</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">),(</span><span style="color:#d88200">&#34;Not&#34;</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">)]</span>
-      <span style="color:#111">,</span><span style="color:#111">wordCounter</span> <span style="color:#111">[(</span><span style="color:#d88200">&#34;Not&#34;</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">)]</span> <span style="color:#d88200">&#34;Not&#34;</span> <span style="color:#f92672">==</span> <span style="color:#111">[(</span><span style="color:#d88200">&#34;Not&#34;</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">)]</span>         
-      <span style="color:#111">]</span>
-<span style="color:#75715e">-- wc2 :: [String] -&gt; [(String,Int)] -- you could just jump to your end goal</span>
-</code></pre></div>
+<p>top3list xs = xs
+&ndash; gives a list of the greatest 10 integers
+&ndash; in the input, in decreasing order
+numlist = [99,30,40,100,80,5]
+ce1 = [
+[100, 99, 80] == top3list numlist
+, [100,99,80,40] == toplist 4 numlist
+, [-90,80,-60]==top3By (abs) [-90,80,-60,30,40]
+, [&ldquo;Jaylin&rdquo;,&ldquo;Matt&rdquo;,&ldquo;Kid&rdquo;]==top3By (length) [&ldquo;KJ&rdquo;,&ldquo;Kid&rdquo;,&ldquo;OK&rdquo;,&ldquo;Matt&rdquo;,&ldquo;Ji&rdquo;,&ldquo;Jaylin&rdquo;]
+]
+&ndash; 2.
+&ndash; 3. try sort on a tuple
+top3By :: (Ord a) =&gt; (a -&gt; Int) -&gt; [a] -&gt; [a]
+top3By f xs = xs
+&ndash; Hint: use [ (f x, x) | x &lt;- xs]
+wordCounter :: [(String,Int)] -&gt; String -&gt; [(String,Int)]
+wordCounter _ _ = []
+&ndash; if word is not seen, add (word,1) to list
+&ndash; if word is already seen, add 1 to its count
+ce2 = [wordCounter [(&ldquo;Not&rdquo;,4)] &ldquo;Good&rdquo; == [(&ldquo;Good&rdquo;,1),(&ldquo;Not&rdquo;,4)]
+,wordCounter [(&ldquo;Not&rdquo;,4)] &ldquo;Not&rdquo; == [(&ldquo;Not&rdquo;,5)]      <br>
+]
+&ndash; wc2 :: [String] -&gt; [(String,Int)] could just jump to your end goal</p>
+
 
     
     
@@ -2601,6 +2604,7 @@ number when the number is at most 80, otherwise <code>Nothing</code>.</li>
     <div id="navigation">
 <a class="nav nav-prev" href="/ap-cs/haskell/ch07/" title="7. Modules"> <i class="fa fa-chevron-left"></i><label>7. Modules</label></a>
     <a class="nav nav-next" href="/ap-cs/haskell/usaco/" title="USACO Practice" style="margin-right: 0px;"><label>USACO Practice</label><i class="fa fa-chevron-right"></i></a></div>
+
   </div>
 
   </section>
