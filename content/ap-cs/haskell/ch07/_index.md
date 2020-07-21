@@ -7,5 +7,5 @@ draft: false
 #theme: white
 ---
 
-{%% children %}}
+{{% children %}}
 
