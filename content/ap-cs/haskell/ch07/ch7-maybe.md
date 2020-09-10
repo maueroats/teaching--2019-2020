@@ -5,6 +5,7 @@ weight: 20
 draft: false
 #type: slide
 #theme: white
+description: "Ordering lists items. The Maybe typeclass."
 ---
 
 The `Maybe` class is built into the standard prelude, so you will only
@@ -32,60 +33,12 @@ from a function.
         top3By :: (Ord a) => (a -> Int) -> [a] -> [a]
 
 
-## Maybe
 
-* Write a function that takes in a number and produces `Just` that
-  number when the number is at most80, otherwise `Nothing`.
-  
+### Testing code
 
+Signatures and tests.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```haskell
 top3list xs = xs
 -- gives a list of the greatest 10 integers
 -- in the input, in decreasing order
@@ -100,7 +53,24 @@ ce1 = [
 -- 3. try sort on a tuple
 top3By :: (Ord a) => (a -> Int) -> [a] -> [a]
 top3By f xs = xs
--- Hint: use [ (f x, x) | x <- xs]
+```
+
+## Maybe
+
+* Write a function that takes in a number and produces `Just` that
+  number when the number is at most 80, otherwise `Nothing`.
+  
+
+## Word Counter
+
+Produce a count of how many times each word appears in a list of words
+(`wc2` below). 
+
+## Testing code
+
+Signatures and tests.
+
+```haskell
 wordCounter :: [(String,Int)] -> String -> [(String,Int)]
 wordCounter _ _ = []
 -- if word is not seen, add (word,1) to list
@@ -108,4 +78,5 @@ wordCounter _ _ = []
 ce2 = [wordCounter [("Not",4)] "Good" == [("Good",1),("Not",4)]
       ,wordCounter [("Not",4)] "Not" == [("Not",5)]         
       ]
--- wc2 :: [String] -> [(String,Int)] could just jump to your end goal
+-- wc2 :: [String] -> [(String,Int)] -- you could just jump to your end goal
+```
