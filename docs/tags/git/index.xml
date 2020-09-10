@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on WY Computer Science</title>
-    <link>https://wy-cs.website/tags/git/</link>
+    <link>https://maueroats.github.io/teaching--2019-2020/tags/git/</link>
     <description>Recent content in git on WY Computer Science</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Feb 2018 07:33:00 -0600</lastBuildDate>
     
-	<atom:link href="https://wy-cs.website/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://maueroats.github.io/teaching--2019-2020/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git-ting Started</title>
-      <link>https://wy-cs.website/ftc/git/getting-started/</link>
+      <link>https://maueroats.github.io/teaching--2019-2020/ftc/git/getting-started/</link>
       <pubDate>Wed, 25 Oct 2017 19:55:58 -0500</pubDate>
       
-      <guid>https://wy-cs.website/ftc/git/getting-started/</guid>
+      <guid>https://maueroats.github.io/teaching--2019-2020/ftc/git/getting-started/</guid>
       <description>Downloads for Home  Git package for all operating systems. Tortoise Git for Windows only.  Tutorials   A command line intro to git in 15 minutes.
   Git for Beginners.
   Beautiful and simple Git Guide.
@@ -27,10 +27,10 @@
     
     <item>
       <title>Everyday Git</title>
-      <link>https://wy-cs.website/ftc/git/everyday/</link>
+      <link>https://maueroats.github.io/teaching--2019-2020/ftc/git/everyday/</link>
       <pubDate>Sun, 11 Feb 2018 07:33:00 -0600</pubDate>
       
-      <guid>https://wy-cs.website/ftc/git/everyday/</guid>
+      <guid>https://maueroats.github.io/teaching--2019-2020/ftc/git/everyday/</guid>
       <description>Everyday Commands All of these need to be run in the karel-* directory:
  ./save-it ./update: git pull from the upstream repository. git pull  Merge Conflicts Sometimes you will modify a file at home without having saved (pushed) your changes at school. This causes a dreaded &amp;ldquo;merge conflict&amp;rdquo; when you update.
 Simple Merging If you are lucky, you are at school and you know that you just want to use the code from home (the &amp;ldquo;incoming code&amp;rdquo; from the pull).</description>
@@ -38,10 +38,10 @@ Simple Merging If you are lucky, you are at school and you know that you just wa
     
     <item>
       <title>Git</title>
-      <link>https://wy-cs.website/ftc/git/</link>
+      <link>https://maueroats.github.io/teaching--2019-2020/ftc/git/</link>
       <pubDate>Tue, 10 Oct 2017 10:20:47 -0500</pubDate>
       
-      <guid>https://wy-cs.website/ftc/git/</guid>
+      <guid>https://maueroats.github.io/teaching--2019-2020/ftc/git/</guid>
       <description>Git is a system for keeping track of all of the versions of things you write, both old and new. The whole system is quite complex, so we will limit ourselves to a small portion of what it can do.
 You will use it for several purposes:
  Turning in your work Backing up your work Transferring work to and from home via the internet instead of using a flash drive Collaborating with a group  Incomplete It is impossible to write down everything you need to know about git.</description>
